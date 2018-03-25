@@ -1,2 +1,2 @@
 entra asi!!!!
-localhost/RUTAS/Vista/inicio.php
+localhost/Ruta/Vista/inicio.php

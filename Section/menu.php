@@ -15,7 +15,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="inicio.php"><i class="fa fa-user-circle-o"></i> <span class="nav-label">Inicio</span></a>
+                    <a href="inicio.php"><i class="fa fa-home"></i> <span class="nav-label">Inicio</span></a>
                 </li>
                 <li>
                     <a href="agregarusuarios.php"><i class="fa fa-user-circle-o"></i> <span class="nav-label">Agregar Usuarios</span></a>

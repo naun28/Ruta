@@ -19,7 +19,7 @@ if (!isset($_SESSION["nombre"])) {
   <div id="wrapper">
   <?PHP include "../Section/menu.php";?>
 </div>
-
 <?PHP include "../Section/js.php";?>
 </body>
+
 </html>
