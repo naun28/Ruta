@@ -15,7 +15,6 @@
                     </div>
                 </li>
                 <?PHP include "../Section/url.php";?>
-               
             </ul>
 
         </div>
@@ -45,7 +44,7 @@
             </ul>
         </nav>
         </div>
-        <!-- AQui va elcontenido-->
+        <!-- AQui va elcontenido o el php include-->
 
         <?PHP include "../Section/footer.php";?>
         </div>

@@ -7,7 +7,7 @@
     html,body {
 
         background-color: #ebe9e5;
-        color: black;
+        color: red;
         font-family: 'Raleway', sans-serif;
         font-weight: 100;
         height: 100vh;
@@ -63,6 +63,7 @@
         filter: blur(4px);
         width: 100%;
         height: 100%;
+
     }
      
 </style>
@@ -72,16 +73,13 @@
 <body class="gray-bg" >
   <div>
     <img id="img" src="../Include/img/maps.png" alt="">
-    <div class="loginColumns animated fadeInDown">
-        <div class="row">
-
-            <div class="col-md-6">
-                <!-- <h2 class="font-bold">SEC</h2> -->
-                    <img src="../Include/img/log.png" alt="" style="width: 370px; height: 270px;">
+  
+<div class="middle-box loginscreen animated fadeInDown">
+        <div>
+            <div>
+                <img class="logo-name" src="../Include/img/log.png" alt="" style="width: 300px; height: 200px;">
             </div>
-            <div class="col-md-6">
-                <div class="ibox-content">
-                  <form method="POST" action="../Modelo/validalogin.php" autocomplete="off">
+              <form method="POST" action="../Modelo/validalogin.php" autocomplete="on" >
 
                     <div class="form-group">
                         <label for="usuario">Usuario</label>
@@ -92,7 +90,7 @@
                         <input class="form-control" type="password" name="pass" required onkeypress="return checkPassword(event)" placeholder="Contraseña">
                     </div>
 
-                    <button class="btn btn-danger"  type="submit" name="action">Entrar</button>
+                    <button class="btn btn-danger block full-width m-b"  type="submit" name="action">Entrar</button>
 
                     <?php
                     if (isset($_GET['error']) == true) {
@@ -101,22 +99,9 @@
                     ?>
 
                 </form>
-                <p class="m-t">
-                    <small>Sistema Gestor de Rutas &copy; 2018</small>
-                </p>
-            </div>
+           <center><p class="m-t"> <small>Secretaria de Educacion y Cultura &copy; 2018</small> </p></center> 
         </div>
     </div>
-    <hr/>
-    <div class="row">
-        <div class="col-md-6">
-            Secretaria de Educacion y Cultura
-        </div>
-        <div class="col-md-6 text-right">
-         <small>© 2018</small>
-        </div>
-    </div>
-</div>
 <script type="text/javascript">
   function checkPassword(e){
     var re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
@@ -124,7 +109,7 @@
 }
 
 </script>
-
 </div>
+
 </body>
 </html>

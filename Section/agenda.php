@@ -15,7 +15,6 @@
                     </div>
                 </li>
                 <?PHP include "../Section/url.php";?>
-               
             </ul>
 
         </div>
@@ -45,7 +44,8 @@
             </ul>
         </nav>
         </div>
-        <!-- AQui va elcontenido-->
+       
+        <?PHP include "../Section/cont_agenda.php";?>
 
         <?PHP include "../Section/footer.php";?>
         </div>

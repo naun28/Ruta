@@ -10,7 +10,7 @@ if (!isset($_SESSION["nombre"])) {
 <!DOCTYPE html>
 <html>
 <head>
-   <title>RUTAS</title>
+   <title>Agregar Usuarios</title>
    <?PHP include "../Section/css.php";?>
 
 </head>

@@ -10,14 +10,14 @@ if (!isset($_SESSION["nombre"])) {
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Inicio</title>
+   <title>Brigadistas</title>
    <?PHP include "../Section/css.php";?>
 
 </head>
 
 <body>
   <div id="wrapper">
-  <?PHP include "../Section/menu.php";?>
+  <?PHP include "../Section/listabrigadistas.php";?>
 </div>
 <?PHP include "../Section/js.php";?>
 </body>
