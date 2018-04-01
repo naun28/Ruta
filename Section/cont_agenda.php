@@ -275,7 +275,7 @@
                             <td class="center">Satelital</td>
                             <td class="center">Mant.Completo</td>
                             <td>
-                                <button class="btn btn-danger btn-xs"><li class="fa fa-minus-circle"></li> Cancelar</button>
+                                <button class="btn btn-danger btn-xs demo3"><li class="fa fa-minus-circle"></li> Cancelar</button>
                             </td>
                         </tr>
                         <tr class="gradeX">

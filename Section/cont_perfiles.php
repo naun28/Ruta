@@ -48,7 +48,7 @@
                         <td>
                             <div>
                                 <button class="btn-primary btn btn-xs"  data-toggle="modal" data-target="#myModal">Editar</button>
-                                <button class="btn-danger btn btn-xs">Borrar</button>
+                                <button class="btn-danger btn btn-xs demo4">Borrar</button>
                             </div>
                            <!---Estructura del Modal-->
                             <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -110,7 +110,7 @@
                                     </div>
                                     <div class="modal-footer">
                                         <button id="btnLimpiar" type="reset" value="Cerrar" class="btn btn-white" data-dismiss="modal">Cerrar</button>
-                                        <button type="submit" class="btn btn-danger">Aceptar</button>
+                                        <button type="submit" class="btn btn-danger demo4">Aceptar</button>
                                     </div>
                                 </form>
                                         </div>

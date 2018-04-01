@@ -13,8 +13,10 @@
     <link href="../Include/css/animate.css" rel="stylesheet">
     <link href="../Include/css/style.css" rel="stylesheet">
     <link href="../Include/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+    <link href="../Include/css/plugins/footable/footable.core.css" rel="stylesheet">
     <link href="../Include/css/bootstrap.min.css" rel="stylesheet">
     <link href="../Include/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../Include/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 
     <link href="../Include/css/plugins/iCheck/custom.css" rel="stylesheet">
 
