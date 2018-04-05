@@ -1,16 +1,16 @@
 
-    <nav class="navbar-default navbar-static-side" role="navigation">
+    <nav class="navbar-default navbar-static-side"  role="navigation ">
         <div class="sidebar-collapse">
-            <ul class="nav metismenu" id="side-menu">
-                <li class="nav-header">
+            <ul class="nav metismenu" id="side-menu" >
+                <li class="nav-header btn-danger" >
                     <div class="dropdown profile-element"> <span>
                             <img alt="image" class="img-circle" src="../Include/img/perfil.jpg" />
                              </span>
                         
                             <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold">Naun Lara</strong>
-                             </span> <span class="text-muted text-xs block">Residente </span> </span>
+                             </span> <span class="text-muted text-xs block" style="color: white;">Residente </span> </span>
                     </div>
-                    <div class="logo-element">
+                    <div class="logo-element" style="color: white;">
                         SEC
                     </div>
                 </li>

@@ -16,7 +16,7 @@ if (!isset($_SESSION["correo"])) {
 </head>
 
 <body>
-  <div id="wrapper">
+  <div id="wrapper" >
   <?PHP include "../Section/menu.php";?>
 </div>
 <?PHP include "../Section/js.php";?>
