@@ -83,11 +83,11 @@
 
                     <div class="form-group">
                         <label for="Correo">Correo</label>
-                        <input  class="form-control" type="email" name="correo" required autofocus="on" placeholder="Correo">
+                        <input style="color: black;font-weight: bold;" class="form-control" type="email" name="correo" required autofocus="on" placeholder="Correo">
                     </div>
                     <div class="form-group">
                         <label for="pass" >Contraseña</label>
-                        <input class="form-control" type="password" name="pass" required onkeypress="return checkPassword(event)" placeholder="Contraseña">
+                        <input style="color: black;font-weight: bold;" class="form-control" type="password" name="pass" required onkeypress="return checkPassword(event)" placeholder="Contraseña">
                     </div>
 
                     <button class="btn btn-danger block full-width m-b"  type="submit" name="action">Entrar</button>
