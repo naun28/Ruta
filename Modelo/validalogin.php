@@ -42,6 +42,7 @@ if ($tipouser == '4') {
         $_SESSION["apellidos"] = $apellidos;
         $_SESSION["id_usuario"] = $id_usuario;
         $_SESSION["correo"] = $correo;
+        $_SESSION["tipouser"] = $tipouser;
 
         echo "
                 <script language='JavaScript'>

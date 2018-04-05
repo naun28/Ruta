@@ -7,8 +7,8 @@
                             <img alt="image" class="img-circle" src="../Include/img/perfil.jpg" />
                              </span>
                         
-                            <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold">Naun Lara</strong>
-                             </span> <span class="text-muted text-xs block" style="color: white;">Residente </span> </span>
+                            <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombres"]; ?>&nbsp;<?php echo $_SESSION["apellidos"]; ?></strong>
+                             </span> <!-- <span class="text-muted text-xs block" style="color: white;"><!-- <?php echo $_SESSION["tipouser"]; ?> --></span> </span>
                     </div>
                     <div class="logo-element" style="color: white;">
                         SEC
