@@ -1,8 +1,8 @@
 
 <?php
 session_start();
-unset($_SESSION["nombre"]);
-$username = trim($_POST['usuario']);
+unset($_SESSION["nombres"]);
+$correo = trim($_POST['correo']);
 $password = trim($_POST['pass']);
 
 $db   = "rutas";
@@ -10,7 +10,7 @@ $host = "localhost";
 $pw   = "";
 $user = "root";
 
-if (empty($username) || empty($password)) {
+if (empty($correo) || empty($password)) {
     header("location: ../Vista/login.php");
     echo "";
     exit();
@@ -21,24 +21,26 @@ if (empty($username) || empty($password)) {
 
 $con = mysqli_connect($host, $user, $pw, $db) or die("Error al conectar " . mysql_error());
 
-$query  = "SELECT * FROM usuario WHERE Usuario= '$username' AND Contrasena = '$password'";
+$query  = "SELECT * FROM usuarios WHERE correo = '$correo' AND pass = '$password'";
 $result = mysqli_query($con, $query);
 $row    = mysqli_fetch_assoc($result);
 if (!isset($row)) {
     header("location: ../Vista/login.php");
 }
 
-$nombre   = $row["Nombre"];
-$apellido = $row["Apellido"];
-$Tipo     = $row['Tipo'];
-$id       = $row['id'];
+$nombres   = $row["nombres"];
+$apellidos = $row["apellidos"];
+$tipouser     = $row['tipouser'];
+$id_usuario  = $row['id_usuario'];
+$correo   = $row['correo'];
+$password = $row['pass'];
 
-if ($Tipo == '1') {
-    if ($row["Contrasena"] === $password && $row["Usuario"] === $username) {
+if ($tipouser == '4') {
+    if ($row["correo"] === $correo && $row["pass"] === $password) {
         session_start();
-        $_SESSION["nombre"]   = $nombre;
-        $_SESSION["apellido"] = $apellido;
-        $_SESSION["id"]       = $id;
+        $_SESSION["nombres"]   = $nombres;
+        $_SESSION["apellidos"] = $apellidos;
+        $_SESSION["id_usuario"] = $id_usuario;
 
         echo "
                 <script language='JavaScript'>
@@ -57,7 +59,7 @@ if ($Tipo == '1') {
         header("location: ../Vista/login.php?error=1");
         exit();
     }
-} elseif ($Tipo == '2') {
+} /*elseif ($Tipo == '2') {
     if ($row["Contrasena"] === $password && $row["Usuario"] === $username) {
         session_start();
         $_SESSION["nombre"]   = $nombre;
@@ -102,6 +104,6 @@ if ($Tipo == '1') {
         exit();
     }
 
-}
+}*/
 
 ?>

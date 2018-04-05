@@ -82,8 +82,8 @@
               <form method="POST" action="../Modelo/validalogin.php" autocomplete="on" >
 
                     <div class="form-group">
-                        <label for="usuario">Usuario</label>
-                        <input  class="form-control" type="text" name="usuario" required autofocus="on" placeholder="Usuario">
+                        <label for="Correo">Correo</label>
+                        <input  class="form-control" type="email" name="correo" required autofocus="on" placeholder="Correo">
                     </div>
                     <div class="form-group">
                         <label for="pass" >Contraseña</label>

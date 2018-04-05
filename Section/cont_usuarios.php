@@ -39,7 +39,7 @@
                                                     <option value="Brigadista" >Brigadista</option>
                                                     <option value="Jefe de Brigada">Jefe de Brigada</option>
                                                     <option value="Mesa">Mesa de Apoyo</option>
-                                                    <option value="Administrador">Administrador</option>
+                                                    <option value="4">Administrador</option>
                                                 </select>
                                             </div>
                                             <div id="ver" >
