@@ -2,7 +2,7 @@
     <nav class="navbar-default navbar-static-side"  role="navigation ">
         <div class="sidebar-collapse">
             <ul class="nav metismenu" id="side-menu" >
-                <li class="nav-header btn-danger" >
+                <li class="nav-header" >
                     <div class="dropdown profile-element"> <span>
                             <img alt="image" class="img-circle" src="../Include/img/perfil.jpg" />
                              </span>
