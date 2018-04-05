@@ -15,7 +15,7 @@
                                             <h4 class="modal-title">Agregar Usuario</h4>
                                         </div>
                                         <div class="modal-body">
-                                          <form  method="POST" action="" id="formLimpiar" class="form-group">
+                                          <form  method="POST" action="../Modelo/RegistroUsuarios.php" id="formLimpiar" class="form-group">
                                                
                                             <div class="form-group col-md-4">
                                                 <label>Nombre(s)</label><input type="text" name="nombres" placeholder="Nombre(s)" class="form-control
@@ -25,13 +25,13 @@
                                                 <label>Apellido(s)</label><input type="text" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
                                             </div>
                                              <div class="form-group col-md-4">
-                                                <label>Telefono</label><input type="text" name="telefon" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 000-0000000" required="">
+                                                <label>Telefono</label><input type="text" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 000-0000000" required="">
                                             </div>
                                             <div class="form-group">
                                                 <label>Correo</label><input type="email" name="correo" placeholder="Correo" class="form-control" required="">
                                             </div>
                                             <div class="form-group">
-                                                <label>Contraseña</label><input type="password" name="password" placeholder="Contraseña" class="form-control" pattern="[A-Za-z0-9!?-]{6,12}" required="">
+                                                <label>Contraseña</label><input type="password" name="pass" placeholder="Contraseña" class="form-control" pattern="[A-Za-z0-9!?-]{6,12}" required="">
                                             </div>
                                             <div class="form-group ">
                                                 <label>Tipo de Usuario</label> 
@@ -96,13 +96,15 @@
                         <div class="ibox-content">
 
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover dataTables-example" >
+                                <table id="user" class="table table-striped table-bordered table-hover dataTables-example" >
                                     <thead>
                                         <tr>
+                                           
                                             <th>Nombre(s)</th>
                                             <th>Apellido(s)</th>
                                             <th>Telefono</th>
                                             <th>Email</th>
+                                           
                                             <th>Tipo de Empleado</th>
                                             <th>N. Brigada</th>
                                         </tr>
@@ -136,8 +138,9 @@
                                         
 
                                     </tbody>
-                                    <tfoot>
+                                       <tfoot>
                                          <tr>
+                                            
                                             <th>Nombre(s)</th>
                                             <th>Apellido(s)</th>
                                             <th>Telefono</th>
@@ -146,7 +149,7 @@
                                             <th>N. Brigada</th>
                                            
                                         </tr>
-                                    </tfoot>
+                                    </tfoot> 
                                 </table>
                             </div>
 
