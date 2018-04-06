@@ -56,7 +56,7 @@
                                             <td>
                                             <button class="btn-primary btn btn-sm">Guardar</button>
                                             </td>
-                                            <td>2005</td>
+                                            <td>2007</td>
                                             <td>2004</td>
                                             <td class="center">Soporte Tecnico</td>
                                             <td class="center">Garantia</td>
