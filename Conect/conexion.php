@@ -12,3 +12,5 @@ function Conectarse()
 
     return $cn;
 }
+
+$conexion = new mysqli("localhost","root","","rutas");

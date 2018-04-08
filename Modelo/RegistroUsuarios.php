@@ -1,4 +1,5 @@
 <?php
+#include("../Conect/conexion.php");
 
 $nombres     = $_POST['nombres'];
 $apellidos   = $_POST['apellidos'];
@@ -10,6 +11,8 @@ $nbrigada      = $_POST['nbrigada'];
 $conexion   = mysqli_connect("localhost", "root", "", "rutas");
 
 $q = ("INSERT INTO usuarios VALUES ('','$nombres','$apellidos','$telefono','$correo','$pass','$tipouser','$nbrigada')");
+
+
 
 $ejecutar_q = mysqli_query($conexion, $q) or die("error al insertar");
 header("location: ../Vista/agregarusuarios.php");

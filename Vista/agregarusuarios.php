@@ -7,6 +7,7 @@ if (!isset($_SESSION["nombres"])) {
 
 }*/
 ?> -->
+
 <!DOCTYPE html>
 <html>
 <head>

@@ -39,27 +39,27 @@
                                                     <option value="Brigadista" >Brigadista</option>
                                                     <option value="Jefe de Brigada">Jefe de Brigada</option>
                                                     <option value="Mesa">Mesa de Apoyo</option>
-                                                    <option value="4">Administrador</option>
+                                                    <option value="Administrador">Administrador</option>
                                                 </select>
                                             </div>
                                             <div id="ver" >
                                               <div id="Mesa"   class="form-group">
                                                 <label>N° de brigada</label> <select name="nbrigada" class="form-control">
                                                     <option value="0" selected>Seleccione Brigada</option>
-                                                    <option value="1">Brigada 1</option>
-                                                    <option value="2">Brigada 2</option>
-                                                    <option value="3">Brigada 3</option>
-                                                    <option value="4">Brigada 4</option>
-                                                    <option value="5">Brigada 5</option>
-                                                    <option value="6">Brigada 6</option>
-                                                    <option value="7">Brigada 7</option>
-                                                    <option value="8">Brigada 8</option>
-                                                    <option value="9">Brigada 9</option>
-                                                    <option value="10">Brigada 10</option>
-                                                    <option value="11">Brigada 11</option>
-                                                    <option value="12">Brigada 12</option>
-                                                    <option value="13">Brigada13</option>
-                                                    <option value="14">Brigada 14</option>
+                                                    <option value="Brigada 1">Brigada 1</option>
+                                                    <option value="Brigada 2">Brigada 2</option>
+                                                    <option value="Brigada 3">Brigada 3</option>
+                                                    <option value="Brigada 4">Brigada 4</option>
+                                                    <option value="Brigada 5">Brigada 5</option>
+                                                    <option value="Brigada 6">Brigada 6</option>
+                                                    <option value="Brigada 7">Brigada 7</option>
+                                                    <option value="Brigada 8">Brigada 8</option>
+                                                    <option value="Brigada 9">Brigada 9</option>
+                                                    <option value="Brigada 10">Brigada 10</option>
+                                                    <option value="Brigada 11">Brigada 11</option>
+                                                    <option value="Brigada 12">Brigada 12</option>
+                                                    <option value="Brigada 13">Brigada13</option>
+                                                    <option value="Brigada 14">Brigada 14</option>
                                                 </select>
                                                 </div>
                                             </div>
@@ -111,31 +111,25 @@
                                     </thead>
                                     <tbody>
 
-                                        <tr>
-                                            <td>Naun</td>
-                                            <td>Lara Gutierrez</td>
-                                            <td>6622112211</td>
-                                            <td>naun@gmail.com</td>
-                                            <td>Jefe de Brigada</td>
-                                            <td>1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Naun</td>
-                                            <td>Lara Gutierrez</td>
-                                            <td>6622112211</td>
-                                            <td>naun@gmail.com</td>
-                                            <td>Jefe de Brigada</td>
-                                            <td>1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Naun</td>
-                                            <td>Lara Gutierrez</td>
-                                            <td>6622112211</td>
-                                            <td>naun@gmail.com</td>
-                                            <td>Jefe de Brigada</td>
-                                            <td>1</td>
-                                        </tr>
-                                        
+                                        <?php 
+                                        include '../Conect/conexion.php';
+                                        $q = "SELECT * FROM usuarios ORDER BY id_usuario DESC";
+                                        $ejecutar_q = mysqli_query($conexion, $q);
+                                        while ($row = $ejecutar_q->fetch_assoc()) {
+                                            ?>
+                                            <tr>
+                                                <td><?php echo $row['nombres']; ?></td>
+                                                <td><?php echo $row['apellidos']; ?></td>
+                                                <td><?php echo $row['telefono']; ?></td>
+                                                <td><?php echo $row['correo']; ?></td>
+                                                <td><?php echo $row['tipouser']; ?></td>
+                                                <td><?php echo $row['nbrigada']; ?></td>
+
+                                            </tr> 
+                                            <?php
+                                        } 
+                                        ?> 
+
 
                                     </tbody>
                                        <tfoot>

@@ -35,7 +35,7 @@ $id_usuario  = $row['id_usuario'];
 $correo   = $row['correo'];
 $password = $row['pass'];
 
-if ($tipouser == '4') {
+if ($tipouser === "Administrador") {
     if ($row["correo"] === $correo && $row["pass"] === $password) {
         session_start();
         $_SESSION["nombres"]   = $nombres;
