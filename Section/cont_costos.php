@@ -200,40 +200,33 @@
                     <div class="col-sm-10"><input type="text" placeholder="Destino más retirado" class="form-control"></div>
                   </div>
 
-                  <div class="form-group"><label class="col-sm-2 control-label">Excedente</label>
-                    <div class="col-sm-10"><input type="text" class="form-control"></div>
-                  </div>
+                  
                   
                 </div>
                 <div class="col-lg-6">
+                  <div class="form-group"><label class="col-sm-2 control-label">Excedente</label>
+                    <div class="col-sm-10"><input type="text" class="form-control"></div>
+                  </div>
                   <div class="form-group"><label class="col-sm-2 control-label">Precio Gasolina/L</label>
                     <div class="col-sm-10"><input placeholder="Introduzca el preco actual" type="text" class="form-control"></div>
                   </div>
                   <div class="form-group"><label class="col-sm-2 control-label">Presupuesto gasolina</label>
                     <div class="col-sm-10"><input type="text" readonly class="form-control"></div>
                   </div>
-                  <div class="form-group"><label class="col-sm-2 control-label">Casetas</label>
+                  <div class="form-group"><label class="col-sm-2 control-label">Presupuesto casetas</label>
                     <div class="col-sm-10"><input type="text" class="form-control"></div>
                   </div>
                   <div class="form-group"><label class="col-sm-2 control-label">Viaticos</label>
                     <div class="col-sm-10"><input type="text" readonly placeholder="700 al dia x brigadista" class="form-control"></div>
                   </div>
-                  <!-- <div class="form-group"><label class="col-sm-2 control-label">C. de caminos</label>
-                    <div class="col-sm-10"><input type="text" class="form-control"></div>
-                  </div> -->
-                  <div class="form-group"><label class="col-sm-2 control-label">Presupuesto casetas</label>
-                    <div class="col-sm-10"><input type="text" class="form-control"></div>
-                  </div>
-
-                  
-
                 </div>
               </fieldset>
+              <br><br>
                  <div class="col-lg-12">
                    <div class="col-lg-6">
                     <fieldset>
                     <legend>Añadir brigadista</legend>
-                      <div class="form-group"><label class="col-sm-2 control-label">Lider de brigada</label>
+                      <div class="form-group"><label class="col-sm-2 control-label">Brigadista</label>
                     <div class="col-sm-10"><select data-placeholder="Selecciona una brigada" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
                       <!-- se cargaran de una base de datos-->
                       <option value="1">Brigadista 1</option>
@@ -298,7 +291,7 @@
     <div id="tab-2" class="tab-pane">
       <div class="panel-body">
         <div class="ibox-content">
-         <div class="form-group " id="data_5">
+          <div class="form-group " id="data_5">
           <center><b><label class="font-normal">Selecciona el rango de fechas que desea buscar</label></b>
            <div class="form-group" id="data_5">
             <label>Fecha</label>
@@ -308,58 +301,141 @@
               <input type="text" class="input-sm form-control" name="end" value="05/22/2014" />
             </div>
           </div>
-        </center>     
-      </div>
+          </center>     
+         </div>
+
       <div class="table-responsive">
         <table class="table table-striped table-bordered table-hover dataTables-example" >
           <thead>
             <tr>
-              <th>Nombre</th>
-              <th>Lugar(es)</th>
-              <th data-hide="phone,tablet">Fechas</th>
-              <th data-hide="phone,tablet">Escuelas</th>
-              <th data-hide="phone,tablet">Dias</th>
-              <th data-hide="phone,tablet">Acciones</th>
+              <th>Lider de brigada</th>
+              <th >Vehiculo</th>
+              <th >Placas</th>
+              <th >Rendimiento</th>
+              <th >Destino(s)</th>
+              <th >Fecha de salida</th>
+              <th >Fecha de llegada</th>
+              <th >Días</th>
+              <th >Escuelas</th>
+              <th >Recorrido(km)</th>
+              <th >Excedente(km)</th>
+              <th >Precio gasolina/L</th>
+              <th >Presupuesto gasolina</th>
+              <th >Presupuesto casetas</th>
+              <th >Viaticos</th>
+              <th >Brigadista acompañante</th>
+              <th >Fecha de salida</th>
+              <th >Fecha de llegada</th>
+              <th >Días</th>
+              <th >Viaticos</th>
+              <th >Total real</th>
+              <th >Total</th>
+              <th >Accion</th>
             </tr>
           </thead>
           <tbody>
             <tr class="gradeX">
-              <td>Ramón Rodriguez</td>
-              <td>Guaymas
-              </td>
-              <td>12-03-2018</td>
-              <td class="center">00XXXXXXXX</td>
-              <td class="center"> 2 </td>
-              <td class="center"> <input class="btn btn-danger" type="button" name="" value="Ver a detalle"> </td>
+              <td>[nombrebrigadista]</td>
+              <td>[Vehiculo]</td>
+              <td>[Placas]</td>
+              <td>[Rendimiento]</td>
+              <td>[destino]</td>
+              <td>[Fechadesalida]</td>
+              <td>[Fechadellegada]</td>
+              <td>[dias]</td>
+              <td>[escuelas]</td>
+              <td>[km]</td>
+              <td>[km]</td>
+              <td>[preciogasolina]/L</td>
+              <td>[presupuestogasolina]</td>
+              <td>[presupuestocasetas]</td>
+              <td>[viaticos]</td>
+              <td>[Fechadesalida]</td>
+              <td>[Fechadellegada]</td>
+              <td>[dias]</td>
+              <td>[brigadistaacompañante]</td>
+              <td>[viaticos]</td>
+              <td>[totalreal]</td>
+              <td>[total]</td>   
+              <td class="center"> <input class="btn btn-danger" type="button" name="" value="ver"> </td>
             </tr>
             <tr class="gradeC">
-              <td>Naun Lara</td>
-              <td>Empalme
-              </td>
-              <td>15-03-2018</td>
-              <td class="center">00XXXXXXXX</td>
-              <td class="center"> 3 </td>
-              <td class="center"> <input class="btn btn-danger" type="button" name="" value="Ver a detalle"> </td>
+              <td>[nombrebrigadista]</td>
+              <td>[Vehiculo]</td>
+              <td>[Placas]</td>
+              <td>[Rendimiento]</td>
+              <td>[destino]</td>
+              <td>[Fechadesalida]</td>
+              <td>[Fechadellegada]</td>
+              <td>[dias]</td>
+              <td>[escuelas]</td>
+              <td>[km]</td>
+              <td>[km]</td>
+              <td>[preciogasolina]/L</td>
+              <td>[presupuestogasolina]</td>
+              <td>[presupuestocasetas]</td>
+              <td>[viaticos]</td>
+              <td>[Fechadesalida]</td>
+              <td>[Fechadellegada]</td>
+              <td>[dias]</td>
+              <td>[brigadistaacompañante]</td>
+              <td>[viaticos]</td>
+              <td>[totalreal]</td>
+              <td>[total]</td>    
+              <td class="center"> <input class="btn btn-danger" type="button" name="" value="ver"> </td>
             </tr>
             <tr class="gradeA">
-              <td>Alberto Rodriguez</td>
-              <td>Navojoa
-              </td>
-              <td>20-03-2018</td>
-              <td class="center">00XXXXXXXX</td>
-              <td class="center"> 3 </td>
-              <td class="center"> <input class="btn btn-danger" type="button" name="" value="Ver a detalle"> </td>
+              <td>[nombrebrigadista]</td>
+              <td>[Vehiculo]</td>
+              <td>[Placas]</td>
+              <td>[Rendimiento]</td>
+              <td>[destino]</td>
+              <td>[Fechadesalida]</td>
+              <td>[Fechadellegada]</td>
+              <td>[dias]</td>
+              <td>[escuelas]</td>
+              <td>[km]</td>
+              <td>[km]</td>
+              <td>[preciogasolina]/L</td>
+              <td>[presupuestogasolina]</td>
+              <td>[presupuestocasetas]</td>
+              <td>[viaticos]</td>
+              <td>[Fechadesalida]</td>
+              <td>[Fechadellegada]</td>
+              <td>[dias]</td>
+              <td>[brigadistaacompañante]</td>
+              <td>[viaticos]</td>
+              <td>[totalreal]</td>
+              <td>[total]</td>  
+              <td class="center"> <input class="btn btn-danger" type="button" name="" value="ver"> </td>
             </tr>
 
           </tbody>
           <tfoot>
             <tr>
-              <th>Nombre</th>
-              <th>Lugar(es)</th>
-              <th data-hide="phone,tablet">Fechas</th>
-              <th data-hide="phone,tablet">Escuelas</th>
-              <th data-hide="phone,tablet">Dias</th>
-              <th data-hide="phone,tablet">Acciones</th>
+              <th>Lider de brigada</th>
+              <th >Vehiculo</th>
+              <th >Placas</th>
+              <th >Rendimiento</th>
+              <th >Destino(s)</th>
+              <th >Fecha de salida</th>
+              <th >Fecha de llegada</th>
+              <th >Días</th>
+              <th >Escuelas</th>
+              <th >Recorrido(km)</th>
+              <th >Excedente(km)</th>
+              <th >Precio gasolina/L</th>
+              <th >Presupuesto gasolina</th>
+              <th >Presupuesto casetas</th>
+              <th >Viaticos</th>
+              <th >Brigadista acompañante</th>
+              <th >Fecha de salida</th>
+              <th >Fecha de llegada</th>
+              <th >Días</th>
+              <th >Viaticos</th>
+              <th >Total real</th>
+              <th >Total</th>
+              <th >Accion</th>
             </tr>
           </tfoot>
         </table>
