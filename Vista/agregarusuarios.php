@@ -1,12 +1,12 @@
-<!-- <?php 
-/*session_start();
+ <?php 
+session_start();
 
-if (!isset($_SESSION["nombres"])) {
+if (!isset($_SESSION["correo"])) {
     header("location:../Vista/login.php");
     exit();
 
-}*/
-?> -->
+}
+?>
 
 <!DOCTYPE html>
 <html>
