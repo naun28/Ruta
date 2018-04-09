@@ -21,8 +21,9 @@
                             </div>  -->
                         </div>
                         <div class="ibox-content">
+                            
 
-                            <table class="footable table table-stripped toggle-arrow-tiny dataTables-example">
+                            <table class="footable table table-stripped toggle-arrow-tiny dataTables-lista">
                                 <thead>
                                  <tr>
                                             <th data-toggle="true">Clave</th>
@@ -30,7 +31,6 @@
                                             <th>Domicilio</th>
                                             <th>Localidad</th>
                                             <th>Municipio</th>
-                                            <th>Prioridad</th>
                                             <th>Accion</th>
                                             <th data-hide="all">N. Equipos</th>
                                             <th data-hide="all">Equipo</th>
@@ -46,13 +46,6 @@
                                             <td>Calle Principal final norte S/N</td>
                                             <td>El GUamuchil</td>
                                             <td class="center">Alamos</td>
-                                             <td>
-                                            <select name="status" id="status" class="center form-control">
-                                                    <option value="1" selected>Alta</option>
-                                                    <option value="2">Media</option>
-                                                    <option value="3">Baja</option>
-                                                </select>
-                                            </td>
                                             <td>
                                             <button class="btn-primary btn btn-sm">Guardar</button>
                                             </td>
@@ -60,73 +53,36 @@
                                             <td>2004</td>
                                             <td class="center">Soporte Tecnico</td>
                                             <td class="center">Garantia</td>
-                                 </tr>
-                                        
-                                    <tr class="gradeX">
-                                            <td>26ETVD029H</td>
+                                </tr>
+                                <tr class="gradeX">
+                                            <td>27HGGHJ29H</td>
                                             <td>TELESECUNDARIA 39</td>
                                             <td>Calle Principal final norte S/N</td>
                                             <td>El GUamuchil</td>
                                             <td class="center">Alamos</td>
-                                             <td>
-                                            <select name="status" id="status" class="center form-control">
-                                                    <option value="1" selected>Alta</option>
-                                                    <option value="2">Media</option>
-                                                    <option value="3">Baja</option>
-                                                </select>
-                                            </td>
                                             <td>
                                             <button class="btn-primary btn btn-sm">Guardar</button>
                                             </td>
-                                            <td>2005</td>
+                                            <td>2007</td>
                                             <td>2004</td>
                                             <td class="center">Soporte Tecnico</td>
-                                            <td class="center">Garantia</td>
-                                 </tr>
-                                        
-                                        <tr class="gradeX">
-                                            <td>26ETVD029H</td>
+                                            <td class="center">conectividad</td>
+                                </tr>
+                                <tr class="gradeX">
+                                            <td>28LOIJHF29H</td>
                                             <td>TELESECUNDARIA 39</td>
                                             <td>Calle Principal final norte S/N</td>
                                             <td>El GUamuchil</td>
                                             <td class="center">Alamos</td>
-                                             <td>
-                                            <select name="status"  id="status" class="center form-control">
-                                                    <option value="1" selected>Alta</option>
-                                                    <option value="2">Media</option>
-                                                    <option value="3">Baja</option>
-                                                </select>
-                                            </td>
                                             <td>
                                             <button class="btn-primary btn btn-sm">Guardar</button>
                                             </td>
-                                            <td>2005</td>
+                                            <td>2007</td>
                                             <td>2004</td>
                                             <td class="center">Soporte Tecnico</td>
                                             <td class="center">Garantia</td>
-                                 </tr>
-                                        
-                                        <tr class="gradeX">
-                                            <td>26ETVD029H</td>
-                                            <td>TELESECUNDARIA 39</td>
-                                            <td>Calle Principal final norte S/N</td>
-                                            <td>El GUamuchil</td>
-                                            <td class="center">Alamos</td>
-                                             <td>
-                                            <select name="status"  id="status" class="center form-control">
-                                                    <option value="1" selected>Alta</option>
-                                                    <option value="2">Media</option>
-                                                    <option value="3">Baja</option>
-                                                </select>
-                                            </td>
-                                            <td>
-                                            <button class="btn-primary btn btn-sm">Guardar</button>
-                                            </td>
-                                            <td>2005</td>
-                                            <td>2004</td>
-                                            <td class="center">Soporte Tecnico</td>
-                                            <td class="center">Garantia</td>
-                                 </tr>
+                                </tr>
+                                    
                                     
                                 </tbody>
                                 

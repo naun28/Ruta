@@ -66,7 +66,7 @@
                                         </div>
                                         <div class="modal-footer">
                                            <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white" data-dismiss="modal">Cerrar</button>
-                                            <button type="submit" class="btn btn-danger">Aceptar</button>
+                                            <button type="submit" class="btn btn-danger demo2">Aceptar</button>
                                         </div>
                                         </form>
                                     </div>
@@ -96,15 +96,14 @@
                         <div class="ibox-content">
 
                             <div class="table-responsive">
-                                <table id="user" class="table table-striped table-bordered table-hover dataTables-example" >
+                                <table class="table table-striped table-bordered table-hover dataTables-example" >
                                     <thead>
                                         <tr>
-                                           
+                                            <th>ID</th>
                                             <th>Nombre(s)</th>
                                             <th>Apellido(s)</th>
                                             <th>Telefono</th>
                                             <th>Email</th>
-                                           
                                             <th>Tipo de Empleado</th>
                                             <th>N. Brigada</th>
                                         </tr>
@@ -113,11 +112,12 @@
 
                                         <?php 
                                         include '../Conect/conexion.php';
-                                        $q = "SELECT * FROM usuarios ORDER BY id_usuario DESC";
+                                        $q = "SELECT * FROM usuarios ORDER BY id_usuario Desc";
                                         $ejecutar_q = mysqli_query($conexion, $q);
                                         while ($row = $ejecutar_q->fetch_assoc()) {
                                             ?>
                                             <tr>
+                                                <td><?php echo $row['id_usuario']; ?></td>
                                                 <td><?php echo $row['nombres']; ?></td>
                                                 <td><?php echo $row['apellidos']; ?></td>
                                                 <td><?php echo $row['telefono']; ?></td>
@@ -129,12 +129,10 @@
                                             <?php
                                         } 
                                         ?> 
-
-
                                     </tbody>
                                        <tfoot>
                                          <tr>
-                                            
+                                            <th>ID</th>
                                             <th>Nombre(s)</th>
                                             <th>Apellido(s)</th>
                                             <th>Telefono</th>

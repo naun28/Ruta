@@ -25,7 +25,7 @@
      <!-- iCheck -->
     <script src="../Include/js/plugins/iCheck/icheck.min.js"></script>
 
-
+    <script src="../Include/js/plugins/footable/footable.all.min.js"></script>
     <script src="../Include/js/plugins/dataTables/datatables.min.js"></script>
      <!-- Chosen -->
     <script src="../Include/js/plugins/chosen/chosen.jquery.js"></script>
@@ -80,7 +80,7 @@
 
     <!-- Dual Listbox -->
     <script src="../Include/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
-    <script src="../Include/js/plugins/footable/footable.all.min.js"></script>
+    
 
     <script>
         $(document).ready(function() {
@@ -109,7 +109,9 @@
         $('.demo1').click(function(){
             swal({
                 title: "Listo",
-                text: "Bien Hecho"
+                text: "Bien Hecho",
+                type: "success"
+
             });
         });
 
@@ -182,6 +184,34 @@
                                     .css('font-size', 'inherit');
                     }
                     }
+                ]
+
+            });
+
+        });
+    </script>
+      <script>
+        $(document).ready(function(){
+            $('.dataTables-lista').DataTable2({
+                pageLength: 25,
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                   
+                    {extend: 'excel', title: 'ExampleFile'},
+                    {extend: 'pdf', title: 'ExampleFile'},
+                 /* { extend: 'copy'},
+                    {extend: 'csv'},
+                    {extend: 'print',
+                     customize: function (win){
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+
+                            $(win.document.body).find('table')
+                                    
+                                  
+                    }
+                    }*/
                 ]
 
             });
