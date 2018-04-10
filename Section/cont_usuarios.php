@@ -96,7 +96,7 @@
                         <div class="ibox-content">
 
                             <div class="table-responsive">
-                                <table id="dt_usuarios" class="table table-bordered table-hover" ><!-- table-striped dataTables-example  SON LOS QUE NO DEJAN QUE FUNCIONE EL JSON-->
+                                <table id="dt_usuarios" class="table table-striped table-bordered table-hover" style="width: 100%;"><!-- dataTables-example  SON LOS QUE NO DEJAN QUE FUNCIONE EL JSON-->
                                     <thead>
                                         <tr>
                                             <th>ID</th>
