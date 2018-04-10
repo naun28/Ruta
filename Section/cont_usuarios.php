@@ -66,7 +66,7 @@
                                         </div>
                                         <div class="modal-footer">
                                            <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white" data-dismiss="modal">Cerrar</button>
-                                            <button type="submit" class="btn btn-danger demo2">Aceptar</button>
+                                            <button type="submit" class="btn btn-danger">Aceptar</button>
                                         </div>
                                         </form>
                                     </div>
@@ -96,7 +96,7 @@
                         <div class="ibox-content">
 
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover dataTables-example" >
+                                <table id="dt_usuarios" class="table table-bordered table-hover" ><!-- table-striped dataTables-example  SON LOS QUE NO DEJAN QUE FUNCIONE EL JSON-->
                                     <thead>
                                         <tr>
                                             <th>ID</th>
@@ -106,29 +106,11 @@
                                             <th>Email</th>
                                             <th>Tipo de Empleado</th>
                                             <th>N. Brigada</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
-
-                                        <?php 
-                                        include '../Conect/conexion.php';
-                                        $q = "SELECT * FROM usuarios ORDER BY id_usuario Desc";
-                                        $ejecutar_q = mysqli_query($conexion, $q);
-                                        while ($row = $ejecutar_q->fetch_assoc()) {
-                                            ?>
-                                            <tr>
-                                                <td><?php echo $row['id_usuario']; ?></td>
-                                                <td><?php echo $row['nombres']; ?></td>
-                                                <td><?php echo $row['apellidos']; ?></td>
-                                                <td><?php echo $row['telefono']; ?></td>
-                                                <td><?php echo $row['correo']; ?></td>
-                                                <td><?php echo $row['tipouser']; ?></td>
-                                                <td><?php echo $row['nbrigada']; ?></td>
-
-                                            </tr> 
-                                            <?php
-                                        } 
-                                        ?> 
+                                    
                                     </tbody>
                                        <tfoot>
                                          <tr>
@@ -139,7 +121,7 @@
                                             <th>Email</th>
                                             <th>Tipo de Empleado</th>
                                             <th>N. Brigada</th>
-                                           
+                                            
                                         </tr>
                                     </tfoot> 
                                 </table>

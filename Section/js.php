@@ -530,5 +530,33 @@
 
 
     </script>
+<!-- mostrar datos de usuarios -->
+<script>
+    $(document).ready(function(){
 
+        listar();
+
+    });
+    var listar = function(){
+        var table = $("#dt_usuarios").DataTable({
+
+            "ajax":{
+                "method":"POST",
+                "url":"../Controlador/usuarioController.php"
+            },
+            "columns":[
+                {"data":"id_usuario"},
+                {"data":"nombres"},
+                {"data":"apellidos"},
+                {"data":"telefono"},
+                {"data":"correo"},
+                {"data":"tipouser"},
+                {"data":"nbrigada"}
+                /*{"defaultContent":"<button>Editar</button>"}*/
+            ]
+
+        });
+    }
+    
+</script>
     

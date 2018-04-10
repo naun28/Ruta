@@ -7,7 +7,6 @@ if (!isset($_SESSION["correo"])) {
 
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
