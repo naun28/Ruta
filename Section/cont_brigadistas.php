@@ -1,11 +1,11 @@
 <br>
 
-<div class="col 12 ">
+<!-- <div class="col 12 ">
     <div class="ibox float-e-margins">
         <div class="ibox-title"><h5>Brigadista</h5>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="row">
     <div class="col-lg-12">
@@ -30,71 +30,44 @@
                                         <th data-toggle="true">Nombre de escuela</th>
                                         <th>Clave</th>
                                         <th>Telefono</th>
+                                        <th>Tipo de escuela</th>
                                         <th data-hide="all">Director</th>
-                                        <th data-hide="all">Otrocampo</th>
-                                        <th data-hide="all">Otrocampo</th>
+                                        <th data-hide="all">Domicilio</th>
+                                        <th data-hide="all">Localidad</th>
+                                        <th data-hide="all">Municipio</th>
                                         <th data-hide="all">Fecha ultima visita</th>
                                         <th data-hide="all">Comentarios</th>
-
                                         <th>Acción</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>Project - This is example of project</td>
-                                        <td>Patrick Smith</td>
+                                        <td>CONSEJO TUTELAR PARA MENORES DEL ESTADO DE SONORA</td>
+                                        <td>26CTM0001A</td>
                                         <td>0800 051213</td>
-                                        <td>Inceptos Hymenaeos Ltd</td>
-                                        <td><span class="pie">0.52/1.561</span></td>
-                                        <td>20%</td>
-                                        <td>Jul 14, 2013</td>
-                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                        <td>PRIMARIA</td>
+                                        <td>NAUN LARA</td>
+                                        <td>BLVRD DE LOS GANADEROS S/N COL. LAS LOMAS</td>
+                                        <td>HERMOSILLO</td>
+                                        <td>HERMOSILLO</td>
+                                        <td>01/01/2018</td>
+                                        <td>AQUI VAN LOS COMENTARIOS</td>
                                         <td> <input type="button" value="Levantar reporte" class="btn btn-danger" data-toggle="modal" data-target="#myModal4"> </td>
                                     </tr>
                                     <tr>
-                                        <td>Alpha project</td>
-                                        <td>Alice Jackson</td>
-                                        <td>0500 780909</td>
-                                        <td>Nec Euismod In Company</td>
-                                        <td><span class="pie">6,9</span></td>
-                                        <td>40%</td>
-                                        <td>Jul 16, 2013</td>
-                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                        <td>RAFAEL MORALES NIEBLAS</td>
+                                        <td>26DAI0001U</td>
+                                        <td>1800 051214</td>
+                                        <td>PRIMARIA</td>
+                                        <td>RAMON RODRIGUEZ</td>
+                                        <td>AV JUAREZ S/N COL. LOS PINOS</td>
+                                        <td>LAS BOCAS</td>
+                                        <td>HUATABAMPO</td>
+                                        <td>02/01/2018</td>
+                                        <td>AQUI VAN LOS COMENTARIOS</td>
                                         <td> <input type="button" value="Levantar reporte" class="btn btn-danger" data-toggle="modal" data-target="#myModal4"> </td>
                                     </tr>
-                                    <tr>
-                                        <td>Betha project</td>
-                                        <td>John Smith</td>
-                                        <td>0800 1111</td>
-                                        <td>Erat Volutpat</td>
-                                        <td><span class="pie">3,1</span></td>
-                                        <td>75%</td>
-                                        <td>Jul 18, 2013</td>
-                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                        <td> <input type="button" value="Levantar reporte" class="btn btn-danger" data-toggle="modal" data-target="#myModal4"> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Gamma project</td>
-                                        <td>Anna Jordan</td>
-                                        <td>(016977) 0648</td>
-                                        <td>Tellus Ltd</td>
-                                        <td><span class="pie">4,9</span></td>
-                                        <td>18%</td>
-                                        <td>Jul 22, 2013</td>
-                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                        <td> <input type="button" value="Levantar reporte" class="btn btn-danger" data-toggle="modal" data-target="#myModal4"> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Alpha project</td>
-                                        <td>Alice Jackson</td>
-                                        <td>0500 780909</td>
-                                        <td>Nec Euismod In Company</td>
-                                        <td><span class="pie">6,9</span></td>
-                                        <td>40%</td>
-                                        <td>Jul 16, 2013</td>
-                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                        <td> <input type="button" value="Levantar reporte" class="btn btn-danger" data-toggle="modal" data-target="#myModal4"> </td>
-                                    </tr>
+                                    
                                 </tbody>
                                 <tfoot>
                                     <tr>
@@ -121,30 +94,41 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Concepto</label>
-                                                        <textarea name="" id="" cols="30" rows="10" class="form-control" readonly></textarea>
+                                                        <textarea name="" id="" cols="30" rows="5" style="min-width: 100%; max-width: 100%;min-height: 100px;max-height: 100px"  class="form-control" readonly></textarea>
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Diagnostico</label>
-                                                        <textarea name="" id="" cols="30" rows="10" class="form-control" required></textarea>
+                                                        <textarea name="" id="" cols="30" rows="5" style="min-width: 100%; max-width: 100%;min-height: 100px;max-height: 100px" class="form-control" required></textarea>
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Seguimiento</label>
-                                                        <textarea name="" id="" cols="30" rows="10" class="form-control" required></textarea>
+                                                        <textarea name="" id="" cols="30" rows="5" style="min-width: 100%; max-width: 100%;min-height: 100px;max-height: 100px" class="form-control" required></textarea>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Fecha de Respuesta</label><input type="text" name="correo" placeholder="" class="form-control" required="">
+                                                        
+                                                        <label class="font-normal">Fecha de Respuesta</label>
+                                                        <div class="form-group" id="data_1">
+
+                                                            <div class="input-group date">
+                                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Responsable</label><input type="text" name="correo" placeholder="" class="form-control" required="">
+                                                        <label>Responsable</label><input type="text" name="correo" placeholder="" readonly class="form-control" required="">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Visitó</label><input type="text" name="correo" placeholder="" class="form-control" required="">
+                                                        <label>Visitó</label><input type="text" name="correo" placeholder="" readonly class="form-control" required="">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Registro reporte:</label><input type="text" name="correo" placeholder="" class="form-control" required="">
+                                                        <label>Reporte recibido por:</label><input type="text" name="correo" placeholder=""  class="form-control" required="">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Capturó</label><input type="text" name="correo" placeholder="" class="form-control" required="">
+                                                        <label>Quien recibio en la escuela</label><input type="text" name="correo" placeholder="" class="form-control" required="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Capturó</label><input type="text" name="correo" placeholder="" readonly class="form-control" required="">
                                                     </div>
                                                     
 

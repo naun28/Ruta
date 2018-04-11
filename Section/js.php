@@ -38,7 +38,7 @@
 
    <!-- Data picker -->
    <script src="../Include/js/plugins/datapicker/bootstrap-datepicker.js"></script>
-
+   <script src="../Include/js/plugins/daterangepicker/daterangepicker.js"></script>
    <!-- NouSlider -->
    <script src="../Include/js/plugins/nouslider/jquery.nouislider.min.js"></script>
 
@@ -285,7 +285,7 @@
             $("#setDrag").click(function() {
                 $image.cropper("setDragMode", "crop");
             });
-
+            
             $('#data_1 .input-group.date').datepicker({
                 todayBtn: "linked",
                 keyboardNavigation: false,
