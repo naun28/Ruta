@@ -38,7 +38,7 @@
 
    <!-- Data picker -->
    <script src="../Include/js/plugins/datapicker/bootstrap-datepicker.js"></script>
-   <script src="../Include/js/plugins/daterangepicker/daterangepicker.js"></script>
+
    <!-- NouSlider -->
    <script src="../Include/js/plugins/nouslider/jquery.nouislider.min.js"></script>
 
@@ -165,7 +165,7 @@
     <script>
         $(document).ready(function(){
             $('.dataTables-example').DataTable({
-                pageLength: 10,
+                pageLength: 25,
                 responsive: true,
                 dom: '<"html5buttons"B>lTfgitp',
                 buttons: [
@@ -173,7 +173,7 @@
                     {extend: 'csv'},*/
                     {extend: 'excel', title: 'ExampleFile'},
                     {extend: 'pdf', title: 'ExampleFile'},
-/*
+
                     {extend: 'print',
                      customize: function (win){
                             $(win.document.body).addClass('white-bg');
@@ -183,15 +183,14 @@
                                     .addClass('compact')
                                     .css('font-size', 'inherit');
                     }
-                    }*/
+                    }
                 ]
 
             });
 
         });
     </script>
-   
-    </script>
+     
     <script>
         $(document).ready(function(){
 
@@ -258,7 +257,7 @@
             $("#setDrag").click(function() {
                 $image.cropper("setDragMode", "crop");
             });
-            
+
             $('#data_1 .input-group.date').datepicker({
                 todayBtn: "linked",
                 keyboardNavigation: false,
@@ -503,39 +502,42 @@
 
 
     </script>
-<!-- mostrar datos de usuarios -->
+
+<!-- mostrar datos de escuelas -->
 <script>
     $(document).ready(function(){
+        
 
         listar();
 
     });
     var listar = function(){
-        var table = $("#dt_usuarios").DataTable({
-            pageLength: 10,
+        var table = $("#dt_escuelas").DataTable({
+                pageLength: 10,
                 responsive: true,
-
                 dom: '<"html5buttons"B>lTfgitp',
                 buttons: [
                    
-                    {extend: 'excel', title: 'ExampleFile'},
-                    {extend: 'pdf', title: 'ExampleFile'},
+                    {extend: 'excel', title: 'LISTA DE ESCUELAS'},
+                    {extend: 'pdf', title: 'LISTA DE ESCUELAS'},
                  
                 ],
                 "destroy":true,
 
+
             "ajax":{
                 "method":"POST",
-                "url":"../Controlador/usuarioController.php"
+                "url":"../Controlador/escuelaController.php"
             },
             "columns":[
-                {"data":"id_usuario"},
-                {"data":"nombres"},
-                {"data":"apellidos"},
-                {"data":"telefono"},
-                {"data":"correo"},
-                {"data":"tipouser"},
-                {"data":"nbrigada"}
+                {"data":"Num"},
+                {"data":"Clave"},
+                {"data":"Escuela"},
+                {"data":"Domicilio"},
+                {"data":"Localidad22"},
+                {"data":"Municipio"},
+                {"data":"zonat"},
+                {"defaultContent": " <button type='button' class='btn-sm btn-primary'>Revisada</button>"}
                 /*{"defaultContent":"<button>Editar</button>"}*/
             ]
 
@@ -544,4 +546,3 @@
     }
     
 </script>
-    

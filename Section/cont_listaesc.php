@@ -1,11 +1,4 @@
 <br>
-<div class="col 12 ">
-        <div class="ibox float-e-margins">
-        <div class="ibox-title"><h5>Lista de Escuelas</h5>
-
-        </div>
-    </div>
-</div>
 
 <div class="row">
                 <div class="col-lg-12">
@@ -22,72 +15,64 @@
                         </div>
                         <div class="ibox-content">
                             
-
-                            <table class="footable table table-stripped toggle-arrow-tiny dataTables-lista">
+                        <div class="table-responsive">
+                            <table id="dt_escuelas"  class="footable table table-stripped toggle-arrow-tiny">
                                 <thead>
                                  <tr>
-                                            <th data-toggle="true">Clave</th>
+                                            <th data-toggle="true" >#</th>
+                                            <th>Clave</th>
                                             <th>Escuela</th>
                                             <th>Domicilio</th>
                                             <th>Localidad</th>
                                             <th>Municipio</th>
+                                            <th>Zona</th>
                                             <th>Accion</th>
                                             <th data-hide="all">N. Equipos</th>
-                                            <th data-hide="all">Equipo</th>
-                                            <th data-hide="all">Reequipo</th>
-                                            <th data-hide="all">Servicio Solicitado</th>
+                                            <th data-hide="all">Año del Equipo</th>
+                                            <th data-hide="all">Reequipamiento</th>
+                                            <th data-hide="all">Reporte</th>
+                                            <th data-hide="all">N. Reporte</th>
+                                            <th data-hide="all">Visitas</th>
+                                            <th data-hide="all">Ultima Visita</th>
+                                            <th data-hide="all">Fecha de Mantenimiento</th>
+                                            <th data-hide="all">Tipo de Escula</th>
                                      
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr class="gradeX">
+                                <!-- <tr>
                                             <td>26ETVD029H</td>
                                             <td>TELESECUNDARIA 39</td>
                                             <td>Calle Principal final norte S/N</td>
                                             <td>El GUamuchil</td>
                                             <td class="center">Alamos</td>
-                                            <td>
-                                            <button class="btn-primary btn btn-sm">Guardar</button>
-                                            </td>
+                                            <td>El GUamuchil</td>
+                                            <td class="center">Alamos</td>
+                                            <td><button class="btn-primary btn btn-sm">Guardar</button></td>
                                             <td>2007</td>
                                             <td>2004</td>
                                             <td class="center">Soporte Tecnico</td>
                                             <td class="center">Garantia</td>
-                                </tr>
-                                <tr class="gradeX">
-                                            <td>27HGGHJ29H</td>
-                                            <td>TELESECUNDARIA 39</td>
-                                            <td>Calle Principal final norte S/N</td>
-                                            <td>El GUamuchil</td>
-                                            <td class="center">Alamos</td>
-                                            <td>
-                                            <button class="btn-primary btn btn-sm">Guardar</button>
-                                            </td>
-                                            <td>2007</td>
-                                            <td>2004</td>
-                                            <td class="center">Soporte Tecnico</td>
-                                            <td class="center">conectividad</td>
-                                </tr>
-                                <tr class="gradeX">
-                                            <td>28LOIJHF29H</td>
-                                            <td>TELESECUNDARIA 39</td>
-                                            <td>Calle Principal final norte S/N</td>
-                                            <td>El GUamuchil</td>
-                                            <td class="center">Alamos</td>
-                                            <td>
-                                            <button class="btn-primary btn btn-sm">Guardar</button>
-                                            </td>
                                             <td>2007</td>
                                             <td>2004</td>
                                             <td class="center">Soporte Tecnico</td>
                                             <td class="center">Garantia</td>
-                                </tr>
-                                    
-                                    
+                                            <td class="center">Garantia</td>
+                                </tr> -->
                                 </tbody>
-                                
+                                <footer>
+                                    <th>#</th>
+                                    <th>Clave</th>
+                                    <th>Escuela</th>
+                                    <th>Domicilio</th>
+                                    <th>Localidad</th>
+                                    <th>Municipio</th>
+                                    <th>Zona</th>
+                                    <th>Accion</th>
+                                </footer>
                             </table>
                         </div>
+                      </div>
                     </div>
                 </div>
 </div>

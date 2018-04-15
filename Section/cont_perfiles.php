@@ -1,13 +1,22 @@
-<div class="ibox float-e-margins">
-    <br><div class="ibox-title"><h5>Perfiles de Usuarios</h5>
-    </div>
-</div>
+<br>
 <div class="row">
     <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Perfiles de Usuarios</h5>
+
+                            <!-- <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                
+                            </div>  -->
+                        </div>
         <div class="ibox">
+
             <div class="ibox-content">
 
-                <table class="footable table table-stripped toggle-arrow-tiny" data-page-size="15">
+                <table class="footable table table-stripped toggle-arrow-tiny dataTables-example" data-page-size="15" >
                     <thead>
                         <tr>
 
@@ -149,7 +158,8 @@
                         </td>
                     </tr>
                 </tbody>
-              
+                <tfoot>
+                   
             </table>
 
         </div>

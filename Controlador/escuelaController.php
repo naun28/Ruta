@@ -1,7 +1,8 @@
 <?php 
-include '../Conect/conexion.php';
-$q = "SELECT * FROM usuarios ORDER BY id_usuario Desc";
-$ejecutar_q = mysqli_query($conexion, $q);
+include "../Conect/conexionEsc.php";
+Conectarse();
+$q = "SELECT * FROM crucebd ORDER BY Num Desc";
+$ejecutar_q = mysqli_query($conEsc, $q);
 if (!$ejecutar_q) {
     die("ERROR");
 }else{
@@ -11,7 +12,4 @@ if (!$ejecutar_q) {
     echo json_encode($arreglo);
 }
 mysqli_free_result($ejecutar_q);
-mysqli_close($conexion);
-
-    
-  
+mysqli_close($conEsc);
