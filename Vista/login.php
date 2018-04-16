@@ -74,10 +74,11 @@
   <div>
     <img id="img" src="../Include/img/maps.png" alt="">
   
-<div class="middle-box loginscreen animated fadeInDown">
-        <div>
-            <div>
-                <img class="logo-name" src="../Include/img/log.png" alt="" style="width: 300px; height: 200px;">
+<div class="middle-box loginscreen animated fadeInDown" >
+        <div >
+            <div >
+                <br><br><br><br>
+                <img class="logo-name" src="../Include/img/log.png" alt="" style="width: 300px; height: 135px;">
             </div>
               <form method="POST" action="../Modelo/validalogin.php" autocomplete="on" >
 

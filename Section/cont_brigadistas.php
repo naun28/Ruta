@@ -131,13 +131,27 @@
                                                         <label>Capturó</label><input type="text" name="correo" placeholder="" readonly class="form-control" required="">
                                                     </div>
                                                     
+                                                    <center>
+                                                        <div class="required">
+                                                            <br>
+                                                            <label > ¿Se completaron todas las tareas? </label> <br>
+                                                        <div class="radio radio-info radio-inline">
+                                                            <input type="radio" id="inlineRadio1" value="option1" name="radioInline">
+                                                            <label for="inlineRadio1"> Si </label>
+                                                        </div>
+                                                        <div class="radio radio-info radio-inline">
+                                                            <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                                                            <label for="inlineRadio2"> No </label>
+                                                        </div>
+                                                    </div>
+                                                    </center>
 
 
 
 
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-white" data-dismiss="modal">Cerrar</button>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-white" data-dismiss="modal">Cerrar</button>
                                                     <button type="button" class="btn btn-danger">Guardar</button>
                                                 </div>
                                             </div>
