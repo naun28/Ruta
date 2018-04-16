@@ -544,4 +544,57 @@
     }
     
 </script>
+
+<!-- mostrar datos de escuelas -->
+<script>
+    $(document).ready(function(){
+        
+
+        listarEsc();
+
+    });
+    var listarEsc = function(){
+        var table = $("#escuela").DataTable({
+                destroy:true,
+                pageLength: 10,
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                   
+                    {extend: 'excel', title: 'LISTA DE ESCUELAS'},
+                    {extend: 'pdf', title: 'LISTA DE ESCUELAS'},
+                 
+                ],
+
+            "ajax":{
+                "method":"POST",
+                "url":"../Controlador/escuelaController.php"
+            },
+            "columns":[
+                {"data":"Num"},
+                {"data":"Clave"},
+                {"data":"Escuela"},
+                {"data":"Domicilio"},
+                {"data":"Localidad22"},
+                {"data":"Municipio"},
+                {"data":"zonat"},
+                {"defaultContent": " <button type='button' class='btn btn-primary btn-xs'>Revisada</button>"},
+                {"data":"Eq"},
+                {"data":"Equip"},
+                {"data":"Reequip"},
+                {"data":"Conectividad"},
+                {"data":"Reporte"},
+                {"data":"NumRep"},
+                {"data":"Visita"},
+                {"data":"UltVisita"},
+                {"data":"FechaMant"},
+                {"data":"tipo_escuela"}
+
+                /*{"defaultContent":"<button>Editar</button>"}*/
+            ]
+
+        });
+
+    }
     
+</script>

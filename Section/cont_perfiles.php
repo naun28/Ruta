@@ -153,7 +153,7 @@
                         <td>
                             <div>
                                 <button class="btn-primary btn btn-xs" data-toggle="modal" data-target="#myModal">Editar</button>
-                                <button class="btn-danger btn btn-xs">Borrar</button>
+                                <button class="btn-danger btn btn-xs demo4">Borrar</button>
                             </div>
                         </td>
                     </tr>

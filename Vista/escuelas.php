@@ -19,7 +19,7 @@ if (!isset($_SESSION["correo"])) {
   <div id="wrapper">
   <?PHP include "../Section/listaesc.php";?>
 </div>
-<?PHP include "../Section/js-lista_esc.php";?>
+<?PHP include "../Section/js.php";?>
 </body>
 
 </html>

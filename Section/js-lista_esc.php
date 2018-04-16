@@ -513,6 +513,7 @@
     });
     var listar = function(){
         var table = $("#dt_escuelas").DataTable({
+                destroy:true,
                 pageLength: 10,
                 responsive: true,
                 dom: '<"html5buttons"B>lTfgitp',
@@ -522,7 +523,7 @@
                     {extend: 'pdf', title: 'LISTA DE ESCUELAS'},
                  
                 ],
-                "destroy":true,
+                
 
 
             "ajax":{

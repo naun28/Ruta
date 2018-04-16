@@ -16,10 +16,10 @@
                         <div class="ibox-content">
                             
                         <div class="table-responsive">
-                            <table id="dt_escuelas"  class="footable table table-stripped toggle-arrow-tiny">
+                            <table id="escuela"  class="footable table table-stripped toggle-arrow-tiny " style="width: 100%;">
                                 <thead>
                                  <tr>
-                                            <th data-toggle="true" >#</th>
+                                            <th data-toggle="true">#</th>
                                             <th>Clave</th>
                                             <th>Escuela</th>
                                             <th>Domicilio</th>
@@ -30,13 +30,14 @@
                                             <th data-hide="all">N. Equipos</th>
                                             <th data-hide="all">Año del Equipo</th>
                                             <th data-hide="all">Reequipamiento</th>
+                                            <th data-hide="all">Conectividad</th>
                                             <th data-hide="all">Reporte</th>
                                             <th data-hide="all">N. Reporte</th>
                                             <th data-hide="all">Visitas</th>
                                             <th data-hide="all">Ultima Visita</th>
                                             <th data-hide="all">Fecha de Mantenimiento</th>
                                             <th data-hide="all">Tipo de Escula</th>
-                                     
+                                      
                                 </tr>
                                 </thead>
                                 <tbody>
