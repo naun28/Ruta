@@ -44,7 +44,7 @@
                             </td>
                             <!--Estructura del Modal-->
                             <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
-                                <div class="modal-dialog" ><!-- style="width: 80%;" -->
+                                <div class="modal-dialog" style="width:60%;"><!-- style="width: 80%;" -->
                                     <div class="modal-content animated">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -53,23 +53,23 @@
                                         </div>
                                         <div class="modal-body">
                                             <form id="formLimpiar" method="post" action="#">
-                                                <div class="form-group">
+                                                <div class="form-group col-md-6">
                                                     <label>Clave</label><input type="text" placeholder="Clave" class="form-control">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="form-group col-md-6">
                                                     <label>Escuela</label><input type="text" placeholder="Escuela" class="form-control">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="form-group col-md-6">
                                                     <label>Municipio</label><input type="text" placeholder="Municipio" class="form-control">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="form-group col-md-6">
                                                     <label>Domicilio</label><input type="text" placeholder="Domicilio" class="form-control">
                                                 </div>
 
                                                 <!-- <div class="form-group">
                                                     <label>Semanas</label><input class="form-control" type="text" name="daterange" placeholder="Escuela" value="01/01/2015 - 01/31/2015" />
                                                 </div> -->
-                                                <div class="form-group" id="data_5">
+                                                <div class="form-group col-md-6" id="data_5">
                                                     <label>Fecha</label>
                                                     <div class="input-daterange input-group" id="datepicker">
                                                         <input type="text" class="input-sm form-control" name="start" value="05/14/2014"/>
@@ -77,7 +77,7 @@
                                                         <input type="text" class="input-sm form-control" name="end" value="05/22/2014" />
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-md-7">
+                                                <div class="form-group col-md-6">
                                                     <label>Jefe de Brigada</label> <select name="status" id="status" class="form-control">
                                                         <option value="1" selected>Jesus Sabori</option>
                                                         <option value="2">Carlos Lafarga</option>
@@ -97,18 +97,24 @@
                                                         <option value="16">16</option>
                                                     </select>
                                                 </div>
-                                                <div class="form-group col-md-4">
+                                                <div class="form-group col-md-6">
                                                     <label>Brigada</label>
                                                     <input type="text" placeholder="Brigada" readonly="Brigada" class="form-control">
                                                 </div>
-                                                <div class="form-group">
+                                                <div class="form-group col-md-6">
                                                     <label>Integrantes</label>
-                                                    <textarea type="text" placeholder="Integrantes" readonly="Integrantes"  class="form-control" style="min-height: 100px; max-height: 100px; min-width: 550px; max-width: 550px;">
+                                                    <textarea type="text" placeholder="Integrantes" readonly="Integrantes"  class="form-control" style="min-height: 45px; max-height: 45px; min-width: 100%; max-width: 100%;">
 
                                                     </textarea>
                                                     
                                                 </div>
-                                                
+                                                <div class="form-group">
+                                                   <label>Comentario</label>
+                                                    <textarea type="text" placeholder="Comentario"  class="form-control" style="min-height: 50px; max-height: 50px; min-width: 100%; max-width: 100%;">
+
+                                                    </textarea>
+                                                    
+                                                </div>
                                                 <div class="modal-footer">
                                                     <button id="btnLimpiar" type="button" class="btn btn-white" data-dismiss="modal">Cerrar</button>
                                                     <button type="submit" class="btn btn-danger">Aceptar</button>

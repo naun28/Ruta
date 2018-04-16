@@ -14,7 +14,7 @@
                                             <i class="fa fa-user-circle modal-icon"></i>
                                             <h4 class="modal-title">Agregar Usuario</h4>
                                         </div>
-                                        <div class="modal-body">
+                                        <div class="modal-body" >
                                           <form  method="POST" action="../Modelo/RegistroUsuarios.php" id="formLimpiar" class="form-group">
                                                
                                             <div class="form-group col-md-4">
@@ -43,7 +43,7 @@
                                                 </select>
                                             </div>
                                             <div id="ver" >
-                                              <div id="Mesa"   class="form-group">
+                                              <div id="Mesa" class="form-group">
                                                 <label>N° de brigada</label> <select name="nbrigada" class="form-control">
                                                     <option value="0" selected>Seleccione Brigada</option>
                                                     <option value="Brigada 1">Brigada 1</option>
