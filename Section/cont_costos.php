@@ -11,7 +11,6 @@
     </ul>
     <div class="tab-content">
       <!--- Pestaña 1 -->
-
       <div id="tab-1" class="tab-pane active">
         <div class="panel-body">
           <div class="ibox-content">
@@ -22,22 +21,22 @@
                   <fieldset>
                     <legend>Brigadista</legend>
                     <div class="form-group"><label class="col-sm-2 control-label">Lider de brigada</label>
-                      <div class="col-sm-10"><select data-placeholder="Selecciona una brigada" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-                        <!-- se cargaran de una base de datos-->
-                        <option value="1">Brigadista 1</option>
-                        <option value="2">Brigadista 2</option>
-                        <option value="3">Brigadista 3</option>
-                        <option value="4">Brigadista 4</option>
-                        <option value="5">Brigadista 5</option>
-                        <option value="6">Brigadista 6</option>
-                        <option value="7">Brigadista 7</option>
-                        <option value="8">Brigadista 8</option>
-                        <option value="9">Brigadista 9</option>
-                        <option value="10">Brigadista 10</option>
-                        <option value="11">Brigadista 11</option>
-                        <option value="12">Brigadista 12</option>
+                      <div class="col-sm-10">
+                        <select data-placeholder="Selecciona el vehiculo" id="selecar"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+                        <option value="0" disabled selected>Selecciones las placas</option>
+                      <?php
+                        require('../Conect/conecviatik.php');
 
-                      </select>
+                        $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios");
+                        while($row=mysqli_fetch_array($rs))
+                        {
+                          echo "<option value='".$row['id_usuario']."'>";
+                          echo $row['nombres']. " " .$row['apellidos'];
+                          echo "</option>";                     
+                        }
+                        mysqli_close($conecviatiks);
+                        ?>
+                         </select>
                     </div>
                   </div>
                 </fieldset>
@@ -48,17 +47,22 @@
                   <legend>Datos del vehiculo</legend>
                   <div class="form-group"><label class="col-sm-2 control-label">Vehiculo</label>
                     <div class="col-sm-10">
-                      <select data-placeholder="Selecciona el vehiculo" class="chosen-select col-sm-10" multiple style="width:350px;" tabindex="4">
+                      <select data-placeholder="Selecciona el vehiculo" id="selecar"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
                         <!-- se cargaran de una base de datos-->
-                        <option value="[000]">[000]</option>
-                        <option value="[001]">[001]</option>
-                        <option value="[002]">[002]</option>
-                        <option value="[003]">[003]</option>
-                        <option value="[004]">[004]</option>
-                        <option value="[005]">[005]</option>
-                        <option value="[006]">[006]</option>
-                        <option value="[007]">[007]</option>
-                        <option value="[008]">[008]</option>
+                        <option value="0" disabled selected>Selecciones un vehiculo</option>
+                        <?php
+                        require('../Conect/conecviatik.php');
+
+                        $rs = mysqli_query($conecviatiks, "SELECT * FROM vehiculos");
+                        while($row=mysqli_fetch_array($rs))
+                        {
+                          echo "<option value='".$row['num_vehiculo']."'>";
+                          echo $row['num_vehiculo'];
+                          echo "</option>";                     
+                        }
+                        
+                        mysqli_close($conecviatiks);
+                        ?>
 
                       </select>
                     </div>
@@ -66,23 +70,26 @@
 
                   <div class="form-group"><label class="col-sm-2 control-label">Placas</label>
                     <div class="col-sm-10">
-                      <select data-placeholder="Placas del vehiculo" class="chosen-select col-sm-10" multiple style="width:350px;" tabindex="4">
-                        <!-- se cargaran de una base de datos-->
-                        <option value="[xx00000]">[xx00000]</option>
-                        <option value="[xx00001]">[xx00001]</option>
-                        <option value="[xx00002]">[xx00002]</option>
-                        <option value="[xx00003]">[xx00003]</option>
-                        <option value="[xx00004]">[xx00004]</option>
-                        <option value="[xx00005]">[xx00005]</option>
-                        <option value="[xx00006]">[xx00006]</option>
-                        <option value="[xx00007]">[xx00007]</option>
-                        <option value="[xx00008]">[xx00008]</option>
+                      <select data-placeholder="Selecciona el vehiculo" id="selecar"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+                        <option value="0" disabled selected>Selecciones las placas</option>
+                      <?php
+                        require('../Conect/conecviatik.php');
 
-                      </select>
+                        $rs = mysqli_query($conecviatiks, "SELECT placas FROM vehiculos");
+                        while($row=mysqli_fetch_array($rs))
+                        {
+                          echo "<option value='".$row['placas']."'>";
+                          echo $row['placas'];
+                          echo "</option>";                     
+                        }
+                        mysqli_close($conecviatiks);
+                        ?>
+                         </select>
                     </div>
                   </div>
                   <div class="form-group"><label class="col-sm-2 control-label">Rendimiento</label>
-                    <div class="col-sm-10"><input placeholder="Km/L" type="text" class="form-control"></div>
+
+                    <div class="col-sm-10"><input type="text" placeholder="Rendimiento (Km/L)" class="form-control"></div>
                   </div>
                 </div>
               </div>
@@ -223,8 +230,8 @@
                 </div>
               </fieldset>
               <br><br>
-              <div class="col-lg-12">
-               <div class="col-lg-6">
+              
+              <div class="col-lg-6">
                 <fieldset>
                   <legend>Añadir brigadista</legend>
                   <div class="form-group"><label class="col-sm-2 control-label">Brigadista</label>
@@ -270,13 +277,14 @@
                 </div>
               </fieldset>
             </div>
+
           </div>
-        </div>
-      </div>      
+        </div>      
+      </div>
     </div>
   </div>
-</div>
 </form>
+
 <!--- Pestaña 2 -->
 <div id="tab-2" class="tab-pane">
   <div class="panel-body">
@@ -437,107 +445,77 @@
 <div id="tab-3" class="tab-pane">
   <div class="panel-body">
     <div class="ibox-content">
-            <fieldset>
-            <legend>Agregar vehiculo</legend>
-            <form action="#" class="form-horizontal" >
-                  <div class="form-group"><label class="col-sm-2 control-label">Numero del vehiculo</label>
-                    <div class="col-sm-10"><input type="text" class="form-control"></div>
-                  </div>
-                  <div class="form-group"><label class="col-sm-2 control-label">Nombre del carro</label>
-                    <div class="col-sm-10"><input type="text" class="form-control"></div>
-                  </div>
-                  <div class="form-group"><label class="col-sm-2 control-label">Placas</label>
-                    <div class="col-sm-10"><input type="text" class="form-control"></div>
-                  </div>
-                  <div class="form-group"><label class="col-sm-2 control-label">Rendimiento</label>
-                    <div class="col-sm-10"><input type="text" class="form-control"></div>
-                  </div>
-                  <input type="submit" class="btn btn-danger pull-right" value="Guardar" >
-            </form>
-            </fieldset>
-            <br>
-            <fieldset>
-            <legend>Listado de vehiculos</legend>
-               <div class="table-responsive">
-                    <table class="footable table table-stripped" >
-                    <thead>
-                    <tr>
-                        <th>Numero de vehiculo</th>
-                        <th>Nombre del vehiculo</th>
-                        <th>Placas</th>
-                        <th>Rendimiento</th>
-                        <th>Acción</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="gradeX">
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 4.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">4</td>
-                        <td class="center"> <input type="button" class="btn btn-danger" value="Eliminar"> </td>
-                    </tr>
-                    <tr class="gradeC">
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 5.0
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">5</td>
-                        <td class="center"> <input type="button" class="btn btn-danger" value="Eliminar"> </td>
-                    </tr>
-                    <tr class="gradeA">
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 5.5
-                        </td>
-                        <td>Win 95+</td>
-                        <td class="center">5.5</td>
-                        <td class="center"> <input type="button" class="btn btn-danger" value="Eliminar"> </td>
-                    </tr>
-                    <tr class="gradeA">
-                        <td>Trident</td>
-                        <td>Internet
-                            Explorer 6
-                        </td>
-                        <td>Win 98+</td>
-                        <td class="center">6</td>
-                        <td class="center"> <input type="button" class="btn btn-danger" value="Eliminar"> </td>
-                    </tr>
-                   
-                    <tr class="gradeC">
-                        <td>Misc</td>
-                        <td>PSP browser</td>
-                        <td>PSP</td>
-                        <td class="center">-</td>
-                        <td class="center"> <input type="button" class="btn btn-danger" value="Eliminar"> </td>
-                    </tr>
-                    <tr class="gradeU">
-                        <td>Other browsers</td>
-                        <td>All others</td>
-                        <td>-</td>
-                        <td class="center">-</td>
-                        <td class="center"> <input type="button" class="btn btn-danger" value="Eliminar"> </td>
-                    </tr>
-                    </tbody>
-                    <tfoot>
-                    <tr>
-                        <th>Numero de vehiculo</th>
-                        <th>Nombre del vehiculo</th>
-                        <th>Placas</th>
-                        <th>Rendimiento</th>
-                        <th>Acción</th>
-                    </tr>
-                    </tfoot>
-                    </table>
-                        </div>
-            </fieldset>
-        
+      <fieldset>
+        <legend>Agregar vehiculo</legend>
+        <form action="../Controlador/regVehiculo.php" method="POST" class="form-horizontal" >
+          <div class="form-group"><label class="col-sm-2 control-label">Numero del vehiculo</label>
+            <div class="col-sm-10"><input type="text" name="numve" class="form-control"></div>
+          </div>
+          <div class="form-group"><label class="col-sm-2 control-label">Nombre del carro</label>
+            <div class="col-sm-10"><input type="text" name="nomve" class="form-control"></div>
+          </div>
+          <div class="form-group"><label class="col-sm-2 control-label">Placas</label>
+            <div class="col-sm-10"><input type="text" name="plave" class="form-control"></div>
+          </div>
+          <div class="form-group"><label class="col-sm-2 control-label">Rendimiento</label>
+            <div class="col-sm-10"><input type="text" name="renve" class="form-control"></div>
+          </div>
+          <input type="submit" class="btn btn-danger pull-right" value="Guardar" >
+        </form>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Listado de vehiculos</legend>
+        <div class="table-responsive">
+          <table class="footable table table-stripped" >
+            <thead>
+              <tr>
+                <th>Numero de vehiculo</th>
+                <th>Nombre del vehiculo</th>
+                <th>Placas</th>
+                <th>Rendimiento</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              require('../Conect/conecviatik.php');
 
-    </div>
+              $rs = mysqli_query($conecviatiks, "SELECT * FROM vehiculos");
+
+              while($row=mysqli_fetch_array($rs))
+              {
+               echo "<tr class='gradeX'>";
+               echo "<td>".$row['num_vehiculo']."</td>";
+               echo "<td>".$row['vehiculo']."</td>";
+               echo "<td>".$row['placas']."</td>";
+               echo "<td>".$row['rendimiento']."</td>";
+               echo "<td class='center'> <a href='../Controlador/eliVehiculo.php?id=".$row['num_vehiculo']."' class='btn btn-danger'>Eliminar</a>
+               </td>";
+               echo "</tr>";
+             }
+             mysqli_close($conecviatiks);
+             ?>
+
+
+
+           </tbody>
+           <tfoot>
+            <tr>
+              <th>Numero de vehiculo</th>
+              <th>Nombre del vehiculo</th>
+              <th>Placas</th>
+              <th>Rendimiento</th>
+              <th>Acción</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </fieldset>
+
+
   </div>
+</div>
 </div>
 </div>
 </div>
