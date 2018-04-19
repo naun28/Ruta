@@ -16,27 +16,28 @@
                         <div class="ibox-content">
                             
                         <div class="table-responsive">
-                            <table id="escuela"  class="footable table table-stripped toggle-arrow-tiny " style="width: 100%;">
+                            <table id="escuela"  class="table table-stripped toggle-arrow-tiny dataTables-example"  data-page-size="50" style="width: 100%;">
                                 <thead>
                                  <tr>
-                                            <th data-toggle="true">#</th>
+                                            <th>#</th>
                                             <th>Clave</th>
                                             <th>Escuela</th>
                                             <th>Domicilio</th>
                                             <th>Localidad</th>
                                             <th>Municipio</th>
                                             <th>Zona</th>
-                                            <th>Accion</th>
-                                            <th data-hide="all">N. Equipos</th>
-                                            <th data-hide="all">Año del Equipo</th>
-                                            <th data-hide="all">Reequipamiento</th>
-                                            <th data-hide="all">Conectividad</th>
-                                            <th data-hide="all">Reporte</th>
-                                            <th data-hide="all">N. Reporte</th>
-                                            <th data-hide="all">Visitas</th>
-                                            <th data-hide="all">Ultima Visita</th>
-                                            <th data-hide="all">Fecha de Mantenimiento</th>
-                                            <th data-hide="all">Tipo de Escula</th>
+                                            <th>Informacion</th>
+                                            <th style="display: none;">N. Equipos</th>
+                                            <th style="display: none;">Año del Equipo</th>
+                                            <th style="display: none;">Reequipamiento</th>
+                                            <th style="display: none;">Conectividad</th>
+                                            <th style="display: none;">Reporte</th>
+                                            <th style="display: none;">N. Reporte</th>
+                                            <th style="display: none;">Visitas</th>
+                                            <th style="display: none;">Ultima Visita</th>
+                                            <th style="display: none;">Fecha de Mantenimiento</th>
+                                            <th style="display: none;">Tipo de Escula</th>
+                                            <th style="display: none;">Problema</th>
                                       
                                 </tr>
                                 </thead>
@@ -69,7 +70,7 @@
                                     <th>Localidad</th>
                                     <th>Municipio</th>
                                     <th>Zona</th>
-                                    <th>Accion</th>
+                                    <th>Informacion</th>
                                 </footer>
                             </table>
                         </div>

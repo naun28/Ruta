@@ -1,6 +1,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
     <script src="../Include/js/jquery-3.1.1.min.js"></script>
     <script src="../Include/js/bootstrap.min.js"></script>
     <script src="../Include/js/plugins/metisMenu/jquery.metisMenu.js"></script>
@@ -558,6 +559,7 @@
                 destroy:true,
                 pageLength: 10,
                 responsive: true,
+                expandFirst: true,
                 dom: '<"html5buttons"B>lTfgitp',
                 buttons: [
                    
@@ -578,23 +580,121 @@
                 {"data":"Localidad22"},
                 {"data":"Municipio"},
                 {"data":"zonat"},
-                {"defaultContent": " <button type='button' class='btn btn-primary btn-xs'>Revisada</button>"},
-                {"data":"Eq"},
-                {"data":"Equip"},
-                {"data":"Reequip"},
-                {"data":"Conectividad"},
-                {"data":"Reporte"},
-                {"data":"NumRep"},
-                {"data":"Visita"},
-                {"data":"UltVisita"},
-                {"data":"FechaMant"},
-                {"data":"tipo_escuela"}
+                {"defaultContent": "<button class=' info btn btn-danger' data-toggle='modal' data-target='#myModal'>Ver</button>"},
+                {"data":"Eq","visible": false},
+                {"data":"Equip","visible": false},
+                {"data":"Reequip","visible": false},
+                {"data":"Conectividad","visible": false},
+                {"data":"Reporte","visible": false},
+                {"data":"NumRep","visible": false},
+                {"data":"Visita","visible": false},
+                {"data":"UltVisita","visible": false},
+                {"data":"FechaMant","visible": false},
+                {"data":"tipo_escuela","visible": false},
+                {"data":"concepto","visible": false}
+                
 
-                /*{"defaultContent":"<button>Editar</button>"}*/
+               // {"defaultContent":"<button>Editar</button>"}
             ]
 
         });
-
+        obtener_data_info("#escuela tbody",table); 
     }
+       var obtener_data_info = function (tbody, table) {
+        $(tbody).on("click","button.info", function(){
+            var data = table.row($(this).parents("tr")).data();
+            var Num = $("#Num").val(data.Num),
+                Clave = $("#Clave").val(data.Clave),
+                Escuela = $("#Escuela").val(data.Escuela),
+                Domicilio = $("#Domicilio").val(data.Domicilio),
+                Localidad22 = $("#Localidad22").val(data.Localidad22),
+                Municipio = $("#Municipio").val(data.Municipio),
+                zonat = $("#zonat").val(data.zonat),
+                Eq = $("#Eq").val(data.Eq),
+                Equip = $("#Equip").val(data.Equip),
+                Reequip= $("#Reequip").val(data.Reequip),
+                Conectividad = $("#Conectividad").val(data.Conectividad),
+                Reporte = $("#Reporte").val(data.Reporte),
+                NumRep = $("#NumRep").val(data.NumRep),
+                Visita = $("#Visita").val(data.Visita),
+                UltVisita = $("#UltVisita").val(data.UltVisita),
+                FechaMant = $("#FechaMant").val(data.FechaMant),
+                tipo_escuela = $("#tipo_escuela").val(data.tipo_escuela),
+                concepto = $("#concepto").val(data.concepto);
+        });
+       
+    }
+
     
 </script>
+<!--Estructura del Modal-->
+<div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content animated fadeIn">
+            <div class="modal-header" style="height: 160px;">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <i class="fa fa-info-circle modal-icon"></i>
+                <h4 class="modal-title">INFORMACION DEL REPORTE</h4>
+            </div>
+            <div class="modal-body" >
+              <form  method="POST" action="#" id="formLimpiar" class="form-group">
+                    <input type="hidden" id="Num">
+                    <input type="hidden" id="Clave">
+                    <input type="hidden" id="Escuela">
+                    <input type="hidden" id="Domicilio">
+                    <input type="hidden" id="Localidad22">
+                    <input type="hidden" id="Municipio">
+                    <input type="hidden" id="zonat">
+                
+                <div class="form-group col-md-4">
+                    <label>Numero de Equipos</label><input type="text" id="Eq" name="Eq" class="form-control
+                    " readonly="">
+                </div>
+                 <div class="form-group col-md-4">
+                    <label>Año de Equipos</label><input type="text" id="Equip" name="Equip" placeholder="" class="form-control" " readonly="">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Reequipamiento</label><input type="text" id="Reequip" name="Reequip" placeholder="" class="form-control" " readonly="">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Conectividad</label><input type="text" id="Conectividad" name="Conectividad" placeholder="" class="form-control" " readonly="">
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Reporte</label><input type="text" id="Reporte" name="Reporte" placeholder="" class="form-control" " readonly="">
+                </div>
+                 
+                 <div class="form-group col-md-4">
+                    <label>Numero de reporte</label><input type="text" id="NumRep" name="NumRep" placeholder="" class="form-control" " readonly="">
+                </div>
+                 
+                 <div class="form-group col-md-6">
+                    <label>Visitas</label><input type="text" id="Visita" name="Visita" placeholder="" class="form-control" " readonly="">
+                </div>
+                 
+                 <div class="form-group col-md-6">
+                    <label>Ultima visita</label><input type="text" id="UltVisita" name="UltVisita" placeholder="" class="form-control" " readonly="">
+                </div>
+                 <div class="form-group col-md-6">
+                    <label>Fecha Mantenimiento</label><input type="text" id="FechaMant" name="FechaMant" placeholder="" class="form-control" " readonly="">
+                </div>
+                 <div class="form-group col-md-6">
+                    <label>TIPO DE ESCUELA</label><input type="text" id="tipo_escuela" name="tipo_escuela" placeholder="" class="form-control" " readonly="">
+                </div>
+                <div class="form-group">
+                    <label>Problema Solicitado</label>
+                    <textarea type="text" id="concepto" name="concepto" class="form-control" style="min-height: 100px; max-height: 100px; min-width: 100%; max-width: 100%;" readonly="" >
+                    </textarea>
+                </div>
+                <div class="form-group" >
+                 <input type="hidden" name="">
+                </div>
+                 
+            <div class="modal-footer">
+               <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-danger">Aceptar</button>
+            </div>
+            </form>
+        </div>
+        
+    </div>
+</div>

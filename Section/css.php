@@ -1,10 +1,10 @@
   
-   
-
+   <link href="../Include/css/data.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
     <!-- Morris -->
     <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
 
-    
+    <link rel="stylesheet" type="text/css" href="cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 
 
 	<link href="../Include/css/bootstrap.min.css" rel="stylesheet">

@@ -1,6 +1,6 @@
 <?php 
 include '../Conect/conexionEsc.php';
-$q = "SELECT * FROM crucebd ORDER BY Num Desc";
+$q = "SELECT *, reportes.concepto FROM crucebd left join reportes on crucebd.Escuela = reportes.nombrect ORDER BY Num desc";
 $resultado = mysqli_query($conEsc, $q);
 if (!$resultado) {
     die("ERROR");
@@ -13,3 +13,5 @@ if (!$resultado) {
 }
 mysqli_free_result($resultado);
 mysqli_close($conEsc);
+
+
