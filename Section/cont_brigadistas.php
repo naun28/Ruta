@@ -10,8 +10,8 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="ibox float-e-margins">
-            <div class="ibox-title">
-                <h5>Listado de tarea asignadas</h5>
+                        <div class="ibox-title">
+                            <h5>Listado de tarea asignadas</h5>
                            <!--  <h6 class="float-right">Semana del {{ date('d-m-Y') }} al {{ date('d-m-Y') </h6>
 
                             <div class="ibox-tools">
@@ -85,7 +85,7 @@
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
                                             <i class="fa fa-book modal-icon"></i>
                                             <h4 class="modal-title">Generar reporte <h4>
-                                            </div>
+                                        </div>
                                             <div class="modal-body">
 
                                                 <form  method="POST" action="#" id="formLimpiar" class="form-group">
@@ -104,16 +104,13 @@
                                                         <label>Seguimiento</label>
                                                         <textarea name="" id="" cols="30" rows="5" style="min-width: 100%; max-width: 100%;min-height: 100px;max-height: 100px" class="form-control" required></textarea>
                                                     </div>
-                                                    <div class="form-group">
-                                                        
+                                                    <div class="form-group">      
                                                         <label class="font-normal">Fecha de Respuesta</label>
                                                         <div class="form-group" id="data_1">
-
                                                             <div class="input-group date">
                                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
                                                             </div>
                                                         </div>
-
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Responsable</label><input type="text" name="correo" placeholder="" readonly class="form-control" required="">
@@ -132,9 +129,9 @@
                                                     </div>
                                                     
                                                     <center>
-                                                        <div class="required">
-                                                            <br>
-                                                            <label > ¿Se completaron todas las tareas? </label> <br>
+                                                    <div class="required">
+                                                        <br>
+                                                        <label > ¿Se completaron todas las tareas? </label> <br>
                                                         <div class="radio radio-info radio-inline">
                                                             <input type="radio" id="inlineRadio1" value="option1" name="radioInline">
                                                             <label for="inlineRadio1"> Si </label>
@@ -145,20 +142,21 @@
                                                         </div>
                                                     </div>
                                                     </center>
+                                                        
 
 
-
-
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-white" data-dismiss="modal">Cerrar</button>
+                                                </form>
+                                            </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-white" data-dismiss="modal">Cerrar</button>
                                                     <button type="button" class="btn btn-danger">Guardar</button>
                                                 </div>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                       </div>
+        </div>
+    </div>
+</div>
 
