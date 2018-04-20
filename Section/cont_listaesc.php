@@ -16,7 +16,7 @@
                         <div class="ibox-content">
                             
                         <div class="table-responsive">
-                            <table id="escuela"  class="table table-stripped toggle-arrow-tiny dataTables-example"  data-page-size="50" style="width: 100%;">
+                            <table id="escuela"  class="table table-stripped toggle-arrow-tiny dataTables-example data-sort-order="desc"  data-page-size="50" style="width: 100%;">
                                 <thead>
                                  <tr>
                                             <th>#</th>

@@ -1,0 +1,16 @@
+#manifiesto v1.0
+#el manifiesto de la pagina
+CACHE MANIFEST
+escuela.php
+Include/css/style.css
+Section/js.php
+Include/plugins/dataTables/datatables.min.js
+
+NETWORK:
+inicio.php
+listaesc.php
+cont_listaesc.php
+escuelas.php
+
+FALLBACK:
+escuelas.php

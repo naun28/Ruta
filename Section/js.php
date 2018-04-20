@@ -547,7 +547,7 @@
 </script>
 
 <!-- mostrar datos de escuelas -->
-<script>
+<script async="async">
     $(document).ready(function(){
         
 
@@ -557,7 +557,7 @@
     var listarEsc = function(){
         var table = $("#escuela").DataTable({
                 destroy:true,
-                pageLength: 10,
+                pageLength: 25,
                 responsive: true,
                 expandFirst: true,
                 dom: '<"html5buttons"B>lTfgitp',
@@ -580,7 +580,7 @@
                 {"data":"Localidad22"},
                 {"data":"Municipio"},
                 {"data":"zonat"},
-                {"defaultContent": "<button class=' info btn btn-danger' data-toggle='modal' data-target='#myModal'>Ver</button>"},
+                {"defaultContent": "<button class=' info btn btn-w-m btn-danger' data-toggle='modal' data-target='#myModal'> Ver</button>"},
                 {"data":"Eq","visible": false},
                 {"data":"Equip","visible": false},
                 {"data":"Reequip","visible": false},
@@ -691,7 +691,7 @@
                  
             <div class="modal-footer">
                <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white" data-dismiss="modal">Cerrar</button>
-                <button type="submit" class="btn btn-danger">Aceptar</button>
+                <button type="submit" class="btn btn-danger"><i class="fa fa-check"></i> Revisada</button>
             </div>
             </form>
         </div>

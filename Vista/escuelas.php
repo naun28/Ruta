@@ -8,7 +8,7 @@ if (!isset($_SESSION["correo"])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html manifest="manifiesto.cache">
 <head>
    <title>Lista de Escuelas</title>
    <?PHP include "../Section/css.php";?>
