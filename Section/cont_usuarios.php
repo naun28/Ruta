@@ -25,10 +25,10 @@
                                                 <label>Apellido(s)</label><input type="text" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
                                             </div>
                                              <div class="form-group col-md-4">
-                                                <label>Telefono</label><input type="text" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 000-0000000" required="">
+                                                <label>Telefono</label><input type="text" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">
                                             </div>
                                             <div class="form-group">
-                                                <label>Correo</label><input type="email" name="correo" placeholder="Correo" class="form-control" required="">
+                                                <label>Correo</label><input type="email" name="correo" placeholder="Correo" class="form-control" pattern="^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required="">
                                             </div>
                                             <div class="form-group">
                                                 <label>Contraseña</label><input type="password" name="pass" placeholder="Contraseña" class="form-control" pattern="[A-Za-z0-9!?-]{6,12}" required="">
@@ -38,14 +38,14 @@
                                                 <select name="tipouser" id="tipouser" class="form-control chosen-container chosen-container-single"  onkeyup="habilitar" required="">
                                                     <option value="Brigadista" >Brigadista</option>
                                                     <option value="Jefe de Brigada">Jefe de Brigada</option>
-                                                    <option value="Mesa">Mesa de Apoyo</option>
                                                     <option value="Administrador">Administrador</option>
+                                                    <option value="Mesa">Mesa de Apoyo</option>
                                                 </select>
                                             </div>
-                                            <div id="ver" >
+                                            <div id="ver">
                                               <div id="Mesa" class="form-group">
                                                 <label>N° de brigada</label> <select name="nbrigada" class="form-control">
-                                                    <option value="0" selected>Seleccione Brigada</option>
+                                                    <option value="" selected>Seleccione Brigada</option>
                                                     <option value="Brigada 1">Brigada 1</option>
                                                     <option value="Brigada 2">Brigada 2</option>
                                                     <option value="Brigada 3">Brigada 3</option>
@@ -63,7 +63,8 @@
                                                 </select>
                                                 </div>
                                             </div>
-                                        </div>
+
+                                       
                                         <div class="modal-footer">
                                            <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white" data-dismiss="modal">Cerrar</button>
                                             <button type="submit" class="btn btn-danger">Aceptar</button>

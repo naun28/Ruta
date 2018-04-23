@@ -10,16 +10,14 @@ if (!isset($_SESSION["correo"])) {
 <!DOCTYPE html>
 <html>
 <head>
-	
-   <title>Lista de Escuelas</title>
+   <title>Viaticos</title>
    <?PHP include "../Section/css.php";?>
 
 </head>
 
 <body>
   <div id="wrapper">
-  	
-  <?PHP include "../Section/listaesc.php";?>
+  <?PHP include "../Section/costo.php";?>
 </div>
 <?PHP include "../Section/js.php";?>
 </body>

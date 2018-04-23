@@ -1,4 +1,4 @@
- <?php 
+<?php 
 session_start();
 
 if (!isset($_SESSION["correo"])) {
@@ -10,16 +10,14 @@ if (!isset($_SESSION["correo"])) {
 <!DOCTYPE html>
 <html>
 <head>
-	
-   <title>Lista de Escuelas</title>
+   <title>Inicio</title>
    <?PHP include "../Section/css.php";?>
 
 </head>
 
 <body>
-  <div id="wrapper">
-  	
-  <?PHP include "../Section/listaesc.php";?>
+  <div id="wrapper" >
+  <?PHP include "../Section/menuBrigada.php";?>
 </div>
 <?PHP include "../Section/js.php";?>
 </body>
