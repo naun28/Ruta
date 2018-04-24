@@ -32,7 +32,7 @@
                             $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios");
                             while($row=mysqli_fetch_array($rs))
                             {
-                              echo "<option value='".$row['id_usuario']."'>";
+                              echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
                               echo $row['nombres']. " " .$row['apellidos'];
                               echo "</option>";                     
                             }
@@ -241,19 +241,19 @@
                       <div class="form-group"><label class="col-sm-2 control-label">Brigadista</label>
                         <div class="col-sm-10">
                           <select data-placeholder="Selecciona una brigada" name="addbrig" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-                            <!-- se cargaran de una base de datos-->
-                            <option value="1">Brigadista 1</option>
-                            <option value="2">Brigadista 2</option>
-                            <option value="3">Brigadista 3</option>
-                            <option value="4">Brigadista 4</option>
-                            <option value="5">Brigadista 5</option>
-                            <option value="6">Brigadista 6</option>
-                            <option value="7">Brigadista 7</option>
-                            <option value="8">Brigadista 8</option>
-                            <option value="9">Brigadista 9</option>
-                            <option value="10">Brigadista 10</option>
-                            <option value="11">Brigadista 11</option>
-                            <option value="12">Brigadista 12</option>
+                            <option value="0" disabled selected>Selecciona brigadista</option>
+                            <?php
+                            require('../Conect/conecviatik.php');
+
+                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios");
+                            while($row=mysqli_fetch_array($rs))
+                            {
+                              echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
+                              echo $row['nombres']. " " .$row['apellidos'];
+                              echo "</option>";                     
+                            }
+                            mysqli_close($conecviatiks);
+                            ?>
                           </select>
                         </div>
                       </div>

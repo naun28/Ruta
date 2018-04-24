@@ -10,8 +10,8 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <h5>Listado de tarea asignadas</h5>
+            <div class="ibox-title">
+                <h5>Listado de tarea asignadas</h5>
                            <!--  <h6 class="float-right">Semana del {{ date('d-m-Y') }} al {{ date('d-m-Y') </h6>
 
                             <div class="ibox-tools">
@@ -68,6 +68,7 @@
                                         <td> <input type="button" value="Levantar reporte" class="btn btn-danger" data-toggle="modal" data-target="#myModal4"> </td>
                                     </tr>
                                     
+                                    
                                 </tbody>
                                 <tfoot>
                                     <tr>
@@ -85,78 +86,78 @@
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
                                             <i class="fa fa-book modal-icon"></i>
                                             <h4 class="modal-title">Generar reporte <h4>
-                                        </div>
+                                            </div>
                                             <div class="modal-body">
 
-                                                <form  method="POST" action="#" id="formLimpiar" class="form-group">
+                                                <form  method="POST" action="../Controlador/regReporte.php" id="formLimpiar" class="form-group">
                                                     <div class="form-group">
-                                                        <label>Reportado por:</label><input type="text" name="correo" placeholder="" class="form-control" required="">
+                                                        <label>Reportado por:</label><input type="text" name="reportado" placeholder="" class="form-control" required="">
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Concepto</label>
-                                                        <textarea name="" id="" cols="30" rows="5" style="min-width: 100%; max-width: 100%;min-height: 100px;max-height: 100px"  class="form-control" readonly></textarea>
+                                                        <textarea name="concepto" id="" cols="30" rows="5" style="min-width: 100%; max-width: 100%;min-height: 100px;max-height: 100px"  class="form-control" ></textarea>
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Diagnostico</label>
-                                                        <textarea name="" id="" cols="30" rows="5" style="min-width: 100%; max-width: 100%;min-height: 100px;max-height: 100px" class="form-control" required></textarea>
+                                                        <textarea name="diagnostico" id="" cols="30" rows="5" style="min-width: 100%; max-width: 100%;min-height: 100px;max-height: 100px" class="form-control" required></textarea>
                                                     </div>
                                                     <div class="form-group">
                                                         <label>Seguimiento</label>
-                                                        <textarea name="" id="" cols="30" rows="5" style="min-width: 100%; max-width: 100%;min-height: 100px;max-height: 100px" class="form-control" required></textarea>
+                                                        <textarea name="seguimiento" id="" cols="30" rows="5" style="min-width: 100%; max-width: 100%;min-height: 100px;max-height: 100px" class="form-control" required></textarea>
                                                     </div>
                                                     <div class="form-group">      
                                                         <label class="font-normal">Fecha de Respuesta</label>
                                                         <div class="form-group" id="data_1">
-                                                            <div class="input-group date">
-                                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                                            <div class="input-group }">
+                                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="date" class="form-control" name="feres" value="">
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Responsable</label><input type="text" name="correo" placeholder="" readonly class="form-control" required="">
+                                                        <label>Responsable</label><input type="text" name="responsable" placeholder=""  class="form-control" required="">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Visitó</label><input type="text" name="correo" placeholder="" readonly class="form-control" required="">
+                                                        <label>Visitó</label><input type="text" name="visito" placeholder=""  class="form-control" required="">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Reporte recibido por:</label><input type="text" name="correo" placeholder=""  class="form-control" required="">
+                                                        <label>Reporte recibido por:</label><input type="text" name="recpor" placeholder=""  class="form-control" required="">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Quien recibio en la escuela</label><input type="text" name="correo" placeholder="" class="form-control" required="">
+                                                        <label>Quien recibio en la escuela</label><input type="text" name="recibio" placeholder="" class="form-control" required="">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Capturó</label><input type="text" name="correo" placeholder="" readonly class="form-control" required="">
+                                                        <label>Capturó</label><input type="text" name="capturo" placeholder=""  class="form-control" required="">
                                                     </div>
                                                     
                                                     <center>
-                                                    <div class="required">
-                                                        <br>
-                                                        <label > ¿Se completaron todas las tareas? </label> <br>
-                                                        <div class="radio radio-info radio-inline">
-                                                            <input type="radio" id="inlineRadio1" value="option1" name="radioInline">
-                                                            <label for="inlineRadio1"> Si </label>
+                                                        <div class="required">
+                                                            <br>
+                                                            <label > ¿Se completaron todas las tareas? </label> <br>
+                                                            <div class="radio radio-info radio-inline">
+                                                                <input type="radio" id="inlineRadio1" value="Si" name="radioInline">
+                                                                <label for="inlineRadio1"> Si </label>
+                                                            </div>
+                                                            <div class="radio radio-info radio-inline">
+                                                                <input type="radio" id="inlineRadio2" value="No" name="radioInline">
+                                                                <label for="inlineRadio2"> No </label>
+                                                            </div>
                                                         </div>
-                                                        <div class="radio radio-info radio-inline">
-                                                            <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
-                                                            <label for="inlineRadio2"> No </label>
-                                                        </div>
-                                                    </div>
                                                     </center>
-                                                        
 
 
-                                                </form>
-                                            </div>
+
+
+                                                </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-white" data-dismiss="modal">Cerrar</button>
-                                                    <button type="button" class="btn btn-danger">Guardar</button>
+                                                    <button type="submit" class="btn btn-danger">Guardar</button>
                                                 </div>
-
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                       </div>
-        </div>
-    </div>
-</div>
+                        </div>
+                    </div>
+                </div>
 

@@ -75,7 +75,7 @@
               echo "<td>".$row['viaticosbrig']."</td>";
               echo "<td>".$row['totalreal']."</td>";
               echo "<td>".$row['totalchilo']."</td>";
-              echo "<td> <a href='../Controlador/hisPdf.php' class='btn btn-danger'>Imprimir</a></td>";
+              echo "<td> <a href='../Controlador/hisPdf.php' target='_blank' class='btn btn-danger'>Imprimir</a></td>";
                           // echo "<td class='center'> <a href='../Controlador/eliVehiculo.php?id=".$row['num_vehiculo']."' class='btn btn-danger'>Eliminar</a>
                           // </td>";
               echo "</tr>";
