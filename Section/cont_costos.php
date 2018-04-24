@@ -25,7 +25,7 @@
                       <div class="form-group"><label class="col-sm-2 control-label">Lider de brigada</label>
                         <div class="col-sm-10">
                           <select data-placeholder="Selecciona el vehiculo" id="selecar" name="librigada"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-                            <option value="0" disabled selected>Selecciones las placas</option>
+                            <option value="0" disabled selected>Selecciona brigadista</option>
                             <?php
                             require('../Conect/conecviatik.php');
 
