@@ -33,11 +33,18 @@
         </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <span class="m-r-sm text-muted welcome-message">HAY QUE PONER ALGO AQUI</span>
+                    <span class="m-r-sm text-muted welcome-message"> <?php
+                        date_default_timezone_set('America/Hermosillo');
+
+                            $hora= date ("h:i:s ");
+
+                            $fecha= date ("j/n/Y");
+                            echo $hora; echo $fecha;
+                            ?></span>
                 </li>
                 
                 <li>
-                    <a href="login.php">
+                    <a href="../Controlador/Salir.php">
                         <i class="fa fa-sign-out"></i> Salir
                     </a>
                 </li>

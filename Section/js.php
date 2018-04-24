@@ -1,4 +1,5 @@
     <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
@@ -90,7 +91,7 @@
               $('#ver').children('div').show();
               $('#ver').children(selectValor).hide();
             });
-
+             
            $("#btnLimpiar").click(function(event) {
            $("#formLimpiar")[0].reset();
             });

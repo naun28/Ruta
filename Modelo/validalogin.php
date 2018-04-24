@@ -61,7 +61,63 @@ if ($tipouser === "Administrador") {
         header("location: ../Vista/login.php?error=1");
         exit();
     }
-} /*elseif ($Tipo == '2') {
+}else if ($tipouser === "Mesa") {
+    if ($row["correo"] === $correo && $row["pass"] === $password) {
+        session_start();
+        $_SESSION["nombres"]   = $nombres;
+        $_SESSION["apellidos"] = $apellidos;
+        $_SESSION["id_usuario"] = $id_usuario;
+        $_SESSION["correo"] = $correo;
+        $_SESSION["tipouser"] = $tipouser;
+
+        echo "
+                <script language='JavaScript'>
+                var mensaje = 'sesión iniciada';
+                alert(mensaje);
+                </script>";
+
+        header("location: ../Vista/inicioMesa.php");
+
+    } else {
+        echo "
+                <script type='text/javascript'>
+                alert('Usuario o contraseña incorrecto');
+                </script>";
+
+        header("location: ../Vista/login.php?error=1");
+        exit();
+    }
+}else if ($tipouser === "Brigadista" || $tipouser === "Jefe de brigada") {
+    if ($row["correo"] === $correo && $row["pass"] === $password) {
+        session_start();
+        $_SESSION["nombres"]   = $nombres;
+        $_SESSION["apellidos"] = $apellidos;
+        $_SESSION["id_usuario"] = $id_usuario;
+        $_SESSION["correo"] = $correo;
+        $_SESSION["tipouser"] = $tipouser;
+
+        echo "
+                <script language='JavaScript'>
+                var mensaje = 'sesión iniciada';
+                alert(mensaje);
+                </script>";
+
+        header("location: ../Vista/inicioBrigada.php");
+
+    } else {
+        echo "
+                <script type='text/javascript'>
+                alert('Usuario o contraseña incorrecto');
+                </script>";
+
+        header("location: ../Vista/login.php?error=1");
+        exit();
+    }
+}  
+
+
+
+/*elseif ($Tipo == '2') {
     if ($row["Contrasena"] === $password && $row["Usuario"] === $username) {
         session_start();
         $_SESSION["nombre"]   = $nombre;
