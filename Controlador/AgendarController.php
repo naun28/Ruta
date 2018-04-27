@@ -1,7 +1,7 @@
 <?php 
-include '../Conect/conexionEsc.php';
-$q = "SELECT *, reportes.fecha, reportes.concepto, reportes.levanto, reportes.clavecct FROM crucebd left join reportes on crucebd.Clave = reportes.clavecct order by reportes.fecha Desc";
-$resultado = mysqli_query($conEsc, $q);
+include '../Conect/conexion.php';
+$q = "SELECT * FROM escuelasrevisadas";
+$resultado = mysqli_query($conexion, $q);
 if (!$resultado) {
     die("ERROR");
 }else{
@@ -12,6 +12,5 @@ if (!$resultado) {
     echo json_encode($arreglo);
 }
 mysqli_free_result($resultado);
-mysqli_close($conEsc);
-
+mysqli_close($conexion);
 

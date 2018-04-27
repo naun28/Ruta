@@ -19,7 +19,7 @@
                             <table id="escuela"  class="table table-stripped toggle-arrow-tiny dataTables-example data-sort-order="desc"  data-page-size="50" style="width: 100%;">
                                 <thead>
                                  <tr>
-                                            <th>#</th>
+                                            
                                             <th>Clave</th>
                                             <th>Escuela</th>
                                             <th>Domicilio</th>
@@ -38,6 +38,7 @@
                                             <th style="display: none;">Fecha de Mantenimiento</th>
                                             <th style="display: none;">Tipo de Escula</th>
                                             <th style="display: none;">Problema</th>
+                                            <th style="display: none;">Fecha</th>
                                       
                                 </tr>
                                 </thead>
@@ -63,7 +64,7 @@
                                 </tr> -->
                                 </tbody>
                                 <footer>
-                                    <th>#</th>
+                                    
                                     <th>Clave</th>
                                     <th>Escuela</th>
                                     <th>Domicilio</th>

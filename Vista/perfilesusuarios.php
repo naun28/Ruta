@@ -21,6 +21,6 @@ if (!isset($_SESSION["correo"])) {
 
 </div>
 
-<?PHP include "../Section/js.php";?>
+<?PHP include "../Section/js_Perfiles.php";?>
 </body>
 </html>

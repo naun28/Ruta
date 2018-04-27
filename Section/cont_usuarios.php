@@ -4,9 +4,9 @@
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
                            <!--Boton Modal-->
-                            <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal"><li class="fa fa-plus-square"></li> Agregar Usuario</button>
+                            <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal2"><li class="fa fa-plus-square"></li> Agregar Usuario</button><br><br>
                              <!--Estructura del Modal-->
-                            <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal inmodal" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-dialog">
                                 <div class="modal-content animated fadeIn">
                                         <div class="modal-header">
