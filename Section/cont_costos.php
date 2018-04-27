@@ -346,7 +346,9 @@
                           echo "<td class='center'> <a href='../Controlador/eliVehiculo.php?id=".$row['num_vehiculo']."' class='btn btn-danger'>Eliminar</a>
                            </td>";
                           echo "</tr>";
+                          
                         }
+
                         mysqli_close($conecviatiks);
                       ?>
                     </tbody>
