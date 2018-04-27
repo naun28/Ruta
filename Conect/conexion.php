@@ -12,5 +12,5 @@ function Conectarse()
 
     return $cn;
 }
-#conexion para mostrar los datos en la tabla
+#conexion para mostrar los datos en la tabla de Usuarios
 $conexion = new mysqli("localhost","root","","rutas");

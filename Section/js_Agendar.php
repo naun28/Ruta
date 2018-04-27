@@ -547,17 +547,16 @@
     }
     
 </script>
-
-<!-- mostrar datos de escuelas -->
+<!-- mostrar datos de escuelas para agendar -->
 <script async="async">
     $(document).ready(function(){
         
 
-        listarEsc();
+        listarAgenda();
 
     });
-    var listarEsc = function(){
-        var table = $("#escuela").DataTable({
+    var listarAgenda = function(){
+        var table = $("#poragendar").DataTable({
                 destroy:true,
                 pageLength: 10,
                 responsive: true,
@@ -565,76 +564,70 @@
                 dom: '<"html5buttons"B>lTfgitp',
                 buttons: [
                    
-                    {extend: 'excel', title: 'LISTA DE ESCUELAS'},
-                    {extend: 'pdf', title: 'LISTA DE ESCUELAS'},
+                    {extend: 'excel', title: 'LISTA DE ESCUELAS POR AGENDAR'},
+                    {extend: 'pdf', title: 'LISTA DE ESCUELAS POR AGENDAR'},
                  
                 ],
 
             "ajax":{
                 "method":"POST",
-                "url":"../Controlador/escuelaController.php"
+                "url":"../Controlador/AgendarController.php"
             },
             "columns":[
                 
                 {"data":"Clave"},
                 {"data":"Escuela"},
                 {"data":"Domicilio"},
-                {"data":"Localidad22"},
+                {"data":"Localidad"},
                 {"data":"Municipio"},
-                {"data":"zonat"},
-                {"defaultContent": "<button class=' info btn btn-w-m btn-danger' data-toggle='modal' data-target='#myModal2'> Ver</button>"},
-                {"data":"Eq","visible": false},
-                {"data":"Equip","visible": false},
+                {"data":"Conectividad"},
+                {"data":"ProbSolicitado"},
+                {"data":"LevantReporte"},
+                {"defaultContent": "<button class=' agenda btn btn-danger btn-xs' data-toggle='modal' data-target='#myModal'>Agendar</button>"},
+                {"data":"Zona","visible": false},
+                {"data":"Nequipos","visible": false},
+                {"data":"Aequipos","visible": false},
                 {"data":"Reequip","visible": false},
-                {"data":"Conectividad","visible": false},
                 {"data":"Reporte","visible": false},
-                {"data":"NumRep","visible": false},
-                {"data":"Visita","visible": false},
-                {"data":"UltVisita","visible": false},
+                {"data":"Nreporte","visible": false},
+                {"data":"FechaReporte","visible": false},
+                {"data":"Visitas","visible": false},
+                {"data":"UltimaVisita","visible": false},
                 {"data":"FechaMant","visible": false},
-                {"data":"tipo_escuela","visible": false},
-                {"data":"concepto","visible": false},
-                {"data":"fecha","visible": false},
-                {"data":"levanto","visible": false},
-                {"data":"clavecct","visible": false}
+                {"data":"TipoEscuela","visible": false}
                 
-
-               // {"defaultContent":"<button>Editar</button>"}
             ]
 
         });
-        obtener_data_info("#escuela tbody",table); 
+        obtener_data_agenda("#poragendar tbody",table); 
     }
-       var obtener_data_info = function (tbody, table) {
-        $(tbody).on("click","button.info", function(){
+       var obtener_data_agenda = function (tbody, table) {
+        $(tbody).on("click","button.agenda", function(){
             var data = table.row($(this).parents("tr")).data();
             var 
                 Clave = $("#Clave").val(data.Clave),
                 Escuela = $("#Escuela").val(data.Escuela),
                 Domicilio = $("#Domicilio").val(data.Domicilio),
-                Localidad22 = $("#Localidad22").val(data.Localidad22),
+                Localidad = $("#Localidad").val(data.Localidad),
                 Municipio = $("#Municipio").val(data.Municipio),
-                zonat = $("#zonat").val(data.zonat),
-                Eq = $("#Eq").val(data.Eq),
-                Equip = $("#Equip").val(data.Equip),
-                Reequip= $("#Reequip").val(data.Reequip),
                 Conectividad = $("#Conectividad").val(data.Conectividad),
+                ProbSolicitado = $("#ProbSolicitado").val(data.ProbSolicitado),
+                LevantReporte = $("#LevantReporte").val(data.LevantReporte),
+                Zona = $("#Zona").val(data.Zona),
+                Nequipos = $("#Nequipos").val(data.Nequipos),
+                Aequipos = $("#Aequipos").val(data.Aequipos),
+                Reequip= $("#Reequip").val(data.Reequip),
                 Reporte = $("#Reporte").val(data.Reporte),
-                NumRep = $("#NumRep").val(data.NumRep),
-                Visita = $("#Visita").val(data.Visita),
-                UltVisita = $("#UltVisita").val(data.UltVisita),
+                Nreporte = $("#Nreporte").val(data.Nreporte),
+                FechaReporte = $("#FechaReporte").val(data.FechaReporte),
+                Visitas = $("#Visitas").val(data.Visitas),
+                UltimaVisita = $("#UltimaVisita").val(data.UltimaVisita),
                 FechaMant = $("#FechaMant").val(data.FechaMant),
-                tipo_escuela = $("#tipo_escuela").val(data.tipo_escuela),
-                concepto = $("#concepto").val(data.concepto),
-                fecha = $("#fecha").val(data.fecha),
-                levanto = $("#levanto").val(data.levanto),
-                clavecct = $("#clavecct").val(data.clavecct);
+                TipoEscuela = $("#TipoEscuela").val(data.tipo_escuela);
 
         });
        
     }
 
 </script>
-<!--Estructura del ModalEscuelas-->
-<?php include 'modalEscuelas.php'; ?>
-
+<?php include "../Section/modalAgendar.php"; ?>

@@ -506,16 +506,20 @@
 
 
     </script>
-<!-- mostrar datos de usuarios -->
-<script>
-    $(document).ready(function(){
 
-        listar();
+
+<!-- mostrar datos de escuelas -->
+<script async="async">
+    $(document).ready(function(){
+        
+
+        listarPerfil();
 
     });
-    var listar = function(){
-        var table = $("#dt_usuarios").DataTable({
-            pageLength: 10,
+    var listarPerfil = function(){
+        var table = $("#perfiles").DataTable({
+                destroy:true,
+                pageLength: 10,
                 responsive: true,
 
                 dom: '<"html5buttons"B>lTfgitp',
@@ -525,110 +529,39 @@
                     {extend: 'pdf', title: 'ExampleFile'},
                  
                 ],
-                "destroy":true,
 
             "ajax":{
                 "method":"POST",
-                "url":"../Controlador/usuarioController.php"
+                "url":"../Controlador/perfilesController.php"
             },
             "columns":[
-                {"data":"id_usuario"},
+                {"data":"id_usuario","visible": false},
                 {"data":"nombres"},
                 {"data":"apellidos"},
                 {"data":"telefono"},
                 {"data":"correo"},
                 {"data":"tipouser"},
-                {"data":"nbrigada"}
-                /*{"defaultContent":"<button>Editar</button>"}*/
+                {"data":"nbrigada"},
+                {"defaultContent": "<button class='edit btn btn-primary btn-xs' data-toggle='modal' data-target='#myModal3'> Editar</button> <button class='eliminar btn btn-danger btn-xs'> Eliminar</button>"},
+                {"data":"pass","visible": false}
             ]
 
         });
 
-    }
-    
-</script>
-
-<!-- mostrar datos de escuelas -->
-<script async="async">
-    $(document).ready(function(){
         
-
-        listarEsc();
-
-    });
-    var listarEsc = function(){
-        var table = $("#escuela").DataTable({
-                destroy:true,
-                pageLength: 10,
-                responsive: true,
-                expandFirst: true,
-                dom: '<"html5buttons"B>lTfgitp',
-                buttons: [
-                   
-                    {extend: 'excel', title: 'LISTA DE ESCUELAS'},
-                    {extend: 'pdf', title: 'LISTA DE ESCUELAS'},
-                 
-                ],
-
-            "ajax":{
-                "method":"POST",
-                "url":"../Controlador/escuelaController.php"
-            },
-            "columns":[
-                
-                {"data":"Clave"},
-                {"data":"Escuela"},
-                {"data":"Domicilio"},
-                {"data":"Localidad22"},
-                {"data":"Municipio"},
-                {"data":"zonat"},
-                {"defaultContent": "<button class=' info btn btn-w-m btn-danger' data-toggle='modal' data-target='#myModal2'> Ver</button>"},
-                {"data":"Eq","visible": false},
-                {"data":"Equip","visible": false},
-                {"data":"Reequip","visible": false},
-                {"data":"Conectividad","visible": false},
-                {"data":"Reporte","visible": false},
-                {"data":"NumRep","visible": false},
-                {"data":"Visita","visible": false},
-                {"data":"UltVisita","visible": false},
-                {"data":"FechaMant","visible": false},
-                {"data":"tipo_escuela","visible": false},
-                {"data":"concepto","visible": false},
-                {"data":"fecha","visible": false},
-                {"data":"levanto","visible": false},
-                {"data":"clavecct","visible": false}
-                
-
-               // {"defaultContent":"<button>Editar</button>"}
-            ]
-
-        });
-        obtener_data_info("#escuela tbody",table); 
+        obtener_data_edit("#perfiles tbody",table); 
     }
-       var obtener_data_info = function (tbody, table) {
-        $(tbody).on("click","button.info", function(){
+       var obtener_data_edit = function (tbody, table) {
+        $(tbody).on("click","button.edit", function(){
             var data = table.row($(this).parents("tr")).data();
-            var 
-                Clave = $("#Clave").val(data.Clave),
-                Escuela = $("#Escuela").val(data.Escuela),
-                Domicilio = $("#Domicilio").val(data.Domicilio),
-                Localidad22 = $("#Localidad22").val(data.Localidad22),
-                Municipio = $("#Municipio").val(data.Municipio),
-                zonat = $("#zonat").val(data.zonat),
-                Eq = $("#Eq").val(data.Eq),
-                Equip = $("#Equip").val(data.Equip),
-                Reequip= $("#Reequip").val(data.Reequip),
-                Conectividad = $("#Conectividad").val(data.Conectividad),
-                Reporte = $("#Reporte").val(data.Reporte),
-                NumRep = $("#NumRep").val(data.NumRep),
-                Visita = $("#Visita").val(data.Visita),
-                UltVisita = $("#UltVisita").val(data.UltVisita),
-                FechaMant = $("#FechaMant").val(data.FechaMant),
-                tipo_escuela = $("#tipo_escuela").val(data.tipo_escuela),
-                concepto = $("#concepto").val(data.concepto),
-                fecha = $("#fecha").val(data.fecha),
-                levanto = $("#levanto").val(data.levanto),
-                clavecct = $("#clavecct").val(data.clavecct);
+            var id_usuario = $("#id_usuario").val(data.id_usuario),
+                nombres = $("#nombres").val(data.nombres),
+                apellidos = $("#apellidos").val(data.apellidos),
+                telefono = $("#telefono").val(data.telefono),
+                correo = $("#correo").val(data.correo),
+                tipouser = $("#tipouser").val(data.tipouser),
+                nbrigada = $("#nbrigada").val(data.nbrigada),
+                pass = $("#pass").val(data.pass);
 
         });
        
@@ -636,5 +569,5 @@
 
 </script>
 <!--Estructura del ModalEscuelas-->
-<?php include 'modalEscuelas.php'; ?>
+<?php include '../Section/modalPerfiles.php'; ?>
 
