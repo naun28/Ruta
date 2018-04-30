@@ -16,7 +16,7 @@
 
                 <div class="ibox-content">
 
-                   <table id="perfiles"  class="table table-stripped toggle-arrow-tiny dataTables-example data-sort-order="desc"  data-page-size="50" style="width: 100%;" >
+                   <table id="perfiles"  class="table table-stripped toggle-arrow-tiny dataTables-example data-sort-order='desc'"  data-page-size="50" style="width: 100%;" >
                     <thead>
                         <tr>
 

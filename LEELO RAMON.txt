@@ -1,2 +1,0 @@
-entra asi!!!!
-localhost/Ruta/Vista/inicio.php
