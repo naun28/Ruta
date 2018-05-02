@@ -25,7 +25,7 @@
     <a href="brigadistas.php" style="color: white;"><i class="fa fa-male"></i> <span class="nav-label">Brigadista</span></a>
 </li>
 <li>
-    <a href="secretarias.php" style="color: white;"><i class="fa fa-female"></i> <span class="nav-label">Secretarias</span></a>
+    <a href="secretarias.php" style="color: white;"><i class="fa fa-female"></i> <span class="nav-label">Mesa de ayuda</span></a>
 </li>
 <li>
     <a href="reportes.php" style="color: white;"><i class="fa fa-newspaper-o"></i> <span class="nav-label">Reportes</span></a>

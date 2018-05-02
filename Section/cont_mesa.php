@@ -13,7 +13,7 @@
                 <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h5>Listado de trabajadores asignados</h5>
+                            <h5>Justificantes</h5>
 
                            <!-- <div class="ibox-tools">
                                 <a class="collapse-link">
@@ -74,7 +74,9 @@
                                     <td>20-03-2018</td>
                                     <td class="center">00XXXXXXXX</td>
                                     <td class="center"> 3 </td>
-                                    <td class="center"> <input class="btn btn-danger" type="button" name="" value="Descargar justificante"> </td>
+                                    <td class="center"> 
+                                        <input class="btn btn-danger" type="button" name="" value="Descargar justificante"> 
+                                    </td>
                                 </tr>
                                 
                                 </tbody>
