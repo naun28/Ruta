@@ -631,3 +631,5 @@
 
 </script>
 <?php include "../Section/modalAgendar.php"; ?>
+
+<!-- script para cambiar valores de input -->

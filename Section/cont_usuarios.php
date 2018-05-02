@@ -37,7 +37,7 @@
                                                 <label>Tipo de Usuario</label> 
                                                 <select name="tipouser" id="tipouser" class="form-control chosen-container chosen-container-single"  onkeyup="habilitar" required="">
                                                     <option value="Brigadista" >Brigadista</option>
-                                                    <option value="Jefe de Brigada">Jefe de Brigada</option>
+                                                    <option value="Lider de Brigada">Lider de Brigada</option>
                                                     <option value="Administrador">Administrador</option>
                                                     <option value="Mesa">Mesa de Apoyo</option>
                                                 </select>

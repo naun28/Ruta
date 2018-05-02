@@ -13,48 +13,47 @@
                                                 <input type="hidden" id="Localidad22" name="Localidad">
                                                 <input type="hidden" id="zonat" name="Zona">
                                                 <div class="form-group col-md-6">
-                                                    <label>Clave</label><input type="text"  id="Clave" name="Clave" placeholder="Clave" class="form-control">
+                                                    <label>Clave</label><input type="text"  id="Clave" name="Clave" placeholder="Clave" class="form-control" readonly="clave">
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label>Escuela</label><input type="text" id="Escuela" name="Escuela" placeholder="Escuela" class="form-control">
+                                                    <label>Escuela</label><input type="text" id="Escuela" name="Escuela" placeholder="Escuela" class="form-control" readonly="Escuela">
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label>Municipio</label><input type="text" id="Municipio" name="Municipio" placeholder="Municipio" class="form-control">
+                                                    <label>Municipio</label><input type="text" id="Municipio" name="Municipio" placeholder="Municipio" class="form-control" readonly="municipio">
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label>Domicilio</label><input type="text" id="Domicilio" name="Domicilio" placeholder="Domicilio" class="form-control">
+                                                    <label>Domicilio</label><input type="text" id="Domicilio" name="Domicilio" placeholder="Domicilio" class="form-control" readonly="Domicilio">
                                                 </div>
                                                 <div class="form-group col-md-6" id="data_5">
                                                     <label>Fecha</label>
                                                     <div class="input-daterange input-group" id="datepicker">
-                                                        <input type="text" class="input-sm form-control" name="start" value="05/14/2014"/>
+                                                        <input type="text" class="input-sm form-control" name="start" id="start" value="05/14/2014"/>
                                                         <span class="input-group-addon">Al</span>
-                                                        <input type="text" class="input-sm form-control" name="end" value="05/22/2014" />
+                                                        <input type="text" class="input-sm form-control" name="end" id="end" value="05/22/2014" />
                                                     </div>
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label>Jefe de Brigada</label> <select name="status" id="status" class="form-control">
-                                                        <option value="1" selected>Jesus Sabori</option>
-                                                        <option value="2">Carlos Lafarga</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">6</option>
-                                                        <option value="7">7</option>
-                                                        <option value="8">8</option>
-                                                        <option value="9">9</option>
-                                                        <option value="10">10</option>
-                                                        <option value="11">11</option>
-                                                        <option value="12">12</option>
-                                                        <option value="13">13</option>
-                                                        <option value="14">14</option>
-                                                        <option value="15">15</option>
-                                                        <option value="16">16</option>
-                                                    </select>
-                                                </div>
+                                                    <label>Lider de Brigada</label>
+                                                    <div class="col-sm-12">
+                                                      <select data-placeholder="Seleccionar Lider" id="selecLider" name="lider"  class="chosen-select form-control" style="width:350px;" onchange="cambio(this);">
+                                                        <option value="0" disabled selected>Seleccionar Lider</option>
+                                                        <?php
+                                                        require('../Conect/conexion.php');
+
+                                                        $rs = mysqli_query($conexion, "SELECT * FROM usuarios where tipouser = 'Lider de Brigada'");
+                                                        while($row=mysqli_fetch_array($rs))
+                                                        {
+                                                          echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
+                                                          echo $row['nombres']. " " .$row['apellidos'];
+                                                          echo "</option>";                 
+                                                       }
+                                                      mysqli_close($conexion);
+                                                      ?>
+                                                  </select>
+                                              </div>
+                                             </div>
                                                 <div class="form-group col-md-6">
-                                                    <label>Brigada</label>
-                                                    <input type="text" placeholder="Brigada" readonly="Brigada" class="form-control">
+                                                    <label>Brigada</label><input type="text"  id="nbrigada" name="nbrigada" placeholder="Brigada" class="form-control" readonly="Brigada">
                                                 </div>
                                                 <div class="form-group col-md-6">
                                                     <label>Integrantes</label>
