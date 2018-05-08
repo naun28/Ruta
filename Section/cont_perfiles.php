@@ -25,7 +25,7 @@
                             <th>Apellido(s)</th>
                             <th>Telefono</th>
                             <th>Correo</th> 
-                            <th>Tipo de Usuario</th>
+                            <th style="width: 18%;">Tipo de Usuario</th>
                             <th>Nº Brigada</th>
                             <th>Accion</th>
                             <th style="display: none;">Pass</th>
@@ -44,7 +44,7 @@
                             <th>Apellido(s)</th>
                             <th>Telefono</th>
                             <th>Correo</th> 
-                            <th>Tipo de Usuario</th>
+                            <th style="width: 18%;">Tipo de Usuario</th>
                             <th>Nº Brigada</th>
                             <th>Accion</th>
                             <th style="display: none;">Pass</th>

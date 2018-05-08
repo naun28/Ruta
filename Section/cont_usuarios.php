@@ -35,16 +35,18 @@
                                             </div>
                                             <div class="form-group ">
                                                 <label>Tipo de Usuario</label> 
-                                                <select name="tipouser" id="tipouser" class="form-control chosen-container chosen-container-single"  onkeyup="habilitar" required="">
-                                                    <option value="Brigadista" >Brigadista</option>
-                                                    <option value="Lider de Brigada">Lider de Brigada</option>
+                                                <select name="tipouser" id="tipouser" id="tipo" class="form-control chosen-container chosen-container-single"  required="">
                                                     <option value="Administrador">Administrador</option>
+                                                    <option value="Director">Director</option>
+                                                    <option value="Brigadista" >Brigadista</option>
+                                                    <option value="Lider">Lider de Brigada</option>
                                                     <option value="Mesa">Mesa de Apoyo</option>
                                                 </select>
                                             </div>
                                             <div id="ver">
-                                              <div id="Mesa" class="form-group">
-                                                <label>N° de brigada</label> <select name="nbrigada" class="form-control">
+                                              <div id="Brigadista" style="display:none;" class="form-group">
+
+                                                <label>N° de Brigada</label> <select name="nbrigada" class="form-control">
                                                     <option value="" selected>Seleccione Brigada</option>
                                                     <option value="Brigada 1">Brigada 1</option>
                                                     <option value="Brigada 2">Brigada 2</option>
@@ -59,8 +61,32 @@
                                                     <option value="Brigada 11">Brigada 11</option>
                                                     <option value="Brigada 12">Brigada 12</option>
                                                     <option value="Brigada 13">Brigada13</option>
-                                                    <option value="Brigada 14">Brigada 14</option>
+                                                    
                                                 </select>
+                                               
+                                                </div>
+                                            </div>
+                                            <div id="mostrar">
+                                              <div id="Lider" style="display:none;" class="form-group">
+
+                                                <label>N° de Brigada</label> <select name="nbrigada" class="form-control">
+                                                    <option value="" selected>Seleccione Brigada</option>
+                                                    <option value="Brigada 1">Brigada 1</option>
+                                                    <option value="Brigada 2">Brigada 2</option>
+                                                    <option value="Brigada 3">Brigada 3</option>
+                                                    <option value="Brigada 4">Brigada 4</option>
+                                                    <option value="Brigada 5">Brigada 5</option>
+                                                    <option value="Brigada 6">Brigada 6</option>
+                                                    <option value="Brigada 7">Brigada 7</option>
+                                                    <option value="Brigada 8">Brigada 8</option>
+                                                    <option value="Brigada 9">Brigada 9</option>
+                                                    <option value="Brigada 10">Brigada 10</option>
+                                                    <option value="Brigada 11">Brigada 11</option>
+                                                    <option value="Brigada 12">Brigada 12</option>
+                                                    <option value="Brigada 13">Brigada13</option>
+                                                    
+                                                </select>
+                                               
                                                 </div>
                                             </div>
 
@@ -100,7 +126,7 @@
                                 <table id="dt_usuarios" class="table table-striped table-bordered table-hover" style="width: 100%;"><!-- dataTables-example  SON LOS QUE NO DEJAN QUE FUNCIONE EL JSON-->
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                            <th style="display: none;">ID</th>
                                             <th>Nombre(s)</th>
                                             <th>Apellido(s)</th>
                                             <th>Telefono</th>
@@ -115,7 +141,7 @@
                                     </tbody>
                                        <tfoot>
                                          <tr>
-                                            <th>ID</th>
+                                            <th style="display: none;">ID</th>
                                             <th>Nombre(s)</th>
                                             <th>Apellido(s)</th>
                                             <th>Telefono</th>

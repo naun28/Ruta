@@ -1,6 +1,6 @@
 <?php 
 include '../Conect/conexionEsc.php';
-$q = "SELECT *, reportes.fecha, reportes.concepto, reportes.levanto, reportes.clavecct FROM crucebd left join reportes on crucebd.Clave = reportes.clavecct order by reportes.fecha Desc";
+$q = "SELECT *, reportes.fecha, reportes.concepto, reportes.levanto, reportes.clavecct FROM crucebd left join reportes on crucebd.Clave = reportes.clavecct WHERE reportes.concepto IS NOT Null AND crucebd.Status_Esc = 0 order by reportes.fecha Desc";
 $resultado = mysqli_query($conEsc, $q);
 if (!$resultado) {
     die("ERROR");

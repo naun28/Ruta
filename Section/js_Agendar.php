@@ -83,7 +83,14 @@
     <!-- Dual Listbox -->
     <script src="../Include/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
 
-    
+    <script>
+            $(document).ready(function () {
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+            });
+        </script>
 
     <script>
         $(document).ready(function() {
@@ -506,47 +513,7 @@
 
 
     </script>
-<!-- mostrar datos de usuarios -->
-<script>
-    $(document).ready(function(){
 
-        listar();
-
-    });
-    var listar = function(){
-        var table = $("#dt_usuarios").DataTable({
-            pageLength: 10,
-                responsive: true,
-
-                dom: '<"html5buttons"B>lTfgitp',
-                buttons: [
-                   
-                    {extend: 'excel', title: 'ExampleFile'},
-                    {extend: 'pdf', title: 'ExampleFile'},
-                 
-                ],
-                "destroy":true,
-
-            "ajax":{
-                "method":"POST",
-                "url":"../Controlador/usuarioController.php"
-            },
-            "columns":[
-                {"data":"id_usuario"},
-                {"data":"nombres"},
-                {"data":"apellidos"},
-                {"data":"telefono"},
-                {"data":"correo"},
-                {"data":"tipouser"},
-                {"data":"nbrigada"}
-                /*{"defaultContent":"<button>Editar</button>"}*/
-            ]
-
-        });
-
-    }
-    
-</script>
 <!-- mostrar datos de escuelas para agendar -->
 <script async="async">
     $(document).ready(function(){
@@ -584,6 +551,7 @@
                 {"data":"ProbSolicitado"},
                 {"data":"LevantReporte"},
                 {"defaultContent": "<button class=' agenda btn btn-danger btn-xs' data-toggle='modal' data-target='#myModal'>Agendar</button>"},
+                {"defaultContent": "<button class=' back btn btn-warning btn-xs'><li class='fa fa-mail-reply'></li></button>"},
                 {"data":"Zona","visible": false},
                 {"data":"Nequipos","visible": false},
                 {"data":"Aequipos","visible": false},
@@ -600,6 +568,7 @@
 
         });
         obtener_data_agenda("#poragendar tbody",table); 
+        obtener_data_back("#poragendar tbody",table); 
     }
        var obtener_data_agenda = function (tbody, table) {
         $(tbody).on("click","button.agenda", function(){
@@ -623,11 +592,13 @@
                 Visitas = $("#Visitas").val(data.Visitas),
                 UltimaVisita = $("#UltimaVisita").val(data.UltimaVisita),
                 FechaMant = $("#FechaMant").val(data.FechaMant),
-                TipoEscuela = $("#TipoEscuela").val(data.tipo_escuela);
+                TipoEscuela = $("#TipoEscuela").val(data.TipoEscuela);
 
         });
        
     }
+    
+
 
 </script>
 <?php include "../Section/modalAgendar.php"; ?>

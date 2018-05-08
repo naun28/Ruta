@@ -89,15 +89,22 @@
         $(document).ready(function() {
              $('#tipouser').on('change',function(){
               var selectValor = '#' +$(this).val();
-              $('#ver').children('div').show();
-              $('#ver').children(selectValor).hide();
+              $('#ver').children('div').hide();
+              $('#ver').children(selectValor).show();
             });
-             
+             $('#tipouser').on('change',function(){
+              var selectValor = '#' +$(this).val();
+              $('#mostrar').children('div').hide();
+              $('#mostrar').children(selectValor).show();
+            });
+
            $("#btnLimpiar").click(function(event) {
            $("#formLimpiar")[0].reset();
             });
             $('.footable').footable();
             $('.footable2').footable();
+
+
 
         });
 
@@ -532,7 +539,7 @@
                 "url":"../Controlador/usuarioController.php"
             },
             "columns":[
-                {"data":"id_usuario"},
+                {"data":"id_usuario","visible": false},
                 {"data":"nombres"},
                 {"data":"apellidos"},
                 {"data":"telefono"},
@@ -581,8 +588,8 @@
                 {"data":"Domicilio"},
                 {"data":"Localidad22"},
                 {"data":"Municipio"},
-                {"data":"zonat"},
-                {"defaultContent": "<button class=' info btn btn-w-m btn-danger' data-toggle='modal' data-target='#myModal2'> Ver</button>"},
+                {"data":"Ruta33"},
+                {"defaultContent": "<button class=' info btn btn-w-m btn-danger' data-toggle='modal' data-target='#myModal2'> Informacion</button>"},
                 {"data":"Eq","visible": false},
                 {"data":"Equip","visible": false},
                 {"data":"Reequip","visible": false},
@@ -596,7 +603,8 @@
                 {"data":"concepto","visible": false},
                 {"data":"fecha","visible": false},
                 {"data":"levanto","visible": false},
-                {"data":"clavecct","visible": false}
+                {"data":"clavecct","visible": false},
+                {"data":"Status_Esc","visible": false}
                 
 
                // {"defaultContent":"<button>Editar</button>"}
@@ -614,7 +622,7 @@
                 Domicilio = $("#Domicilio").val(data.Domicilio),
                 Localidad22 = $("#Localidad22").val(data.Localidad22),
                 Municipio = $("#Municipio").val(data.Municipio),
-                zonat = $("#zonat").val(data.zonat),
+                Ruta33 = $("#Ruta33").val(data.Ruta33),
                 Eq = $("#Eq").val(data.Eq),
                 Equip = $("#Equip").val(data.Equip),
                 Reequip= $("#Reequip").val(data.Reequip),
@@ -628,7 +636,8 @@
                 concepto = $("#concepto").val(data.concepto),
                 fecha = $("#fecha").val(data.fecha),
                 levanto = $("#levanto").val(data.levanto),
-                clavecct = $("#clavecct").val(data.clavecct);
+                clavecct = $("#clavecct").val(data.clavecct),
+                Status_Esc = $("#Status_Esc").val(data.Status_Esc);
 
         });
        

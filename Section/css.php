@@ -17,7 +17,7 @@
     <link href="../Include/css/bootstrap.min.css" rel="stylesheet">
     <link href="../Include/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="../Include/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
-
+    <link href="../Include/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
     <link href="../Include/css/plugins/iCheck/custom.css" rel="stylesheet">
 
     <link href="../Include/css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">

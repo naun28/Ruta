@@ -89,8 +89,13 @@
         $(document).ready(function() {
              $('#tipouser').on('change',function(){
               var selectValor = '#' +$(this).val();
-              $('#ver').children('div').show();
-              $('#ver').children(selectValor).hide();
+              $('#ver').children('div').hide();
+              $('#ver').children(selectValor).show();
+            });
+             $('#tipouser').on('change',function(){
+              var selectValor = '#' +$(this).val();
+              $('#mostrar').children('div').hide();
+              $('#mostrar').children(selectValor).show();
             });
              
            $("#btnLimpiar").click(function(event) {
@@ -568,6 +573,6 @@
     }
 
 </script>
-<!--Estructura del ModalEscuelas-->
+<!--Estructura del Modal-->
 <?php include '../Section/modalPerfiles.php'; ?>
 

@@ -16,7 +16,8 @@
                     <input type="hidden" id="Domicilio" name="Domicilio">
                     <input type="hidden" id="Localidad22" name="Localidad">
                     <input type="hidden" id="Municipio" name="Municipio">
-                    <input type="hidden" id="zonat" name="Zona">
+                    <input type="hidden" id="Ruta33" name="Zona">
+                    <input type="hidden" id="Status_Esc" name="Status_Esc">
                 
                 <div class="form-group col-md-4">
                     <label>Numero de Equipos</label><input type="text" id="Eq" name="Nequipos" class="form-control
@@ -36,7 +37,7 @@
                 </div>
                  
                  <div class="form-group col-md-4">
-                    <label>Numero de reporte</label><input type="text" id="NumRep" name="Nreporte" placeholder="" class="form-control" " readonly="">
+                    <label>Numero de Reporte</label><input type="text" id="NumRep" name="Nreporte" placeholder="" class="form-control" " readonly="">
                 </div>
                 <div class="form-group col-md-4">
                     <label>Fecha de Reporte</label><input type="text" id="fecha" name="FechaReporte" placeholder="" class="form-control" " readonly="">
@@ -52,13 +53,13 @@
                 </div>
                  
                  <div class="form-group col-md-4">
-                    <label>Ultima visita</label><input type="text" id="UltVisita" name="UltimaVisita" placeholder="" class="form-control" " readonly="">
+                    <label>Ultima Visita</label><input type="text" id="UltVisita" name="UltimaVisita" placeholder="" class="form-control" " readonly="">
                 </div>
                  <div class="form-group col-md-4">
-                    <label>TIPO DE ESCUELA</label><input type="text" id="tipo_escuela" name="TipoEscuela" placeholder="" class="form-control" " readonly="">
+                    <label>Tipo de Escuela</label><input type="text" id="tipo_escuela" name="TipoEscuela" placeholder="" class="form-control" " readonly="">
                 </div>
                 <div class="form-group">
-                    <label>Problema Solicitado</label>
+                    <label>Solicitud del Reporte</label>
                     <textarea type="text" id="concepto" name="ProbSolicitado" class="form-control" style="min-height: 100px; max-height: 100px; min-width: 100%; max-width: 100%;" readonly="" >
                     </textarea>
                 </div>
