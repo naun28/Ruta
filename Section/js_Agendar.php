@@ -551,7 +551,7 @@
                 {"data":"ProbSolicitado"},
                 {"data":"LevantReporte"},
                 {"defaultContent": "<button class=' agenda btn btn-danger btn-xs' data-toggle='modal' data-target='#myModal'>Agendar</button>"},
-                {"defaultContent": "<button class=' back btn btn-warning btn-xs'><li class='fa fa-mail-reply'></li></button>"},
+                {"defaultContent": "<button class='deshacer btn btn-warning btn-xs' data-toggle='modal' data-target='#myModal6'><li class='fa fa-mail-reply'></li></button>"},
                 {"data":"Zona","visible": false},
                 {"data":"Nequipos","visible": false},
                 {"data":"Aequipos","visible": false},
@@ -568,7 +568,7 @@
 
         });
         obtener_data_agenda("#poragendar tbody",table); 
-        obtener_data_back("#poragendar tbody",table); 
+        obtener_data_deshacer("#poragendar tbody",table); 
     }
        var obtener_data_agenda = function (tbody, table) {
         $(tbody).on("click","button.agenda", function(){
@@ -593,14 +593,22 @@
                 UltimaVisita = $("#UltimaVisita").val(data.UltimaVisita),
                 FechaMant = $("#FechaMant").val(data.FechaMant),
                 TipoEscuela = $("#TipoEscuela").val(data.TipoEscuela);
-
+               
+        });
+       
+    }
+    var obtener_data_deshacer = function (tbody, table) {
+        $(tbody).on("click","button.deshacer", function(){
+            var data = table.row($(this).parents("tr")).data();
+            var 
+                ClaveM = $("#ClaveM").val(data.Clave);
+               
         });
        
     }
     
-
-
 </script>
-<?php include "../Section/modalAgendar.php"; ?>
 
+<?php include "../Section/modalAgendar.php"; ?>
+<?php include "../Section/modalDeshacer.php"; ?>
 <!-- script para cambiar valores de input -->
