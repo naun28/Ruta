@@ -42,14 +42,14 @@
                             <label>Domicilio</label><input type="text" id="Domicilio" name="Domicilio" placeholder="Domicilio" class="form-control" readonly="Domicilio">
                         </div>
                         <div class="form-group col-md-6">
-                            <label>Semana</label><input type="number" id="Semana" name="Semana" placeholder="Semana" class="form-control">
+                            <label>Semana</label><input type="number" id="Semana" name="Semana" placeholder="Semana" class="form-control" required="Semana">
                         </div>
                         <div class="form-group col-md-6" id="data_5">
                             <label>Fecha</label>
                            <div class="input-daterange input-group" id="datepicker">
-                                <input type="text" class="input-sm form-control" placeholder="Inicio" name="FechaIni" id="FechaIni" />
+                                <input type="text" class="input-sm form-control" placeholder="Inicio" name="FechaIni" id="FechaIni" required="Inicio" />
                                 <span class="input-group-addon">Al</span>
-                                <input type="text" class="input-sm form-control" placeholder="Final" name="FechaFin" id="FechaFin"  />
+                                <input type="text" class="input-sm form-control" placeholder="Final" name="FechaFin" id="FechaFin" required="final" />
                             </div>
                         </div>
                         <div class="form-group col-md-12">
@@ -58,8 +58,8 @@
 
                             <label class="checkbox-inline i-checks"> <input type="checkbox" value="Soporte" name="Soporte" class="form-control"> Soporte </label>
                             <label class="checkbox-inline i-checks"> <input type="checkbox" value="Mantenimiento" name="Mantenimiento" class="form-control"> Mantenimiento </label>
-                            <label class="checkbox-inline i-checks"> <input type="checkbox" value="Conectividad" name="Conectividad" class="form-control"> Conectividad </label>
-                            <label class="checkbox-inline i-checks"> <input type="checkbox" value="Conectividad" name="Conectividad" class="form-control"> Aula de Medios </label>
+                            <label class="checkbox-inline i-checks"> <input type="checkbox" value="Conectividad" name="Conectiv" class="form-control"> Conectividad </label>
+                            <label class="checkbox-inline i-checks"> <input type="checkbox" value="AulaDeMedios" name="AulaDeMedios" class="form-control"> Aula de Medios </label>
                           </div>
                         </div>
                         <div class="form-group col-md-6">
@@ -69,7 +69,7 @@
                                 <?php
                                 require('../Conect/conexion.php');
 
-                                $rs = mysqli_query($conexion, "SELECT * FROM usuarios where tipouser = 'Lider de Brigada'");
+                                $rs = mysqli_query($conexion, "SELECT * FROM usuarios where tipouser = 'Lider'");
                                 while($row=mysqli_fetch_array($rs))
                                 {
                                   echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";

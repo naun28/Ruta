@@ -536,12 +536,22 @@
                  
                 ],
 
-            "ajax":{
-                "method":"POST",
-                "url":"../Controlador/AgendarController.php"
+                "ajax":{
+                    "method":"POST",
+                    "url":"../Controlador/AgendarController.php",
+                    
+                   error: function (result) {
+                    
+            swal({
+                title: "LISTA VACIA",
+                text: "NO HAY ESCUELAS PARA AGENDAR",
+                type: "warning"
+
+            });
+                }
             },
             "columns":[
-                
+         
                 {"data":"Clave"},
                 {"data":"Escuela"},
                 {"data":"Domicilio"},
@@ -565,10 +575,10 @@
                 {"data":"TipoEscuela","visible": false}
                 
             ]
-
         });
         obtener_data_agenda("#poragendar tbody",table); 
-        obtener_data_deshacer("#poragendar tbody",table); 
+        obtener_data_deshacer("#poragendar tbody",table);
+
     }
        var obtener_data_agenda = function (tbody, table) {
         $(tbody).on("click","button.agenda", function(){

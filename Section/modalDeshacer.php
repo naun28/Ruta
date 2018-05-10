@@ -9,15 +9,16 @@
                 </div>
                 <div class="modal-body">
                     <CENTER><h4>¿DESEA QUITAR ESCUELA DE LA LISTA?</h4></CENTER>
-                        <form method="post" action="#" name="deshacer" id="deshacer" id="formLimpiar">
+                        <form method="POST" action="../Modelo/deshacer.php" id="formLimpiar">
                             <input type="hidden"  id="ClaveM" name="ClaveM" placeholder="Clave" class="form-control" readonly="clave">
                             <input type="hidden" id="Status_Esc" name="Status_Esc" value="0">
-                       </form>
+                       
                 </div>
                 <div class="modal-footer">
                     <button id="btnLimpiar" type="button" class="btn btn-white" data-dismiss="modal">Cancelar</button>
                     <button type="submit" class="btn btn-danger">Aceptar</button>
                 </div>
+            </form>
             </div>
         </div>
     </div>
