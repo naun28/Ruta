@@ -244,7 +244,7 @@
             } else {
                 $inputImage.addClass("hide");
             }
-
+            $('.chosen-select').chosen({width: "100%"});
             $("#download").click(function() {
                 window.open($image.cropper("getDataURL"));
             });
@@ -421,7 +421,7 @@
 
         });
 
-        $('.chosen-select').chosen({width: "100%"});
+        
 
         $("#ionrange_1").ionRangeSlider({
             min: 0,
@@ -498,7 +498,7 @@
                 'max':  80
             }
         });
-
+        
         var drag_fixed = document.getElementById('drag-fixed');
 
         noUiSlider.create(drag_fixed, {
@@ -540,16 +540,15 @@
                     "method":"POST",
                     "url":"../Controlador/AgendarController.php",
                     
-                   error: function (result) {
-                    
-            swal({
-                title: "LISTA VACIA",
-                text: "NO HAY ESCUELAS PARA AGENDAR",
-                type: "warning"
+                    error: function (result) {
+                        swal({
+                            title: "LISTA VACIA",
+                            text: "NO HAY ESCUELAS PARA AGENDAR",
+                            type: "warning"
 
-            });
-                }
-            },
+                        });
+                    }
+                  },
             "columns":[
          
                 {"data":"Clave"},
@@ -561,7 +560,7 @@
                 {"data":"ProbSolicitado"},
                 {"data":"LevantReporte"},
                 {"defaultContent": "<button class=' agenda btn btn-danger btn-xs' data-toggle='modal' data-target='#myModal'>Agendar</button>"},
-                {"defaultContent": "<button class='deshacer btn btn-warning btn-xs' data-toggle='modal' data-target='#myModal6'><li class='fa fa-mail-reply'></li></button>"},
+                {"defaultContent": "<button class='deshacer btn btn-warning btn-xs' data-toggle='modal' data-target='#myModal6'><li class='fa fa-trash'></li></button>"},
                 {"data":"Zona","visible": false},
                 {"data":"Nequipos","visible": false},
                 {"data":"Aequipos","visible": false},

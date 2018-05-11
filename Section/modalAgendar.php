@@ -85,11 +85,22 @@
                             <label>Brigada</label><input type="text"  id="nBrigada" name="nBrigada" placeholder="Brigada" class="form-control" readonly="nBrigada" >
                         </div>
                         <div class="form-group col-md-12">
-                            <label>Integrantes</label>
-                            <textarea type="text" placeholder="Integrantes" name="Brigadistas" readonly="Integrantes"  class="form-control" style="min-height: 45px; max-height: 45px; min-width: 100%; max-width: 100%;">
-                            </textarea>
+                            <label>Brigadistas</label>
+                              <select data-placeholder="Brigadistas" class="chosen-select col-sm-10"  name="Brigadista"  multiple style="width:350px;" tabindex="4">
                             
-                        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <?php
+                            require('../Conect/conecviatik.php');
+                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios where tipouser = 'Brigadista'");
+                            while($row=mysqli_fetch_array($rs))
+                            {
+                              echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
+                              echo $row['nombres']. " " .$row['apellidos'];
+                              echo "</option>";                     
+                            }
+                            mysqli_close($conecviatiks);
+                            ?>
+                          </select>
+                     </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         <div class="form-group">
                            <label>Comentarios</label>
                             <textarea type="text" placeholder="Comentario" name="Comentarios" class="form-control" style="min-height: 50px; max-height: 50px; min-width: 100%; max-width: 100%;">
@@ -97,6 +108,7 @@
                             </textarea>
                             
                         </div>
+                        
                         <div class="modal-footer">
                             <button id="btnLimpiar" type="button" class="btn btn-white" data-dismiss="modal">Cerrar</button>
                             <button type="submit" class="btn btn-danger">Aceptar</button>

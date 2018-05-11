@@ -7,7 +7,7 @@ $telefono   = $_POST['telefono'];
 $correo     = $_POST['correo'];
 $pass      = $_POST['pass'];
 $tipouser      = $_POST['tipouser'];
-$nbrigada      = $_POST['nbrigada'];
+$nbrigada      = $_POST['nbrigada'].$_POST['nbrig'];
 $conexion   = mysqli_connect("localhost", "root", "", "rutas");
 
 if (!empty($id_usuario)) {

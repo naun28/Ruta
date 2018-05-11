@@ -11,6 +11,8 @@ function Conectarse()
     mysql_query("SET NAMES 'utf8'");
 
     return $cn;
+    
 }
 #conexion para mostrar los datos en la tabla de Usuarios
 $conexion = new mysqli("localhost","root","","rutas");
+

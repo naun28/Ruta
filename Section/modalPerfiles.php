@@ -31,10 +31,10 @@
                     </div>
                     <div class="form-group ">
                         <label>Tipo de Usuario</label> 
-                        <select name="tipouser" id="tipouser" name="tipouser" id="tipo" class="form-control chosen-container chosen-container-single"  onkeyup="habilitar" required="">
+                        <select name="tipouser" id="tipouser" id="tipo" name="tipo"  class="form-control chosen-container chosen-container-single"  onkeyup="habilitar" required="">
                             <option value="Administrador">Administrador</option>
                             <option value="Director">Director</option>
-                            <option value="Brigadista" >Brigadista</option>
+                            <option value="Brigadista">Brigadista</option>
                             <option value="Lider">Lider de Brigada</option>
                             <option value="Mesa">Mesa de Apoyo</option>
                         </select>
@@ -65,7 +65,7 @@
                         <div id="mostrar">
                           <div id="Lider" style="display:none;" class="form-group">
 
-                            <label>N° de Brigada</label> <select name="nbrigada" class="form-control">
+                            <label>N° de Brigada</label> <select name="nbrig" class="form-control">
                                 <option value="" selected>Seleccione Brigada</option>
                                 <option value="Brigada 1">Brigada 1</option>
                                 <option value="Brigada 2">Brigada 2</option>
@@ -86,8 +86,6 @@
                             </div>
                         </div>
                     
-
-               
                 <div class="modal-footer">
                    <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white" data-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-danger">Aceptar</button>

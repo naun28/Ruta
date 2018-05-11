@@ -25,7 +25,7 @@
                             <th style="width: 18%;">Solicitud</th>
                             <th>Levanto Reporte</th>
                             <th>Accion</th>
-                            <th><li class="fa fa-mail-reply"></li></th>
+                            <th><li class="fa fa-trash"></li></th>
                             <th style="display: none;">Zona</th>
                             <th style="display: none;">Nequipos</th>
                             <th style="display: none;">Aequipos</th>
@@ -54,7 +54,7 @@
                             <th style="width: 18%;">Solicitud</th>
                             <th>Levanto Reporte</th>
                             <th>Accion</th>
-                            <th><li class="fa fa-mail-reply"></li></th>
+                            <th><li class="fa fa-trash"></li></th>
                             <th style="display: none;">Zona</th>
                             <th style="display: none;">Nequipos</th>
                             <th style="display: none;">Aequipos</th>
