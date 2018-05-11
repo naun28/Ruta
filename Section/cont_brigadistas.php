@@ -52,7 +52,7 @@
                                         <td>HERMOSILLO</td>
                                         <td>01/01/2018</td>
                                         <td>AQUI VAN LOS COMENTARIOS</td>
-                                        <td> <input type="button" value="Levantar reporte" class="btn btn-danger" data-toggle="modal" data-target="#myModal4"> </td>
+                                        <td> <input type="button" value="Captura de visita" class="btn btn-danger" data-toggle="modal" data-target="#myModal4"> </td>
                                     </tr>
                                     <tr>
                                         <td>RAFAEL MORALES NIEBLAS</td>
@@ -65,7 +65,7 @@
                                         <td>HUATABAMPO</td>
                                         <td>02/01/2018</td>
                                         <td>AQUI VAN LOS COMENTARIOS</td>
-                                        <td> <input type="button" value="Levantar reporte" class="btn btn-danger" data-toggle="modal" data-target="#myModal4"> </td>
+                                        <td> <input type="button" value="Captura de visita" class="btn btn-danger" data-toggle="modal" data-target="#myModal4"> </td>
                                     </tr>
                                     
                                     
@@ -79,18 +79,54 @@
                                 </tfoot>
                             </table>
 
+
                             <div class="modal inmodal"  id="myModal4" tabindex="-1" role="dialog"  aria-hidden="true">
                                 <div class="modal-dialog" style="width: 50%">
                                     <div class="modal-content animated fadeIn">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
                                             <i class="fa fa-book modal-icon"></i>
-                                            <h4 class="modal-title">Generar reporte <h4>
+                                            <h4 class="modal-title">Captura de visita<h4>
                                             </div>
                                             <div class="modal-body">
+                                            <form  method="POST" action="../Controlador/regReporte.php" id="formLimpiar" class="form-group">
+                                                <div class="form-group">
+                                                    <label>Fecha de llegada</label><input type="text" name="fechaloc" placeholder=""  class="form-control" required="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Hora de llegada</label><input id="hora" type="text" name="horaloc" placeholder=""  class="form-control" required="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" value="<?php echo date('d-m-Y');  ?>" name="fechaserv" placeholder=""   class="form-control" required="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" value="<?php echo date('H:i:s',time());  ?>" name="horaserv" placeholder=""  class="form-control" required="">
+                                                </div>
+                                                <div class="form-group">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+    function getTimeAJAX() {   
+        var time = $.ajax({
+            url: '../Controlador/horaser.php', //indicamos la ruta donde se genera la hora
+            dataType: 'text',//indicamos que es de tipo texto plano
+            async: false     //ponemos el parámetro asyn a falso
+        }).responseText;
+        //actualizamos el div que nos mostrará la hora actual
+        var horis= time;
+        document.getElementById("myWadtch").innerHTML = time;
+    }
+    //con esta funcion llamamos a la función getTimeAJAX cada segundo para actualizar el div que mostrará la hora
+    setInterval(getTimeAJAX,1000);
+</script>
+<div id='myWadtch'></div>
 
-                                                <form  method="POST" action="../Controlador/regReporte.php" id="formLimpiar" class="form-group">
-                                                    <div class="form-group">
+                                                    <label>Fecha de llegada</label><input value="" type="text" id="myWadtch" placeholder=""  class="form-control" required="">
+                                                </div>
+                                                    
+
+
+
+                                                   <!--  <div class="form-group">
                                                         <label>Reportado por:</label><input type="text" name="reportado" placeholder="" class="form-control" required="">
                                                     </div>
                                                     <div class="form-group">
@@ -147,7 +183,7 @@
 
 
 
-                                                </div>
+                                                </div> -->
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-white" data-dismiss="modal">Cerrar</button>
                                                     <button type="submit" class="btn btn-danger">Guardar</button>

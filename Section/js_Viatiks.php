@@ -536,15 +536,17 @@
             },
             "columns":[
                 
-                {"data":"id", "visible": false},
+                
                 {"data":"liderbrig"},
-                {"data":"vehiculo"},
-                {"data":"placas"},
-                {"data":"rendimiento"},
                 {"data":"lugares"},
-                {"defaultContent": "<button class=' hist btn btn-w-m btn-danger' data-toggle='modal' data-target='#myModa20'> Ver</button>"},
-                {"data":"fechaini","visible": false},
-                {"data":"fechafin","visible": false},
+                {"data":"fechaini"},
+                {"data":"fechafin"},
+                {"data":"brigacompanante"},
+                
+                {"defaultContent": "<button class=' hist btn btn-w-m btn-danger' data-toggle='modal' data-target='#myModa20'> Detalles</button>"},
+                {"data":"vehiculo","visible": false},
+                {"data":"placas","visible": false},
+                {"data":"rendimiento","visible": false},
                 {"data":"dias","visible": false},
                 {"data":"escuelasvisit","visible": false},
                 {"data":"recorrido","visible": false},
@@ -553,7 +555,7 @@
                 {"data":"presugasolina","visible": false},
                 {"data":"presucasetas","visible": false},
                 {"data":"viaticoslider","visible": false},
-                {"data":"brigacompanante","visible": false},
+                
                 {"data":"viaticosbrig","visible": false},
                 {"data":"totalreal","visible": false},
                 {"data":"totalchilo","visible": false}

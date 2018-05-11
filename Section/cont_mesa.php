@@ -42,32 +42,15 @@
                                 <tr>
                                     <th>Nombre</th>
                                     <th>Lugar(es)</th>
-                                    <th data-hide="phone,tablet">Fechas</th>
+                                    <th data-hide="phone,tablet">Fecha</th>
                                     <th data-hide="phone,tablet">Escuelas</th>
                                     <th data-hide="phone,tablet">Dias</th>
                                     <th data-hide="phone,tablet">Acciones</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr class="gradeX">
-                                    <td>Ramón Rodriguez</td>
-                                    <td>Guaymas
-                                    </td>
-                                    <td>12-03-2018</td>
-                                    <td class="center">00XXXXXXXX</td>
-                                    <td class="center"> 2 </td>
-                                    <td class="center"> <input class="btn btn-danger" type="button" name="" value="Descargar justificante"> </td>
-                                </tr>
-                                <tr class="gradeC">
-                                    <td>Naun Lara</td>
-                                    <td>Empalme
-                                    </td>
-                                    <td>15-03-2018</td>
-                                    <td class="center">00XXXXXXXX</td>
-                                    <td class="center"> 3 </td>
-                                    <td class="center"> <input class="btn btn-danger" type="button" name="" value="Descargar justificante"> </td>
-                                </tr>
-                                <tr class="gradeA">
+
+                                <tr>
                                     <td>Alberto Rodriguez</td>
                                     <td>Navojoa
                                     </td>
@@ -75,7 +58,7 @@
                                     <td class="center">00XXXXXXXX</td>
                                     <td class="center"> 3 </td>
                                     <td class="center"> 
-                                        <input class="btn btn-danger" type="button" name="" value="Descargar justificante"> 
+                                        <input class="btn btn-danger" type="button" name="" value=""> 
                                     </td>
                                 </tr>
                                 

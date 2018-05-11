@@ -1,6 +1,9 @@
 <br>
 <div class="row">
-
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
  <!--- Estructura -->
   <div class="col-lg-12">
     <div class="tabs-container">
@@ -24,6 +27,7 @@
                       <legend>Brigadista</legend>
                       <div class="form-group"><label class="col-sm-2 control-label">Lider de brigada</label>
                         <div class="col-sm-10">
+
                           <select data-placeholder="Selecciona el vehiculo" id="selecar" name="librigada"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
                             <option value="0" disabled selected>Selecciona brigadista</option>
                             <?php
@@ -49,11 +53,27 @@
                       <legend>Datos del vehiculo</legend>
                       <div class="form-group"><label class="col-sm-2 control-label">Vehiculo</label>
                         <div class="col-sm-10">
-                          <select data-placeholder="Selecciona el vehiculo" id="selecar" name="nuvehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-                            <!-- se cargaran de una base de datos-->
+                          <script type="text/javascript">
+                            $(document).ready(function(){
+                              $('#nuvehiculo').focus();
+                              $('#nuvehiculo').keyup(function(e){
+                                ;
+                                var url="../Controlador/conVehi.php";
+                                $.getJSON(url,{ _num1: $('#nuvehiculo').val() }, function(carros){
+                                $.each(carros, function(i.carro){
+                                  $.("#nuvehiculo").val(carro.nuvehiculo);
+                                  $.("#plavehiculo").val(carro.plavehiculo);
+                                  $.("#rendvehiculo").val(carro.rendvehiculo);
+                                });
+                                });
+                              });
+                            });
+                          </script>
+                          <!-- <select data-placeholder="Selecciona el vehiculo" id="nuvehiculo" name="nuvehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+                           
                             <option value="0" disabled selected>Selecciones un vehiculo</option>
                             <?php
-                            require('../Conect/conecviatik.php');
+                         /*   require('../Conect/conecviatik.php');
 
                             $rs = mysqli_query($conecviatiks, "SELECT * FROM vehiculos");
                             while($row=mysqli_fetch_array($rs))
@@ -72,7 +92,7 @@
 
                       <div class="form-group"><label class="col-sm-2 control-label">Placas</label>
                         <div class="col-sm-10">
-                          <select data-placeholder="Selecciona el vehiculo" id="selecar" name="plavehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+                          <select data-placeholder="Selecciona el vehiculo" id="plavehiculo" name="plavehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
                             <option value="0" disabled selected>Selecciones las placas</option>
                             <?php
                             require('../Conect/conecviatik.php');
@@ -84,14 +104,31 @@
                               echo $row['placas'];
                               echo "</option>";                     
                             }
-                            mysqli_close($conecviatiks);
+                            mysqli_close($conecviatiks);*/
                             ?>
                           </select>
                         </div>
                       </div>
-                      <div class="form-group"><label class="col-sm-2 control-label">Rendimiento</label>
 
-                        <div class="col-sm-10"><input type="text" placeholder="Rendimiento (Km/L)" name="rendvehiculo" class="form-control"></div>
+                      <div class="form-group"><label class="col-sm-2 control-label">Rendimiento</label>
+                        <div class="col-sm-10">
+                          <input id="rendvehiculo" type="text" placeholder="Rendimiento (Km/L)" name="rendvehiculo" class="form-control">
+                        </div>
+                      </div> -->
+                      <div class="form-group"><label class="col-sm-2 control-label" for="nuvehiculo">vehiculo</label>
+                        <div class="col-sm-10">
+                          <input id="nuvehiculo" type="text" placeholder="vehiculo" name="nuvehiculo" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group"><label class="col-sm-2 control-label" for="plavehiculo">placas</label>
+                        <div class="col-sm-10">
+                          <input id="plavehiculo" type="text" placeholder="placas" name="plavehiculo" class="form-control">
+                        </div>
+                      </div>
+                      <div class="form-group"><label class="col-sm-2 control-label" for="rendvehiculo">Rendimiento</label>
+                        <div class="col-sm-10">
+                          <input id="rendvehiculo" type="text" placeholder="Rendimiento (Km/L)" name="rendvehiculo" class="form-control">
+                        </div>
                       </div>
                     </fieldset>
                   </div>       
