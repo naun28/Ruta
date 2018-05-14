@@ -1,7 +1,9 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- para calcular dias -->
+    <script src="http://momentjs.com/downloads/moment.min.js"></script>
+    
     <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
     <script src="../Include/js/jquery-3.1.1.min.js"></script>
     <script src="../Include/js/bootstrap.min.js"></script>

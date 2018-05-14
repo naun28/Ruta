@@ -28,7 +28,7 @@
                       <div class="form-group"><label class="col-sm-2 control-label">Lider de brigada</label>
                         <div class="col-sm-10">
 
-                          <select data-placeholder="Selecciona el vehiculo" id="selecar" name="librigada"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+                          <select data-placeholder="Selecciona el vehiculo" onchange="return showCustomer();" id="selecar" name="librigada"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
                             <option value="0" disabled selected>Selecciona brigadista</option>
                             <?php
                             require('../Conect/conecviatik.php');
@@ -53,23 +53,55 @@
                       <legend>Datos del vehiculo</legend>
                       <div class="form-group"><label class="col-sm-2 control-label">Vehiculo</label>
                         <div class="col-sm-10">
-                          <script type="text/javascript">
-                            $(document).ready(function(){
-                              $('#nuvehiculo').focus();
-                              $('#nuvehiculo').keyup(function(e){
-                                ;
-                                var url="../Controlador/conVehi.php";
-                                $.getJSON(url,{ _num1: $('#nuvehiculo').val() }, function(carros){
-                                $.each(carros, function(i.carro){
-                                  $.("#nuvehiculo").val(carro.nuvehiculo);
-                                  $.("#plavehiculo").val(carro.plavehiculo);
-                                  $.("#rendvehiculo").val(carro.rendvehiculo);
-                                });
-                                });
-                              });
-                            });
+
+
+                        <select data-placeholder="Selecciona el vehiculo" onchange="cale(this.value)" id="nuvehiculo" name="nuvehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+                           
+                            <option value="0" disabled selected>Selecciones un vehiculo</option>
+                            <?php
+                            require('../Conect/conecviatik.php');
+
+                            $rs = mysqli_query($conecviatiks, "SELECT * FROM vehiculos");
+                            while($row=mysqli_fetch_array($rs))
+                            {
+                              echo "<option value='".$row['num_vehiculo']."'>";
+                              echo $row['num_vehiculo'];
+                              echo "</option>";                     
+                            }
+
+                            mysqli_close($conecviatiks);
+                            ?>
+
+                          </select>
+
+                          <script>
+                            function cale(str) {
+                                if (str == "") {
+                                    document.getElementById("datosvehiculo").innerHTML = "";
+                                    return;
+                                } else { 
+                                    if (window.XMLHttpRequest) {
+                                        // code for IE7+, Firefox, Chrome, Opera, Safari
+                                        xmlhttp = new XMLHttpRequest();
+                                    } else {
+                                        // code for IE6, IE5
+                                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                                    }
+                                    xmlhttp.onreadystatechange = function() {
+                                        if (this.readyState == 4 && this.status == 200) {
+                                            document.getElementById("datosvehiculo").innerHTML = this.responseText;
+                                        }
+                                    };
+                                    xmlhttp.open("GET","../Controlador/getdatos.php?q="+str,true);
+                                    xmlhttp.send();
+                                }
+                            }
                           </script>
-                          <!-- <select data-placeholder="Selecciona el vehiculo" id="nuvehiculo" name="nuvehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+                          <br><br>
+                          <div id="datosvehiculo"></div>
+                      
+<!--
+                       <select data-placeholder="Selecciona el vehiculo" id="nuvehiculo" name="nuvehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
                            
                             <option value="0" disabled selected>Selecciones un vehiculo</option>
                             <?php
@@ -115,21 +147,6 @@
                           <input id="rendvehiculo" type="text" placeholder="Rendimiento (Km/L)" name="rendvehiculo" class="form-control">
                         </div>
                       </div> -->
-                      <div class="form-group"><label class="col-sm-2 control-label" for="nuvehiculo">vehiculo</label>
-                        <div class="col-sm-10">
-                          <input id="nuvehiculo" type="text" placeholder="vehiculo" name="nuvehiculo" class="form-control">
-                        </div>
-                      </div>
-                      <div class="form-group"><label class="col-sm-2 control-label" for="plavehiculo">placas</label>
-                        <div class="col-sm-10">
-                          <input id="plavehiculo" type="text" placeholder="placas" name="plavehiculo" class="form-control">
-                        </div>
-                      </div>
-                      <div class="form-group"><label class="col-sm-2 control-label" for="rendvehiculo">Rendimiento</label>
-                        <div class="col-sm-10">
-                          <input id="rendvehiculo" type="text" placeholder="Rendimiento (Km/L)" name="rendvehiculo" class="form-control">
-                        </div>
-                      </div>
                     </fieldset>
                   </div>       
                 </div>
@@ -217,27 +234,51 @@
                           </select>
                         </div>
                       </div>
-                      <div class="form-group"><label class="col-sm-2 control-label">Fecha</label>
+                      
+                      <div class="form-group" id="data_5"><label class="col-sm-2 control-label">Fecha</label>
                         <div class="col-sm-10">
                           <center><div class="input-daterange input-group" id="datepicker">
-                            <input type="date" class="input-sm form-control"  name="feini" value="05/14/2014"/>
+                            <input type="text" class="input-sm form-control" id="feini" name="feini" placeholder="inicio" />
                             <span class="input-group-addon">Al</span>
-                            <input type="date" class="input-sm form-control"  name="fefin" value="05/22/2014" />
+                            <input type="text" class="input-sm form-control" id="fefin" name="fefin" placeholder="final" />
                           </div></center>
                         </div>
                       </div> 
+                      <script>
+                        function hola(){
+                          var f1 = document.getElementsByTagName('feini');
+                        var f2 = document.getElementsByTagName('fefin');
+                        var r = f2.diff(f1,"days");
+                        $("#di").text(r);
+                        }
+                      </script>
+                      <span id="di"></span>
+                      <?php 
+                      $datetime1 = date_create('2009-10-11');
+                      $datetime2 = date_create('2009-10-13');
+                      $interval = date_diff($datetime1, $datetime2);
+                      echo $interval->format('%d%');
+                       ?>
+                      <span id="di"></span>
                       <div class="form-group"><label class="col-sm-2 control-label">Dias</label>
-                        <div class="col-sm-10"><input type="text" name="dia" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" id="di" name="dia" class="form-control"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Claves de escuelas</label>
                         <div class="col-sm-10">
                           <!--<input type="text" class="form-control">-->
-                          <select data-placeholder="Escuela(s) a visitar" name="scuelas" class="chosen-select col-sm-10" multiple style="width:350px;" tabindex="4">
-                            <option value="1">Escuela 1</option>
-                            <option value="2">Escuela 2</option>
-                            <option value="3">Escuela 3</option>
-                            <option value="4">Escuela 4</option>
-                            <option value="5">Escuela 5</option>
+                          <select data-placeholder="Escuela(s) a visitar" name="scuelas[]" class="chosen-select col-sm-10" multiple style="width:350px;" tabindex="4">
+                            <?php
+                            require('../Conect/conecviatik.php');
+
+                            $rs = mysqli_query($conecviatiks, "SELECT Clave,Escuela FROM agendadas");
+                            while($row=mysqli_fetch_array($rs))
+                            {
+                              echo "<option value='".$row['Clave'],"'>";
+                              echo $row['Clave']. " - " .$row['Escuela'];
+                              echo "</option>";                     
+                            }
+                            mysqli_close($conecviatiks);
+                            ?>
                           </select> 
                         </div>
                       </div>
@@ -277,8 +318,8 @@
                       <legend>Añadir brigadista</legend>
                       <div class="form-group"><label class="col-sm-2 control-label">Brigadista</label>
                         <div class="col-sm-10">
-                          <select data-placeholder="Selecciona una brigada" name="addbrig" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-                            <option value="0" disabled selected>Selecciona brigadista</option>
+                          <select data-placeholder="Selecciona una brigada" multiple name="addbrig" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+                            
                             <?php
                             require('../Conect/conecviatik.php');
 

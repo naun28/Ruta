@@ -33,9 +33,9 @@
               <th >Fecha de salida</th>
               <th >Fecha de llegada</th>
               <th >Brigadista acompañante</th>
-              <th >Vehiculo</th>
               <th >Detalles</th>
               <th style="display: none;">Id</th>
+              <th style="display: none;">Vehiculo</th>
               <th style="display: none;">Placas</th>
               <th style="display: none;">Rendimiento</th>
               <th style="display: none;">Días</th>
@@ -93,7 +93,6 @@
               <th >Fecha de salida</th>
               <th >Fecha de llegada</th>
               <th >Brigadista acompañante</th>
-              <th >Vehiculo</th>
               <th >Detalles</th>
              
               

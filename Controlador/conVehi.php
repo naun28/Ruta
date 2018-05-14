@@ -8,8 +8,10 @@ $carrod = $_GET['_num1'];
 	}
 
 	function busqar($carrod){
-		require('../Conect/conecviatik.php');
-		$sql = mysql_query("SELECT num_vehiculo,placas,rendimiento from vehiculos where num_vehiculo='".$carrod."'",$conecviatiks);
+		//require('../Conect/conecviatik.php');
+		$con= mysql_connect('localhost','root','');
+		mysql_select_db('rutas',$con);
+		$sql = mysql_query("SELECT num_vehiculo,placas,rendimiento from vehiculos where num_vehiculo='".$carrod."'",$con);
 		$carros = array();
 		$contar = mysql_num_rows($sql);
 		if ($contar == 0) {
@@ -25,7 +27,7 @@ $carrod = $_GET['_num1'];
 				$carros[] = array('nuvehiculo'=> $num_vehiculo, 'plavehiculo'=> $placas, 'rendvehiculo'=> $rendimiento);
 			}
 		}
-		$json_string = json_encode($carro);
+		$json_string = json_encode($carros);
 		echo $json_string;
 
 	}
