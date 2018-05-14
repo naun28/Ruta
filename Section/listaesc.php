@@ -33,15 +33,32 @@
         </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <span class="m-r-sm text-muted welcome-message"> 
-                        <?php
-                        date_default_timezone_set('America/Hermosillo');
+                    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+                    <script type="text/javascript">
+                        function getTimeAJAX() {   
+                            var time = $.ajax({
+                                url: '../Controlador/horaser.php', //indicamos la ruta donde se genera la hora
+                                dataType: 'text',//indicamos que es de tipo texto plano
+                                async: false     //ponemos el parámetro asyn a falso
+                            }).responseText;
+                            //actualizamos el div que nos mostrará la hora actual
+                            var horis= time;
+                            document.getElementById("myWadtch").innerHTML = time;
+                        }
+                        //con esta funcion llamamos a la función getTimeAJAX cada segundo para actualizar el div que mostrará la hora
+                        setInterval(getTimeAJAX,1000);
+                    </script>
+                    <b><span id='myWadtch'></span></b>
+                    <!-- <span class="m-r-sm text-muted welcome-message">
+                         <?php
+                       /* date_default_timezone_set('America/Hermosillo');
 
                             $hora= date ("h:i:s ");
 
                             $fecha= date ("j/n/Y");
-                            echo $hora; echo $fecha;
-                            ?></span>
+                            echo $hora; echo $fecha;*/
+                            ?>
+                    </span> -->
                 </li>
                 
                 <li>
