@@ -74,7 +74,8 @@
                                 {
                                   echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
                                   echo $row['nombres']. " " .$row['apellidos'];
-                                  echo "</option>";                 
+                                  echo "</option>";
+                                  $brig = $row['nbrigada'];
                                }
                               mysqli_close($conexion);
                               ?>
@@ -82,7 +83,7 @@
                      
                      </div>
                         <div class="form-group col-md-6">
-                            <label>Brigada</label><input type="text"  id="nBrigada" name="nBrigada" placeholder="Brigada" class="form-control" readonly="nBrigada" >
+                            <label>Brigada</label><input type="text"  id="nBrigada" name="nBrigada" placeholder="Brigada" class="form-control" readonly="nBrigada" ">
                         </div>
                         <div class="form-group col-md-12">
                             <label>Brigadistas</label>
