@@ -64,7 +64,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label>Lider de Brigada</label>
-                              <select data-placeholder="Seleccionar Lider" id="Lider" name="Lider"  class="chosen-select form-control" style="width:350px;" onchange="cambio(this);">
+                              <select data-placeholder="Seleccionar Lider" id="Lider" name="Lider" onchange="calix(this.value)"  class="chosen-select form-control" style="width:350px;" >
                                 <option value="0" disabled selected>Seleccionar Lider</option>
                                 <?php
                                 require('../Conect/conexion.php');
@@ -72,7 +72,7 @@
                                 $rs = mysqli_query($conexion, "SELECT * FROM usuarios where tipouser = 'Lider'");
                                 while($row=mysqli_fetch_array($rs))
                                 {
-                                  echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
+                                  echo "<option value='".$row['id_usuario']."'>";
                                   echo $row['nombres']. " " .$row['apellidos'];
                                   echo "</option>";
                                   $brig = $row['nbrigada'];
@@ -80,6 +80,31 @@
                               mysqli_close($conexion);
                               ?>
                           </select>
+                          <script>
+                            function calix(str) {
+                                if (str == "") {
+                                    document.getElementById("datosbrig").innerHTML = "";
+                                    return;
+                                } else { 
+                                    if (window.XMLHttpRequest) {
+                                        // code for IE7+, Firefox, Chrome, Opera, Safari
+                                        xmlhttp = new XMLHttpRequest();
+                                    } else {
+                                        // code for IE6, IE5
+                                        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                                    }
+                                    xmlhttp.onreadystatechange = function() {
+                                        if (this.readyState == 4 && this.status == 200) {
+                                            document.getElementById("datosbrig").innerHTML = this.responseText;
+                                        }
+                                    };
+                                    xmlhttp.open("GET","../Controlador/getdatosbrig.php?q="+str,true);
+                                    xmlhttp.send();
+                                }
+                            }
+                          </script>
+                          <br><br>
+                          <div id="datosbrig"></div>
                      
                      </div>
                         <div class="form-group col-md-6">
