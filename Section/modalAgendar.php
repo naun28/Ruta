@@ -62,7 +62,7 @@
                             <label class="checkbox-inline i-checks"> <input type="checkbox" value="AulaDeMedios" name="AulaDeMedios" class="form-control"> Aula de Medios </label>
                           </div>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-12">
                             <label>Lider de Brigada</label>
                               <select data-placeholder="Seleccionar Lider" id="Lider" name="Lider" onchange="calix(this.value)"  class="chosen-select form-control" style="width:350px;" >
                                 <option value="0" disabled selected>Seleccionar Lider</option>
@@ -75,7 +75,6 @@
                                   echo "<option value='".$row['id_usuario']."'>";
                                   echo $row['nombres']. " " .$row['apellidos'];
                                   echo "</option>";
-                                  $brig = $row['nbrigada'];
                                }
                               mysqli_close($conexion);
                               ?>
@@ -103,16 +102,12 @@
                                 }
                             }
                           </script>
-                          <br><br>
+                          
                           <div id="datosbrig"></div>
-                     
                      </div>
-                        <div class="form-group col-md-6">
-                            <label>Brigada</label><input type="text"  id="nBrigada" name="nBrigada" placeholder="Brigada" class="form-control" readonly="nBrigada" ">
-                        </div>
                         <div class="form-group col-md-12">
                             <label>Brigadistas</label>
-                              <select data-placeholder="Brigadistas" class="chosen-select col-sm-10"  name="Brigadista"  multiple style="width:350px;" tabindex="4">
+                              <select data-placeholder="Brigadistas" class="chosen-select col-sm-10"  name="Brigadistas[]"  multiple style="width:350px;" tabindex="4">
                             
                             <?php
                             require('../Conect/conecviatik.php');
@@ -126,7 +121,7 @@
                             mysqli_close($conecviatiks);
                             ?>
                           </select>
-                     </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                     </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         <div class="form-group">
                            <label>Comentarios</label>
                             <textarea type="text" placeholder="Comentario" name="Comentarios" class="form-control" style="min-height: 50px; max-height: 50px; min-width: 100%; max-width: 100%;">
