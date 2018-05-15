@@ -8,17 +8,25 @@
             <div class="modal-body" >
                 <form  method="POST" action="#" id="formLimpiar" class="form-group">
                     <input type="hidden" class="form-control" readonly id="id">
- 
+                <fieldset>
+                <legend>Brigadista</legend>
                 <div class="form-group col-md-4">
                     <b><label></b>Lider de Brigada</label>
                     <input type="text" class="form-control" readonly id="liderbrig">
+                </div>
+                <div class="form-group col-md-4">
+                    <b><label></b>Brigadista(s)</label>
+                    <input type="text" class="form-control" readonly id="brigacompanante">
 
                 </div>
+                </fieldset>
+                <fieldset>
+                <legend>Datos del vehiculo</legend>
                  <div class="form-group col-md-4">
                     <b><label></b>Vehiculo</label>
                     <input type="text" class="form-control" readonly id="vehiculo">
-
                 </div>
+            
                 <div class="form-group col-md-4">
                     <b><label></b>Placas</label>
                     <input type="text" class="form-control" readonly id="placas">
@@ -27,8 +35,10 @@
                 <div class="form-group col-md-4">
                     <b><label></b>Rendimiento</label>
                     <input type="text" class="form-control" readonly id="rendimiento">
-
                 </div>
+                </fieldset>
+                <fieldset>
+                <legend>Brigadista</legend>
                 <div class="form-group col-md-4">
                     <b><label></b>Destinos</label>
                     <input type="text" class="form-control" readonly id="lugares">
@@ -66,6 +76,9 @@
                     <input type="text" class="form-control" readonly id="excedente">
 
                 </div>
+            </fieldset>
+            <fieldset>
+                <legend>Presupuesto</legend>
                 <div class="form-group col-md-4">
                     <b><label></b>Precio de gasolina por litro</label>
                     <input type="text" class="form-control" readonly id="prelitrogas">
@@ -85,11 +98,7 @@
                     <input type="text" class="form-control" readonly id="viaticoslider">
 
                 </div>
-                <div class="form-group col-md-4">
-                    <b><label></b>Brigadista(s)</label>
-                    <input type="text" class="form-control" readonly id="brigacompanante">
-
-                </div>
+                
                 <div class="form-group col-md-4">
                     <b><label></b>Viaticos para brigadistas</label>
                     <input type="text" class="form-control" readonly id="viaticosbrig">
@@ -105,7 +114,7 @@
                     <input type="text" class="form-control" readonly id="totalchilo">
 
                 </div>
-              
+              </fieldset>
                  
             <div class="modal-footer">
                <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-danger" data-dismiss="modal">Cerrar</button>

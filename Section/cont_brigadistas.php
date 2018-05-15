@@ -90,12 +90,23 @@
                                             </div>
                                             <div class="modal-body">
                                             <form  method="POST" action="../Controlador/regReporte.php" id="formLimpiar" class="form-group">
-                                                <div class="form-group">
-                                                    <label>Fecha de llegada</label><input type="text" name="fechaloc" placeholder=""  class="form-control" required="">
+
+                                                <div class="form-group" id="data_1">
+                                                    <label class="font-normal">Fecha de llegada</label>
+                                                    <div class="input-group date">
+                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
+                                                    </div>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label>Hora de llegada</label><input id="hora" type="text" name="horaloc" placeholder=""  class="form-control" required="">
-                                                </div>
+                                               
+
+                            <div class="input-group clockpicker" data-autoclose="true">
+                                <input type="text" class="form-control" value="09:30" >
+                                <span class="input-group-addon">
+                                    <span class="fa fa-clock-o"></span>
+                                </span>
+                            </div>
+                        
+                                                <br>
                                                 <div class="form-group">
                                                     <input type="text" value="<?php echo date('d-m-Y');  ?>" name="fechaserv" placeholder=""   class="form-control" required="">
                                                 </div>
