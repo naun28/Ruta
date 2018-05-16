@@ -19,10 +19,10 @@
                                                
                                             <div class="form-group col-md-4">
                                                 <label>Nombre(s)</label><input type="text" name="nombres" placeholder="Nombre(s)" class="form-control
-                                                " pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
+                                                " pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
                                             </div>
                                              <div class="form-group col-md-4">
-                                                <label>Apellido(s)</label><input type="text" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
+                                                <label>Apellido(s)</label><input type="text" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[A-Z]+[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
                                             </div>
                                              <div class="form-group col-md-4">
                                                 <label>Telefono</label><input type="text" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">
@@ -62,7 +62,8 @@
                                                     <option value="Brigada 12">Brigada 12</option>
                                                     <option value="Brigada 13">Brigada13</option>
                                                     
-                                                </select>
+                                                </select><br>
+                                                <label>Zona</label><input type="text" name="zonaBrig" placeholder="Zona" class="form-control" pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
                                                
                                                 </div>
                                             </div>
@@ -85,7 +86,8 @@
                                                     <option value="Brigada 12">Brigada 12</option>
                                                     <option value="Brigada 13">Brigada13</option>
                                                     
-                                                </select>
+                                                </select><br>
+                                                <label>Zona</label><input type="text" name="zonaBrig" placeholder="Zona" class="form-control" required="Zona" pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
                                                
                                                 </div>
                                             </div>
@@ -133,6 +135,7 @@
                                             <th>Email</th>
                                             <th>Tipo de Empleado</th>
                                             <th>N. Brigada</th>
+                                            <th>Zona</th>
                                             
                                         </tr>
                                     </thead>
@@ -148,6 +151,7 @@
                                             <th>Email</th>
                                             <th>Tipo de Empleado</th>
                                             <th>N. Brigada</th>
+                                            <th>Zona</th>
                                             
                                         </tr>
                                     </tfoot> 

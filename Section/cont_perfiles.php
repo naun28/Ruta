@@ -29,7 +29,7 @@
                             <th>Nº Brigada</th>
                             <th>Accion</th>
                             <th style="display: none;">Pass</th>
-                            
+                            <th style="display: none;">Zona</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,7 +48,7 @@
                             <th>Nº Brigada</th>
                             <th>Accion</th>
                             <th style="display: none;">Pass</th>
-                            
+                            <th style="display: none;">Zona</th>
                             
                         </tr>
                     </tfoot>

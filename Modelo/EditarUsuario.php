@@ -8,13 +8,14 @@ $correo     = $_POST['correo'];
 $pass      = $_POST['pass'];
 $tipouser      = $_POST['tipouser'];
 $nbrigada      = $_POST['nbrigada'].$_POST['nbrig'];
+$zonaBrig = $_POST['zonaBrig'];
 $conexion   = mysqli_connect("localhost", "root", "", "rutas");
 
 if (!empty($id_usuario)) {
 	
 
 
-$q = ("UPDATE usuarios set nombres='$nombres',apellidos='$apellidos',telefono='$telefono',correo='$correo',pass='$pass',tipouser='$tipouser',nbrigada='$nbrigada' where id_usuario='" . $id_usuario . "'");
+$q = ("UPDATE usuarios set nombres='$nombres',apellidos='$apellidos',telefono='$telefono',correo='$correo',pass='$pass',tipouser='$tipouser',nbrigada='$nbrigada',zonaBrig='$zonaBrig' where id_usuario='" . $id_usuario . "'");
 
 $ejecutar_q = mysqli_query($conexion, $q) or die("error al insertar");
 }

@@ -59,7 +59,6 @@
                             <option value="Brigada 13">Brigada13</option>
                             
                         </select>
-                        
                     </div>
                 </div>
                         <div id="mostrar">
@@ -82,9 +81,12 @@
                                 <option value="Brigada 13">Brigada13</option>
                                 
                             </select>
-                           
                             </div>
                         </div>
+                        <div class="form-group ">
+                         <label>Zona</label><input type="text" id="zonaBrig" name="zonaBrig" placeholder="Zona" class="form-control" pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+                        </div>                    
+                           
                     
                 <div class="modal-footer">
                    <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white" data-dismiss="modal">Cerrar</button>

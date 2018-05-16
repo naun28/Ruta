@@ -545,7 +545,8 @@
                 {"data":"telefono"},
                 {"data":"correo"},
                 {"data":"tipouser"},
-                {"data":"nbrigada"}
+                {"data":"nbrigada"},
+                {"data":"zonaBrig"}
                 /*{"defaultContent":"<button>Editar</button>"}*/
             ]
 

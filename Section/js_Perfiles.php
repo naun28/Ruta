@@ -147,8 +147,8 @@
 
         $('.demo4').click(function () {
             swal({
-                        title: "Deseas ELIMINAR?",
-                        text: "Al ELIMINAR esta opcion se quitara de tu lista",
+                        title: "DESEAS ELIMINAR EL USUARIO?",
+                        text: "Al ELIMINAR este usuario se quitara de su lista",
                         type: "warning",
                         showCancelButton: true,
                         confirmButtonColor: "#DD6B55",
@@ -160,7 +160,7 @@
                         if (isConfirm) {
                             swal("ELIMINADO!", "Se elimino correctamente", "success");
                         } else {
-                            swal("Cancelado", "Usted a cancelado", "error");
+                            swal("CANCELADO", "Usted a cancelado", "error");
                         }
                     });
         });
@@ -548,13 +548,15 @@
                 {"data":"tipouser"},
                 {"data":"nbrigada"},
                 {"defaultContent": "<button class='edit btn btn-primary btn-xs' data-toggle='modal' data-target='#myModal3'> Editar</button> <button class='eliminar btn btn-danger btn-xs'> Eliminar</button>"},
-                {"data":"pass","visible": false}
+                {"data":"pass","visible": false},
+                {"data":"zonaBrig","visible": false}
             ]
 
         });
 
         
-        obtener_data_edit("#perfiles tbody",table); 
+        obtener_data_edit("#perfiles tbody",table);
+        obtener_data_eliminar("#perfiles tbody",table); 
     }
        var obtener_data_edit = function (tbody, table) {
         $(tbody).on("click","button.edit", function(){
@@ -566,8 +568,42 @@
                 correo = $("#correo").val(data.correo),
                 tipouser = $("#tipouser").val(data.tipouser),
                 nbrigada = $("#nbrigada").val(data.nbrigada),
-                pass = $("#pass").val(data.pass);
+                pass = $("#pass").val(data.pass),
+                zonaBrig = $("#zonaBrig").val(data.zonaBrig);
 
+        });
+       
+    }
+    var obtener_data_eliminar = function (tbody, table) {
+        $(tbody).on("click","button.eliminar", function(){
+            var data = table.row($(this).parents("tr")).data();
+            var id_usuario = $("#id_usuario").val(data.id_usuario),
+                nombres = $("#nombres").val(data.nombres),
+                apellidos = $("#apellidos").val(data.apellidos),
+                telefono = $("#telefono").val(data.telefono),
+                correo = $("#correo").val(data.correo),
+                tipouser = $("#tipouser").val(data.tipouser),
+                nbrigada = $("#nbrigada").val(data.nbrigada),
+                pass = $("#pass").val(data.pass),
+                zonaBrig = $("#zonaBrig").val(data.zonaBrig);
+                swal({
+                        title: "DESEAS ELIMINAR AL USUARIO?",
+                        text: "Al ELIMINARLO se quitara de la lista",
+                        type: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "Si, ELIMINAR!",
+                        cancelButtonText: "No, CANCELAR!",
+                        closeOnConfirm: false,
+                        closeOnCancel: false },
+                    function (isConfirm) {
+                        if (isConfirm) {
+                            swal("ELIMINADO!", "Se elimino correctamente", "success");
+                        } else {
+                            swal("CANCELADO", "Usted a cancelado", "error");
+                        }
+                    });
+                
         });
        
     }
