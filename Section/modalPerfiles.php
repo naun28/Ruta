@@ -10,15 +10,15 @@
                 <div class="modal-body" >
                   <form  method="POST" action="../Modelo/EditarUsuario.php" id="formLimpiar" class="form-group">
                     <div class="form-group">
-                        <label></label><input type="hidden" id="id_usuario" name="id_usuario" class="form-control">
+                        <label></label><input type="hidden" id="idusuario" name="id_usuario" class="form-control">
                     </div>
                        
                     <div class="form-group col-md-4">
-                        <label>Nombre(s)</label><input type="text" id="nombres" name="nombres" placeholder="Nombre(s)" class="form-control
+                        <label>Nombre(s)</label><input type="text" id="nombre" name="nombres" placeholder="Nombre(s)" class="form-control
                         " pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
                     </div>
                      <div class="form-group col-md-4">
-                        <label>Apellido(s)</label><input type="text" id="apellidos" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
+                        <label>Apellido(s)</label><input type="text" id="apellido" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
                     </div>
                      <div class="form-group col-md-4">
                         <label>Telefono</label><input type="text" id="telefono" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">

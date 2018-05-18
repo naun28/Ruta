@@ -238,30 +238,21 @@
                       <div class="form-group" id="data_5"><label class="col-sm-2 control-label">Fecha</label>
                         <div class="col-sm-10">
                           <center><div class="input-daterange input-group" id="datepicker">
-                            <input type="text" class="input-sm form-control" id="feini" name="feini" placeholder="inicio" />
+                            <input type="text" class="input-sm form-control" id="feini" name="feini" values="05/16/2018" placeholder="inicio" />
                             <span class="input-group-addon">Al</span>
-                            <input type="text" class="input-sm form-control" id="fefin" name="fefin" placeholder="final" />
+                            <input type="text" class="input-sm form-control" id="fefin" name="fefin" values="05/30/2018" placeholder="final" />
                           </div></center>
                         </div>
-                      </div> 
-                      <script>
-                        function hola(){
-                          var f1 = document.getElementsByTagName('feini');
-                        var f2 = document.getElementsByTagName('fefin');
-                        var r = f2.diff(f1,"days");
-                        $("#di").text(r);
-                        }
-                      </script>
-                      <span id="di"></span>
+                      </div>                     
+                     
                       <?php 
-                      $datetime1 = date_create('2009-10-11');
-                      $datetime2 = date_create('2009-10-13');
+                      /*$datetime1 = date_create('2009-10-11');
+                      $datetime2 = date_create('2009-10-20');
                       $interval = date_diff($datetime1, $datetime2);
-                      echo $interval->format('%d%');
+                      echo $interval->format('%d%');*/
                        ?>
-                      <span id="di"></span>
                       <div class="form-group"><label class="col-sm-2 control-label">Dias</label>
-                        <div class="col-sm-10"><input type="text" id="di" name="dia" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" id="di" value="3 <?php  //echo $interval->format('%d%'); ?>" name="dia" class="form-control"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Claves de escuelas</label>
                         <div class="col-sm-10">
@@ -283,10 +274,10 @@
                         </div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Recorrido (Km)</label>
-                        <div class="col-sm-10"><input type="text" name="recor" placeholder="Destino más retirado" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="recor" value="100" placeholder="Destino más retirado" class="form-control"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Excedente</label>
-                        <div class="col-sm-10"><input type="text" name="recorexe" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="recorexe"  value="10" class="form-control"></div>
                       </div>
                     </fieldset>
                   </div> 
@@ -296,16 +287,16 @@
                       <legend>Presupuestos</legend>
                       
                       <div class="form-group"><label class="col-sm-2 control-label">Precio Gasolina/L</label>
-                        <div class="col-sm-10"><input placeholder="Introduzca el preco actual" name="prelitro" type="text" class="form-control"></div>
+                        <div class="col-sm-10"><input placeholder="Introduzca el preco actual" value="100" name="prelitro" type="text" class="form-control"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Presupuesto gasolina</label>
-                        <div class="col-sm-10"><input type="text" name="pregasolina" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="pregasolina" value="100"  class="form-control"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Presupuesto casetas</label>
-                        <div class="col-sm-10"><input type="text" name="precasetas" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="precasetas"  value="100" class="form-control"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Viaticos</label>
-                        <div class="col-sm-10"><input type="text" name="previatico" placeholder="700 al dia x brigadista" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="previatico"  value="100" placeholder="" class="form-control"></div>
                       </div>
                     </fieldset>
                   </div>
@@ -318,12 +309,12 @@
                       <legend>Añadir brigadista</legend>
                       <div class="form-group"><label class="col-sm-2 control-label">Brigadista</label>
                         <div class="col-sm-10">
-                          <select data-placeholder="Selecciona una brigada" multiple name="addbrig" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+                          <select data-placeholder="Selecciona una brigada" multiple name="addbrig[]" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
                             
                             <?php
                             require('../Conect/conecviatik.php');
 
-                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios");
+                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios where tipouser='Brigadista'");
                             while($row=mysqli_fetch_array($rs))
                             {
                               echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
@@ -335,8 +326,9 @@
                           </select>
                         </div>
                       </div>
+
                       <div class="form-group"><label class="col-sm-2 control-label">Viaticos</label>
-                        <div class="col-sm-10"><input type="text" name="prebriadd" placeholder="700 al dia x brigadista" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="prebriadd"  value="200" placeholder="" class="form-control"></div>
                       </div>
                     </fieldset>
                   </div>
@@ -345,10 +337,10 @@
                     <fieldset>
                       <legend>Resumen costo</legend>
                       <div class="form-group"><label class="col-sm-2 control-label">Total real</label>
-                        <div class="col-sm-10"><input type="text" name="totreal" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="totreal"  value="1000" class="form-control"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Total</label>
-                        <div class="col-sm-10"><input type="text" name="totfinal" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="totfinal" value="1000" class="form-control"></div>
                       </div>
                       <div class="form-group ">
                         <div class="col-sm-10"><br><br>

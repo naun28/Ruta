@@ -32,7 +32,7 @@ $varaddbrig=$_POST['addbrig'];
 foreach ($varaddbrig as $valorbrig) {
 $varbrig .= $valorbrig;
 $varbrig .= ',';
-$contbrig++;
+$varcont++;
 }
 //----------------------
 $varprebriadd=$_POST['prebriadd'];
