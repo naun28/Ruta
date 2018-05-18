@@ -16,3 +16,12 @@ function Conectarse()
 #conexion para mostrar los datos en la tabla de Usuarios
 $conexion = new mysqli("localhost","root","","rutas");
 
+
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=rutas;charset=utf8', 'root', '');
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}

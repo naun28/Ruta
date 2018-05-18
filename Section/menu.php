@@ -73,7 +73,22 @@
         </nav>
         </div>
         <!-- AQui va elcontenido-->
-
+       
+        <div class="row" style="margin-left: 20%;">
+            <div class="col-lg-9">
+            <div class="ibox float-e-margins">
+                
+                <div class="ibox-content">
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </div>
+            
+    </div><br>
+        <!-- /.row -->
+        
+        
+    
         <?PHP include "../Section/footer.php";?>
         </div>
        

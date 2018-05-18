@@ -1,8 +1,13 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
     <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+    <script src="../Include/js/plugins/fullcalendar/moment.min.js"></script>
     <script src="../Include/js/jquery-3.1.1.min.js"></script>
     <script src="../Include/js/bootstrap.min.js"></script>
     <script src="../Include/js/plugins/metisMenu/jquery.metisMenu.js"></script>
@@ -82,8 +87,8 @@
 
     <!-- Dual Listbox -->
     <script src="../Include/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
-
-    
+    <!-- Full Calendar -->
+   <script src="../Include/js/plugins/fullcalendar/fullcalendar.min.js"></script>
 
     <script>
         $(document).ready(function() {
@@ -648,3 +653,48 @@
 <!--Estructura del ModalEscuelas-->
 <?php include 'modalEscuelas.php'; ?>
 
+<!--Calendario Principal-->
+<script>
+
+    $(document).ready(function() {
+        
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,basicWeek,basicDay'
+            },
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            selectable: true,
+            selectHelper: true,
+            events: [
+            <?php foreach($events as $event): 
+            
+                $FechaIni = explode(" ", $event['FechaIni']);
+                $FechaFin = explode(" ", $event['FechaFin']);
+                if($FechaIni[1] == '00:00:00'){
+                    $FechaIni = $FechaIni[0];
+                }else{
+                    $FechaIni = $event['FechaIni'];
+                }
+                if($FechaFin[1] == '00:00:00'){
+                    $FechaFin = $FechaFin[0];
+                }else{
+                    $FechaFin = $event['FechaFin'];
+                }
+            ?>
+                {
+                    id_agendada: '<?php echo $event['id_agendada']; ?>',
+                    title: '<?php echo $event['nBrigada']; ?>',
+                    start: '<?php echo $FechaIni; ?>',
+                    end: '<?php echo $FechaFin; ?>'
+                },
+            <?php endforeach; ?>
+            ]
+        });
+        
+        
+    });
+
+</script>

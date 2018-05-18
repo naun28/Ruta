@@ -620,4 +620,83 @@
 
 <?php include "../Section/modalAgendar.php"; ?>
 <?php include "../Section/modalDeshacer.php"; ?>
-<!-- script para cambiar valores de input -->
+
+<!-- mostrar escuelas agendadas por fecha -->
+
+<script>
+
+       $(document).ready(function () {
+
+                var hoy = new Date();
+                var dd = hoy.getDate();
+                var mm = hoy.getMonth()+1; //hoy es 0!
+                var yyyy = hoy.getFullYear();
+
+               if(dd<10) {
+                    dd='0'+dd
+                }
+
+               if(mm<10) {
+                     mm='0'+mm
+                }
+
+                hoy = mm+'/'+dd+'/'+yyyy;
+
+                listar(hoy);
+
+
+                $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: false,
+                autoclose: true
+            });
+
+            });
+
+       function lista(e){
+
+            listarRutas(e);
+
+
+       }
+
+       var listarRutas = function(e){
+
+            var datestring = moment(e.value).format('YYYY/MM/DD');
+            console.log(datestring);
+            var table = $("#Rutas").DataTable({
+                "destroy":true,
+                "ajax":{
+                    "method" : "POST",
+                    "url": "../Controlador/actualesController.php?fecha="+datestring+"",
+                    error: function (result) {
+                        swal({
+                            title: "LISTA VACIA",
+                            text: "NO HAY RUTAS EN ESTA FECHA",
+                            type: "warning"
+
+                        });
+                    }
+                },
+
+                "columns":[
+                    {"data":"Clave","visible": false},
+                    {"data":"Escuela"},
+                    {"data":"Localidad22"},
+                    {"data":"Municipio","visible": false},
+                    {"data":"Lider"},
+                    {"data":"nBrigada"},
+                    {"data":"Brigadistas"},
+                    {"data":"FechaIni"},
+                    {"data":"FechaFin"},
+                    {"data":"Semana"},
+                    {"data":"Comentarios"},
+                    {"data":"Actividad"}
+
+                ]
+            });
+        }
+
+    </script>
