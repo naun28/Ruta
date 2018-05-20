@@ -12,6 +12,10 @@
     <script src="../Include/js/bootstrap.min.js"></script>
     <script src="../Include/js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="../Include/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- Full Calendar -->
+   <script src="../Include/js/plugins/fullcalendar/fullcalendar.min.js"></script>
+   <script src="../Include/js/plugins/fullcalendar/fullcalendar.js"></script>
+   <script src="../Include/js/plugins/fullcalendar/locale/es.js"></script>
 
     <!-- Custom and plugin javascript -->
     <script src="../Include/js/inspinia.js"></script>
@@ -70,8 +74,6 @@
     <!-- Image cropper -->
     <script src="../Include/js/plugins/cropper/cropper.min.js"></script>
 
-    <!-- Date range use moment.js same as full calendar plugin -->
-    <script src="../Include/js/plugins/fullcalendar/moment.min.js"></script>
 
     <!-- Date range picker -->
     <script src="../Include/js/plugins/daterangepicker/daterangepicker.js"></script>
@@ -87,9 +89,7 @@
 
     <!-- Dual Listbox -->
     <script src="../Include/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
-    <!-- Full Calendar -->
-   <script src="../Include/js/plugins/fullcalendar/fullcalendar.min.js"></script>
-
+    
     <script>
         $(document).ready(function() {
              $('#tipouser').on('change',function(){
@@ -541,7 +541,15 @@
 
             "ajax":{
                 "method":"POST",
-                "url":"../Controlador/usuarioController.php"
+                "url":"../Controlador/usuarioController.php",
+                 error: function (result) {
+                        swal({
+                            title: "LISTA VACIA",
+                            text: "NO HAY USUARIOS AGREGADOS",
+                            type: "warning"
+
+                        });
+                    }
             },
             "columns":[
                 {"data":"id_usuario","visible": false},
@@ -585,7 +593,15 @@
 
             "ajax":{
                 "method":"POST",
-                "url":"../Controlador/escuelaController.php"
+                "url":"../Controlador/escuelaController.php",
+                 error: function (result) {
+                        swal({
+                            title: "LISTA VACIA",
+                            text: "NO HAY ESCUELAS PARA MOSTRAR",
+                            type: "warning"
+
+                        });
+                    }
             },
             "columns":[
                 
@@ -659,6 +675,7 @@
     $(document).ready(function() {
         
         $('#calendar').fullCalendar({
+           
             header: {
                 left: 'prev,next today',
                 center: 'title',
@@ -668,6 +685,16 @@
             eventLimit: true, // allow "more" link when too many events
             selectable: true,
             selectHelper: true,
+            eventRender: function(event, element) {
+                element.bind('dblclick', function() {
+                    $('#ModalCalendar #id_agendada').val(event.id_agendada);
+                    $('#ModalCalendar #nBrigada').val(event.title);
+                    $('#ModalCalendar #Lider').val(event.Lider);
+                    $('#ModalCalendar #Brigadistas').val(event.Brigadistas);
+                     $('#ModalCalendar #Escuela').val(event.Escuela);
+                    $('#ModalCalendar').modal('show');
+                });
+            },
             events: [
             <?php foreach($events as $event): 
             
@@ -686,7 +713,10 @@
             ?>
                 {
                     id_agendada: '<?php echo $event['id_agendada']; ?>',
-                    title: '<?php echo $event['nBrigada']; ?>',
+                    title: '<?php echo $event['nBrigada'];?>',
+                    Lider: '<?php echo $event['Lider'];?>',
+                    Brigadistas: '<?php echo $event['Brigadistas'];?>',
+                    Escuela: '<?php echo $event['Escuela'];?>',
                     start: '<?php echo $FechaIni; ?>',
                     end: '<?php echo $FechaFin; ?>'
                 },

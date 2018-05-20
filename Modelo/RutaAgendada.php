@@ -1,5 +1,6 @@
 <?php
 include("../Conect/conexion.php");
+
 $id_usuario = $_POST['Lider'];
 $Clave     = $_POST['Clave'];
 $Escuela   = $_POST['Escuela'];

@@ -537,7 +537,15 @@
 
             "ajax":{
                 "method":"POST",
-                "url":"../Controlador/perfilesController.php"
+                "url":"../Controlador/perfilesController.php",
+                 error: function (result) {
+                        swal({
+                            title: "LISTA VACIA",
+                            text: "NO HAY USUARIOS PARA MOSTRAR",
+                            type: "warning"
+
+                        });
+                    }
             },
             "columns":[
                 {"data":"id_usuario","visible": false},

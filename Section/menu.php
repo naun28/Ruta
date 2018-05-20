@@ -86,11 +86,10 @@
             
     </div><br>
         <!-- /.row -->
-        
-        
     
-        <?PHP include "../Section/footer.php";?>
-        </div>
+<?php include 'modalCalendar.php'; ?>
+<?PHP include "../Section/footer.php";?>
+</div>
        
    
 
