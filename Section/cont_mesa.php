@@ -9,69 +9,58 @@
         </div>
     </div> -->
 
-     <div class="row">
-                <div class="col-lg-12">
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <h5>Justificantes</h5>
-
-                           <!-- <div class="ibox-tools">
-                                <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
-                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                    <i class="fa fa-wrench"></i>
-                                </a>
-                                <ul class="dropdown-menu dropdown-user">
-                                    <li><a href="#">Config option 1</a>
-                                    </li>
-                                    <li><a href="#">Config option 2</a>
-                                    </li>
-                                </ul>
-                                <a class="close-link">
-                                    <i class="fa fa-times"></i>
-                                </a> 
-                            </div>-->
-                        </div>
-                        <div class="ibox-content">
-                            <input type="text" class="form-control input-sm m-b-xs" id="filter"
-                                   placeholder="Search in table">
-
-                            <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
-                                <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Lugar(es)</th>
-                                    <th data-hide="phone,tablet">Fecha</th>
-                                    <th data-hide="phone,tablet">Escuelas</th>
-                                    <th data-hide="phone,tablet">Dias</th>
-                                    <th data-hide="phone,tablet">Acciones</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-
-                                <tr>
-                                    <td>Alberto Rodriguez</td>
-                                    <td>Navojoa
-                                    </td>
-                                    <td>20-03-2018</td>
-                                    <td class="center">00XXXXXXXX</td>
-                                    <td class="center"> 3 </td>
-                                    <td class="center"> 
-                                        <input class="btn btn-danger" type="button" name="" value=""> 
-                                    </td>
-                                </tr>
-                                
-                                </tbody>
-                                <tfoot>
-                                <tr>
-                                    <td colspan="5">
-                                        <ul class="pagination pull-right"></ul>
-                                    </td>
-                                </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>Justificantes</h5>
                 </div>
-     </div>
+                <div class="ibox-content">
+                    <h5></h5>
+                    <form class="form-horizontal" action="../Controlador/juspdf.php" method="POST">
+                        <div class="form-group"><label class="col-sm-2 control-label">Empleado</label>
+                            <div class="col-sm-10">
+                                <select data-placeholder="Selecciona el vehiculo" onchange="return showCustomer();"  name="empleado"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+                            <option value="0" disabled selected>Selecciona empleado</option>
+                            <?php
+                            require('../Conect/conecviatik.php');
+
+                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios");
+                            while($row=mysqli_fetch_assoc($rs))
+                            {
+                              echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
+                              echo $row['nombres']. " " .$row['apellidos'];
+                              echo "</option>";                     
+                            }
+                            mysqli_close($conecviatiks);
+                            ?>
+                          </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group"><label class="col-sm-2 control-label">Fecha inicial</label>
+                            <div class="col-sm-10">
+                                <input type="date" name="fi" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group"><label class="col-sm-2 control-label">Fecha final</label>
+                            <div class="col-sm-10">
+                                <input type="date" name="ff" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group"><label class="col-sm-2 control-label">Observaciones</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" maxlength="200" name="obser"  cols="30" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10">
+                                <br>
+                                <button type="submit" class="btn btn-danger pull-right" target="blank">Justificante</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

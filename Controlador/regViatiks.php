@@ -23,10 +23,13 @@ $varesc .= ',';
 //----------------------
 $varrecor=$_POST['recor'];
 $varrecorexe=$_POST['recorexe'];
+
+
+//----------------------
 $varprelitro=$_POST['prelitro'];
-$varpregasolina=$_POST['pregasolina'];
+
 $varprecasetas=$_POST['precasetas'];
-$varpreviatico=$_POST['previatico'];
+
 // arreglo para brigadistas extras
 $varaddbrig=$_POST['addbrig'];
 foreach ($varaddbrig as $valorbrig) {
@@ -35,9 +38,8 @@ $varbrig .= ',';
 $varcont++;
 }
 //----------------------
-$varprebriadd=$_POST['prebriadd'];
-$vartotreal=$_POST['totreal'];
-$vartotfinal=$_POST['totfinal'];
+/*$vartotreal=$_POST['totreal'];
+$vartotfinal=$_POST['totfinal'];*/
 
 $sql="SELECT * FROM vehiculos WHERE num_vehiculo = '".$varnuvehiculo."'";
 $result = mysqli_query($conecviatiks,$sql);
@@ -49,6 +51,17 @@ while($row = mysqli_fetch_array($result)) {
     $varrendvehiculo=$row['rendimiento'];
    
 }
+$vartotkm= $varrecor+$varrecorexe; // calcula total de kilometros
+$litrosnecesarios=$vartotkm/$varrendvehiculo; // divide total de kilometros entre rendimiento y el resultado es igual a los litro que ocupa
+$presupuestoparagasolina=$varprelitro * $litrosnecesarios;// calcula el costo total de la gasolina a ocupar
+
+$viaticosdiaporpersona= $vardia * 700;//calcula viaticos por persona
+$varviaticoacompanantes= $viaticosdiaporpersona * $varcont;//calcula viaticos de brigadistas extras
+
+$toreal= $presupuestoparagasolina+$varviaticoacompanantes+$varprecasetas+$viaticosdiaporpersona;
+//$totaltotales=round($toreal, 0, PHP_ROUND_HALF_UP);
+
+
 
 // $varplavehiculo=$_POST['plavehiculo'];//$varrendvehiculo=$_POST['rendvehiculo'];
 
@@ -58,8 +71,8 @@ $q= "INSERT INTO viatiks (
 							presucasetas,viaticoslider,brigacompanante,viaticosbrig,totalreal,totalchilo) 
 				  values (  '','$varlibrigada','$varnuvehiculo','$varplavehiculo','$varrendvehiculo',
 				  			'$var','$varfeini','$varfefin','$vardia','$varesc','$varrecor',
-				  			'$varrecorexe','$varprelitro','$varpregasolina','$varprecasetas',
-				  			'$varpreviatico','$varbrig','$varprebriadd','$vartotreal','$vartotfinal')";
+				  			'$varrecorexe','$varprelitro','$presupuestoparagasolina','$varprecasetas',
+				  			'$viaticosdiaporpersona','$varbrig','$varviaticoacompanantes','$toreal','$toreal')";
 $ejecuta_q= mysqli_query($conecviatiks,$q) or die("error al insertar");
 
 mysqli_close($con);

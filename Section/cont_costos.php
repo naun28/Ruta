@@ -1,10 +1,10 @@
 <br>
 <div class="row">
-<script
+  <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
- <!--- Estructura -->
+  <!--- Estructura -->
   <div class="col-lg-12">
     <div class="tabs-container">
       <ul class="nav nav-tabs">
@@ -55,8 +55,8 @@
                         <div class="col-sm-10">
 
 
-                        <select data-placeholder="Selecciona el vehiculo" onchange="cale(this.value)" id="nuvehiculo" name="nuvehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-                           
+                          <select data-placeholder="Selecciona el vehiculo" onchange="cale(this.value)" id="nuvehiculo" name="nuvehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+
                             <option value="0" disabled selected>Selecciones un vehiculo</option>
                             <?php
                             require('../Conect/conecviatik.php');
@@ -76,30 +76,30 @@
 
                           <script>
                             function cale(str) {
-                                if (str == "") {
-                                    document.getElementById("datosvehiculo").innerHTML = "";
-                                    return;
-                                } else { 
-                                    if (window.XMLHttpRequest) {
+                              if (str == "") {
+                                document.getElementById("datosvehiculo").innerHTML = "";
+                                return;
+                              } else { 
+                                if (window.XMLHttpRequest) {
                                         // code for IE7+, Firefox, Chrome, Opera, Safari
                                         xmlhttp = new XMLHttpRequest();
-                                    } else {
+                                      } else {
                                         // code for IE6, IE5
                                         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-                                    }
-                                    xmlhttp.onreadystatechange = function() {
+                                      }
+                                      xmlhttp.onreadystatechange = function() {
                                         if (this.readyState == 4 && this.status == 200) {
-                                            document.getElementById("datosvehiculo").innerHTML = this.responseText;
+                                          document.getElementById("datosvehiculo").innerHTML = this.responseText;
                                         }
-                                    };
-                                    xmlhttp.open("GET","../Controlador/getdatos.php?q="+str,true);
-                                    xmlhttp.send();
-                                }
-                            }
-                          </script>
-                          <br><br>
-                          <div id="datosvehiculo"></div>
-                      
+                                      };
+                                      xmlhttp.open("GET","../Controlador/getdatos.php?q="+str,true);
+                                      xmlhttp.send();
+                                    }
+                                  }
+                                </script>
+                                <br><br>
+                                <div id="datosvehiculo"></div>
+
 <!--
                        <select data-placeholder="Selecciona el vehiculo" id="nuvehiculo" name="nuvehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
                            
@@ -244,15 +244,15 @@
                           </div></center>
                         </div>
                       </div>                     
-                     
+
                       <?php 
                       /*$datetime1 = date_create('2009-10-11');
                       $datetime2 = date_create('2009-10-20');
                       $interval = date_diff($datetime1, $datetime2);
                       echo $interval->format('%d%');*/
-                       ?>
+                      ?>
                       <div class="form-group"><label class="col-sm-2 control-label">Dias</label>
-                        <div class="col-sm-10"><input type="text" id="di" value="3 <?php  //echo $interval->format('%d%'); ?>" name="dia" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" id="di" value="<?php  //echo $interval->format('%d%'); ?>" name="dia" class="form-control"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Claves de escuelas</label>
                         <div class="col-sm-10">
@@ -274,10 +274,10 @@
                         </div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Recorrido (Km)</label>
-                        <div class="col-sm-10"><input type="text" name="recor" value="100" placeholder="Destino más retirado" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="recor" value="" placeholder="" class="form-control"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Excedente</label>
-                        <div class="col-sm-10"><input type="text" name="recorexe"  value="10" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="recorexe"  value="" class="form-control"></div>
                       </div>
                     </fieldset>
                   </div> 
@@ -287,30 +287,20 @@
                       <legend>Presupuestos</legend>
                       
                       <div class="form-group"><label class="col-sm-2 control-label">Precio Gasolina/L</label>
-                        <div class="col-sm-10"><input placeholder="Introduzca el preco actual" value="100" name="prelitro" type="text" class="form-control"></div>
+                        <div class="col-sm-10"><input placeholder="Introduzca el precio actual" value="" name="prelitro" type="text" class="form-control"></div>
                       </div>
-                      <div class="form-group"><label class="col-sm-2 control-label">Presupuesto gasolina</label>
-                        <div class="col-sm-10"><input type="text" name="pregasolina" value="100"  class="form-control"></div>
-                      </div>
+                      
                       <div class="form-group"><label class="col-sm-2 control-label">Presupuesto casetas</label>
-                        <div class="col-sm-10"><input type="text" name="precasetas"  value="100" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="precasetas"  value="" class="form-control"></div>
                       </div>
-                      <div class="form-group"><label class="col-sm-2 control-label">Viaticos</label>
-                        <div class="col-sm-10"><input type="text" name="previatico"  value="100" placeholder="" class="form-control"></div>
-                      </div>
+                      
                     </fieldset>
-                  </div>
-                </div>
-                <!-- NIVEL 3 -->
-                <div class="col-lg-12">
-                  <!-- AÑADIR BRIGADISTAS -->
-                  <div class="col-lg-6">
                     <fieldset>
                       <legend>Añadir brigadista</legend>
                       <div class="form-group"><label class="col-sm-2 control-label">Brigadista</label>
                         <div class="col-sm-10">
                           <select data-placeholder="Selecciona una brigada" multiple name="addbrig[]" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-                            
+
                             <?php
                             require('../Conect/conecviatik.php');
 
@@ -326,13 +316,47 @@
                           </select>
                         </div>
                       </div>
-
-                      <div class="form-group"><label class="col-sm-2 control-label">Viaticos</label>
-                        <div class="col-sm-10"><input type="text" name="prebriadd"  value="200" placeholder="" class="form-control"></div>
-                      </div>
                     </fieldset>
                   </div>
-                  <!-- RESUMEN DE COSTO -->
+                  <div class="col-sm-10"><br><br>
+                        
+                          <input type="submit" class="btn btn-danger pull-right" value="Terminar">
+                        </div>
+                </div>
+                <!-- NIVEL 3 -->
+                <div class="col-lg-12">
+                  <!-- AÑADIR BRIGADISTAS
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <legend>Añadir brigadista</legend>
+                      <div class="form-group"><label class="col-sm-2 control-label">Brigadista</label>
+                        <div class="col-sm-10">
+                          <select data-placeholder="Selecciona una brigada" multiple name="addbrig[]" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+
+                            <?php
+                           /* require('../Conect/conecviatik.php');
+
+                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios where tipouser='Brigadista'");
+                            while($row=mysqli_fetch_array($rs))
+                            {
+                              echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
+                              echo $row['nombres']. " " .$row['apellidos'];
+                              echo "</option>";                     
+                            }
+                            mysqli_close($conecviatiks);*/
+                            ?>
+                          </select>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <div class="form-group ">
+                        <div class="col-sm-10"><br><br>
+                          <input type="reset" class="btn btn-default pull-left" value="Limpiar"> 
+                          <input type="submit" class="btn btn-danger pull-right" value="Terminar">
+                        </div>
+                      </div>
+                  </div> -->
+                  <!-- RESUMEN DE COSTO 
                   <div class="col-lg-6">
                     <fieldset>
                       <legend>Resumen costo</legend>
@@ -342,21 +366,16 @@
                       <div class="form-group"><label class="col-sm-2 control-label">Total</label>
                         <div class="col-sm-10"><input type="text" name="totfinal" value="1000" class="form-control"></div>
                       </div>
-                      <div class="form-group ">
-                        <div class="col-sm-10"><br><br>
-                          <!-- <input type="reset" class="btn btn-default pull-left" value="Limpiar"> -->
-                          <input type="submit" class="btn btn-danger pull-right" value="Terminar">
-                        </div>
-                      </div>
+                      
                     </fieldset>
-                  </div>
+                  </div>-->
                 </div>
-               </form>
-              </div>
-            </div>      
-          </div>
+              </form>
+            </div>
+          </div>      
         </div>
-        <!--- Pestaña 2 -->
+      </div>
+      <!--- Pestaña 2 -->
        <!--  <div id="tab-2" class="tab-pane">
           <div class="panel-body">
             <div class="ibox-content">
@@ -371,7 +390,7 @@
           <div class="panel-body">
             <div class="ibox-content">
               <fieldset>
-              <legend>Agregar vehiculo</legend>
+                <legend>Agregar vehiculo</legend>
                 <form action="../Controlador/regVehiculo.php" method="POST" class="form-horizontal" >
                   <div class="form-group"><label class="col-sm-2 control-label">Numero del vehiculo</label>
                     <div class="col-sm-10"><input type="text" name="numve" class="form-control"></div>
@@ -390,7 +409,7 @@
               </fieldset>
               <br>
               <fieldset>
-              <legend>Listado de vehiculos</legend>
+                <legend>Listado de vehiculos</legend>
                 <div class="table-responsive">
                   <table class="footable table table-stripped" >
                     <thead>
@@ -404,22 +423,22 @@
                     </thead>
                     <tbody>
                       <?php
-                        require('../Conect/conecviatik.php');
-                        $rs = mysqli_query($conecviatiks, "SELECT * FROM vehiculos");
-                        while($row=mysqli_fetch_array($rs))
-                        {
-                          echo "<tr class='gradeX'>";
-                          echo "<td>".$row['num_vehiculo']."</td>";
-                          echo "<td>".$row['vehiculo']."</td>";
-                          echo "<td>".$row['placas']."</td>";
-                          echo "<td>".$row['rendimiento']."</td>";
-                          echo "<td class='center'> <a href='../Controlador/eliVehiculo.php?id=".$row['num_vehiculo']."' class='btn btn-danger'>Eliminar</a>
-                           </td>";
-                          echo "</tr>";
-                          
-                        }
+                      require('../Conect/conecviatik.php');
+                      $rs = mysqli_query($conecviatiks, "SELECT * FROM vehiculos");
+                      while($row=mysqli_fetch_array($rs))
+                      {
+                        echo "<tr class='gradeX'>";
+                        echo "<td>".$row['num_vehiculo']."</td>";
+                        echo "<td>".$row['vehiculo']."</td>";
+                        echo "<td>".$row['placas']."</td>";
+                        echo "<td>".$row['rendimiento']."</td>";
+                        echo "<td class='center'> <a href='../Controlador/eliVehiculo.php?id=".$row['num_vehiculo']."' class='btn btn-danger'>Eliminar</a>
+                        </td>";
+                        echo "</tr>";
 
-                        mysqli_close($conecviatiks);
+                      }
+
+                      mysqli_close($conecviatiks);
                       ?>
                     </tbody>
                     <tfoot>
