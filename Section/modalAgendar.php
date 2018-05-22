@@ -130,8 +130,8 @@
                         </div>
                         
                         <div class="modal-footer">
-                            <button id="btnLimpiar" type="button" class="btn btn-white" data-dismiss="modal">Cerrar</button>
-                            <button type="submit" class="btn btn-danger">Aceptar</button>
+                            <button id="btnLimpiar" type="button" class="btn btn-white dim" data-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-danger dim">Aceptar</button>
                         </div>
                     </form>
                 </div>

@@ -71,7 +71,7 @@
         </div>
        
         <?PHP include "../Section/cont_agenda.php";?>
-
+       
         <?PHP include "../Section/footer.php";?>
         </div>
        

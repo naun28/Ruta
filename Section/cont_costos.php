@@ -320,7 +320,7 @@
                   </div>
                   <div class="col-sm-10"><br><br>
                         
-                          <input type="submit" class="btn btn-danger pull-right" value="Terminar">
+                          <input type="submit" class="btn btn-danger pull-right dim" value="Terminar">
                         </div>
                 </div>
                 <!-- NIVEL 3 -->
@@ -404,7 +404,7 @@
                   <div class="form-group"><label class="col-sm-2 control-label">Rendimiento</label>
                     <div class="col-sm-10"><input type="text" name="renve" class="form-control"></div>
                   </div>
-                  <input type="submit" class="btn btn-danger pull-right" value="Guardar" >
+                  <input type="submit" class="btn btn-danger pull-right dim " value="Guardar" >
                 </form>
               </fieldset>
               <br>
@@ -432,7 +432,7 @@
                         echo "<td>".$row['vehiculo']."</td>";
                         echo "<td>".$row['placas']."</td>";
                         echo "<td>".$row['rendimiento']."</td>";
-                        echo "<td class='center'> <a href='../Controlador/eliVehiculo.php?id=".$row['num_vehiculo']."' class='btn btn-danger'>Eliminar</a>
+                        echo "<td class='center'> <a href='../Controlador/eliVehiculo.php?id=".$row['num_vehiculo']."' class='btn btn-danger dim'>Eliminar</a>
                         </td>";
                         echo "</tr>";
 

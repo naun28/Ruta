@@ -545,7 +545,7 @@
                 {"data":"fechafin"},
                 {"data":"brigacompanante"},
                 
-                {"defaultContent": "<button class=' hist btn btn-w-m btn-danger' data-toggle='modal' data-target='#myModa20'> Detalles</button>"},
+                {"defaultContent": "<button class=' hist btn btn-w-m btn-danger dim' data-toggle='modal' data-target='#myModa20'> Detalles</button>"},
                 {"data":"vehiculo","visible": false},
                 {"data":"placas","visible": false},
                 {"data":"rendimiento","visible": false},

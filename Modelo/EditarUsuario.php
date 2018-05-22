@@ -14,7 +14,6 @@ $conexion   = mysqli_connect("localhost", "root", "", "rutas");
 if (!empty($id_usuario)) {
 	
 
-
 $q = ("UPDATE usuarios set nombres='$nombres',apellidos='$apellidos',telefono='$telefono',correo='$correo',pass='$pass',tipouser='$tipouser',nbrigada='$nbrigada',zonaBrig='$zonaBrig' where id_usuario='" . $id_usuario . "'");
 
 $ejecutar_q = mysqli_query($conexion, $q) or die("error al insertar");

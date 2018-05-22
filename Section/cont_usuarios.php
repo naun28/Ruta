@@ -4,7 +4,7 @@
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
                            <!--Boton Modal-->
-                            <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal2"><li class="fa fa-plus-square"></li> Agregar Usuario</button><br><br>
+                            <button class="btn btn-danger dim btn-xs" data-toggle="modal" data-target="#myModal2"><li class="fa fa-plus-square"></li> Agregar Usuario</button><br><br>
                              <!--Estructura del Modal-->
                             <div class="modal inmodal" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -94,8 +94,8 @@
 
                                        
                                         <div class="modal-footer">
-                                           <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white" data-dismiss="modal">Cerrar</button>
-                                            <button type="submit" class="btn btn-danger">Aceptar</button>
+                                           <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white dim" data-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-danger dim">Aceptar</button>
                                         </div>
                                         </form>
                                     </div>

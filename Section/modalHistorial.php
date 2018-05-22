@@ -117,7 +117,7 @@
               </fieldset>
                  
             <div class="modal-footer">
-               <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+               <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-danger dim" data-dismiss="modal">Cerrar</button>
             </div>
             </form>
         </div>

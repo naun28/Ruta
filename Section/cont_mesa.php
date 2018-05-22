@@ -56,7 +56,7 @@
                         <div class="form-group">
                             <div class="col-sm-10">
                                 <br>
-                                <button type="submit" class="btn btn-danger pull-right" target="blank">Justificante</button>
+                                <button type="submit" class="btn btn-danger dim pull-right" target="blank">Justificante</button>
                             </div>
                         </div>
                     </form>

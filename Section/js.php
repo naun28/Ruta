@@ -611,7 +611,7 @@
                 {"data":"Localidad22"},
                 {"data":"Municipio"},
                 {"data":"Ruta33"},
-                {"defaultContent": "<button class=' info btn btn-w-m btn-danger' data-toggle='modal' data-target='#myModal2'> Informacion</button>"},
+                {"defaultContent": "<button class=' info btn btn-w-m btn-danger dim' data-toggle='modal' data-target='#myModal2'> Informacion</button>"},
                 {"data":"Eq","visible": false},
                 {"data":"Equip","visible": false},
                 {"data":"Reequip","visible": false},
@@ -697,7 +697,6 @@
             },
             events: [
             <?php foreach($events as $event): 
-            
                 $FechaIni = explode(" ", $event['FechaIni']);
                 $FechaFin = explode(" ", $event['FechaFin']);
                 if($FechaIni[1] == '00:00:00'){

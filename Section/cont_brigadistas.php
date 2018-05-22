@@ -52,7 +52,7 @@
                                         <td>HERMOSILLO</td>
                                         <td>01/01/2018</td>
                                         <td>AQUI VAN LOS COMENTARIOS</td>
-                                        <td> <a type="button" class="btn btn-danger" href="../Vista/Captura.php" >Captura de visita</a> </td>
+                                        <td> <a type="button" class="btn btn-danger dim" href="../Vista/Captura.php" >Captura de visita</a> </td>
                                     </tr>
                                     <tr>
                                         <td>RAFAEL MORALES NIEBLAS</td>
@@ -65,7 +65,7 @@
                                         <td>HUATABAMPO</td>
                                         <td>02/01/2018</td>
                                         <td>AQUI VAN LOS COMENTARIOS</td>
-                                        <td> <a type="button" class="btn btn-danger" href="../Vista/Captura.php" >Captura de visita</a> </td>
+                                        <td> <a type="button" class="btn btn-danger dim" href="../Vista/Captura.php" >Captura de visita</a> </td>
                                         <!-- data-toggle="modal" data-target="#myModal4" -->
                                     </tr>
                                     

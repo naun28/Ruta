@@ -10,15 +10,15 @@
                 <div class="modal-body" >
                   <form  method="POST" action="../Modelo/EditarUsuario.php" id="formLimpiar" class="form-group">
                     <div class="form-group">
-                        <label></label><input type="hidden" id="idusuario" name="id_usuario" class="form-control">
+                        <label></label><input type="hidden" id="id_usuario" name="id_usuario" class="form-control">
                     </div>
                        
                     <div class="form-group col-md-4">
-                        <label>Nombre(s)</label><input type="text" id="nombre" name="nombres" placeholder="Nombre(s)" class="form-control
+                        <label>Nombre(s)</label><input type="text" id="nombres" name="nombres" placeholder="Nombre(s)" class="form-control
                         " pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
                     </div>
                      <div class="form-group col-md-4">
-                        <label>Apellido(s)</label><input type="text" id="apellido" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
+                        <label>Apellido(s)</label><input type="text" id="apellidos" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
                     </div>
                      <div class="form-group col-md-4">
                         <label>Telefono</label><input type="text" id="telefono" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">
@@ -57,8 +57,9 @@
                             <option value="Brigada 11">Brigada 11</option>
                             <option value="Brigada 12">Brigada 12</option>
                             <option value="Brigada 13">Brigada13</option>
-                            
                         </select>
+                        <br>
+                            <label>Zona</label><input type="text" id="zonaBrig" name="zonaBrig" placeholder="Zona" class="form-control" pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
                     </div>
                 </div>
                         <div id="mostrar">
@@ -80,17 +81,16 @@
                                 <option value="Brigada 12">Brigada 12</option>
                                 <option value="Brigada 13">Brigada13</option>
                                 
-                            </select>
+                            </select><br>
+                            <label>Zona</label><input type="text" id="zonaBrig" name="zonaBrig" placeholder="Zona" class="form-control" pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
                             </div>
                         </div>
-                        <div class="form-group ">
-                         <label>Zona</label><input type="text" id="zonaBrig" name="zonaBrig" placeholder="Zona" class="form-control" pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
-                        </div>                    
+                                           
                            
                     
                 <div class="modal-footer">
-                   <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-danger">Aceptar</button>
+                   <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white dim" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-danger dim">Aceptar</button>
                 </div>
                 </form>
             </div>
