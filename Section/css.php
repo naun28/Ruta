@@ -57,4 +57,5 @@
     <link href="../Include/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
     <link href="../Include/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 
+    <link href="../Include/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
     
