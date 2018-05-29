@@ -27,7 +27,7 @@
                            </div>
                 </div>
                 <div class="form-group modal-footer">
-                    <button  id="btnLimpiar" type="button" class="btn btn-danger" data-dismiss="modal">Aceptar</button>
+                    <button  id="btnLimpiar" type="button" class="btn btn-danger dim" data-dismiss="modal">Aceptar</button>
                 </div>
             </form>
             </div>

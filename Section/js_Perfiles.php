@@ -555,7 +555,7 @@
                 {"data":"correo"},
                 {"data":"tipouser"},
                 {"data":"nbrigada"},
-                {"defaultContent": "<button class='edit btn btn-primary btn-xs' data-toggle='modal' data-target='#myModal3'> Editar</button> <button class='eliminar btn btn-danger btn-xs'> Eliminar</button>"},
+                {"defaultContent": "<button class='edit btn btn-primary dim btn-xs' data-toggle='modal' data-target='#myModal3'><i class='fa fa-edit'></i></button> <button class='eliminar btn btn-danger dim btn-xs' data-toggle='modal' data-target='#myModal9'><i class='fa fa-trash'></i></button>"},
                 {"data":"pass","visible": false},
                 {"data":"zonaBrig","visible": false}
             ]
@@ -585,38 +585,15 @@
     var obtener_data_eliminar = function (tbody, table) {
         $(tbody).on("click","button.eliminar", function(){
             var data = table.row($(this).parents("tr")).data();
-            var id_usuario = $("#id_usuario").val(data.id_usuario),
-                nombres = $("#nombres").val(data.nombres),
-                apellidos = $("#apellidos").val(data.apellidos),
-                telefono = $("#telefono").val(data.telefono),
-                correo = $("#correo").val(data.correo),
-                tipouser = $("#tipouser").val(data.tipouser),
-                nbrigada = $("#nbrigada").val(data.nbrigada),
-                pass = $("#pass").val(data.pass),
-                zonaBrig = $("#zonaBrig").val(data.zonaBrig);
-                swal({
-                        title: "DESEAS ELIMINAR AL USUARIO?",
-                        text: "Al ELIMINARLO se quitara de la lista",
-                        type: "warning",
-                        showCancelButton: true,
-                        confirmButtonColor: "#DD6B55",
-                        confirmButtonText: "Si, ELIMINAR!",
-                        cancelButtonText: "No, CANCELAR!",
-                        closeOnConfirm: false,
-                        closeOnCancel: false },
-                    function (isConfirm) {
-                        if (isConfirm) {
-                            swal("ELIMINADO!", "Se elimino correctamente", "success");
-                        } else {
-                            swal("CANCELADO", "Usted a cancelado", "error");
-                        }
-                    });
-                
+            var id_usuario = $("#id_usuario").val(data.id_usuario);
+               
         });
        
     }
 
 </script>
 <!--Estructura del Modal-->
+<?php include '../Section/modalEliminar.php'; ?>
 <?php include '../Section/modalPerfiles.php'; ?>
+
 

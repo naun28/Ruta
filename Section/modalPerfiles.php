@@ -14,11 +14,11 @@
                     </div>
                        
                     <div class="form-group col-md-4">
-                        <label>Nombre(s)</label><input type="text" id="nombre" name="nombres" placeholder="Nombre(s)" class="form-control
+                        <label>Nombre(s)</label><input type="text" id="nombres" name="nombres" placeholder="Nombre(s)" class="form-control
                         " pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
                     </div>
                      <div class="form-group col-md-4">
-                        <label>Apellido(s)</label><input type="text" id="apellido" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
+                        <label>Apellido(s)</label><input type="text" id="apellidos" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
                     </div>
                      <div class="form-group col-md-4">
                         <label>Telefono</label><input type="text" id="telefono" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">
@@ -89,8 +89,8 @@
                            
                     
                 <div class="modal-footer">
-                   <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-danger">Aceptar</button>
+                   <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white dim" data-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-danger dim">Aceptar</button>
                 </div>
                 </form>
             </div>
