@@ -555,7 +555,7 @@
                 {"data":"correo"},
                 {"data":"tipouser"},
                 {"data":"nbrigada"},
-                {"defaultContent": "<button class='edit btn btn-primary dim btn-xs' data-toggle='modal' data-target='#myModal3'><i class='fa fa-edit'></i></button> <button class='eliminar btn btn-danger dim btn-xs' data-toggle='modal' data-target='#myModal9'><i class='fa fa-trash'></i></button>"},
+                {"defaultContent": "<button class='edit btn btn-primary dim btn-md' data-toggle='modal' data-target='#myModal3'><i class='fa fa-edit'></i></button> <button class='eliminar btn btn-danger dim btn-md' data-toggle='modal' data-target='#myModal9'><i class='fa fa-trash'></i></button>"},
                 {"data":"pass","visible": false},
                 {"data":"zonaBrig","visible": false}
             ]
