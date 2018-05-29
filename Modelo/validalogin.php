@@ -102,7 +102,7 @@ if ($tipouser === "Administrador") {
                 alert(mensaje);
                 </script>";
 
-        header("location: ../Vista/Brigadista/inicioBrigada.php");
+        header("location: ../Vista/inicioBrigada.php");
 
     } else {
         echo "

@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION["correo"])) {
-    header("location:../../Vista/login.php");
+    header("location:../Vista/login.php");
     exit();
 
 }
@@ -11,15 +11,15 @@ if (!isset($_SESSION["correo"])) {
 <html>
 <head>
    <title>Inicio</title>
-   <?PHP include "../../Section/css.php";?>
+   <?PHP include "../Section/css.php";?>
 
 </head>
 
 <body>
   <div id="wrapper" >
-  <?PHP include "../../Section/menuBrigada.php";?>
+  <?PHP include "../Section/menuBrigada.php";?>
 </div>
-<?PHP include "../../Section/js.php";?>
+<?PHP include "../Section/js.php";?>
 </body>
 
 </html>

@@ -29,44 +29,31 @@
 
                                         <th data-toggle="true">Nombre de escuela</th>
                                         <th>Clave</th>
-                                        <th>Zona</th>
+                                        <th>Telefono</th>
                                         <th>Tipo de escuela</th>
-                                        
+                                        <th data-hide="all">Director</th>
                                         <th data-hide="all">Domicilio</th>
                                         <th data-hide="all">Localidad</th>
                                         <th data-hide="all">Municipio</th>
                                         <th data-hide="all">Fecha ultima visita</th>
-                                        <th data-hide="all">Semana</th>
                                         <th data-hide="all">Comentarios</th>
                                         <th>Acción</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    require('../Conect/conecviatik.php');
-                                    $rs = mysqli_query($conecviatiks, "SELECT * FROM agendadas ");
-                                    while($row=mysqli_fetch_array($rs))
-                                    {
-                                        echo "<tr class='gradeX'>";
-                                        echo "<td>".$row['Escuela']."</td>";
-                                        echo "<td>".$row['Clave']."</td>";
-                                        echo "<td>".$row['zonat']."</td>";
-                                        echo "<td>".$row['TipoEscuela']."</td>";
-                                        
-                                        echo "<td>".$row['Domicilio']."</td>";
-                                        echo "<td>".$row['Localidad22']."</td>";
-                                        echo "<td>".$row['Municipio']."</td>";
-                                        echo "<td>".$row['UltimaVisita']."</td>";
-                                        echo "<td>".$row['Semana']."</td>";
-                                        echo "<td>".$row['Comentarios']."</td>";
-                                        echo "<td class='center'> <a href='../Vista/Captura.php?idagen=".$row["id_agendada"]."&idu=".$_SESSION['id_usuario']."' class='btn btn-danger'>Capturar visita</a>
-                                        </td>";
-                                        echo "</tr>";
-
-                                    }
-
-                                    mysqli_close($conecviatiks);
-                                    ?>
+                                    <tr>
+                                        <td>CONSEJO TUTELAR PARA MENORES DEL ESTADO DE SONORA</td>
+                                        <td>26CTM0001A</td>
+                                        <td>0800 051213</td>
+                                        <td>PRIMARIA</td>
+                                        <td>NAUN LARA</td>
+                                        <td>BLVRD DE LOS GANADEROS S/N COL. LAS LOMAS</td>
+                                        <td>HERMOSILLO</td>
+                                        <td>HERMOSILLO</td>
+                                        <td>01/01/2018</td>
+                                        <td>AQUI VAN LOS COMENTARIOS</td>
+                                        <td> <a type="button" class="btn btn-danger" href="../Vista/Captura.php" >Captura de visita</a> </td>
+                                    </tr>
                                     <tr>
                                         <td>RAFAEL MORALES NIEBLAS</td>
                                         <td>26DAI0001U</td>
@@ -103,35 +90,35 @@
                                             <h4 class="modal-title">Captura de visita<h4>
                                             </div>
                                             <div class="modal-body">
-                                                <form  method="POST" action="../Controlador/regReporte.php" id="formLimpiar" class="form-group">
+                                            <form  method="POST" action="../Controlador/regReporte.php" id="formLimpiar" class="form-group">
 
-                                                    <div class="form-group" id="data_1">
-                                                        <label class="font-normal">Fecha de llegada</label>
-                                                        <div class="input-group date">
-                                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
-                                                        </div>
+                                                <div class="form-group" id="data_1">
+                                                    <label class="font-normal">Fecha de llegada</label>
+                                                    <div class="input-group date">
+                                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="03/04/2014">
                                                     </div>
+                                                </div>
+                                               
+7
+                            <div class="input-group clockpicker" data-autoclose="true">
+                                <input type="text" class="form-control" value="09:30" >
+                                <span class="input-group-addon">
+                                    <span class="fa fa-clock-o"></span>
+                                </span>
+                            </div>
+                        
+                                                <br>
+                                                <div class="form-group">
+                                                    <input type="text" value="<?php echo date('d-m-Y');  ?>" name="fechaserv" placeholder=""   class="form-control" required="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="text" value="<?php echo date('H:i:s',time());  ?>" name="horaserv" placeholder=""  class="form-control" required="">
+                                                </div>
+                                                <div class="form-group">
 
-                                                    7
-                                                    <div class="input-group clockpicker" data-autoclose="true">
-                                                        <input type="text" class="form-control" value="09:30" >
-                                                        <span class="input-group-addon">
-                                                            <span class="fa fa-clock-o"></span>
-                                                        </span>
-                                                    </div>
 
-                                                    <br>
-                                                    <div class="form-group">
-                                                        <input type="text" value="<?php echo date('d-m-Y');  ?>" name="fechaserv" placeholder=""   class="form-control" required="">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="text" value="<?php echo date('H:i:s',time());  ?>" name="horaserv" placeholder=""  class="form-control" required="">
-                                                    </div>
-                                                    <div class="form-group">
-
-
-                                                        <label>Fecha de llegada</label><input value="" type="text" id="myWadtch" placeholder=""  class="form-control" required="">
-                                                    </div>
+                                                    <label>Fecha de llegada</label><input value="" type="text" id="myWadtch" placeholder=""  class="form-control" required="">
+                                                </div>
                                                     
 
 
