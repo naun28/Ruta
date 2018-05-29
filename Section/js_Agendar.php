@@ -559,8 +559,8 @@
                 {"data":"Conectividad"},
                 {"data":"ProbSolicitado"},
                 {"data":"LevantReporte"},
-                {"defaultContent": "<button class=' agenda btn btn-danger btn-xs' data-toggle='modal' data-target='#myModal'>Agendar</button>"},
-                {"defaultContent": "<button class='deshacer btn btn-warning btn-xs' data-toggle='modal' data-target='#myModal6'><li class='fa fa-trash'></li></button>"},
+                {"defaultContent": "<button class=' agenda btn btn-danger dim btn-xs' data-toggle='modal' data-target='#myModal'>Agendar</button>"},
+                {"defaultContent": "<button class='deshacer btn btn-primary dim btn-xs' data-toggle='modal' data-target='#myModal6'><li class='fa fa-window-close'></li></button>"},
                 {"data":"Zona","visible": false},
                 {"data":"Nequipos","visible": false},
                 {"data":"Aequipos","visible": false},
@@ -622,8 +622,7 @@
 <?php include "../Section/modalDeshacer.php"; ?>
 
 <!-- mostrar escuelas agendadas por fecha -->
-
-<script>
+ <script>
 
        $(document).ready(function () {
 
@@ -655,32 +654,31 @@
 
             });
 
-       function lista(e){
+       function corte(e){
 
-            listarRutas(e);
+            listar(e);
 
 
        }
 
-       var listarRutas = function(e){
+       var listar = function(e){
 
             var datestring = moment(e.value).format('YYYY/MM/DD');
-            console.log(datestring);
-            var table = $("#Rutas").DataTable({
+
+            var table = $("#rutas").DataTable({
                 "destroy":true,
                 "ajax":{
                     "method" : "POST",
-                    "url": "../Controlador/actualesController.php?fecha="+datestring+"",
+                    "url": "../Controlador/fechasController.php?fecha="+datestring+"",
                     error: function (result) {
                         swal({
                             title: "LISTA VACIA",
-                            text: "NO HAY RUTAS EN ESTA FECHA",
+                            text: "NO HAY RUTAS PARA MOSTRAR",
                             type: "warning"
 
                         });
                     }
                 },
-
                 "columns":[
                     {"data":"Clave","visible": false},
                     {"data":"Escuela"},
@@ -692,11 +690,18 @@
                     {"data":"FechaIni"},
                     {"data":"FechaFin"},
                     {"data":"Semana"},
-                    {"data":"Comentarios"},
+                    {"data":"Comentarios","visible": false},
                     {"data":"Actividad"}
 
                 ]
             });
+
+
+            
+
         }
 
+
     </script>
+
+
