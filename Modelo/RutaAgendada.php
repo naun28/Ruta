@@ -31,7 +31,7 @@ $nBrigada      = $_POST['nBrigada'];
 $BRIG=$_POST['Brigadistas'];
 foreach ($BRIG as $valor) {
 $var .= $valor;
-$var .= ',';
+$var .= ' ';
 #$var ++;
 }
 
@@ -40,7 +40,7 @@ $Soporte      = $_POST['Soporte'];
 $Mantenimiento      = $_POST['Mantenimiento'];
 $Conectiv      = $_POST['Conectiv'];
 $AulaDeMedios      = $_POST['AulaDeMedios'];
-$Actividad = $Soporte.",".$Mantenimiento.",".$Conectiv.",".$AulaDeMedios;
+$Actividad = $Soporte." ".$Mantenimiento." ".$Conectiv." ".$AulaDeMedios;
 
 $sql="SELECT * FROM usuarios WHERE id_usuario = '".$id_usuario."'";
 $result = mysqli_query($conexion,$sql);

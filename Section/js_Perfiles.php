@@ -569,7 +569,7 @@
        var obtener_data_edit = function (tbody, table) {
         $(tbody).on("click","button.edit", function(){
             var data = table.row($(this).parents("tr")).data();
-            var id_usuario = $("#id_usuario").val(data.id_usuario),
+            var id_usuario = $("#idusuario").val(data.id_usuario),
                 nombres = $("#nombres").val(data.nombres),
                 apellidos = $("#apellidos").val(data.apellidos),
                 telefono = $("#telefono").val(data.telefono),
