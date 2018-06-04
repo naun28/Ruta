@@ -1,6 +1,5 @@
 <?php
 include("../Conect/conexion.php");
-
 $id_usuario = $_POST['Lider'];
 $Clave     = $_POST['Clave'];
 $Escuela   = $_POST['Escuela'];
@@ -49,11 +48,12 @@ while($row = mysqli_fetch_array($result)) {
 
     $Lid = $row['nombres']. " " .$row['apellidos'];
     $nbrigada=$row['nbrigada'];
+    $zonaBrig = $row['zonaBrig'];
    
 }
 $conexion   = mysqli_connect("localhost", "root", "", "rutas");
 //insertando en agendadas
-$q = ("INSERT INTO agendadas (id_agendada,Clave,Escuela,Domicilio,Municipio,Conectividad,ProbSolicitado,LevantReporte,Lider,nBrigada,Brigadistas,FechaIni,FechaFin,Comentarios,Localidad22,Nequipos,Aequipos,Reequip,Reporte,NReporte,FechaReporte,Visitas,UltimaVisita,FechaMant,TipoEscuela,zonat,Actividad,Semana) VALUES ('','$Clave','$Escuela','$Domicilio','$Municipio','$Conectividad','$ProbSolicitado','$LevantReporte','$Lid','$nbrigada','$var','$FechaIni','$FechaFin','$Comentarios','$Localidad22','$Nequipos','$Aequipos','$Reequip','$Reporte','$Nreporte','$FechaReporte','$Visitas','$UltimaVisita','$FechaMant','$TipoEscuela','$Zona','$Actividad','$Semana')");
+$q = ("INSERT INTO agendadas (id_agendada,Clave,Escuela,Domicilio,Municipio,Conectividad,ProbSolicitado,LevantReporte,Lider,nBrigada,Brigadistas,FechaIni,FechaFin,Comentarios,Localidad22,Nequipos,Aequipos,Reequip,Reporte,NReporte,FechaReporte,Visitas,UltimaVisita,FechaMant,TipoEscuela,zonat,Actividad,Semana,zonaBrig) VALUES ('','$Clave','$Escuela','$Domicilio','$Municipio','$Conectividad','$ProbSolicitado','$LevantReporte','$Lid','$nbrigada','$var','$FechaIni','$FechaFin','$Comentarios','$Localidad22','$Nequipos','$Aequipos','$Reequip','$Reporte','$Nreporte','$FechaReporte','$Visitas','$UltimaVisita','$FechaMant','$TipoEscuela','$Zona','$Actividad','$Semana','$zonaBrig')");
 $ejecutar_q = mysqli_query($conexion, $q) or die("error al insertar");
 
 //eliminando de escuelasrevisadas

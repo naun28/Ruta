@@ -35,7 +35,7 @@ $id_usuario  = $row['id_usuario'];
 $correo   = $row['correo'];
 $password = $row['pass'];
 
-if ($tipouser === "Administrador") {
+if ($tipouser === "Administrador" || $tipouser === "Director" ) {
     if ($row["correo"] === $correo && $row["pass"] === $password) {
         session_start();
         $_SESSION["nombres"]   = $nombres;
@@ -87,7 +87,7 @@ if ($tipouser === "Administrador") {
         header("location: ../Vista/login.php?error=1");
         exit();
     }
-}else if ($tipouser === "Brigadista" || $tipouser === "Jefe de brigada") {
+}else if ($tipouser === "Lider") {
     if ($row["correo"] === $correo && $row["pass"] === $password) {
         session_start();
         $_SESSION["nombres"]   = $nombres;
@@ -95,6 +95,7 @@ if ($tipouser === "Administrador") {
         $_SESSION["id_usuario"] = $id_usuario;
         $_SESSION["correo"] = $correo;
         $_SESSION["tipouser"] = $tipouser;
+        $_SESSION["zonaBrig"] = $zonaBrig;
 
         echo "
                 <script language='JavaScript'>
@@ -102,7 +103,7 @@ if ($tipouser === "Administrador") {
                 alert(mensaje);
                 </script>";
 
-        header("location: ../Vista/inicioBrigada.php");
+        header("location: ../Vista/inicioLider.php");
 
     } else {
         echo "

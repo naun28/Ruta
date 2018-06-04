@@ -1,6 +1,5 @@
 <?php 
 session_start();
-
 if (!isset($_SESSION["correo"])) {
     header("location:../Vista/login.php");
     exit();
@@ -17,7 +16,7 @@ if (!isset($_SESSION["correo"])) {
 
 <body>
   <div id="wrapper" >
-  <?PHP include "../Section/menuBrigada.php";?>
+  <?PHP include "../Section/menuLider.php";?>
 </div>
 <?PHP include "../Section/js.php";?>
 </body>

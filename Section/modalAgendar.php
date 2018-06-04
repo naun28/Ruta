@@ -48,7 +48,7 @@
                            <div class="input-date input-group">
                                 <input type="date" class="input-sm form-control" placeholder="Inicio" name="FechaIni" id="FechaIni" required="Inicio" />
                                 <span class="input-group-addon">Al</span>
-                                <input type="date"  class="input-sm form-control" placeholder="Final" name="FechaFin" id="FechaFin"  required="final" />
+                                <input type="date"  class="input-sm form-control" placeholder="Final" name="FechaFin" id="FechaFin" required="final" />
                             </div>
                         </div>
                         <div class="form-group col-md-12">

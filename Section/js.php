@@ -728,3 +728,58 @@
     });
 
 </script>
+<!-- mostrar escuelas de lider -->
+<script async="async">
+    $(document).ready(function(){
+        
+
+        listarEsclider();
+
+    });
+    var listarEsclider = function(){
+        var table = $("#rutasLider").DataTable({
+                destroy:true,
+                pageLength: 10,
+                responsive: true,
+                expandFirst: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                   
+                    {extend: 'excel', title: 'LISTA DE ESCUELAS DE LIDER'},
+                    {extend: 'pdf', title: 'LISTA DE ESCUELAS DE LIDER'},
+                 
+                ],
+
+            "ajax":{
+                "method":"POST",
+                "url":"../Controlador/escuelaliderController.php",
+                 error: function (result) {
+                        swal({
+                            title: "LISTA VACIA",
+                            text: "NO HAY ESCUELAS PARA MOSTRAR",
+                            type: "warning"
+
+                        });
+                    }
+            },
+            "columns":[
+                    {"data":"Clave","visible": false},
+                    {"data":"Escuela"},
+                    {"data":"Localidad22"},
+                    {"data":"Municipio","visible": false},
+                    {"data":"Lider"},
+                    {"data":"nBrigada"},
+                    {"data":"Brigadistas"},
+                    {"data":"FechaIni"},
+                    {"data":"FechaFin"},
+                    {"data":"Semana"},
+                    {"data":"Comentarios","visible": false},
+                    {"data":"zonaBrig","visible": false},
+                    {"data":"Actividad"}
+
+                ]
+
+        });
+    }
+       
+</script>
