@@ -44,9 +44,10 @@
                                 <tbody>
                                     <?php
                                     require('../Conect/conecviatik.php');
-                                    $rs = mysqli_query($conecviatiks, "SELECT * FROM agendadas ");
+                                    $rs = mysqli_query($conecviatiks, "SELECT * FROM agendadas where statusvisita=0 || statusvisita=1 ");
                                     while($row=mysqli_fetch_array($rs))
                                     {
+                                        $llegada=$row['statusvisita'];
                                         echo "<tr class='gradeX'>";
                                         echo "<td>".$row['Escuela']."</td>";
                                         echo "<td>".$row['Clave']."</td>";
@@ -59,28 +60,24 @@
                                         echo "<td>".$row['UltimaVisita']."</td>";
                                         echo "<td>".$row['Semana']."</td>";
                                         echo "<td>".$row['Comentarios']."</td>";
-                                        echo "<td class='center'> <a href='../Vista/Captura.php?idagen=".$row["id_agendada"]."&idu=".$_SESSION['id_usuario']."' class='btn btn-danger'>Capturar visita</a>
-                                        </td>";
+                                        if ($llegada == 0) {
+                                            echo "<td class='center'> <a href='../Vista/Capturallegada.php?idagen=".$row["id_agendada"]."&idu=".$_SESSION['id_usuario']."' class='btn btn-danger'>Registrar llegada</a>
+                                                </td>";
+                                        }elseif ($llegada == 1) {
+                                           echo "<td class='center'> <a href='../Vista/Capturasalida.php?idagen=".$row["id_agendada"]."&idu=".$_SESSION['id_usuario']."' class='btn btn-danger'>Registrar salida</a>
+                                                </td>";
+                                        }elseif ($llegada == 2) {
+                                            echo "<td class='center'> Terminada </td>";
+                                        }
+                                        //echo "<td class='center'> <a href='../Vista/Captura.php?idagen=".$row["id_agendada"]."&idu=".$_SESSION['id_usuario']."' class='btn btn-danger'>Registrar llegada</a>
+                                        //</td>";
                                         echo "</tr>";
 
                                     }
 
                                     mysqli_close($conecviatiks);
                                     ?>
-                                    <tr>
-                                        <td>RAFAEL MORALES NIEBLAS</td>
-                                        <td>26DAI0001U</td>
-                                        <td>1800 051214</td>
-                                        <td>PRIMARIA</td>
-                                        <td>RAMON RODRIGUEZ</td>
-                                        <td>AV JUAREZ S/N COL. LOS PINOS</td>
-                                        <td>LAS BOCAS</td>
-                                        <td>HUATABAMPO</td>
-                                        <td>02/01/2018</td>
-                                        <td>AQUI VAN LOS COMENTARIOS</td>
-                                        <td> <a type="button" class="btn btn-danger" href="../Vista/Captura.php" >Captura de visita</a> </td>
-                                        <!-- data-toggle="modal" data-target="#myModal4" -->
-                                    </tr>
+                                    
                                     
                                     
                                 </tbody>

@@ -3,7 +3,7 @@
 $id_agendada=$_GET['idagen'];
 $id_usuario=$_GET['idu'];
 
-se hace update a la base de datos con las variables GET 
+/*se hace update a la base de datos con las variables GET 
 se consulta el status  (sera null por defecto)
 
 if (status == 1) {
@@ -11,7 +11,7 @@ if (status == 1) {
 }elseif(status == 0 || status == null){
 	muestra contenido de llegada
 }
-
+*/
 
 ?>
 

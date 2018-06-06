@@ -71,7 +71,7 @@
         </nav>
         </div>
         <!-- Aqui inicia el contenido-->
-        <?PHP include "../Section/cont_capturallegada.php";?>
+        <?PHP include "../Section/cont_capturasalida.php";?>
  
         <!-- fin del contenido-->
 
