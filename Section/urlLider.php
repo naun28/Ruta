@@ -1,5 +1,5 @@
  <li>
-    <a href="inicioBrigada.php" style="color: white;"><i class="fa fa-home"></i> <span class="nav-label">Inicio</span></a>
+    <a href="inicioLider.php" style="color: white;"><i class="fa fa-home"></i> <span class="nav-label">Inicio</span></a>
 </li>
 <li>
     <a href="viaticos2.php" style="color: white;"><i class="fa fa-usd"></i> <span class="nav-label">Viáticos</span></a>

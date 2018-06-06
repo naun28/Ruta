@@ -14,7 +14,7 @@
                         SEC
                     </div>
                 </li>
-                <?PHP include "../Section/urlBrigada.php";?>
+                <?PHP include "../Section/urlLider.php";?>
                
             </ul>
 
@@ -72,6 +72,7 @@
         </div>
         <!-- AQui va elcontenido-->
 
+        <?PHP include "../Section/cont_lider.php";?>
         <?PHP include "../Section/footer.php";?>
         </div>
        

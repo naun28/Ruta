@@ -542,8 +542,8 @@
                     
                     error: function (result) {
                         swal({
-                            title: "LISTA VACIA",
-                            text: "NO HAY ESCUELAS PARA AGENDAR",
+                            title: "NO HAY ESCUELAS PARA AGENDAR",
+                            text: "IR A LISTA DE ESCUELAS PARA PODER AGENDAR RUTAS",
                             type: "warning"
 
                         });
@@ -668,16 +668,9 @@
             var table = $("#rutas").DataTable({
                 "destroy":true,
                 "ajax":{
-                    "method" : "POST",
-                    "url": "../Controlador/fechasController.php?fecha="+datestring+"",
-                    error: function (result) {
-                        swal({
-                            title: "LISTA VACIA",
-                            text: "NO HAY RUTAS PARA MOSTRAR",
-                            type: "warning"
-
-                        });
-                    }
+                "method" : "POST",
+                "url": "../Controlador/fechasController.php?fecha="+datestring+""
+                                   
                 },
                 "columns":[
                     {"data":"Clave","visible": false},
