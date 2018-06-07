@@ -95,7 +95,7 @@ if (status == 1) {
 						</div>
 
 					</div>
-					<div class="well" id="fesa">
+				<!-- 	<div class="well" id="fesa">
 						<h3 class="m-t-lg">Fecha de salida</h3>
 
 						<div class="row diff-wrapper">
@@ -110,10 +110,10 @@ if (status == 1) {
 										<div class="col-sm-10"><input type="time" id="di" value="<?php  //echo $interval->format('%d%'); ?>" name="dia" class="form-control"></div>
 									</div>
 									<div class="form-group">
-										<div class="col-sm-10"><input type="hidden" id="di" readonly value="<?php echo date('Y-m-d')?>" name="dia" class="form-control"></div>
+										<div class="col-sm-10"><input type="hidden" id="di" readonly value="<?php// echo date('Y-m-d')?>" name="dia" class="form-control"></div>
 									</div>
 									<div class="form-group">
-										<div class="col-sm-10"><input type="hidden" readonly id="di" value="<?php echo date('h:i:s A',time()); ?>" name="dia" class="form-control"></div>
+										<div class="col-sm-10"><input type="hidden" readonly id="di" value="<?php //echo date('h:i:s A',time()); ?>" name="dia" class="form-control"></div>
 									</div>
 									
 								</div>
@@ -135,7 +135,7 @@ if (status == 1) {
 
 						</div>
 
-					</div>
+					</div> -->
 
 
 				</div>
