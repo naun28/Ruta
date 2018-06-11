@@ -1,8 +1,9 @@
 <?php 
-session_start();
+session_start(); 
 include '../Conect/conexionEsc.php';
-
-$q = "SELECT * from agendadas where Lider like '%Ramon%'";
+$lider = $_SESSION["nombres"];
+$nbrigada = $_SESSION["nbrigada"]; 
+$q = "SELECT * from agendadas where Lider like '%$lider%' AND nBrigada = '$nbrigada' ";
 $resultado = mysqli_query($conEsc, $q);
 if (!$resultado) {
     die("ERROR");

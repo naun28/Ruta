@@ -34,6 +34,7 @@ $tipouser     = $row['tipouser'];
 $id_usuario  = $row['id_usuario'];
 $correo   = $row['correo'];
 $password = $row['pass'];
+$nbrigada = $row["nbrigada"];
 
 if ($tipouser === "Administrador" || $tipouser === "Director" ) {
     if ($row["correo"] === $correo && $row["pass"] === $password) {
@@ -96,6 +97,7 @@ if ($tipouser === "Administrador" || $tipouser === "Director" ) {
         $_SESSION["correo"] = $correo;
         $_SESSION["tipouser"] = $tipouser;
         $_SESSION["zonaBrig"] = $zonaBrig;
+        $_SESSION["nbrigada"] = $nbrigada;
 
         echo "
                 <script language='JavaScript'>
