@@ -36,31 +36,32 @@ if (status == 1) {
 										<input type="hidden" id="di" value="<?php echo $id_agendada?>" name="ida" class="form-control">
 										<input type="hidden" id="di" value="<?php echo $id_usuario?>" name="idu" class="form-control">
 									<div class="form-group"><label class="col-sm-2 control-label">Fecha</label>
-										<div class="col-sm-10"><input type="date" required id="di" value="<?php  //echo $interval->format('%d%'); ?>" name="fechausu2" class="form-control"></div>
+										<div class="col-sm-10"><input type="date" required  value="<?php  //echo $interval->format('%d%'); ?>" name="fechausu2" class="form-control"></div>
 									</div>
 									<div class="form-group"><label class="col-sm-2 control-label">Hora</label>
-										<div class="col-sm-10"><input type="time" required id="di" value="<?php  //echo $interval->format('%d%'); ?>" name="horausu2" class="form-control"></div>
+										<div class="col-sm-10"><input type="time" required  value="<?php  //echo $interval->format('%d%'); ?>" name="horausu2" class="form-control"></div>
 									</div>
 									<div class="form-group">
-										<div class="col-sm-10"><input type="hidden" required id="di" readonly value="<?php echo date('Y-m-d')?>" name="fechaser2" class="form-control"></div>
+										<div class="col-sm-10"><input type="hidden" required  readonly value="<?php echo date('Y-m-d')?>" name="fechaser2" class="form-control"></div>
 									</div>
 									<div class="form-group">
-										<div class="col-sm-10"><input type="hidden" required readonly id="di" value="<?php echo date('h:i:s A',time()); ?>" name="horaser2" class="form-control"></div>
+										<div class="col-sm-10"><input type="hidden" required readonly  value="<?php echo date('h:i:s A',time()); ?>" name="horaser2" class="form-control"></div>
 									</div>
 									
 								</div>
 							</div>
 							<div class="col-md-6">
 								<h4>Tipo de servicio</h4>
-										<div class="i-checks"><label> <input type="checkbox" name="Soporte" value="Soporte"> <i></i> Soporte </label></div>
+										<div class="i-checks"><label> <input type="checkbox" name="conectividad" value="Conectividad"> <i></i> Conectividad </label></div>
+										<div class="i-checks"><label> <input type="checkbox" name="soporte" value="Soporte"> <i></i> Soporte </label></div>
                                         <div class="i-checks"><label> <input type="checkbox" name="Mantenimiento" value="Mantenimiento"> <i></i> Mantenimiento </label></div>
-                                        <div class="i-checks"><label> <input type="checkbox" name="Aula_de_medios" value="Aula_de_medios"> <i></i> Aula de medios </label></div>
+                                        <div class="i-checks"><label> <input type="checkbox" name="AulaDeMedios" value="AulaDeMedios"> <i></i> Aula de medios </label></div>
 									<br><label class="col-sm-2 control-label">Observaciones</label><br>
 									<div class="form-group">
 										<div class="col-sm-12"><textarea class="form-control" maxlength="200" required name="observaciones" id="" cols="30" rows="5"></textarea></div>
 									</div><br><br>
 									<div class="form-group"><label class="col-sm-2 control-label"></label>
-										<div class="col-sm-12"><input type="submit" id="di" value="Guardar" name="dia" class=" btn btn-danger"></div>
+										<div class="col-sm-12"><input type="submit"  value="Guardar" name="dia" class=" btn btn-danger"></div>
 									</div>
 									</form>
 							</div>
