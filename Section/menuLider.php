@@ -72,7 +72,7 @@
         </div>
         <!-- AQui va elcontenido-->
 
-        <?PHP include "../Section/cont_lider.php";?>
+        <?PHP include "../Section/cont_brigadistas.php";?>
         <?PHP include "../Section/footer.php";?>
         </div>
        
