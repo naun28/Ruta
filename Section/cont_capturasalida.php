@@ -52,10 +52,20 @@ if (status == 1) {
 							</div>
 							<div class="col-md-6">
 								<h4>Tipo de servicio</h4>
-										<div class="checkbox-inline i-checks"><label> <input type="checkbox" name="Conectividad" value="Conectividad"> <i></i> Conectividad </label></div>
+
+										 <select data-placeholder="Selecciona municipio(s)" name="servicio[]" class="chosen-select col-sm-10" multiple style="width:350px;" tabindex="4">
+                            <option value="Conectividad">Conectividad</option>
+                            <option value="Soporte">Soporte</option>
+                            <option value="Mantenimiento">Mantenimiento</option>
+                            <option value="AulaDeMedios">Aula de medios</option>
+                            
+                            
+                          </select>
+
+										<!-- <div class="checkbox-inline i-checks"><label> <input type="checkbox" name="Conectividad" value="Conectividad"> <i></i> Conectividad </label></div>
 										<div class=" checkbox-inline i-checks"><label> <input type="checkbox" name="Soporte" value="Soporte"> <i></i> Soporte </label></div>
                                         <div class="checkbox-inline i-checks"><label> <input type="checkbox" name="Mantenimiento" value="Mantenimiento"> <i></i> Mantenimiento </label></div>
-                                        <div class="checkbox-inline i-checks"><label> <input type="checkbox" name="AulaDeMedios" value="AulaDeMedios"> <i></i> Aula de medios </label></div>
+                                        <div class="checkbox-inline i-checks"><label> <input type="checkbox" name="AulaDeMedios" value="AulaDeMedios"> <i></i> Aula de medios </label></div> -->
 									<br><label class="col-sm-2 control-label">Observaciones</label><br>
 									<div class="form-group">
 										<div class="col-sm-12"><textarea class="form-control" maxlength="200" required name="observaciones" id="" cols="30" rows="5"></textarea></div>
