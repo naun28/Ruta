@@ -13,8 +13,6 @@ $conexion   = mysqli_connect("localhost", "root", "", "rutas");
 
 $q = ("INSERT INTO usuarios VALUES ('','$nombres','$apellidos','$telefono','$correo','$pass','$tipouser','$nbrigada','$zona')");
 
-
-
 $ejecutar_q = mysqli_query($conexion, $q) or die("error al insertar");
 header("location: ../Vista/agregarusuarios.php");
 echo "<br> Registro Insertado Correctamente! <br>";

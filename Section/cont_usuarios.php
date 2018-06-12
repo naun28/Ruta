@@ -87,7 +87,7 @@
                                                     <option value="Brigada 13">Brigada13</option>
                                                     
                                                 </select><br>
-                                                <label>Zona</label><input type="text" name="zonaBrig" placeholder="Zona" class="form-control" required="Zona" pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+                                                <label>Zona</label><input type="text" name="zonaBrig" placeholder="Zona" class="form-control"  pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
                                                
                                                 </div>
                                             </div>

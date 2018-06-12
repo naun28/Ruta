@@ -9,6 +9,7 @@
                 </div>
                 <div class="modal-body">
                     <form id="formLimpiar" method="post" action="../Modelo/RutaAgendada.php">
+                        
                         <input type="hidden" id="Localidad" name="Localidad22">
                         <input type="hidden" id="Nequipos" name="Nequipos">
                         <input type="hidden" id="Aequipos" name="Aequipos">
