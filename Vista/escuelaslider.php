@@ -10,16 +10,18 @@ if (!isset($_SESSION["correo"])) {
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Brigadistas</title>
+	
+   <title>Lista de Escuelas</title>
    <?PHP include "../Section/css.php";?>
 
 </head>
 
 <body>
   <div id="wrapper">
-  <?PHP include "../Section/listabrig.php";?>
+  	
+  <?PHP include "../Section/listaesclider.php";?>
 </div>
-<?PHP include "../Section/jsbrig.php";?>
+<?PHP include "../Section/js.php";?>
 </body>
 
 </html>

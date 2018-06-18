@@ -1,20 +1,20 @@
 
-    <nav class="navbar-default navbar-static-side"  role="navigation ">
-        <div class="sidebar-collapse">
-            <ul class="nav metismenu" id="side-menu" >
-                <li class="nav-header" >
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse" >
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
                             <img alt="image" class="img-circle" src="../Include/img/perfil.jpg" />
                              </span>
                         
-                            <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombres"]; ?>&nbsp;<?php echo $_SESSION["apellidos"];  ?></strong>
-                             </span> <span class="text-muted text-xs block" style="color: white;"><?php echo $_SESSION["tipouser"]; ?> </span> 
+                               <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombres"]; ?>&nbsp;<?php echo $_SESSION["apellidos"]; ?></strong>
+                             </span> <span class="text-muted text-xs block" style="color: white;"><?php echo $_SESSION["tipouser"]; ?> </span>  
                     </div>
-                    <div class="logo-element" style="color: white;">
+                    <div class="logo-element">
                         SEC
                     </div>
                 </li>
-                <?PHP include "../Section/urlLider.php";?>
+               <?PHP include "../Section/urlLider.php";?>
                
             </ul>
 
@@ -29,7 +29,7 @@
             <form class="navbar-form-custom">
                <div>
                 <img src="../Include/img/log.png" alt="" style="width: 150px; height: 70px;">
-            </div>
+            </div>  
             </form>
         </div>
             <ul class="nav navbar-top-links navbar-right">
@@ -63,18 +63,19 @@
                 </li>
                 
                 <li>
-                   <a href="../Controlador/Salir.php">
+                    <a href="../Controlador/Salir.php">
                         <i class="fa fa-sign-out"></i> Salir
                     </a>
                 </li>
             </ul>
         </nav>
         </div>
-        <!-- AQui va elcontenido-->
+        <!-- Aqui inicia el contenido-->
+        <?PHP include "../Section/cont_capturallegadalider.php";?>
+ 
+        <!-- fin del contenido-->
 
-        <?PHP include "../Section/cont_asig_lider.php";?>
         <?PHP include "../Section/footer.php";?>
-        </div>
+  </div>
        
-   
-
+  

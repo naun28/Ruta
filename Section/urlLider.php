@@ -1,15 +1,13 @@
  <li>
-    <a href="brigadistas.php" style="color: white;"><i class="fa fa-home"></i> <span class="nav-label">Inicio</span></a>
+    <a href="inicioLider.php" style="color: white;"><i class="fa fa-home"></i> <span class="nav-label">Inicio</span></a>
 </li>
 <li>
-    <a href="listaesc.php" style="color: white;"><i class="fa fa-usd"></i> <span class="nav-label">Viáticos</span></a>
+    <a href="escuelaslider.php" style="color: white;"><i class="fa fa-male"></i> <span class="nav-label">Escuelas</span></a>
 </li>
 <li>
-    <a href="historial.php" style="color: white;"><i class="fa fa-newspaper-o"></i> <span class="nav-label">Historial</span></a>
+    <a href="agendarlider.php" style="color: white;"><i class="fa fa-usd"></i> <span class="nav-label">Agendar</span></a>
 </li>
+
 <li>
-    <a href="brigadistas.php" style="color: white;"><i class="fa fa-male"></i> <span class="nav-label">Brigadista</span></a>
-</li>
-<li>
-    <a href="reportes.php" style="color: white;"><i class="fa fa-newspaper-o"></i> <span class="nav-label">Reportes</span></a>
+    <a href="historiallider.php" style="color: white;"><i class="fa fa-newspaper-o"></i> <span class="nav-label">Historial</span></a>
 </li>

@@ -10,14 +10,14 @@ if (!isset($_SESSION["correo"])) {
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Brigadistas</title>
+   <title>Captura de visita</title>
    <?PHP include "../Section/css.php";?>
 
 </head>
 
 <body>
   <div id="wrapper">
-  <?PHP include "../Section/listabrig.php";?>
+  <?PHP include "../Section/menucapturalider2.php";?>
 </div>
 <?PHP include "../Section/jsbrig.php";?>
 </body>

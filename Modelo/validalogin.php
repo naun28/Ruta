@@ -12,7 +12,7 @@ $user = "root";
 
 if (empty($correo) || empty($password)) {
     header("location: ../Vista/login.php");
-    echo "";
+    echo "llenar los campos";
     exit();
 
 }
@@ -58,7 +58,6 @@ if ($tipouser === "Administrador" || $tipouser === "Director" ) {
                 <script type='text/javascript'>
                 alert('Usuario o contraseña incorrecto');
                 </script>";
-
         header("location: ../Vista/login.php?error=1");
         exit();
     }
@@ -112,6 +111,31 @@ if ($tipouser === "Administrador" || $tipouser === "Director" ) {
                 <script type='text/javascript'>
                 alert('Usuario o contraseña incorrecto');
                 </script>";
+
+        header("location: ../Vista/login.php?error=1");
+        exit();
+    }
+}else if ($tipouser === "Brigadista") {
+    if ($row["correo"] === $correo && $row["pass"] === $password) {
+        session_start();
+        $_SESSION["nombres"]   = $nombres;
+        $_SESSION["apellidos"] = $apellidos;
+        $_SESSION["id_usuario"] = $id_usuario;
+        $_SESSION["correo"] = $correo;
+        $_SESSION["tipouser"] = $tipouser;
+        $_SESSION["zonaBrig"] = $zonaBrig;
+        $_SESSION["nbrigada"] = $nbrigada;
+
+        echo "
+                <script language='JavaScript'>
+                var mensaje = 'sesión iniciada';
+                alert(mensaje);
+                </script>";
+
+        header("location: ../Vista/iniciobrig.php");
+
+    } else {
+        echo "Usuario o contraseña incorrecto";
 
         header("location: ../Vista/login.php?error=1");
         exit();

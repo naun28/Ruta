@@ -1,21 +1,20 @@
 
-    <nav class="navbar-default navbar-static-side"  role="navigation ">
+    <nav class="navbar-default navbar-static-side" role="navigation">
         <div class="sidebar-collapse">
-            <ul class="nav metismenu" id="side-menu" >
-                <li class="nav-header" >
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
                     <div class="dropdown profile-element"> <span>
                             <img alt="image" class="img-circle" src="../Include/img/perfil.jpg" />
                              </span>
                         
-                            <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombres"]; ?>&nbsp;<?php echo $_SESSION["apellidos"];  ?></strong>
+                               <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombres"]; ?>&nbsp;<?php echo $_SESSION["apellidos"]; ?></strong>
                              </span> <span class="text-muted text-xs block" style="color: white;"><?php echo $_SESSION["tipouser"]; ?> </span> 
                     </div>
-                    <div class="logo-element" style="color: white;">
+                    <div class="logo-element">
                         SEC
                     </div>
                 </li>
                 <?PHP include "../Section/urlLider.php";?>
-               
             </ul>
 
         </div>
@@ -63,7 +62,7 @@
                 </li>
                 
                 <li>
-                   <a href="../Controlador/Salir.php">
+                    <a href="../Controlador/Salir.php">
                         <i class="fa fa-sign-out"></i> Salir
                     </a>
                 </li>
@@ -71,8 +70,7 @@
         </nav>
         </div>
         <!-- AQui va elcontenido-->
-
-        <?PHP include "../Section/cont_asig_lider.php";?>
+        <?PHP include "../Section/cont_listaesclider.php";?>
         <?PHP include "../Section/footer.php";?>
         </div>
        

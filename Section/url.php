@@ -28,6 +28,6 @@
     <a href="reportes.php" style="color: white;"><i class="fa fa-newspaper-o"></i> <span class="nav-label">Historial de brigadista</span></a>
 </li>
 <li>
-    <a href="secretarias.php" style="color: white;"><i class="fa fa-female"></i> <span class="nav-label">Mesa de ayuda</span></a>
+    <a href="justificante.php" style="color: white;"><i class="fa fa-female"></i> <span class="nav-label">Justificante</span></a>
 </li>
 
