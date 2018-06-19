@@ -38,7 +38,7 @@
                                         <th data-hide="all">Fecha ultima visita</th>
                                         <th data-hide="all">Semana</th>
                                         <th data-hide="all">Comentarios</th>
-                                      x
+                                      
                                     </tr>
                                 </thead>
                                 <tbody>

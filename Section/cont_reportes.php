@@ -11,7 +11,7 @@
     <div class="col-lg-12">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h5>Listado de tarea asignadas</h5>
+                <h5>Listado de tarea terminadas</h5>
                            <!--  <h6 class="float-right">Semana del {{ date('d-m-Y') }} al {{ date('d-m-Y') </h6>
 
                             <div class="ibox-tools">

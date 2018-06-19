@@ -17,7 +17,7 @@ if (!isset($_SESSION["correo"])) {
 
 <body>
   <div id="wrapper">
-  <?PHP include "../Section/listabrig.php";?>
+  <?PHP include "../Section/asignadas.php";?>
 </div>
 <?PHP include "../Section/jsbrig.php";?>
 </body>
