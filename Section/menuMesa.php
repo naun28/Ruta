@@ -71,7 +71,7 @@
         </nav>
         </div>
         <!-- AQui va elcontenido-->
-
+        <?PHP include "../Section/inicio_mesa.php";?>
         <?PHP include "../Section/footer.php";?>
         </div>
        
