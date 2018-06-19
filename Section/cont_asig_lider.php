@@ -43,8 +43,11 @@
                                 </thead>
                                 <tbody>
                                     <?php
+
                                     require('../Conect/conecviatik.php');
-                                    $rs = mysqli_query($conecviatiks, "SELECT * FROM agendadas where statusvisita=0 || statusvisita=1 ");
+                                    $lider = $_SESSION["nombres"];
+                                    $nbrigada = $_SESSION["nbrigada"];
+                                    $rs = mysqli_query($conecviatiks, "SELECT * FROM agendadas where Lider like '%$lider%' AND nBrigada = '$nbrigada' AND (statusvisita=0 || statusvisita=1) ORDER BY statusvisita=0");
                                     while($row=mysqli_fetch_array($rs))
                                     {
                                         $llegada=$row['statusvisita'];
