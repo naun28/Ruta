@@ -15,10 +15,10 @@
                        
                     <div class="form-group col-md-4">
                         <label>Nombre(s)</label><input type="text" id="nombres" name="nombres" placeholder="Nombre(s)" class="form-control
-                        " pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
+                        " pattern="^[A-Z]+[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo permite letras y la primera mayuscula" required="">
                     </div>
                      <div class="form-group col-md-4">
-                        <label>Apellido(s)</label><input type="text" id="apellidos" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
+                        <label>Apellido(s)</label><input type="text" id="apellidos" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[A-Z]+[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo permite letras y la primera mayuscula" required="">
                     </div>
                      <div class="form-group col-md-4">
                         <label>Telefono</label><input type="text" id="telefono" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">
@@ -27,7 +27,7 @@
                         <label>Correo</label><input type="email" id="correo" name="correo" placeholder="Correo" class="form-control" pattern="^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required="">
                     </div>
                     <div class="form-group col-md-6">
-                        <label>Contraseña</label><input type="password" id="pass" name="pass" placeholder="Contraseña" class="form-control" pattern="[A-Za-z0-9!?-]{6,12}" required="">
+                        <label>Contraseña</label><input type="password"  id="pass"  name="pass" placeholder="Contraseña" class="form-control"pattern="[A-Za-z0-9!?-]{6,8}" minlength="6" maxlength="8" required="" title="Minimo 6 caracteres y maximo 8"><input type="checkbox" onclick="myFunction()"> Ver contraseña
                     </div>
                     <div class="form-group ">
                         <label>Tipo de Usuario</label> 
@@ -84,7 +84,23 @@
                             </div>
                         </div>
                         <div class="form-group ">
-                         <label>Zona</label><input type="text" id="zonaBrig" name="zonaBrig" placeholder="Zona" class="form-control" pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+                         <label>Zona</label><select id="zonaBrig" name="zonaBrig" class="form-control" >
+                                    <option value="" selected>Seleccionar zona</option>
+                                    <option value="Zona  1">Zona  1</option>
+                                    <option value="Zona  2">Zona  2</option>
+                                    <option value="Zona  3">Zona  3</option>
+                                    <option value="Zona  4">Zona  4</option>
+                                    <option value="Zona  5">Zona  5</option>
+                                    <option value="Zona  6">Zona  6</option>
+                                    <option value="Zona  7">Zona  7</option>
+                                    <option value="Zona  8">Zona  8</option>
+                                    <option value="Zona  9">Zona  9</option>
+                                    <option value="Zona  10">Zona  10</option>
+                                    <option value="Zona  11">Zona  11</option>
+                                    <option value="Zona  12">Zona  12</option>
+                                    <option value="Zona  13">Zona 13</option>
+                                    
+                                </select>
                         </div> 
                 <div class="modal-footer">
                    <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white dim" data-dismiss="modal">Cerrar</button>

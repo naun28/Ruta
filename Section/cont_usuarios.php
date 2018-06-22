@@ -19,10 +19,10 @@
                                                
                                             <div class="form-group col-md-4">
                                                 <label>Nombre(s)</label><input type="text" name="nombres" placeholder="Nombre(s)" class="form-control
-                                                " pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
+                                                " pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo permite letras y la primera mayuscula" required="">
                                             </div>
                                              <div class="form-group col-md-4">
-                                                <label>Apellido(s)</label><input type="text" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[A-Z]+[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
+                                                <label>Apellido(s)</label><input type="text" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[A-Z]+[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo permite letras y la primera mayuscula" required="">
                                             </div>
                                              <div class="form-group col-md-4">
                                                 <label>Telefono</label><input type="text" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">
@@ -31,7 +31,7 @@
                                                 <label>Correo</label><input type="email" name="correo" placeholder="Correo" class="form-control" pattern="^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required="">
                                             </div>
                                             <div class="form-group">
-                                                <label>Contraseña</label><input type="password" name="pass" placeholder="Contraseña" class="form-control" pattern="[A-Za-z0-9!?-]{6,12}" required="">
+                                                <label>Contraseña</label><input type="password" id="myInput" name="pass" placeholder="Contraseña" class="form-control" pattern="[A-Za-z0-9!?-]{6,8}" minlength="6" maxlength="8" required="" title="Minimo 6 caracteres y maximo 8"><input type="checkbox" onclick="myFunction()"> Ver contraseña
                                             </div>
                                             <div class="form-group ">
                                                 <label>Tipo de Usuario</label> 
@@ -63,14 +63,30 @@
                                                     <option value="Brigada 13">Brigada13</option>
                                                     
                                                 </select><br>
-                                                <label>Zona</label><input type="text" name="zonaBrig" placeholder="Zona" class="form-control" pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+                                                <label>Zona</label><select name="zonaBrig" class="form-control" >
+                                                    <option value="" selected>Seleccione zona</option>
+                                                    <option value="Zona  1">Zona  1</option>
+                                                    <option value="Zona  2">Zona  2</option>
+                                                    <option value="Zona  3">Zona  3</option>
+                                                    <option value="Zona  4">Zona  4</option>
+                                                    <option value="Zona  5">Zona  5</option>
+                                                    <option value="Zona  6">Zona  6</option>
+                                                    <option value="Zona  7">Zona  7</option>
+                                                    <option value="Zona  8">Zona  8</option>
+                                                    <option value="Zona  9">Zona  9</option>
+                                                    <option value="Zona  10">Zona  10</option>
+                                                    <option value="Zona  11">Zona  11</option>
+                                                    <option value="Zona  12">Zona  12</option>
+                                                    <option value="Zona  13">Zona 13</option>
+                                                    
+                                                </select>
                                                
                                                 </div>
                                             </div>
                                             <div id="mostrar">
                                               <div id="Lider" style="display:none;" class="form-group">
 
-                                                <label>N° de Brigada</label> <select name="nbrigada" class="form-control">
+                                                <label>N° de Brigada</label> <select name="nbrig" class="form-control">
                                                     <option value="" selected>Seleccione Brigada</option>
                                                     <option value="Brigada 1">Brigada 1</option>
                                                     <option value="Brigada 2">Brigada 2</option>
@@ -87,7 +103,23 @@
                                                     <option value="Brigada 13">Brigada13</option>
                                                     
                                                 </select><br>
-                                                <label>Zona</label><input type="text" name="zonaBrig" placeholder="Zona" class="form-control"  pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+                                                <label>Zona</label><select name="zonaBrig" class="form-control" >
+                                                    <option value="" selected>Seleccione zona</option>
+                                                    <option value="Zona  1">Zona  1</option>
+                                                    <option value="Zona  2">Zona  2</option>
+                                                    <option value="Zona  3">Zona  3</option>
+                                                    <option value="Zona  4">Zona  4</option>
+                                                    <option value="Zona  5">Zona  5</option>
+                                                    <option value="Zona  6">Zona  6</option>
+                                                    <option value="Zona  7">Zona  7</option>
+                                                    <option value="Zona  8">Zona  8</option>
+                                                    <option value="Zona  9">Zona  9</option>
+                                                    <option value="Zona  10">Zona  10</option>
+                                                    <option value="Zona  11">Zona  11</option>
+                                                    <option value="Zona  12">Zona  12</option>
+                                                    <option value="Zona  13">Zona 13</option>
+                                                    
+                                                </select>
                                                
                                                 </div>
                                             </div>

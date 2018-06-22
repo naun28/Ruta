@@ -28,8 +28,8 @@
                       <div class="form-group"><label class="col-sm-2 control-label">Lider de brigada</label>
                         <div class="col-sm-10">
 
-                          <select data-placeholder="Selecciona el vehiculo" onchange="return showCustomer();" id="selecar" name="librigada"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-                            <option value="0" disabled selected>Selecciona brigadista</option>
+                          <select data-placeholder="Selecciona lider" onchange="return showCustomer();" id="selecar" name="librigada"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4" required="llenar campo">
+                            <option value="0" disabled selected>Selecciona lider</option>
                             <?php
                             require('../Conect/conecviatik.php');
 
@@ -55,7 +55,7 @@
                         <div class="col-sm-10">
 
 
-                          <select data-placeholder="Selecciona el vehiculo" onchange="cale(this.value)" id="nuvehiculo" name="nuvehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+                          <select data-placeholder="Selecciona el vehiculo" onchange="cale(this.value)" id="nuvehiculo" name="nuvehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4" required="llenar campo">
 
                             <option value="0" disabled selected>Selecciones un vehiculo</option>
                             <?php
@@ -158,7 +158,7 @@
                       <legend>Datos del viaje</legend>
                       <div class="form-group"><label class="col-sm-2 control-label">Lugar(es)</label>
                         <div class="col-sm-10">
-                          <select data-placeholder="Selecciona municipio(s)" name="lugs[]" class="chosen-select col-sm-10" multiple style="width:350px;" tabindex="4">
+                          <select data-placeholder="Selecciona municipio(s)" name="lugs[]" class="chosen-select col-sm-10" multiple style="width:350px;" tabindex="4" required="llenar campo">
                             <option value="Aconchi">Aconchi</option>
                             <option value="Agua_Prieta">Agua_Prieta</option>
                             <option value="Alamos">Alamos</option>
@@ -238,9 +238,9 @@
                       <div class="form-group" id="data_5"><label class="col-sm-2 control-label">Fecha</label>
                         <div class="col-sm-10">
                           <center><div class="input-daterange input-group" id="datepicker">
-                            <input type="text" class="input-sm form-control" id="feini" name="feini" values="05/16/2018" placeholder="inicio" />
+                            <input type="text" class="input-sm form-control" id="feini" name="feini" values="05/16/2018" placeholder="inicio" required="llenar campo" />
                             <span class="input-group-addon">Al</span>
-                            <input type="text" class="input-sm form-control" id="fefin" name="fefin" values="05/30/2018" placeholder="final" />
+                            <input type="text" class="input-sm form-control" id="fefin" name="fefin" values="05/30/2018" placeholder="final" required="llenar campo" />
                           </div></center>
                         </div>
                       </div>                     
@@ -252,7 +252,7 @@
                       echo $interval->format('%d%');*/
                       ?>
                       <div class="form-group"><label class="col-sm-2 control-label">Dias</label>
-                        <div class="col-sm-10"><input type="text" id="di" value="<?php  //echo $interval->format('%d%'); ?>" name="dia" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" id="di" value="<?php  //echo $interval->format('%d%'); ?>" name="dia" class="form-control" required="llenar campo"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Claves de escuelas</label>
                         <div class="col-sm-10">
@@ -274,10 +274,10 @@
                         </div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Recorrido (Km)</label>
-                        <div class="col-sm-10"><input type="text" name="recor" value="" placeholder="" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="recor" value="" placeholder="" class="form-control" required="llenar campo"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Excedente</label>
-                        <div class="col-sm-10"><input type="text" name="recorexe"  value="" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="recorexe"  value="" class="form-control" required="llenar campo"></div>
                       </div>
                     </fieldset>
                   </div> 
@@ -287,11 +287,11 @@
                       <legend>Presupuestos</legend>
                       
                       <div class="form-group"><label class="col-sm-2 control-label">Precio Gasolina/L</label>
-                        <div class="col-sm-10"><input placeholder="Introduzca el precio actual" value="" name="prelitro" type="text" class="form-control"></div>
+                        <div class="col-sm-10"><input placeholder="Introduzca el precio actual" value="" name="prelitro" type="text" class="form-control" required="llenar campo"></div>
                       </div>
                       
                       <div class="form-group"><label class="col-sm-2 control-label">Presupuesto casetas</label>
-                        <div class="col-sm-10"><input type="text" name="precasetas"  value="" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" name="precasetas"  value="" class="form-control" required="llenar campo"></div>
                       </div>
                       
                     </fieldset>
@@ -393,16 +393,16 @@
                 <legend>Agregar vehiculo</legend>
                 <form action="../Controlador/regVehiculo.php" method="POST" class="form-horizontal" >
                   <div class="form-group"><label class="col-sm-2 control-label">Numero del vehiculo</label>
-                    <div class="col-sm-10"><input type="text" name="numve" class="form-control"></div>
+                    <div class="col-sm-10"><input type="text" name="numve" class="form-control" pattern="[0-9]{1,3}" minlength="1" maxlength="3" required title="Solo permite numeros"></div>
                   </div>
                   <div class="form-group"><label class="col-sm-2 control-label">Nombre del carro</label>
-                    <div class="col-sm-10"><input type="text" name="nomve" class="form-control"></div>
+                    <div class="col-sm-10"><input type="text" name="nomve" class="form-control" title="Llenar campo" required=""></div>
                   </div>
                   <div class="form-group"><label class="col-sm-2 control-label">Placas</label>
-                    <div class="col-sm-10"><input type="text" name="plave" class="form-control"></div>
+                    <div class="col-sm-10"><input type="text" name="plave" class="form-control" pattern="[A-Za-z0-9]{7}" maxlength="7" required title="Placa incompleta"></div>
                   </div>
                   <div class="form-group"><label class="col-sm-2 control-label">Rendimiento</label>
-                    <div class="col-sm-10"><input type="text" name="renve" class="form-control"></div>
+                    <div class="col-sm-10"><input type="text" name="renve" class="form-control" pattern="[0-9]{1,3}" minlength="1" maxlength="3"  required title="Solo permite numeros"></div>
                   </div>
                   <input type="submit" class="btn btn-danger pull-right" value="Guardar" >
                 </form>

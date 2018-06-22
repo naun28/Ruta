@@ -82,7 +82,8 @@
 
     <!-- Dual Listbox -->
     <script src="../Include/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
-
+    <!-- Input Mask-->
+    <script src="../Include/js/plugins/jasny/jasny-bootstrap.min.js"></script>
     <script>
             $(document).ready(function () {
                 $('.i-checks').iCheck({

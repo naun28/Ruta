@@ -17,11 +17,11 @@
                 </div>
                 <div class="ibox-content">
                     <h5></h5>
-                    <form class="form-horizontal" action="../Controlador/juspdf.php" method="POST">
+                    <form class="form-horizontal" action="../Controlador/juspdf.php" method="POST" target="_blank">
                         <div class="form-group"><label class="col-sm-2 control-label">Empleado</label>
                             <div class="col-sm-10">
-                                <select data-placeholder="Selecciona el vehiculo" onchange="return showCustomer();"  name="empleado"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-                            <option value="0" disabled selected>Selecciona empleado</option>
+                                <select data-placeholder="Selecciona empleado" onchange="return showCustomer();"  name="empleado"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
+                            <option value="" disabled selected>Selecciona empleado</option>
                             <?php
                             require('../Conect/conecviatik.php');
 
@@ -40,12 +40,12 @@
                         
                         <div class="form-group"><label class="col-sm-2 control-label">Fecha inicial</label>
                             <div class="col-sm-10">
-                                <input type="date" name="fi" class="form-control">
+                                <input type="date" name="fi" class="form-control" required="selecciona fecha" title="selecciona fecha">
                             </div>
                         </div>
                         <div class="form-group"><label class="col-sm-2 control-label">Fecha final</label>
                             <div class="col-sm-10">
-                                <input type="date" name="ff" class="form-control">
+                                <input type="date" name="ff" class="form-control" required="">
                             </div>
                         </div>
                         <div class="form-group"><label class="col-sm-2 control-label">Observaciones</label>

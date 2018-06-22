@@ -89,7 +89,18 @@
 
     <!-- Dual Listbox -->
     <script src="../Include/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
-    
+    <!-- Input Mask-->
+    <script src="../Include/js/plugins/jasny/jasny-bootstrap.min.js"></script>
+    <script>
+function myFunction() {
+    var x = document.getElementById("myInpu");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>
     <script>
         $(document).ready(function() {
              $('#tipouser').on('change',function(){

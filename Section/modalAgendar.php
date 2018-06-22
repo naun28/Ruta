@@ -42,12 +42,12 @@
                             <label>Domicilio</label><input type="text" id="Domicilio" name="Domicilio" placeholder="Domicilio" class="form-control" readonly="Domicilio">
                         </div>
                         <div class="form-group col-md-6">
-                            <label>Semana</label><input type="number" id="Semana" name="Semana" placeholder="Semana" class="form-control" required="Semana">
+                            <label>Semana</label><input type="number" id="Semana" name="Semana" min="1" placeholder="Semana" class="form-control" required="Semana">
                         </div>
                         <div class="form-group col-md-6" id="data_5">
                             <label>Fecha</label>
                            <div class="input-date input-group">
-                                <input type="date" class="input-sm form-control" placeholder="Inicio" name="FechaIni" id="FechaIni" required="Inicio" />
+                                <input type="date" class="input-sm form-control" required min=<?php $hoy=date("Y-m-d"); echo $hoy;?> placeholder="Inicio" name="FechaIni" id="FechaIni" required="Inicio" />
                                 <span class="input-group-addon">Al</span>
                                 <input type="date"  class="input-sm form-control" placeholder="Final" name="FechaFin" id="FechaFin" required="final" />
                             </div>
@@ -124,7 +124,7 @@
                      </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         <div class="form-group">
                            <label>Comentarios</label>
-                            <textarea type="text" placeholder="Comentario" name="Comentarios" class="form-control" style="min-height: 50px; max-height: 50px; min-width: 100%; max-width: 100%;">
+                            <textarea type="text" placeholder="Comentario" name="Comentarios" maxlength="255" class="form-control" style="min-height: 50px; max-height: 50px; min-width: 100%; max-width: 100%;">
 
                             </textarea>
                             
