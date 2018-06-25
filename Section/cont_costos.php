@@ -29,7 +29,7 @@
                         <div class="col-sm-10">
 
                           <select data-placeholder="Selecciona lider" onchange="return showCustomer();" id="selecar" name="librigada"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4" required="llenar campo">
-                            <option value="0" disabled selected>Selecciona lider</option>
+                            <option value=""  >Selecciona lider</option>
                             <?php
                             require('../Conect/conecviatik.php');
 
@@ -57,7 +57,7 @@
 
                           <select data-placeholder="Selecciona el vehiculo" onchange="cale(this.value)" id="nuvehiculo" name="nuvehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4" required="llenar campo">
 
-                            <option value="0" disabled selected>Selecciones un vehiculo</option>
+                            <option value="" >Selecciones un vehiculo</option>
                             <?php
                             require('../Conect/conecviatik.php');
 
@@ -100,53 +100,6 @@
                                 <br><br>
                                 <div id="datosvehiculo"></div>
 
-<!--
-                       <select data-placeholder="Selecciona el vehiculo" id="nuvehiculo" name="nuvehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-                           
-                            <option value="0" disabled selected>Selecciones un vehiculo</option>
-                            <?php
-                         /*   require('../Conect/conecviatik.php');
-
-                            $rs = mysqli_query($conecviatiks, "SELECT * FROM vehiculos");
-                            while($row=mysqli_fetch_array($rs))
-                            {
-                              echo "<option value='".$row['num_vehiculo']."'>";
-                              echo $row['num_vehiculo'];
-                              echo "</option>";                     
-                            }
-
-                            mysqli_close($conecviatiks);
-                            ?>
-
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group"><label class="col-sm-2 control-label">Placas</label>
-                        <div class="col-sm-10">
-                          <select data-placeholder="Selecciona el vehiculo" id="plavehiculo" name="plavehiculo" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-                            <option value="0" disabled selected>Selecciones las placas</option>
-                            <?php
-                            require('../Conect/conecviatik.php');
-
-                            $rs = mysqli_query($conecviatiks, "SELECT placas FROM vehiculos");
-                            while($row=mysqli_fetch_array($rs))
-                            {
-                              echo "<option value='".$row['placas']."'>";
-                              echo $row['placas'];
-                              echo "</option>";                     
-                            }
-                            mysqli_close($conecviatiks);*/
-                            ?>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div class="form-group"><label class="col-sm-2 control-label">Rendimiento</label>
-                        <div class="col-sm-10">
-                          <input id="rendvehiculo" type="text" placeholder="Rendimiento (Km/L)" name="rendvehiculo" class="form-control">
-                        </div>
-                      </div> -->
                     </fieldset>
                   </div>       
                 </div>
@@ -158,7 +111,7 @@
                       <legend>Datos del viaje</legend>
                       <div class="form-group"><label class="col-sm-2 control-label">Lugar(es)</label>
                         <div class="col-sm-10">
-                          <select data-placeholder="Selecciona municipio(s)" name="lugs[]" class="chosen-select col-sm-10" multiple style="width:350px;" tabindex="4" required="llenar campo">
+                          <select data-placeholder="Selecciona municipio(s)" name="lugs[]" class="chosen-select col-sm-10" multiple style="width:350px;" tabindex="4" required>
                             <option value="Aconchi">Aconchi</option>
                             <option value="Agua_Prieta">Agua_Prieta</option>
                             <option value="Alamos">Alamos</option>
@@ -252,12 +205,13 @@
                       echo $interval->format('%d%');*/
                       ?>
                       <div class="form-group"><label class="col-sm-2 control-label">Dias</label>
-                        <div class="col-sm-10"><input type="text" id="di" value="<?php  //echo $interval->format('%d%'); ?>" name="dia" class="form-control" required="llenar campo"></div>
+                        <div class="col-sm-10"><input type="text" id="di" onkeypress="return validanum(event)" value="" name="dia" class="form-control" required="llenar campo"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Claves de escuelas</label>
                         <div class="col-sm-10">
                           <!--<input type="text" class="form-control">-->
                           <select data-placeholder="Escuela(s) a visitar" name="scuelas[]" class="chosen-select col-sm-10" multiple style="width:350px;" tabindex="4">
+                            
                             <?php
                             require('../Conect/conecviatik.php');
 
@@ -274,10 +228,10 @@
                         </div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Recorrido (Km)</label>
-                        <div class="col-sm-10"><input type="text" name="recor" value="" placeholder="" class="form-control" required="llenar campo"></div>
+                        <div class="col-sm-10"><input type="text" name="recor" onkeypress="return validanum(event)" value="" placeholder="" class="form-control" required="llenar campo"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Excedente</label>
-                        <div class="col-sm-10"><input type="text" name="recorexe"  value="" class="form-control" required="llenar campo"></div>
+                        <div class="col-sm-10"><input type="text" name="recorexe" onkeypress="return validanum(event)" value="" class="form-control" required="llenar campo"></div>
                       </div>
                     </fieldset>
                   </div> 
@@ -287,11 +241,11 @@
                       <legend>Presupuestos</legend>
                       
                       <div class="form-group"><label class="col-sm-2 control-label">Precio Gasolina/L</label>
-                        <div class="col-sm-10"><input placeholder="Introduzca el precio actual" value="" name="prelitro" type="text" class="form-control" required="llenar campo"></div>
+                        <div class="col-sm-10"><input placeholder="Introduzca el precio actual" value="" name="prelitro" onkeypress="return validanum(event)" type="text" class="form-control" required="llenar campo"></div>
                       </div>
                       
                       <div class="form-group"><label class="col-sm-2 control-label">Presupuesto casetas</label>
-                        <div class="col-sm-10"><input type="text" name="precasetas"  value="" class="form-control" required="llenar campo"></div>
+                        <div class="col-sm-10"><input type="text" name="precasetas"  value="" class="form-control" onkeypress="return validanum(event)" required="llenar campo"></div>
                       </div>
                       
                     </fieldset>
@@ -325,67 +279,14 @@
                 </div>
                 <!-- NIVEL 3 -->
                 <div class="col-lg-12">
-                  <!-- AÑADIR BRIGADISTAS
-                  <div class="col-lg-6">
-                    <fieldset>
-                      <legend>Añadir brigadista</legend>
-                      <div class="form-group"><label class="col-sm-2 control-label">Brigadista</label>
-                        <div class="col-sm-10">
-                          <select data-placeholder="Selecciona una brigada" multiple name="addbrig[]" class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-
-                            <?php
-                           /* require('../Conect/conecviatik.php');
-
-                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios where tipouser='Brigadista'");
-                            while($row=mysqli_fetch_array($rs))
-                            {
-                              echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
-                              echo $row['nombres']. " " .$row['apellidos'];
-                              echo "</option>";                     
-                            }
-                            mysqli_close($conecviatiks);*/
-                            ?>
-                          </select>
-                        </div>
-                      </div>
-                    </fieldset>
-                    <div class="form-group ">
-                        <div class="col-sm-10"><br><br>
-                          <input type="reset" class="btn btn-default pull-left" value="Limpiar"> 
-                          <input type="submit" class="btn btn-danger pull-right" value="Terminar">
-                        </div>
-                      </div>
-                  </div> -->
-                  <!-- RESUMEN DE COSTO 
-                  <div class="col-lg-6">
-                    <fieldset>
-                      <legend>Resumen costo</legend>
-                      <div class="form-group"><label class="col-sm-2 control-label">Total real</label>
-                        <div class="col-sm-10"><input type="text" name="totreal"  value="1000" class="form-control"></div>
-                      </div>
-                      <div class="form-group"><label class="col-sm-2 control-label">Total</label>
-                        <div class="col-sm-10"><input type="text" name="totfinal" value="1000" class="form-control"></div>
-                      </div>
-                      
-                    </fieldset>
-                  </div>-->
+                 
                 </div>
               </form>
             </div>
           </div>      
         </div>
       </div>
-      <!--- Pestaña 2 -->
-       <!--  <div id="tab-2" class="tab-pane">
-          <div class="panel-body">
-            <div class="ibox-content">
-         
-             
-            
-            </div>
-          </div>
-        </div> -->
-        <!--- Pestaña 2 -->
+   
         <div id="tab-2" class="tab-pane">
           <div class="panel-body">
             <div class="ibox-content">
@@ -460,4 +361,25 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+        function validaletra(e) { 
+          tecla = (document.all) ? e.keyCode : e.which; 
+          if (tecla==8) return true; 
+          patron =/[A-Za-z\s]/; 
+          te = String.fromCharCode(tecla); 
+          return patron.test(te); 
+          }
+      </script>
+      <script type="text/javascript">
+          function validanum(e){
+          tecla = (document.all) ? e.keyCode : e.which;
 
+          if (tecla==8){
+              return true;
+          }
+              patron =/[0-9]/;
+              tecla_final = String.fromCharCode(tecla);
+              return patron.test(tecla_final);
+          }
+      </script>
+      

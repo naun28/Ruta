@@ -20,8 +20,8 @@
                     <form class="form-horizontal" action="../Controlador/juspdf.php" method="POST" target="_blank">
                         <div class="form-group"><label class="col-sm-2 control-label">Empleado</label>
                             <div class="col-sm-10">
-                                <select data-placeholder="Selecciona empleado" onchange="return showCustomer();"  name="empleado"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4">
-                            <option value="" disabled selected>Selecciona empleado</option>
+                                <select required="selecciones un empleado" data-placeholder="Selecciona empleado"   name="empleado"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4" >
+                            <option value=""  >Selecciona empleado</option>
                             <?php
                             require('../Conect/conecviatik.php');
 
@@ -37,20 +37,19 @@
                           </select>
                             </div>
                         </div>
+                        <div class="form-group" id="data_5"><label class="col-sm-2 control-label">Fecha</label>
+                        <div class="col-sm-10">
+                          <center><div class="input-daterange input-group" id="datepicker">
+                            <input type="text" class="input-sm form-control" id="fi" name="fi" placeholder="inicio" required="llenar campo" />
+                            <span class="input-group-addon">Al</span>
+                            <input type="text" class="input-sm form-control" id="ff" name="ff"  placeholder="final" required="llenar campo" />
+                          </div></center>
+                        </div>
+                      </div> 
                         
-                        <div class="form-group"><label class="col-sm-2 control-label">Fecha inicial</label>
-                            <div class="col-sm-10">
-                                <input type="date" name="fi" class="form-control" required="selecciona fecha" title="selecciona fecha">
-                            </div>
-                        </div>
-                        <div class="form-group"><label class="col-sm-2 control-label">Fecha final</label>
-                            <div class="col-sm-10">
-                                <input type="date" name="ff" class="form-control" required="">
-                            </div>
-                        </div>
                         <div class="form-group"><label class="col-sm-2 control-label">Observaciones</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" maxlength="200" name="obser"  cols="30" rows="5"></textarea>
+                                <textarea required class="form-control" maxlength="200" name="obser"  cols="30" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="form-group">

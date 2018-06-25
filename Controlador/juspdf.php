@@ -1,25 +1,27 @@
 <?php 
 require '../Conect/conecviatik.php';
 require '../Controlador/fpdf181/fpdf.php';
-$empleado=$_POST['empleado'];
+$empleado=isset($_POST['empleado']) ? $_POST['empleado'] : $_POST['empleado'];;
 $fecha=$_POST['fi'];
 $fecha2=$_POST['ff'];
 $obser=$_POST['obser'];
 $fecha; //2008-10-08 
 //en este caso el 2 seria nuestro dato 0. 
-$anio = substr($fecha, 0, 4); 
-$mes = substr($fecha, 5, 2); 
-$dia = substr($fecha, 8);  
+$mes = substr($fecha, 0, 2); 
+$dia = substr($fecha, 3, 2); 
+$anio = substr($fecha, 6);  
 
-$anio2 = substr($fecha2, 0, 4); 
-$mes2 = substr($fecha2, 5, 2); 
-$dia2 = substr($fecha2, 8); 
+$mes2 = substr($fecha2, 0, 2); 
+$dia2 = substr($fecha2, 3, 2); 
+$anio2 = substr($fecha2, 6); 
 
 $nombrecompleto=$empleado;
 
-
+/*if (isset($empleado)) {
+	echo "<h1>El sistema no pudo generar el justificante</h1>";
+}else{}
       
-/*$fecha = $fi; 
+$fecha = $fi; 
 list($anio, $mes, $dia) = explode("/",$fecha); */
 if ($mes=='01') {
 	$mesletra='Enero';
@@ -160,120 +162,6 @@ $pdf->Cell(185, 70, '  8-DRH-P10-F02/REV.02', 0,1,'R');
 
 
 
-/*
-
-$pdf->Ln(20);
-$pdf->SetFont('Arial', 'B', 11);
-$pdf->Cell(70, 8, '', 0);
-$pdf->Cell(100, 8, 'Detalles de los viaticos', 0);
-$pdf->Ln(23);
-$pdf->SetFont('Arial', 'B', 8);
-
-//CONSULTA
- $productos = mysqli_query($conecviatiks, "SELECT * FROM viatiks ");
-//$productos = mysql_query("SELECT * FROM ");
-$item = 0;
-$totaluni = 0;
-$totaldis = 0;
-while($row = mysqli_fetch_array($productos)){
-	$pdf->Cell(50, 4, 'Lider de brigada', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['liderbrig']        , 0);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Destino(s)', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['lugares']        , 0);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Fecha de salida', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['fechaini']        , 0,1);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Fecha de llegada', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['fechafin']        , 0 );
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Brigadista acompañante', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['brigacompanante']        , 0,1);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Vehiculo', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['vehiculo']        , 0);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Placas', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['placas']        , 0,1);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Rendimiento', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['rendimiento']        , 0);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Días', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['dias']        , 0,1);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Escuelas', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['escuelasvisit']        , 0);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Recorrido(km)', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['recorrido']        , 0,1);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Excedente(km)', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['excedente']        , 0);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Precio gasolina/L', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['prelitrogas']        , 0,1);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Presupuesto gasolina', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['presugasolina']        , 0);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Presupuesto casetas', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['presucasetas']        , 0,1);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Viaticos del lider', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['viaticoslider']        , 0);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Viaticos acompañante', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['viaticosbrig']        , 0,1);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Total real', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['totalreal']        , 0);
-
-	$pdf->SetFont('Arial','B', 8);
-	$pdf->Cell(50, 4, 'Total', 0);
-	$pdf->SetFont('Arial','', 8);
-	$pdf->Cell(50, 4,$row['totalchilo']        , 0,1);
-
-	$pdf->SetFont('Arial','B', 8);
-
-	$pdf->Ln(8);
-}*/
 $pdf->SetFont('Arial', 'B', 8);
 $pdf->Cell(114,8,'',0);
 
