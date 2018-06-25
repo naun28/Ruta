@@ -21,7 +21,7 @@ if (!isset($_SESSION["correo"])) {
   	
   <?PHP include "../Section/listaesclider.php";?>
 </div>
-<?PHP include "../Section/js.php";?>
+<?PHP include "../Section/js_lider.php";?>
 </body>
 
 </html>

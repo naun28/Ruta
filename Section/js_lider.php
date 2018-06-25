@@ -604,7 +604,7 @@ function myFunction() {
 
             "ajax":{
                 "method":"POST",
-                "url":"../Controlador/escuelaController.php",
+                "url":"../Controlador/esczonaliderController.php",
                  error: function (result) {
                         swal({
                             title: "LISTA VACIA",
@@ -622,7 +622,7 @@ function myFunction() {
                 {"data":"Localidad22"},
                 {"data":"Municipio"},
                 {"data":"Ruta33"},
-                {"defaultContent": "<button class=' info btn btn-w-m btn-danger dim' data-toggle='modal' data-target='#myModal2'> Informacion</button>"},
+                {"defaultContent": "<button class=' info btn btn-w-m btn-danger dim' data-toggle='modal' data-target='#myModalEscLid'> Informacion</button>"},
                 {"data":"Eq","visible": false},
                 {"data":"Equip","visible": false},
                 {"data":"Reequip","visible": false},
@@ -678,7 +678,7 @@ function myFunction() {
 
 </script>
 <!--Estructura del ModalEscuelas-->
-<?php include 'modalEscuelas.php'; ?>
+<?php include 'modalEscuelasLider.php'; ?>
 
 <!--Calendario Principal-->
 <script>
