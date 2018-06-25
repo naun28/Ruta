@@ -9,11 +9,11 @@
                 </div>
                 <div class="modal-body">
                     <CENTER><h4>¿DESEA ELIMINAR ESTE USUARIO?</h4></CENTER>
-                        <form method="POST" action="../Modelo/eliminar.php" id="formLimpiar">
+                        <form method="POST" action="../Modelo/eliminar.php">
                             <input type="hidden"  id="id_usuario" name="id_usuario" placeholder="Clave" class="form-control" readonly="id_usuario">
                 </div>
                 <div class="modal-footer">
-                    <button id="btnLimpiar" type="button" class="btn btn-white dim" data-dismiss="modal">Cancelar</button>
+                    <button type="button"  class="btn btn-white dim" data-dismiss="modal">Cancelar</button>
                     <button type="submit" class="btn btn-danger dim">Aceptar</button>
                 </div>
             </form>

@@ -12,7 +12,6 @@ $nbrigada      = $_POST['nbrigada'].$_POST['nbrig'];
 $zona=$_POST['zonaBrig'];
 foreach ($zona as $zonaBrig) {
 $var .= $zonaBrig;
-
 }
 $conexion   = mysqli_connect("localhost", "root", "", "rutas");
 

@@ -2,7 +2,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+    <script type="text/javascript" charset="utf8" src="../Include/js/plugins/dataTables/datatables.min.js"></script>
     <script src="../Include/js/jquery-3.1.1.min.js"></script>
     <script src="../Include/js/bootstrap.min.js"></script>
     <script src="../Include/js/plugins/metisMenu/jquery.metisMenu.js"></script>
@@ -11,7 +11,7 @@
     <!-- Custom and plugin javascript -->
     <script src="../Include/js/inspinia.js"></script>
     <script src="../Include/js/plugins/pace/pace.min.js"></script>
-    
+
     <!-- Select2 -->
     <script src="../Include/js/plugins/select2/select2.full.min.js"></script>
     <!-- Flot -->

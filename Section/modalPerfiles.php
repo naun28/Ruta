@@ -42,7 +42,7 @@
                     <div id="ver">
                       <div id="Brigadista" style="display:none;" class="form-group">
 
-                        <label>N° de Brigada</label> <select name="nbrigada" class="form-control">
+                        <label>N° de Brigada</label> <select id="nbrigada" name="nbrigada" class="form-control">
                             <option value="" selected>Seleccione Brigada</option>
                             <option value="Brigada 1">Brigada 1</option>
                             <option value="Brigada 2">Brigada 2</option>
@@ -64,7 +64,7 @@
                         <div id="mostrar">
                           <div id="Lider" style="display:none;" class="form-group">
 
-                            <label>N° de Brigada</label> <select name="nbrig" class="form-control">
+                            <label>N° de Brigada</label> <select id="nbrigada" name="nbrig" class="form-control">
                                 <option value="" selected>Seleccione Brigada</option>
                                 <option value="Brigada 1">Brigada 1</option>
                                 <option value="Brigada 2">Brigada 2</option>
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                         <label>Zona</label><select id="zonaBrig" class="chosen-select form-control" name="zonaBrig[]"  multiple style="width:350px;" tabindex="4">               
+                         <label>Zona</label><select id="zonaBrig" class="select2_demo_1 form-control" name="zonaBrig[]" >               
                             <?php
                             require('../Conect/conecviatik.php');
                             $rs = mysqli_query($conecviatiks, "SELECT * FROM zona WHERE 1 ORDER BY zonaL ASC");

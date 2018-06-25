@@ -1,17 +1,17 @@
   
-   <link href="../Include/css/data.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
+   <link href="../Include/css/data.min.css" rel="../Include/stylesheet">
+    <link rel="../Include/stylesheet" type="text/css" href="DataTables/datatables.css">
     <!-- Morris -->
-    <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="../Include/css/plugins/morris/morris-0.4.3.min.css" rel="../Include/stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-    <link href='../Include/css/fullcalendar.css' rel='stylesheet' />
+    <link rel="../Include/stylesheet" type="text/css" href="cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link href='../Include/css/fullcalendar.css' rel='../Include/stylesheet' />
 
-	<link href="../Include/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../Include/css/bootstrap.min.css" rel="../Include/stylesheet">
     <link href="../Include/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <link href="../Include/css/animate.css" rel="stylesheet">
-    <link href="../Include/css/style.css" rel="stylesheet">
+    <link href="../Include/css/animate.css" rel="../Include/stylesheet">
+    <link href="../Include/css/style.css" rel="../Include/stylesheet">
     <link href="../Include/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
     <link href="../Include/css/plugins/footable/footable.core.css" rel="stylesheet">
     <link href="../Include/css/bootstrap.min.css" rel="stylesheet">
