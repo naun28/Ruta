@@ -83,24 +83,21 @@
                             </select>
                             </div>
                         </div>
-                        <div class="form-group ">
-                         <label>Zona</label><select id="zonaBrig" name="zonaBrig" class="form-control" >
-                                    <option value="" selected>Seleccionar zona</option>
-                                    <option value="Zona  1">Zona  1</option>
-                                    <option value="Zona  2">Zona  2</option>
-                                    <option value="Zona  3">Zona  3</option>
-                                    <option value="Zona  4">Zona  4</option>
-                                    <option value="Zona  5">Zona  5</option>
-                                    <option value="Zona  6">Zona  6</option>
-                                    <option value="Zona  7">Zona  7</option>
-                                    <option value="Zona  8">Zona  8</option>
-                                    <option value="Zona  9">Zona  9</option>
-                                    <option value="Zona  10">Zona  10</option>
-                                    <option value="Zona  11">Zona  11</option>
-                                    <option value="Zona  12">Zona  12</option>
-                                    <option value="Zona  13">Zona 13</option>
-                                    
-                                </select>
+                        <div class="form-group">
+                         <label>Zona</label><select id="zonaBrig" class="chosen-select form-control" name="zonaBrig[]"  multiple style="width:350px;" tabindex="4">               
+                            <?php
+                            require('../Conect/conecviatik.php');
+                            $rs = mysqli_query($conecviatiks, "SELECT * FROM zona WHERE 1 ORDER BY zonaL ASC");
+                            while($row=mysqli_fetch_array($rs))
+                            {
+                              echo "<option value='".$row['zonaL']."'>";
+                              echo $row['zonaL'];
+                              echo "</option>";                     
+                            }
+                            mysqli_close($conecviatiks);
+                            ?>
+                          </select>
+
                         </div> 
                 <div class="modal-footer">
                    <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white dim" data-dismiss="modal">Cerrar</button>

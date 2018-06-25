@@ -8,7 +8,12 @@ $correo     = $_POST['correo'];
 $pass      = $_POST['pass'];
 $tipouser      = $_POST['tipouser'];
 $nbrigada      = $_POST['nbrigada'].$_POST['nbrig'];
-$zonaBrig = $_POST['zonaBrig'];
+
+$zona=$_POST['zonaBrig'];
+foreach ($zona as $zonaBrig) {
+$var .= $zonaBrig;
+
+}
 $conexion   = mysqli_connect("localhost", "root", "", "rutas");
 
 $q = ("INSERT INTO usuarios VALUES ('','$nombres','$apellidos','$telefono','$correo','$pass','$tipouser','$nbrigada','$zonaBrig')");

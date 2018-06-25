@@ -10,6 +10,7 @@ if (!isset($_SESSION["correo"])) {
 <!DOCTYPE html>
 <html>
 <head>
+	
    <title>Perfiles de Usuarios</title>
    <?PHP include "../Section/css.php";?>
 

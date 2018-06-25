@@ -11,7 +11,9 @@
     <!-- Custom and plugin javascript -->
     <script src="../Include/js/inspinia.js"></script>
     <script src="../Include/js/plugins/pace/pace.min.js"></script>
-
+    
+    <!-- Select2 -->
+    <script src="../Include/js/plugins/select2/select2.full.min.js"></script>
     <!-- Flot -->
     <script src="../Include/js/plugins/flot/jquery.flot.js"></script>
     <script src="../Include/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
@@ -70,9 +72,6 @@
 
     <!-- Date range picker -->
     <script src="../Include/js/plugins/daterangepicker/daterangepicker.js"></script>
-
-    <!-- Select2 -->
-    <script src="../Include/js/plugins/select2/select2.full.min.js"></script>
 
     <!-- TouchSpin -->
     <script src="../Include/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
