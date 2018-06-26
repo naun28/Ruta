@@ -35,6 +35,7 @@ $id_usuario  = $row['id_usuario'];
 $correo   = $row['correo'];
 $password = $row['pass'];
 $nbrigada = $row["nbrigada"];
+$zonaBrig = $row["zonaBrig"];
 
 if ($tipouser === "Administrador" || $tipouser === "Director" ) {
     if ($row["correo"] === $correo && $row["pass"] === $password) {
@@ -90,9 +91,9 @@ if ($tipouser === "Administrador" || $tipouser === "Director" ) {
 }else if ($tipouser === "Lider") {
     if ($row["correo"] === $correo && $row["pass"] === $password) {
         session_start();
+        $_SESSION["id_usuario"] = $id_usuario;
         $_SESSION["nombres"]   = $nombres;
         $_SESSION["apellidos"] = $apellidos;
-        $_SESSION["id_usuario"] = $id_usuario;
         $_SESSION["correo"] = $correo;
         $_SESSION["tipouser"] = $tipouser;
         $_SESSION["zonaBrig"] = $zonaBrig;

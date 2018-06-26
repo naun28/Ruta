@@ -1,4 +1,5 @@
 <?php 
+//ESCUELAS ASIGNADAS POR LIDER 
 session_start(); 
 include '../Conect/conexionEsc.php';
 $lider = $_SESSION["nombres"];

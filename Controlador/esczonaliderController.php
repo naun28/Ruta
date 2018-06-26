@@ -1,7 +1,10 @@
 <?php 
-//PONER POR ZONAS
+//ESCUELAS POR ZONA DEL LIDER
+ session_start();
 include '../Conect/conexionEsc.php';
-$q = "SELECT *, reportes.fecha, reportes.concepto, reportes.levanto, reportes.clavecct FROM crucebd left join reportes on crucebd.Clave = reportes.clavecct WHERE reportes.concepto IS NOT Null AND crucebd.Status_Esc = 0 order by reportes.fecha Desc";
+$zonaBrig= $_SESSION["zonaBrig"];
+
+$q = "SELECT *, reportes.fecha, reportes.concepto, reportes.levanto, reportes.clavecct FROM crucebd left join reportes on crucebd.Clave = reportes.clavecct WHERE reportes.concepto IS NOT Null AND crucebd.Status_Esc = 0 AND crucebd.Ruta33 = '$zonaBrig' order by reportes.fecha Desc";
 $resultado = mysqli_query($conEsc, $q);
 if (!$resultado) {
     die("ERROR");

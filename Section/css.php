@@ -5,7 +5,7 @@
     <link href="../Include/css/plugins/morris/morris-0.4.3.min.css" rel="../Include/stylesheet">
 
     <link rel="../Include/stylesheet" type="text/css" href="cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-    <link href='../Include/css/fullcalendar.css' rel='../Include/stylesheet' />
+    <link href='../Include/css/fullcalendar.css' rel='stylesheet' />
 
 	<link href="../Include/css/bootstrap.min.css" rel="../Include/stylesheet">
     <link href="../Include/font-awesome/css/font-awesome.css" rel="stylesheet">

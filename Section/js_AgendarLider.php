@@ -1,21 +1,13 @@
-    <meta charset="utf-8">
+ <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <script type="text/javascript" charset="utf8" src="../Include/js/plugins/dataTables/datatables.min.js"></script>
-    <script src="../Include/js/plugins/fullcalendar/moment.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
     <script src="../Include/js/jquery-3.1.1.min.js"></script>
     <script src="../Include/js/bootstrap.min.js"></script>
     <script src="../Include/js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="../Include/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <!-- Full Calendar -->
-   <script src="../Include/js/plugins/fullcalendar/fullcalendar.min.js"></script>
-   <script src="../Include/js/plugins/fullcalendar/fullcalendar.js"></script>
-   <script src="../Include/js/plugins/fullcalendar/locale/es.js"></script>
+
     <!-- Custom and plugin javascript -->
     <script src="../Include/js/inspinia.js"></script>
     <script src="../Include/js/plugins/pace/pace.min.js"></script>
@@ -73,9 +65,14 @@
     <!-- Image cropper -->
     <script src="../Include/js/plugins/cropper/cropper.min.js"></script>
 
+    <!-- Date range use moment.js same as full calendar plugin -->
+    <script src="../Include/js/plugins/fullcalendar/moment.min.js"></script>
 
     <!-- Date range picker -->
     <script src="../Include/js/plugins/daterangepicker/daterangepicker.js"></script>
+
+    <!-- Select2 -->
+    <script src="../Include/js/plugins/select2/select2.full.min.js"></script>
 
     <!-- TouchSpin -->
     <script src="../Include/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
@@ -87,38 +84,28 @@
     <script src="../Include/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
     <!-- Input Mask-->
     <script src="../Include/js/plugins/jasny/jasny-bootstrap.min.js"></script>
-     <!-- Select2 -->
-    <script src="../Include/js/plugins/select2/select2.full.min.js"></script>
     <script>
-function myFunction() {
-    var x = document.getElementById("myInput");
-    if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
-    }
-}
-</script>
+            $(document).ready(function () {
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+            });
+        </script>
+
     <script>
         $(document).ready(function() {
              $('#tipouser').on('change',function(){
               var selectValor = '#' +$(this).val();
-              $('#ver').children('div').hide();
-              $('#ver').children(selectValor).show();
+              $('#ver').children('div').show();
+              $('#ver').children(selectValor).hide();
             });
-             $('#tipouser').on('change',function(){
-              var selectValor = '#' +$(this).val();
-              $('#mostrar').children('div').hide();
-              $('#mostrar').children(selectValor).show();
-            });
-
+             
            $("#btnLimpiar").click(function(event) {
            $("#formLimpiar")[0].reset();
             });
             $('.footable').footable();
             $('.footable2').footable();
-
-
 
         });
 
@@ -258,7 +245,7 @@ function myFunction() {
             } else {
                 $inputImage.addClass("hide");
             }
-
+            $('.chosen-select').chosen({width: "100%"});
             $("#download").click(function() {
                 window.open($image.cropper("getDataURL"));
             });
@@ -435,7 +422,7 @@ function myFunction() {
 
         });
 
-        $('.chosen-select').chosen({width: "100%"});
+        
 
         $("#ionrange_1").ionRangeSlider({
             min: 0,
@@ -512,7 +499,7 @@ function myFunction() {
                 'max':  80
             }
         });
-
+        
         var drag_fixed = document.getElementById('drag-fixed');
 
         noUiSlider.create(drag_fixed, {
@@ -527,67 +514,17 @@ function myFunction() {
 
 
     </script>
-<!-- mostrar datos de usuarios -->
-<script>
-    $(document).ready(function(){
 
-        listar();
-
-    });
-    var listar = function(){
-        var table = $("#dt_usuarios").DataTable({
-            pageLength: 10,
-                responsive: true,
-
-                dom: '<"html5buttons"B>lTfgitp',
-                buttons: [
-                   
-                    {extend: 'excel', title: 'ExampleFile'},
-                    {extend: 'pdf', title: 'ExampleFile'},
-                 
-                ],
-                "destroy":true,
-
-            "ajax":{
-                "method":"POST",
-                "url":"../Controlador/usuarioController.php",
-                 error: function (result) {
-                        swal({
-                            title: "LISTA VACIA",
-                            text: "NO HAY USUARIOS AGREGADOS",
-                            type: "warning"
-
-                        });
-                    }
-            },
-            "columns":[
-                {"data":"id_usuario","visible": false},
-                {"data":"nombres"},
-                {"data":"apellidos"},
-                {"data":"telefono"},
-                {"data":"correo"},
-                {"data":"tipouser"},
-                {"data":"nbrigada"},
-                {"data":"zonaBrig"}
-                /*{"defaultContent":"<button>Editar</button>"}*/
-            ]
-
-        });
-
-    }
-    
-</script>
-
-<!-- mostrar datos de escuelas -->
+<!-- mostrar datos de escuelas para agendar -->
 <script async="async">
     $(document).ready(function(){
         
 
-        listarEsc();
+        listarAgenda();
 
     });
-    var listarEsc = function(){
-        var table = $("#escuela").DataTable({
+    var listarAgenda = function(){
+        var table = $("#poragendar").DataTable({
                 destroy:true,
                 pageLength: 10,
                 responsive: true,
@@ -595,200 +532,96 @@ function myFunction() {
                 dom: '<"html5buttons"B>lTfgitp',
                 buttons: [
                    
-                    {extend: 'excel', title: 'LISTA DE ESCUELAS'},
-                    {extend: 'pdf', title: 'LISTA DE ESCUELAS'},
+                    {extend: 'excel', title: 'LISTA DE ESCUELAS POR AGENDAR'},
+                    {extend: 'pdf', title: 'LISTA DE ESCUELAS POR AGENDAR'},
                  
                 ],
 
-            "ajax":{
-                "method":"POST",
-                "url":"../Controlador/escuelaController.php",
-                 error: function (result) {
+                "ajax":{
+                    "method":"POST",
+                    "url":"../Controlador/LiderAgendarController.php",
+                    
+                    error: function (result) {
                         swal({
-                            title: "LISTA VACIA",
-                            text: "NO HAY ESCUELAS PARA MOSTRAR",
+                            title: "NO HAY ESCUELAS PARA AGENDAR",
+                            text: "IR A LISTA DE ESCUELAS PARA PODER AGENDAR RUTAS",
                             type: "warning"
 
                         });
                     }
-            },
+                  },
             "columns":[
-                
+         
                 {"data":"Clave"},
                 {"data":"Escuela"},
                 {"data":"Domicilio"},
-                {"data":"Localidad22"},
+                {"data":"Localidad"},
                 {"data":"Municipio"},
-                {"data":"Ruta33"},
-                {"defaultContent": "<button class=' info btn btn-w-m btn-danger dim' data-toggle='modal' data-target='#myModal2'> Informacion</button>"},
-                {"data":"Eq","visible": false},
-                {"data":"Equip","visible": false},
+                {"data":"Conectividad"},
+                {"data":"ProbSolicitado"},
+                {"data":"LevantReporte"},
+                {"defaultContent": "<button class=' agenda btn btn-danger dim btn-xs' data-toggle='modal' data-target='#myModal'>Agendar</button>"},
+                {"defaultContent": "<button class='deshacer btn btn-primary dim btn-xs' data-toggle='modal' data-target='#myModal6'><li class='fa fa-window-close'></li></button>"},
+                {"data":"Zona","visible": false},
+                {"data":"Nequipos","visible": false},
+                {"data":"Aequipos","visible": false},
                 {"data":"Reequip","visible": false},
-                {"data":"Conectividad","visible": false},
                 {"data":"Reporte","visible": false},
-                {"data":"NumRep","visible": false},
-                {"data":"Visita","visible": false},
-                {"data":"UltVisita","visible": false},
+                {"data":"Nreporte","visible": false},
+                {"data":"FechaReporte","visible": false},
+                {"data":"Visitas","visible": false},
+                {"data":"UltimaVisita","visible": false},
                 {"data":"FechaMant","visible": false},
-                {"data":"tipo_escuela","visible": false},
-                {"data":"concepto","visible": false},
-                {"data":"fecha","visible": false},
-                {"data":"levanto","visible": false},
-                {"data":"clavecct","visible": false},
-                {"data":"Status_Esc","visible": false}
+                {"data":"TipoEscuela","visible": false}
                 
-
-               // {"defaultContent":"<button>Editar</button>"}
             ]
-
         });
-        obtener_data_info("#escuela tbody",table); 
+        obtener_data_agenda("#poragendar tbody",table); 
+        obtener_data_deshacer("#poragendar tbody",table);
+
     }
-       var obtener_data_info = function (tbody, table) {
-        $(tbody).on("click","button.info", function(){
+       var obtener_data_agenda = function (tbody, table) {
+        $(tbody).on("click","button.agenda", function(){
             var data = table.row($(this).parents("tr")).data();
             var 
                 Clave = $("#Clave").val(data.Clave),
                 Escuela = $("#Escuela").val(data.Escuela),
                 Domicilio = $("#Domicilio").val(data.Domicilio),
-                Localidad22 = $("#Localidad22").val(data.Localidad22),
+                Localidad = $("#Localidad").val(data.Localidad),
                 Municipio = $("#Municipio").val(data.Municipio),
-                Ruta33 = $("#Ruta33").val(data.Ruta33),
-                Eq = $("#Eq").val(data.Eq),
-                Equip = $("#Equip").val(data.Equip),
-                Reequip= $("#Reequip").val(data.Reequip),
                 Conectividad = $("#Conectividad").val(data.Conectividad),
+                ProbSolicitado = $("#ProbSolicitado").val(data.ProbSolicitado),
+                LevantReporte = $("#LevantReporte").val(data.LevantReporte),
+                Zona = $("#Zona").val(data.Zona),
+                Nequipos = $("#Nequipos").val(data.Nequipos),
+                Aequipos = $("#Aequipos").val(data.Aequipos),
+                Reequip= $("#Reequip").val(data.Reequip),
                 Reporte = $("#Reporte").val(data.Reporte),
-                NumRep = $("#NumRep").val(data.NumRep),
-                Visita = $("#Visita").val(data.Visita),
-                UltVisita = $("#UltVisita").val(data.UltVisita),
+                Nreporte = $("#Nreporte").val(data.Nreporte),
+                FechaReporte = $("#FechaReporte").val(data.FechaReporte),
+                Visitas = $("#Visitas").val(data.Visitas),
+                UltimaVisita = $("#UltimaVisita").val(data.UltimaVisita),
                 FechaMant = $("#FechaMant").val(data.FechaMant),
-                tipo_escuela = $("#tipo_escuela").val(data.tipo_escuela),
-                concepto = $("#concepto").val(data.concepto),
-                fecha = $("#fecha").val(data.fecha),
-                levanto = $("#levanto").val(data.levanto),
-                clavecct = $("#clavecct").val(data.clavecct),
-                Status_Esc = $("#Status_Esc").val(data.Status_Esc);
-
+                TipoEscuela = $("#TipoEscuela").val(data.TipoEscuela);
+               
         });
        
     }
-
-</script>
-<!--Estructura del ModalEscuelas-->
-<?php include 'modalEscuelas.php'; ?>
-
-<!--Calendario Principal-->
-<script>
-
-    $(document).ready(function() {
-        
-        $('#calendar').fullCalendar({
-           
-            header: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'month,basicWeek,basicDay'
-            },
-            editable: true,
-            eventLimit: true, // allow "more" link when too many events
-            selectable: true,
-            selectHelper: true,
-            eventRender: function(event, element) {
-                element.bind('dblclick', function() {
-                    $('#ModalCalendar #id_agendada').val(event.id_agendada);
-                    $('#ModalCalendar #nBrigada').val(event.title);
-                    $('#ModalCalendar #Lider').val(event.Lider);
-                    $('#ModalCalendar #Brigadistas').val(event.Brigadistas);
-                     $('#ModalCalendar #Escuela').val(event.Escuela);
-                    $('#ModalCalendar').modal('show');
-                });
-            },
-            events: [
-            <?php foreach($events as $event): 
-            
-                $FechaIni = explode(" ", $event['FechaIni']);
-                $FechaFin = explode(" ", $event['FechaFin']);
-                if($FechaIni[1] == '00:00:00'){
-                    $FechaIni = $FechaIni[0];
-                }else{
-                    $FechaIni = $event['FechaIni'];
-                }
-                if($FechaFin[1] == '00:00:00'){
-                    $FechaFin = $FechaFin[0];
-                }else{
-                    $FechaFin = $event['FechaFin'];
-                }
-            ?>
-                {
-                    id_agendada: '<?php echo $event['id_agendada']; ?>',
-                    title: '<?php echo $event['nBrigada'];?>',
-                    Lider: '<?php echo $event['Lider'];?>',
-                    Brigadistas: '<?php echo $event['Brigadistas'];?>',
-                    Escuela: '<?php echo $event['Escuela'];?>',
-                    start: '<?php echo $FechaIni; ?>',
-                    end: '<?php echo $FechaFin; ?>'
-                },
-            <?php endforeach; ?>
-            ]
+    var obtener_data_deshacer = function (tbody, table) {
+        $(tbody).on("click","button.deshacer", function(){
+            var data = table.row($(this).parents("tr")).data();
+            var 
+                ClaveM = $("#ClaveM").val(data.Clave);
+               
         });
-        
-        
-    });
-
-</script>
-<!-- mostrar escuelas de lider -->
-<script async="async">
-    $(document).ready(function(){
-        
-
-        listarEsclider();
-
-    });
-    var listarEsclider = function(){
-        var table = $("#rutasLider").DataTable({
-                destroy:true,
-                pageLength: 10,
-                responsive: true,
-                expandFirst: true,
-                dom: '<"html5buttons"B>lTfgitp',
-                buttons: [
-                   
-                    {extend: 'excel', title: 'LISTA DE ESCUELAS DE LIDER'},
-                    {extend: 'pdf', title: 'LISTA DE ESCUELAS DE LIDER'},
-                 
-                ],
-
-            "ajax":{
-                "method":"POST",
-                "url":"../Controlador/escuelaliderController.php",
-                 error: function (result) {
-                        swal({
-                            title: "LISTA VACIA",
-                            text: "NO HAY ESCUELAS PARA MOSTRAR",
-                            type: "warning"
-
-                        });
-                    }
-            },
-            "columns":[
-                    {"data":"Clave","visible": false},
-                    {"data":"Escuela"},
-                    {"data":"Localidad22"},
-                    {"data":"Municipio","visible": false},
-                    {"data":"Lider"},
-                    {"data":"nBrigada"},
-                    {"data":"Brigadistas"},
-                    {"data":"FechaIni"},
-                    {"data":"FechaFin"},
-                    {"data":"Semana"},
-                    {"data":"Comentarios","visible": false},
-                    {"data":"zonaBrig","visible": false},
-                    {"data":"Actividad"}
-
-                ]
-
-        });
-    }
        
+    }
+    
 </script>
+
+<?php include "../Section/modalLiderAgendar.php"; ?>
+<?php include "../Section/modalDeshacer.php"; ?>
+
+
+
+

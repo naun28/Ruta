@@ -578,7 +578,7 @@ function myFunction() {
     
 </script>
 
-<!-- mostrar datos de escuelas -->
+<!-- mostrar lista de escuelas por zona para lider-->
 <script async="async">
     $(document).ready(function(){
         
@@ -602,7 +602,7 @@ function myFunction() {
 
             "ajax":{
                 "method":"POST",
-                "url":"../Controlador/escuelaController.php",
+                "url":"../Controlador/esczonaliderController.php",
                  error: function (result) {
                         swal({
                             title: "LISTA VACIA",
@@ -636,9 +636,6 @@ function myFunction() {
                 {"data":"levanto","visible": false},
                 {"data":"clavecct","visible": false},
                 {"data":"Status_Esc","visible": false}
-                
-
-               // {"defaultContent":"<button>Editar</button>"}
             ]
 
         });
