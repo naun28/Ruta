@@ -6,7 +6,9 @@ $telefono   = $_POST['telefono'];
 $correo     = $_POST['correo'];
 $pass      = $_POST['pass'];
 $tipouser      = $_POST['tipouser'];
-$nbrigada      = $_POST['nbrigada'].$_POST['nbrig'];
+$nbrigad      = $_POST['nbrigada'];
+$nbrig      = $_POST['nbrig'];
+$nbrigada = $nbrigad.$nbrig;
 
 $zona=$_POST['zonaBrig'];
 foreach ($zona as $zonaBrig) {

@@ -42,7 +42,7 @@
                     <div id="ver">
                       <div id="Brigadista" style="display:none;" class="form-group">
 
-                        <label>N° de Brigada</label> <select id="nbrigada" name="nbrigada" class="form-control">
+                        <label>N° de Brigada</label> <select id="" name="nbrigada" class="form-control">
                             <option value="" selected>Seleccione Brigada</option>
                             <option value="Brigada 1">Brigada 1</option>
                             <option value="Brigada 2">Brigada 2</option>
@@ -64,7 +64,7 @@
                         <div id="mostrar">
                           <div id="Lider" style="display:none;" class="form-group">
 
-                            <label>N° de Brigada</label> <select id="nbrigada" name="nbrig" class="form-control">
+                            <label>N° de Brigada</label> <select id="" name="nbrig" class="form-control">
                                 <option value="" selected>Seleccione Brigada</option>
                                 <option value="Brigada 1">Brigada 1</option>
                                 <option value="Brigada 2">Brigada 2</option>
