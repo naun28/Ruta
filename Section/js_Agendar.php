@@ -674,10 +674,11 @@
                                    
                 },
                 "columns":[
-                    {"data":"Clave","visible": false},
+                    {"data":"id_agendada","visible": false},
+                    {"data":"Clave"},
                     {"data":"Escuela"},
                     {"data":"Localidad22"},
-                    {"data":"Municipio","visible": false},
+                    {"data":"Municipio"},
                     {"data":"Lider"},
                     {"data":"nBrigada"},
                     {"data":"Brigadistas"},
@@ -698,4 +699,4 @@
 
     </script>
 
-
+<?php include "../Section/modalViaticos.php"; ?>

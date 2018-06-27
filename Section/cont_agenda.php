@@ -21,18 +21,21 @@
                        <div class="input-group date">
                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                            <input type="text" onchange="corte(this);" name="fecha" id="fecha" value = "<?php echo date('m/d/Y'); ?>" class="form-control" >
+
                        </div>
+                       
                    </div>
-               </div>
-           </div><br><br>
+               </div><br><!-- <button class=' agenda btn btn-danger dim btn-xs pull-right' data-toggle='modal' data-target='#myModal99'>Generar viaticos</button> -->
+           </div><br>
            <div class="table-responsive">
                <table  id="rutas" class="table table-striped table-bordered table-hover" style="width: 100%;">
                 <thead>
                     <tr>
-                       <th style="display: none;">Clave</th>
+                      <th style="display: none;">id</th>
+                       <th>Clave</th>
                        <th>Escuela</th>
                        <th>Localidad</th>
-                       <th style="display: none;">Municipio</th>
+                       <th>Municipio</th>
                        <th>Lider de Brigada</th>
                        <th>Brigada</th>
                        <th>Brigadistas</th>
@@ -41,6 +44,7 @@
                        <th>Semana</th>
                        <th style="display: none;">Comentarios</th>
                        <th>Actividad</th>
+
                    </tr>
                </thead>
 
