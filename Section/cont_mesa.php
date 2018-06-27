@@ -17,7 +17,7 @@
                 </div>
                 <div class="ibox-content">
                     <h5></h5>
-                    <form class="form-horizontal" action="../Controlador/juspdf.php" method="POST">
+                    <form class="form-horizontal" action="../Controlador/juspdf.php" method="POST" target="_blank">
                         <div class="form-group"><label class="col-sm-2 control-label">Empleado</label>
                             <div class="col-sm-10">
                             <select onchange="return showCustomer();"  name="empleado"  class="chosen-select col-sm-10" style="width:350px;" tabindex="4" required>
