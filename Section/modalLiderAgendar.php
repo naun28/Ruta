@@ -24,6 +24,16 @@
                         <input type="hidden" id="UltimaVisita" name="UltimaVisita">
                         <input type="hidden" id="FechaMant" name="FechaMant">
                         <input type="hidden" id="TipoEscuela" name="TipoEscuela">
+                        <input type="hidden" id="zonaBrig" name="zonaBrig" value="<?php 
+                                
+                                $zonaBrig= $_SESSION["zonaBrig"];  
+                               
+                                echo $zonaBrig; ?>"> 
+                        <input type="hidden" id="nbrigada" name="nBrigada" value="<?php 
+                                
+                                $nBrigada= $_SESSION["nbrigada"];  
+                               
+                                echo $nBrigada; ?>"> 
                        
                         
                        <div class="form-group col-md-12">

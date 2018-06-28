@@ -39,6 +39,7 @@
                     <th style="display: none;">UltimaVisita</th>
                     <th style="display: none;">FechaMant</th>
                     <th style="display: none;">TipoEscuela</th>
+                   
 
                   </tr>
                 </thead>

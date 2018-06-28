@@ -8,7 +8,14 @@ $pass      = $_POST['pass'];
 $tipouser      = $_POST['tipouser'];
 $nbrigad      = $_POST['nbrigada'];
 $nbrig      = $_POST['nbrig'];
-$nbrigada = $nbrigad.$nbrig;
+if (!empty($nbrigad)) {
+	$nbrigada = $nbrigad;
+}else{
+	$nbrigada = $nbrig;
+}
+if ($tipouser=="Mesa" || $tipouser=="Director" || $tipouser=="Administrador") {
+	$nbrigada =" ";
+}
 
 $zona=$_POST['zonaBrig'];
 foreach ($zona as $zonaBrig) {
