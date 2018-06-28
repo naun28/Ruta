@@ -19,10 +19,10 @@
                                                
                                             <div class="form-group col-md-4">
                                                 <label>Nombre(s)</label><input type="text" name="nombres" placeholder="Nombre(s)" class="form-control
-                                                " pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo permite letras y la primera mayuscula" required="">
+                                                " pattern="^[A-Z]+[A-Za-zàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{2,48}" title="Solo permite letras y la primera mayuscula" required="">
                                             </div>
                                              <div class="form-group col-md-4">
-                                                <label>Apellido(s)</label><input type="text" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[A-Z]+[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo permite letras y la primera mayuscula" required="">
+                                                <label>Apellido(s)</label><input type="text" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[A-Z]+[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð]{2,48}" title="Solo permite letras y la primera mayuscula" required="">
                                             </div>
                                              <div class="form-group col-md-4">
                                                 <label>Telefono</label><input type="text" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">
@@ -35,7 +35,7 @@
                                             </div>
                                             <div class="form-group ">
                                                 <label>Tipo de Usuario</label> 
-                                                <select name="tipouser" id="tipouser" id="tipo" class="form-control chosen-container chosen-container-single"  required="">
+                                                <select name="tipouser" id="tipouser" id="tipo" class="form-control chosen-container chosen-container-single"  required="">  <option value="">Selecciona usuario</option>
                                                     <option value="Administrador">Administrador</option>
                                                     <option value="Director">Director</option>
                                                     <option value="Brigadista" >Brigadista</option>
