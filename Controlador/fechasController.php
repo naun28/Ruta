@@ -5,7 +5,7 @@ $fecha = $_GET['fecha'];
 
 
 
-$select = "SELECT * FROM agendadas WHERE DATE(FechaIni)  =  '" . DATE($fecha) . "' " OR "SELECT * FROM agendadas WHERE DATE(FechaFin)  =  '" . DATE($fecha) . "' " ;
+$select = "SELECT * FROM agendadas WHERE DATE(FechaIni)  =  '" . DATE($fecha) . "' OR  DATE(FechaFin)  =  '" . DATE($fecha) . "' OR '" . DATE($fecha) . "' BETWEEN DATE(FechaIni) AND DATE(FechaFin) " ;
 $result = mysqli_query($cn , $select);
 
 if (!$result) {

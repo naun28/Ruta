@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-group ">
                         <label>Tipo de Usuario</label> 
-                        <select name="tipouser" id="tipouser" id="tipo" name="tipo"  class="form-control chosen-container chosen-container-single"  onkeyup="habilitar" required="">
+                        <select name="tipouser" id="tipouser"  name="tipo"  class="form-control chosen-container chosen-container-single"  onkeyup="habilitar" required="">
                             <option value="Administrador">Administrador</option>
                             <option value="Director">Director</option>
                             <option value="Brigadista">Brigadista</option>
@@ -40,7 +40,7 @@
                         </select>
                     </div>
                     <div id="ver">
-                      <div id="Brigadista" style="display:none;" class="form-group">
+                      <div id="Brigadista" id="Lider" style="display:none;" class="form-group">
 
                         <label>N° de Brigada</label> <select id="nbrigada" name="nbrigada" class="form-control">
                             <option value="" selected>Seleccione Brigada</option>
@@ -60,29 +60,28 @@
                             
                         </select>
                     </div>
-                </div>
-                        <div id="mostrar">
-                          <div id="Lider" style="display:none;" class="form-group">
+                    <div id="Lider" style="display:none;" class="form-group">
 
-                            <label>N° de Brigada</label> <select id="nbrigada" name="nbrig" class="form-control">
-                                <option value="" selected>Seleccione Brigada</option>
-                                <option value="Brigada 1">Brigada 1</option>
-                                <option value="Brigada 2">Brigada 2</option>
-                                <option value="Brigada 3">Brigada 3</option>
-                                <option value="Brigada 4">Brigada 4</option>
-                                <option value="Brigada 5">Brigada 5</option>
-                                <option value="Brigada 6">Brigada 6</option>
-                                <option value="Brigada 7">Brigada 7</option>
-                                <option value="Brigada 8">Brigada 8</option>
-                                <option value="Brigada 9">Brigada 9</option>
-                                <option value="Brigada 10">Brigada 10</option>
-                                <option value="Brigada 11">Brigada 11</option>
-                                <option value="Brigada 12">Brigada 12</option>
-                                <option value="Brigada 13">Brigada13</option>
-                                
-                            </select>
-                            </div>
-                        </div>
+                        <label>N° de Brigada</label> <select id="nbrigada" name="nbrig" class="form-control">
+                            <option value="" selected>Seleccione Brigada</option>
+                            <option value="Brigada 1">Brigada 1</option>
+                            <option value="Brigada 2">Brigada 2</option>
+                            <option value="Brigada 3">Brigada 3</option>
+                            <option value="Brigada 4">Brigada 4</option>
+                            <option value="Brigada 5">Brigada 5</option>
+                            <option value="Brigada 6">Brigada 6</option>
+                            <option value="Brigada 7">Brigada 7</option>
+                            <option value="Brigada 8">Brigada 8</option>
+                            <option value="Brigada 9">Brigada 9</option>
+                            <option value="Brigada 10">Brigada 10</option>
+                            <option value="Brigada 11">Brigada 11</option>
+                            <option value="Brigada 12">Brigada 12</option>
+                            <option value="Brigada 13">Brigada13</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                        
                         <div class="form-group">
                          <label>Zona</label><select id="zonaBrig" class="select2_demo_1 form-control" name="zonaBrig[]" >               
                             <?php
