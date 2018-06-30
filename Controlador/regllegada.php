@@ -26,6 +26,6 @@ $ejecuta_qs= mysqli_query($conecviatiks,$qs) or die("error al insertar");
 
 
 mysqli_close($con);
-header('Location: ../Vista/brigadistas.php');
+header('Location: ../Vista/inicioLider.php');
 
 ?>
