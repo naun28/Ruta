@@ -1,8 +1,8 @@
-    <meta charset="utf-8">
+<meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script type="text/javascript" charset="utf8" src="../Include/js/plugins/dataTables/datatables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
     <script src="../Include/js/jquery-3.1.1.min.js"></script>
     <script src="../Include/js/bootstrap.min.js"></script>
     <script src="../Include/js/plugins/metisMenu/jquery.metisMenu.js"></script>
@@ -12,8 +12,6 @@
     <script src="../Include/js/inspinia.js"></script>
     <script src="../Include/js/plugins/pace/pace.min.js"></script>
 
-    <!-- Select2 -->
-    <script src="../Include/js/plugins/select2/select2.full.min.js"></script>
     <!-- Flot -->
     <script src="../Include/js/plugins/flot/jquery.flot.js"></script>
     <script src="../Include/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
@@ -73,6 +71,9 @@
     <!-- Date range picker -->
     <script src="../Include/js/plugins/daterangepicker/daterangepicker.js"></script>
 
+    <!-- Select2 -->
+    <script src="../Include/js/plugins/select2/select2.full.min.js"></script>
+
     <!-- TouchSpin -->
     <script src="../Include/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
 
@@ -83,28 +84,21 @@
     <script src="../Include/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
     <!-- Input Mask-->
     <script src="../Include/js/plugins/jasny/jasny-bootstrap.min.js"></script>
-    
     <script>
-function myFunction() {
-    var x = document.getElementById("pass");
-    if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
-    }
-}
-</script>
+            $(document).ready(function () {
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+            });
+        </script>
+
     <script>
         $(document).ready(function() {
              $('#tipouser').on('change',function(){
               var selectValor = '#' +$(this).val();
-              $('#ver').children('div').hide();
-              $('#ver').children(selectValor).show();
-            });
-             $('#tipouser').on('change',function(){
-              var selectValor = '#' +$(this).val();
-              $('#mostrar').children('div').hide();
-              $('#mostrar').children(selectValor).show();
+              $('#ver').children('div').show();
+              $('#ver').children(selectValor).hide();
             });
              
            $("#btnLimpiar").click(function(event) {
@@ -156,8 +150,8 @@ function myFunction() {
 
         $('.demo4').click(function () {
             swal({
-                        title: "DESEAS ELIMINAR EL USUARIO?",
-                        text: "Al ELIMINAR este usuario se quitara de su lista",
+                        title: "Deseas ELIMINAR?",
+                        text: "Al ELIMINAR esta opcion se quitara de tu lista",
                         type: "warning",
                         showCancelButton: true,
                         confirmButtonColor: "#DD6B55",
@@ -169,7 +163,7 @@ function myFunction() {
                         if (isConfirm) {
                             swal("ELIMINADO!", "Se elimino correctamente", "success");
                         } else {
-                            swal("CANCELADO", "Usted a cancelado", "error");
+                            swal("Cancelado", "Usted a cancelado", "error");
                         }
                     });
         });
@@ -251,7 +245,7 @@ function myFunction() {
             } else {
                 $inputImage.addClass("hide");
             }
-
+            $('.chosen-select').chosen({width: "100%"});
             $("#download").click(function() {
                 window.open($image.cropper("getDataURL"));
             });
@@ -428,7 +422,7 @@ function myFunction() {
 
         });
 
-        $('.chosen-select').chosen({width: "100%"});
+        
 
         $("#ionrange_1").ionRangeSlider({
             min: 0,
@@ -505,7 +499,7 @@ function myFunction() {
                 'max':  80
             }
         });
-
+        
         var drag_fixed = document.getElementById('drag-fixed');
 
         noUiSlider.create(drag_fixed, {
@@ -521,88 +515,188 @@ function myFunction() {
 
     </script>
 
-
-<!-- mostrar datos de escuelas -->
+<!-- mostrar datos de escuelas para agendar -->
 <script async="async">
     $(document).ready(function(){
         
 
-        listarPerfil();
+        listarAgenda();
 
     });
-    var listarPerfil = function(){
-        var table = $("#perfiles").DataTable({
+    var listarAgenda = function(){
+        var table = $("#poragendar").DataTable({
                 destroy:true,
                 pageLength: 10,
                 responsive: true,
-
+                expandFirst: true,
                 dom: '<"html5buttons"B>lTfgitp',
                 buttons: [
                    
-                    {extend: 'excel', title: 'ExampleFile'},
-                    {extend: 'pdf', title: 'ExampleFile'},
+                    {extend: 'excel', title: 'LISTA DE ESCUELAS POR AGENDAR'},
+                    {extend: 'pdf', title: 'LISTA DE ESCUELAS POR AGENDAR'},
                  
                 ],
 
-            "ajax":{
-                "method":"POST",
-                "url":"../Controlador/perfilesController.php",
-                 error: function (result) {
+                "ajax":{
+                    "method":"POST",
+                    "url":"../Controlador/AgendarController.php",
+                    
+                    error: function (result) {
                         swal({
-                            title: "LISTA VACIA",
-                            text: "NO HAY USUARIOS PARA MOSTRAR",
+                            title: "NO HAY ESCUELAS PARA AGENDAR",
+                            text: "IR A LISTA DE ESCUELAS PARA PODER AGENDAR RUTAS",
                             type: "warning"
 
                         });
                     }
-            },
+                  },
             "columns":[
-                {"data":"id_usuario","visible": false},
-                {"data":"nombres"},
-                {"data":"apellidos"},
-                {"data":"telefono"},
-                {"data":"correo"},
-                {"data":"tipouser"},
-                {"data":"nbrigada"},
-                {"data":"zonaBrig"},
-                {"defaultContent": "<button class='edit btn btn-primary dim btn-md' data-toggle='modal' data-target='#myModal3'><i class='fa fa-edit'></i></button> <button class='eliminar btn btn-danger dim btn-md' data-toggle='modal' data-target='#myModal9'><i class='fa fa-trash'></i></button>"},
-                {"data":"pass","visible": false}
+         
+                {"data":"Clave"},
+                {"data":"Escuela"},
+                {"data":"Domicilio"},
+                {"data":"Localidad"},
+                {"data":"Municipio"},
+                {"data":"Conectividad"},
+                {"data":"ProbSolicitado"},
+                {"data":"LevantReporte"},
+                {"defaultContent": "<button class=' agenda btn btn-danger dim btn-xs' data-toggle='modal' data-target='#myModal'>Agendar</button>"},
+                {"defaultContent": "<button class='deshacer btn btn-primary dim btn-xs' data-toggle='modal' data-target='#myModal6'><li class='fa fa-window-close'></li></button>"},
+                {"data":"Zona","visible": false},
+                {"data":"Nequipos","visible": false},
+                {"data":"Aequipos","visible": false},
+                {"data":"Reequip","visible": false},
+                {"data":"Reporte","visible": false},
+                {"data":"Nreporte","visible": false},
+                {"data":"FechaReporte","visible": false},
+                {"data":"Visitas","visible": false},
+                {"data":"UltimaVisita","visible": false},
+                {"data":"FechaMant","visible": false},
+                {"data":"TipoEscuela","visible": false}
+                
             ]
-
         });
+        obtener_data_agenda("#poragendar tbody",table); 
+        obtener_data_deshacer("#poragendar tbody",table);
 
-        
-        obtener_data_edit("#perfiles tbody",table);
-        obtener_data_eliminar("#perfiles tbody",table); 
     }
-       var obtener_data_edit = function (tbody, table) {
-        $(tbody).on("click","button.edit", function(){
+       var obtener_data_agenda = function (tbody, table) {
+        $(tbody).on("click","button.agenda", function(){
             var data = table.row($(this).parents("tr")).data();
-            var id_usuario = $("#idusuario").val(data.id_usuario),
-                nombres = $("#nombres").val(data.nombres),
-                apellidos = $("#apellidos").val(data.apellidos),
-                telefono = $("#telefono").val(data.telefono),
-                correo = $("#correo").val(data.correo),
-                tipouser = $("#tipouser").val(data.tipouser),
-                nbrigada = $("#nbrigada").val(data.nbrigada),
-                pass = $("#pass").val(data.pass),
-                zonaBrig = $("#zonaBrig").val(data.zonaBrig);
-
-        });
-       
-    }
-    var obtener_data_eliminar = function (tbody, table) {
-        $(tbody).on("click","button.eliminar", function(){
-            var data = table.row($(this).parents("tr")).data();
-            var id_usuario = $("#id_usuario").val(data.id_usuario);
+            var 
+                Clave = $("#Clave").val(data.Clave),
+                Escuela = $("#Escuela").val(data.Escuela),
+                Domicilio = $("#Domicilio").val(data.Domicilio),
+                Localidad = $("#Localidad").val(data.Localidad),
+                Municipio = $("#Municipio").val(data.Municipio),
+                Conectividad = $("#Conectividad").val(data.Conectividad),
+                ProbSolicitado = $("#ProbSolicitado").val(data.ProbSolicitado),
+                LevantReporte = $("#LevantReporte").val(data.LevantReporte),
+                Zona = $("#Zona").val(data.Zona),
+                Nequipos = $("#Nequipos").val(data.Nequipos),
+                Aequipos = $("#Aequipos").val(data.Aequipos),
+                Reequip= $("#Reequip").val(data.Reequip),
+                Reporte = $("#Reporte").val(data.Reporte),
+                Nreporte = $("#Nreporte").val(data.Nreporte),
+                FechaReporte = $("#FechaReporte").val(data.FechaReporte),
+                Visitas = $("#Visitas").val(data.Visitas),
+                UltimaVisita = $("#UltimaVisita").val(data.UltimaVisita),
+                FechaMant = $("#FechaMant").val(data.FechaMant),
+                TipoEscuela = $("#TipoEscuela").val(data.TipoEscuela);
                
         });
        
     }
-
+    var obtener_data_deshacer = function (tbody, table) {
+        $(tbody).on("click","button.deshacer", function(){
+            var data = table.row($(this).parents("tr")).data();
+            var 
+                ClaveM = $("#ClaveM").val(data.Clave);
+               
+        });
+       
+    }
+    
 </script>
-<!--Estructura del Modal-->
-<?php include '../Section/modalEliminar.php'; ?>
-<?php include '../Section/modalPerfiles.php'; ?>
+
+<?php include "../Section/modalAgendar.php"; ?>
+<?php include "../Section/modalDeshacer.php"; ?>
+
+<!-- mostrar escuelas agendadas por fecha -->
+ <script>
+
+       $(document).ready(function () {
+
+                var hoy = new Date();
+                var dd = hoy.getDate();
+                var mm = hoy.getMonth()+1; //hoy es 0!
+                var yyyy = hoy.getFullYear();
+
+               if(dd<10) {
+                    dd='0'+dd
+                }
+
+               if(mm<10) {
+                     mm='0'+mm
+                }
+
+                hoy = mm+'/'+dd+'/'+yyyy;
+
+                listar(hoy);
 
 
+                $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: false,
+                autoclose: true
+            });
+
+            });
+
+       function corte(e){
+
+            listar(e);
+
+
+       }
+
+       var listar = function(e){
+
+            var datestring = moment(e.value).format('YYYY/MM/DD');
+
+            var table = $("#rutas").DataTable({
+                "destroy":true,
+                "ajax":{
+                "method" : "POST",
+                "url": "../Controlador/fechasController.php?fecha="+datestring+""
+                                   
+                },
+                "columns":[
+                    {"data":"id_agendada","visible": false},
+                    {"data":"Clave"},
+                    {"data":"Escuela"},
+                    {"data":"Localidad22"},
+                    {"data":"Municipio"},
+                    {"data":"Lider"},
+                    {"data":"nBrigada"},
+                    {"data":"Brigadistas"},
+                    {"data":"FechaIni"},
+                    {"data":"FechaFin"},
+                    {"data":"Semana"},
+                    {"data":"Comentarios","visible": false},
+                    {"data":"Actividad"}
+
+                ]
+            });
+
+
+            
+
+        }
+
+
+    </script>
+
+<?php include "../Section/modalViaticos.php"; ?>

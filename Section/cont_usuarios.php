@@ -35,7 +35,7 @@
                                             </div>
                                             <div class="form-group ">
                                                 <label>Tipo de Usuario</label> 
-                                                <select name="tipouser" id="tipouser" id="tipo" class="form-control chosen-container chosen-container-single"  required="">  <option value="">Selecciona usuario</option>
+                                                <select name="tipouser" id="tipouser" id="tipo" class="chosen-select form-control col-sm-10"  required="">  <option value="">Selecciona usuario</option>
                                                     <option value="Administrador">Administrador</option>
                                                     <option value="Director">Director</option>
                                                     <option value="Brigadista" >Brigadista</option>
@@ -46,7 +46,7 @@
                                             <div id="ver">
                                               <div id="Brigadista" style="display:none;" class="form-group">
 
-                                                <label>N° de Brigada</label> <select name="nbrigada" class="form-control">
+                                                <label>N° de Brigada</label> <select name="nbrigada" class="chosen-select form-control col-sm-10">
                                                     <option value="" selected>Seleccione Brigada</option>
                                                     <option value="Brigada 1">Brigada 1</option>
                                                     <option value="Brigada 2">Brigada 2</option>
@@ -62,9 +62,9 @@
                                                     <option value="Brigada 12">Brigada 12</option>
                                                     <option value="Brigada 13">Brigada13</option>
                                                     
-                                                </select><br>
+                                                </select><br><br>
                                                 <label>Zona</label>
-                                                  <select data-placeholder="Zona" class="chosen-select col-sm-10"  name="zonaBrig[]"  multiple style="width:350px;" tabindex="4">
+                                                  <select data-placeholder="Zona"  class="chosen-select form-control col-sm-10"  name="zonaBrig" style="width:350px;" tabindex="4">
                                                 
                                                 <?php
                                                 require('../Conect/conecviatik.php');
@@ -83,7 +83,7 @@
                                             <div id="mostrar">
                                               <div id="Lider" style="display:none;" class="form-group">
 
-                                                <label>N° de Brigada</label> <select name="nbrig" class="form-control">
+                                                <label>N° de Brigada</label> <select name="nbrig" class="chosen-select form-control col-sm-10">
                                                     <option value="" selected>Seleccione Brigada</option>
                                                     <option value="Brigada 1">Brigada 1</option>
                                                     <option value="Brigada 2">Brigada 2</option>
@@ -99,8 +99,8 @@
                                                     <option value="Brigada 12">Brigada 12</option>
                                                     <option value="Brigada 13">Brigada13</option>
                                                     
-                                                </select><br>
-                                                <label>Zona</label><select data-placeholder="Zona" class="chosen-select col-sm-10"  name="zonaBrig[]"  multiple style="width:350px;" tabindex="4">
+                                                </select><br><br>
+                                                <label>Zona</label><select data-placeholder="Zona" class="chosen-select form-control col-sm-10"  name="zonaLider" style="width:350px;" tabindex="4">
                                                 
                                                 <?php
                                                 require('../Conect/conecviatik.php');

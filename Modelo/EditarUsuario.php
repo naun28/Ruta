@@ -8,6 +8,8 @@ $pass      = $_POST['pass'];
 $tipouser      = $_POST['tipouser'];
 $nbrigad      = $_POST['nbrigada'];
 $nbrig      = $_POST['nbrig'];
+$zonaBri=$_POST['zonaBri'];
+$zonaLider=$_POST['zonaLider'];
 if (!empty($nbrigad)) {
 	$nbrigada = $nbrigad;
 }else{
@@ -17,10 +19,17 @@ if ($tipouser=="Mesa" || $tipouser=="Director" || $tipouser=="Administrador") {
 	$nbrigada =" ";
 }
 
-$zona=$_POST['zonaBrig'];
-foreach ($zona as $zonaBrig) {
-$var .= $zonaBrig;
+
+if (!empty($zonaBri)) {
+	$zonaBrig = $zonaBri;
+}else{
+	$zonaBrig = $zonaLider;
 }
+if ($tipouser=="Mesa" || $tipouser=="Director" || $tipouser=="Administrador") {
+	
+	$zonaBrig =" ";
+}
+
 $conexion   = mysqli_connect("localhost", "root", "", "rutas");
 
 if (!empty($id_usuario)) {

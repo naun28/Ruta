@@ -31,7 +31,7 @@
                     </div>
                     <div class="form-group ">
                         <label>Tipo de Usuario</label> 
-                        <select name="tipouser" id="tipouser"  name="tipo"  class="form-control chosen-container chosen-container-single"  onkeyup="habilitar" required="">
+                        <select name="tipouser" id="tipouser"  name="tipo"  class="chosen-select form-control"  onkeyup="habilitar" required="">
                             <option value="Administrador">Administrador</option>
                             <option value="Director">Director</option>
                             <option value="Brigadista">Brigadista</option>
@@ -42,7 +42,7 @@
                     <div id="ver">
                       <div id="Brigadista" id="Lider" style="display:none;" class="form-group">
 
-                        <label>N° de Brigada</label> <select id="nbrigada" name="nbrigada" class="form-control">
+                        <label>N° de Brigada</label> <select id="nbrigada" name="nbrigada" class="chosen-select form-control col-sm-10">
                             <option value="" selected>Seleccione Brigada</option>
                             <option value="Brigada 1">Brigada 1</option>
                             <option value="Brigada 2">Brigada 2</option>
@@ -58,7 +58,20 @@
                             <option value="Brigada 12">Brigada 12</option>
                             <option value="Brigada 13">Brigada13</option>
                             
-                        </select>
+                        </select><br>
+                        <label>Zona</label><select id="zonaBrig" class="form-control" name="zonaBri" >               
+                            <?php
+                            require('../Conect/conecviatik.php');
+                            $rs = mysqli_query($conecviatiks, "SELECT * FROM zona WHERE 1 ORDER BY zonaL ASC");
+                            while($row=mysqli_fetch_array($rs))
+                            {
+                              echo "<option value='".$row['zonaL']."'>";
+                              echo $row['zonaL'];
+                              echo "</option>";                     
+                            }
+                            mysqli_close($conecviatiks);
+                            ?>
+                          </select>
                     </div>
                     <div id="Lider" style="display:none;" class="form-group">
 
@@ -78,12 +91,8 @@
                             <option value="Brigada 12">Brigada 12</option>
                             <option value="Brigada 13">Brigada13</option>
                             
-                        </select>
-                    </div>
-                </div>
-                        
-                        <div class="form-group">
-                         <label>Zona</label><select id="zonaBrig" class="select2_demo_1 form-control" name="zonaBrig[]" >               
+                        </select><br>
+                        <label>Zona</label><select id="zonaBrig" class="form-control" name="zonaLider" >               
                             <?php
                             require('../Conect/conecviatik.php');
                             $rs = mysqli_query($conecviatiks, "SELECT * FROM zona WHERE 1 ORDER BY zonaL ASC");
@@ -96,8 +105,8 @@
                             mysqli_close($conecviatiks);
                             ?>
                           </select>
-
-                        </div> 
+                    </div>
+                </div>
                 <div class="modal-footer">
                    <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white dim" data-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-danger dim">Aceptar</button>

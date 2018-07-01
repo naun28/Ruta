@@ -28,9 +28,10 @@
                             <th>Correo</th> 
                             <th style="width: 18%;">Tipo de Usuario</th>
                             <th>Nº Brigada</th>
+                            <th>Zona</th>
                             <th>Accion</th>
                             <th style="display: none;">Pass</th>
-                            <th style="display: none;">Zona</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -47,9 +48,10 @@
                             <th>Correo</th> 
                             <th style="width: 18%;">Tipo de Usuario</th>
                             <th>Nº Brigada</th>
+                            <th>Zona</th>
                             <th>Accion</th>
                             <th style="display: none;">Pass</th>
-                            <th style="display: none;">Zona</th>
+                            
                             
                         </tr>
                     </tfoot>

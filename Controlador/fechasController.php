@@ -3,9 +3,9 @@ include "../Conect/conlista.php";
 $cn    = Conectarse();
 $fecha = $_GET['fecha'];
 
+//OR DATE(FechaIni) BETWEEN '" . DATE($fecha) . "' AND DATE(FechaFin) 
 
-
-$select = "SELECT * FROM agendadas WHERE DATE(FechaIni)  =  '" . DATE($fecha) . "' OR  DATE(FechaFin)  =  '" . DATE($fecha) . "' OR '" . DATE($fecha) . "' BETWEEN DATE(FechaIni) AND DATE(FechaFin) " ;
+$select = "SELECT * FROM agendadas WHERE DATE(FechaIni)  =  '" . DATE($fecha) . "' OR  DATE(FechaFin)  =  '" . DATE($fecha) . "'  OR  '" . DATE($fecha) . "' >  DATE(FechaIni) AND '" . DATE($fecha) . "' <  DATE(FechaFin) " ;
 $result = mysqli_query($cn , $select);
 
 if (!$result) {
