@@ -655,7 +655,7 @@
 
             });
 
-       function corte(e){
+       function fechas(e){
 
             listar(e);
 

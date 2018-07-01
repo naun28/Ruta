@@ -20,7 +20,9 @@
                    <div class="form-group" id="data_1">
                        <div class="input-group date">
                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                           <input type="text" onchange="corte(this);" name="fecha" id="fecha" value = "<?php echo date('m/d/Y'); ?>" class="form-control" >
+                           <input type="text" onchange="corte(this);" name="fecha" id="fecha" value = "<?php 
+                           date_default_timezone_set("America/Mexico_City");
+                           echo date('m/d/Y'); ?>" class="form-control" >
 
                        </div>
                        
