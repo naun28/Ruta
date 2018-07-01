@@ -38,6 +38,10 @@
                                         <th data-hide="all">Fecha ultima visita</th>
                                         <th data-hide="all">Semana</th>
                                         <th data-hide="all">Comentarios</th>
+                                        <th data-hide="all">Fecha del servidor </th>
+                                        <th data-hide="all">Hora del servidor</th>
+                                        <th data-hide="all">Fecha del lider de brigada</th>
+                                        <th data-hide="all">Hora del lider de brigada</th>
                                         <th>Acción</th>
                                     </tr>
                                 </thead>
@@ -47,10 +51,16 @@
                                     $rs = mysqli_query($conecviatiks, "SELECT * FROM agendadas where statusvisita=2");
                                     while($row=mysqli_fetch_array($rs))
                                     {
-                                      //query para consulta de hora y fecha si lo piden
-                                      //$ida=$row['id_agendada'];
-                                      //$rs = mysqli_query($conecviatiks, "SELECT idagendada FROM cheker where idagendada='$ida'");
-
+                                      //query para consulta de hora y fecha 
+                                      $ida=$row['id_agendada'];
+                                      $rss = mysqli_query($conecviatiks, "SELECT * FROM cheker where idagendada='$ida'");
+                                      while($rowcheker=mysqli_fetch_array($rss)){
+                                      $observaciones=$rowcheker['observaciones'];
+                                      $horauser=$rowcheker['horausu'];
+                                      $fechauser=$rowcheker['fechausu'];
+                                      $horaser=$rowcheker['horaser'];
+                                      $fechaser=$rowcheker['fechaser'];
+                                      }
                                         $llegada=$row['statusvisita'];
                                         echo "<tr class='gradeX'>";
                                         echo "<td>".$row['Escuela']."</td>";
@@ -63,7 +73,11 @@
                                         echo "<td>".$row['Municipio']."</td>";
                                         echo "<td>".$row['UltimaVisita']."</td>";
                                         echo "<td>".$row['Semana']."</td>";
-                                        echo "<td>".$row['Comentarios']."</td>";
+                                        echo "<td>".$observaciones."</td>";
+                                        echo "<td>".$fechaser."</td>";
+                                        echo "<td>".$horaser."</td>";
+                                        echo "<td>".$fechauser."</td>";
+                                        echo "<td>".$horauser."</td>";
                                         
                                             echo "<td class='center'> Terminada </td>";
                                        
