@@ -38,10 +38,10 @@
                                         <th data-hide="all">Fecha ultima visita</th>
                                         <th data-hide="all">Semana</th>
                                         <th data-hide="all">Comentarios</th>
-                                        <th data-hide="all">Fecha del servidor </th>
-                                        <th data-hide="all">Hora del servidor</th>
-                                        <th data-hide="all">Fecha del lider de brigada</th>
-                                        <th data-hide="all">Hora del lider de brigada</th>
+                                        <th data-hide="all">Fecha y hora de llegada (Servidor)</th>                                        
+                                        <th data-hide="all">Fecha y hora de llegada (Lider)</th>
+                                        <th data-hide="all">Fecha y hora de salida (Servidor)</th>                                        
+                                        <th data-hide="all">Fecha y hora de salida (Lider)</th>
                                         <th>Acción</th>
                                     </tr>
                                 </thead>
@@ -51,16 +51,24 @@
                                     $rs = mysqli_query($conecviatiks, "SELECT * FROM agendadas where statusvisita=2");
                                     while($row=mysqli_fetch_array($rs))
                                     {
-                                      //query para consulta de hora y fecha 
+                                      //Consulta hora y fecha de llegada 
                                       $ida=$row['id_agendada'];
-                                      $rss = mysqli_query($conecviatiks, "SELECT * FROM cheker where idagendada='$ida'");
-                                      while($rowcheker=mysqli_fetch_array($rss)){
+                                      $rss2 = mysqli_query($conecviatiks, "SELECT * FROM cheker where idagendada='$ida' and status=1");
+                                      $rowcheker2=mysqli_fetch_array($rss2);//){
+                                      $observaciones2=$rowcheker2['observaciones'];
+                                      $horauser2=$rowcheker2['horausu'];
+                                      $fechauser2=$rowcheker2['fechausu'];
+                                      $horaser2=$rowcheker2['horaser'];
+                                      $fechaser2=$rowcheker2['fechaser'];
+                                      //}Consulta hora y fecha de salida 
+                                      $rss = mysqli_query($conecviatiks, "SELECT * FROM cheker where idagendada='$ida' and status=0");
+                                      $rowcheker=mysqli_fetch_array($rss);//){
                                       $observaciones=$rowcheker['observaciones'];
                                       $horauser=$rowcheker['horausu'];
                                       $fechauser=$rowcheker['fechausu'];
                                       $horaser=$rowcheker['horaser'];
                                       $fechaser=$rowcheker['fechaser'];
-                                      }
+
                                         $llegada=$row['statusvisita'];
                                         echo "<tr class='gradeX'>";
                                         echo "<td>".$row['Escuela']."</td>";
@@ -74,11 +82,10 @@
                                         echo "<td>".$row['UltimaVisita']."</td>";
                                         echo "<td>".$row['Semana']."</td>";
                                         echo "<td>".$observaciones."</td>";
-                                        echo "<td>".$fechaser."</td>";
-                                        echo "<td>".$horaser."</td>";
-                                        echo "<td>".$fechauser."</td>";
-                                        echo "<td>".$horauser."</td>";
-                                        
+                                        echo "<td>".$horaser2." ~ ".$fechaser2."</td>";
+                                        echo "<td>".$horauser2." ~ ".$fechauser2."</td>";
+                                        echo "<td>".$horaser." ~ ".$fechaser."</td>";
+                                        echo "<td>".$horauser." ~ ".$fechauser."</td>";
                                             echo "<td class='center'> Terminada </td>";
                                        
                                         //echo "<td class='center'> <a href='../Vista/Captura.php?idagen=".$row["id_agendada"]."&idu=".$_SESSION['id_usuario']."' class='btn btn-danger'>Registrar llegada</a>
