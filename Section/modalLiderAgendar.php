@@ -59,9 +59,9 @@
                         <div class="form-group col-md-6" id="data_5">
                             <label>Fecha</label>
                            <div class="input-date input-group">
-                                <input type="date" class="input-sm form-control" required min=<?php $hoy=date("Y-m-d"); echo $hoy;?> placeholder="Inicio" name="FechaIni" id="FechaIni" required="Inicio" />
+                                <input type="date" class="input-sm form-control" required min=<?php $hoy=date("Y-m-d"); echo $hoy;?> placeholder="Fecha de salida" name="FechaIni" id="FechaIni" required="Inicio" />
                                 <span class="input-group-addon">Al</span>
-                                <input type="date"  class="input-sm form-control" placeholder="Final" name="FechaFin" id="FechaFin" required="final" />
+                                <input type="date"  class="input-sm form-control" placeholder="Fecha de llegada" name="FechaFin" id="FechaFin" required="final" />
                             </div>
                         </div>
                         <div class="form-group col-md-12">

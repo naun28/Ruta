@@ -11,7 +11,7 @@
                 <fieldset>
                 <legend>Brigadista</legend>
                 <div class="form-group col-md-4">
-                    <b><label></b>Lider de Brigada</label>
+                    <b><label></b>Lider de brigada</label>
                     <input type="text" class="form-control" readonly id="liderbrig">
                 </div>
                 <div class="form-group col-md-4">

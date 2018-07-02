@@ -63,9 +63,9 @@
                           </div>
                         </div>
                         <div class="form-group col-md-12">
-                            <label>Lider de Brigada</label>
+                            <label>Lider de brigada</label>
                               <select data-placeholder="Seleccionar Lider" id="Lider" name="Lider" onchange="calix(this.value)"  class="chosen-select form-control" style="width:350px;" >
-                                <option value="0" disabled selected>Seleccionar Lider</option>
+                                <option value="0" disabled selected>Seleccionar lider</option>
                                 <?php
                                 require('../Conect/conexion.php');
 

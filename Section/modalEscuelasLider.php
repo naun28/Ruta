@@ -20,11 +20,11 @@
                     <input type="hidden" id="Status_Esc" name="Status_Esc">
                 
                 <div class="form-group col-md-4">
-                    <label>Numero de Equipos</label><input type="text" id="Eq" name="Nequipos" class="form-control
+                    <label>Numero de equipos</label><input type="text" id="Eq" name="Nequipos" class="form-control
                     " readonly="">
                 </div>
                  <div class="form-group col-md-4">
-                    <label>Año de Equipos</label><input type="text" id="Equip" name="Aequipos" placeholder="" class="form-control" " readonly="">
+                    <label>Año de equipos</label><input type="text" id="Equip" name="Aequipos" placeholder="" class="form-control" " readonly="">
                 </div>
                 <div class="form-group col-md-4">
                     <label>Reequipamiento</label><input type="text" id="Reequip" name="Reequip" placeholder="" class="form-control" " readonly="">
@@ -37,29 +37,29 @@
                 </div>
                  
                  <div class="form-group col-md-4">
-                    <label>Numero de Reporte</label><input type="text" id="NumRep" name="Nreporte" placeholder="" class="form-control" " readonly="">
+                    <label>Numero de reporte</label><input type="text" id="NumRep" name="Nreporte" placeholder="" class="form-control" " readonly="">
                 </div>
                 <div class="form-group col-md-4">
-                    <label>Fecha de Reporte</label><input type="text" id="fecha" name="FechaReporte" placeholder="" class="form-control" " readonly="">
+                    <label>Fecha de reporte</label><input type="text" id="fecha" name="FechaReporte" placeholder="" class="form-control" " readonly="">
                 </div>
                 <div class="form-group col-md-4">
-                    <label>Levanto Reporte</label><input type="text" id="levanto" name="LevantReporte" placeholder="" class="form-control" " readonly="">
+                    <label>Levanto reporte</label><input type="text" id="levanto" name="LevantReporte" placeholder="" class="form-control" " readonly="">
                 </div>
                  <div class="form-group col-md-4">
-                    <label>Fecha Mantenimiento</label><input type="text" id="FechaMant" name="FechaMant" placeholder="" class="form-control" " readonly="">
+                    <label>Fecha de mantenimiento</label><input type="text" id="FechaMant" name="FechaMant" placeholder="" class="form-control" " readonly="">
                 </div>
                  <div class="form-group col-md-4">
                     <label>Visitas</label><input type="text" id="Visita" name="Visitas" placeholder="" class="form-control" " readonly="">
                 </div>
                  
                  <div class="form-group col-md-4">
-                    <label>Ultima Visita</label><input type="text" id="UltVisita" name="UltimaVisita" placeholder="" class="form-control" " readonly="">
+                    <label>Ultima visita</label><input type="text" id="UltVisita" name="UltimaVisita" placeholder="" class="form-control" " readonly="">
                 </div>
                  <div class="form-group col-md-4">
-                    <label>Tipo de Escuela</label><input type="text" id="tipo_escuela" name="TipoEscuela" placeholder="" class="form-control" " readonly="">
+                    <label>Tipo de escuela</label><input type="text" id="tipo_escuela" name="TipoEscuela" placeholder="" class="form-control" " readonly="">
                 </div>
                 <div class="form-group">
-                    <label>Solicitud del Reporte</label>
+                    <label>Solicitud del reporte</label>
                     <textarea type="text" id="concepto" name="ProbSolicitado" class="form-control" style="min-height: 100px; max-height: 100px; min-width: 100%; max-width: 100%;" readonly="" >
                     </textarea>
                 </div>

@@ -5,7 +5,7 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                     <i class="fa fa-user-circle modal-icon"></i>
-                    <h4 class="modal-title">Editar Usuario</h4>
+                    <h4 class="modal-title">Editar usuario</h4>
                 </div>
                 <div class="modal-body" >
                   <form  method="POST" action="../Modelo/EditarUsuario.php" id="formLimpiar" class="form-group">
@@ -30,20 +30,20 @@
                         <label>Contraseña</label><input type="password"  id="pass"  name="pass" placeholder="Contraseña" class="form-control"pattern="[A-Za-z0-9!?-]{6,8}" minlength="6" maxlength="8" required="" title="Minimo 6 caracteres y maximo 8"><input type="checkbox" onclick="myFunction()"> Ver contraseña
                     </div>
                     <div class="form-group ">
-                        <label>Tipo de Usuario</label> 
+                        <label>Tipo de usuario</label> 
                         <select name="tipouser" id="tipouser"  name="tipo"  class="chosen-select form-control"  onkeyup="habilitar" required="">
                             <option value="Administrador">Administrador</option>
                             <option value="Director">Director</option>
                             <option value="Brigadista">Brigadista</option>
-                            <option value="Lider">Lider de Brigada</option>
-                            <option value="Mesa">Mesa de Apoyo</option>
+                            <option value="Lider">Lider de brigada</option>
+                            <option value="Mesa">Mesa de apoyo</option>
                         </select>
                     </div>
                     <div id="ver">
                       <div id="Brigadista" id="Lider" style="display:none;" class="form-group">
 
                         <label>N° de Brigada</label> <select id="nbrigada" name="nbrigada" class="chosen-select form-control col-sm-10">
-                            <option value="" selected>Seleccione Brigada</option>
+                            <option value="" selected>Seleccione brigada</option>
                             <option value="Brigada 1">Brigada 1</option>
                             <option value="Brigada 2">Brigada 2</option>
                             <option value="Brigada 3">Brigada 3</option>
@@ -76,7 +76,7 @@
                     <div id="Lider" style="display:none;" class="form-group">
 
                         <label>N° de Brigada</label> <select id="nbrigada" name="nbrig" class="form-control">
-                            <option value="" selected>Seleccione Brigada</option>
+                            <option value="" selected>Seleccione brigada</option>
                             <option value="Brigada 1">Brigada 1</option>
                             <option value="Brigada 2">Brigada 2</option>
                             <option value="Brigada 3">Brigada 3</option>
