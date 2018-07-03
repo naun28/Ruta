@@ -3,7 +3,7 @@
     <link rel="../Include/stylesheet" type="text/css" href="DataTables/datatables.css">
     <!-- Morris -->
     <link href="../Include/css/plugins/morris/morris-0.4.3.min.css" rel="../Include/stylesheet">
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="../Include/stylesheet" type="text/css" href="cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link href='../Include/css/fullcalendar.css' rel='stylesheet' />
 

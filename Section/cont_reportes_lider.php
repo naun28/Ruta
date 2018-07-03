@@ -11,7 +11,7 @@
     <div class="col-lg-12">
         <div class="ibox float-e-margins">
             <div class="ibox-title">
-                <h5>Listado de tarea asignadas</h5>
+                <h5>Escuelas terminadas</h5>
                            <!--  <h6 class="float-right">Semana del {{ date('d-m-Y') }} al {{ date('d-m-Y') </h6>
 
                             <div class="ibox-tools">
@@ -30,11 +30,11 @@
                                         <th data-toggle="true">Nombre de escuela</th>
                                         <th>Clave</th>
                                         <th>Zona</th>
-                                        <th>Tipo de escuela</th>
+                                        <th data-hide="all">Tipo de escuela</th>
                                         
                                         <th data-hide="all">Domicilio</th>
                                         <th data-hide="all">Localidad</th>
-                                        <th data-hide="all">Municipio</th>
+                                        <th >Municipio</th>
                                         <th data-hide="all">Fecha ultima visita</th>
                                         <th data-hide="all">Semana</th>
                                         <th data-hide="all">Observaciones de la visita</th>

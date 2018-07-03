@@ -18,13 +18,13 @@
           <div class="panel-body">
             <div class="ibox-content">
               <div class="row">
-               <form method="POST" action="../Controlador/regViatiks.php" class="form-horizontal">
+               <form method="POST" action="../Controlador/regViatiks.php" class="form-horizontal" >
                 <!-- NIVEL 1 -->
                 <div class="col-lg-12">
                   <!-- LIDER DE BRIGADA -->
                   <div class="col-lg-6">
                     <fieldset>
-                      <legend>Brigadista</legend>
+                      <legend>Lider de brigada</legend>
                       <div class="form-group"><label class="col-sm-2 control-label">Lider de brigada</label>
                         <div class="col-sm-10">
 
@@ -33,7 +33,7 @@
                             <?php
                             require('../Conect/conecviatik.php');
 
-                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios");
+                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios where tipouser='Lider'");
                             while($row=mysqli_fetch_array($rs))
                             {
                               echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
@@ -258,7 +258,7 @@
                             <?php
                             require('../Conect/conecviatik.php');
 
-                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios where tipouser='Brigadista'");
+                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios  ");
                             while($row=mysqli_fetch_array($rs))
                             {
                               echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
@@ -273,8 +273,8 @@
                     </fieldset>
                   </div>
                   <div class="col-sm-10"><br><br>
-                        
-                          <input type="submit" class="btn btn-danger pull-right" value="Terminar">
+                         <!--  <button type="submit" class="btn btn-danger demo2 pull-right">Terminar2</button> -->
+                          <input type="submit" onclick="alert('guardado');" class="btn btn-danger  pull-right" value="Terminar">
                         </div>
                 </div>
                 <!-- NIVEL 3 -->

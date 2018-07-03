@@ -30,7 +30,7 @@ if (status == 1) {
 
 						<div class="row diff-wrapper">
 							<div class="col-md-6">
-								<h4>Checador</h4>
+								
 								<div class="changed">
 									<form action="../Controlador/regsalida.php" method="POST" class="form-horizontal">
 										<input type="hidden" id="di" value="<?php echo $id_agendada?>" name="ida" class="form-control">
@@ -53,10 +53,10 @@ if (status == 1) {
 							<div class="col-md-6">
 								<h4>Tipo de servicio</h4>
 
-										 <select data-placeholder="Selecciona municipio(s)" name="servicio[]" class="chosen-select col-sm-10" multiple style="width:350px;" tabindex="4">
+							<select data-placeholder="Selecciona municipio(s)" name="servicio[]" class="chosen-select col-sm-10" multiple style="width:350px;" tabindex="4">
                             <option value="Conectividad">Conectividad</option>
                             <option value="Soporte">Soporte</option>
-                            <option value="Mantenimiento">Mantenimiento</option>
+                            <option value="Mantenimiento">Solucion del aula</option>
                             <option value="AulaDeMedios">Aula de medios</option>
                             
                             

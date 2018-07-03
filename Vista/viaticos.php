@@ -11,8 +11,9 @@ if (!isset($_SESSION["correo"])) {
 <html>
 <head>
    <title>Viaticos</title>
+   
    <?PHP include "../Section/css.php";?>
-
+	 
 </head>
 
 <body>

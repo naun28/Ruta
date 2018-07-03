@@ -30,11 +30,11 @@
                                         <th data-toggle="true">Nombre de escuela</th>
                                         <th>Clave</th>
                                         <th>Zona</th>
-                                        <th>Tipo de escuela</th>
+                                        <th data-hide="all">Tipo de escuela</th>
                                         
                                         <th data-hide="all">Domicilio</th>
                                         <th data-hide="all">Localidad</th>
-                                        <th data-hide="all">Municipio</th>
+                                        <th >Municipio</th>
                                         <th data-hide="all">Fecha ultima visita</th>
                                         <th data-hide="all">Semana</th>
                                         <th data-hide="all">Comentarios</th>

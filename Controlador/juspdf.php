@@ -139,7 +139,7 @@ $pdf->SetFont('Arial', 'U', 11);
 $pdf->Cell(-300, 40, '_______________________________', 0,1,'C');
 $pdf->SetFont('Arial', 'B', 8);
 $pdf->Cell(80, -30, '  ING. JESUS MA. SABORI VALENZUELA', 0,1,'C');
-$pdf->Cell(80, 35, '  Titular de área', 0,1,'C');
+$pdf->Cell(80, 35, '  Director de Infraestructura Tecnológica', 0,1,'C');
 
 $pdf->SetFont('Arial', 'U', 11);
 $pdf->Cell(0, -51, '_______________________________', 0,1,'R');

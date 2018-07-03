@@ -46,6 +46,8 @@
    <!-- Input Mask-->
     <script src="../Include/js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+
    <!-- Data picker -->
    <script src="../Include/js/plugins/datapicker/bootstrap-datepicker.js"></script>
    <script src="../Include/js/plugins/daterangepicker/daterangepicker.js"></script>
@@ -527,6 +529,13 @@ function myFunction() {
 
 
     </script>
+    <script>
+      $('.clockpicker').clockpicker();  
+    </script>
+ <script src="js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+
+    <!-- Clock picker -->
+    <script src="js/plugins/clockpicker/clockpicker.js"></script>
 <!-- mostrar datos de usuarios -->
 <script>
     $(document).ready(function(){
