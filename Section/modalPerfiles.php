@@ -56,15 +56,25 @@
                             <option value="Brigada 10">Brigada 10</option>
                             <option value="Brigada 11">Brigada 11</option>
                             <option value="Brigada 12">Brigada 12</option>
-                            <option value="Brigada 13">Brigada13</option>
+                            <option value="Brigada 13">Brigada 13</option>
+                            <option value="Brigada 14">Brigada 14</option>
+                            <option value="Brigada 15">Brigada 15</option>
+                            <option value="Brigada 16">Brigada 16</option>
+                            <option value="Brigada 17">Brigada 17</option>
+                            <option value="Brigada 18">Brigada 18</option>
+                            <option value="Brigada 19">Brigada 19</option>
+                            <option value="Brigada 20">Brigada 20</option>
                             
                         </select><br>
-                        <label>Zona</label><select id="zonaBrig" class="form-control" name="zonaBri" >               
+                        <label>Zona</label><select id="zonaBrig" class="form-control" name="zonaBri" > 
+                        	     
                             <?php
+                           
                             require('../Conect/conecviatik.php');
                             $rs = mysqli_query($conecviatiks, "SELECT * FROM zona WHERE 1 ORDER BY zonaL ASC");
                             while($row=mysqli_fetch_array($rs))
                             {
+
                               echo "<option value='".$row['zonaL']."'>";
                               echo $row['zonaL'];
                               echo "</option>";                     
@@ -89,11 +99,19 @@
                             <option value="Brigada 10">Brigada 10</option>
                             <option value="Brigada 11">Brigada 11</option>
                             <option value="Brigada 12">Brigada 12</option>
-                            <option value="Brigada 13">Brigada13</option>
+                            <option value="Brigada 13">Brigada 13</option>
+                            <option value="Brigada 14">Brigada 14</option>
+                            <option value="Brigada 15">Brigada 15</option>
+                            <option value="Brigada 16">Brigada 16</option>
+                            <option value="Brigada 17">Brigada 17</option>
+                            <option value="Brigada 18">Brigada 18</option>
+                            <option value="Brigada 19">Brigada 19</option>
+                            <option value="Brigada 20">Brigada 20</option>
                             
                         </select><br>
                         <label>Zona</label><select id="zonaBrig" class="form-control" name="zonaLider" >               
                             <?php
+                            
                             require('../Conect/conecviatik.php');
                             $rs = mysqli_query($conecviatiks, "SELECT * FROM zona WHERE 1 ORDER BY zonaL ASC");
                             while($row=mysqli_fetch_array($rs))
@@ -106,6 +124,7 @@
                             ?>
                           </select>
                     </div>
+                    
                 </div>
                 <div class="modal-footer">
                    <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white dim" data-dismiss="modal">Cerrar</button>

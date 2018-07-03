@@ -35,10 +35,10 @@ $var .= ' ';
 }
 
 $Semana      = $_POST['Semana'];
-$Soporte      = $_POST['Soporte'];
-$Mantenimiento      = $_POST['Mantenimiento'];
+$sopman      = $_POST['sop-man'];
 $Conectiv      = $_POST['Conectiv'];
-$AulaDeMedios      = $_POST['AulaDeMedios'];
+$SolucionDeAula      = $_POST['SolucionDeAula'];
+$Actividad = $sopman." ".$Conectiv." ".$SolucionDeAula;
 $Actividad = $Soporte." ".$Mantenimiento." ".$Conectiv." ".$AulaDeMedios;
 $zonaBrig = $_POST['zonaBrig'];
 //insertando en agendadas

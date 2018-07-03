@@ -35,11 +35,10 @@ $var .= ' ';
 }
 
 $Semana      = $_POST['Semana'];
-$Soporte      = $_POST['Soporte'];
-$Mantenimiento      = $_POST['Mantenimiento'];
+$sopman      = $_POST['sop-man'];
 $Conectiv      = $_POST['Conectiv'];
-$AulaDeMedios      = $_POST['AulaDeMedios'];
-$Actividad = $Soporte." ".$Mantenimiento." ".$Conectiv." ".$AulaDeMedios;
+$SolucionDeAula      = $_POST['SolucionDeAula'];
+$Actividad = $sopman." ".$Conectiv." ".$SolucionDeAula;
 
 $sql="SELECT * FROM usuarios WHERE id_usuario = '".$id_usuario."'";
 $result = mysqli_query($conexion,$sql);

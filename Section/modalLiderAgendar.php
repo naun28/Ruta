@@ -66,13 +66,25 @@
                         </div>
                         <div class="form-group col-md-12">
                           <label>Actividad</label><br>
-                          <div class=" form-group col-sm-10">
-
-                            <label class="checkbox-inline i-checks"> <input type="checkbox" value="Soporte" name="Soporte" class="form-control"> Soporte </label>
-                            <label class="checkbox-inline i-checks"> <input type="checkbox" value="Mantenimiento" name="Mantenimiento" class="form-control"> Mantenimiento </label>
-                            <label class="checkbox-inline i-checks"> <input type="checkbox" value="Conectividad" name="Conectiv" class="form-control"> Conectividad </label>
-                            <label class="checkbox-inline i-checks"> <input type="checkbox" value="AulaDeMedios" name="AulaDeMedios" class="form-control"> Aula de Medios </label>
-                          </div>
+                          <div class="form-group col-sm-10">
+                            
+                            <div class="radio radio-inline">
+                                <input type="radio" id="inlineRadio2" value="Soporte" name="sop-man">
+                                <label> Soporte </label>
+                            </div>
+                            <div class="radio radio-inline">
+                                <input type="radio" id="inlineRadio2" value="Mantenimiento" name="sop-man">
+                                <label> Mantenimiento </label>
+                            </div>
+                            <div class="radio radio-inline">
+                                <input type="radio" id="inlineRadio2" value="Conectividad" name="Conectiv">
+                                <label > Conectividad </label>
+                            </div>
+                            <div class="radio radio-inline">
+                               <input type="radio" value="SolucionDeAula" name="SolucionDeAula">
+                               <label > Soluciona de aula </label>
+                            </div>
+                        </div>
                         </div>
                         <div class="form-group col-md-12">
                             <label>Lider de Brigada</label><input type="text" id="Lider" name="Lider" placeholder="Lider" class="form-control" readonly="Lider" value="<?php 

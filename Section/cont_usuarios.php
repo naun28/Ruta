@@ -61,6 +61,13 @@
                                                     <option value="Brigada 11">Brigada 11</option>
                                                     <option value="Brigada 12">Brigada 12</option>
                                                     <option value="Brigada 13">Brigada13</option>
+                                                    <option value="Brigada 14">Brigada 14</option>
+                                                    <option value="Brigada 15">Brigada 15</option>
+                                                    <option value="Brigada 16">Brigada 16</option>
+                                                    <option value="Brigada 17">Brigada 17</option>
+                                                    <option value="Brigada 18">Brigada 18</option>
+                                                    <option value="Brigada 19">Brigada 19</option>
+                                                    <option value="Brigada 20">Brigada 20</option>
                                                     
                                                 </select><br><br>
                                                 <label>Zona</label>
@@ -98,7 +105,14 @@
                                                     <option value="Brigada 11">Brigada 11</option>
                                                     <option value="Brigada 12">Brigada 12</option>
                                                     <option value="Brigada 13">Brigada13</option>
-                                                    
+                                                    <option value="Brigada 14">Brigada 14</option>
+                                                    <option value="Brigada 15">Brigada 15</option>
+                                                    <option value="Brigada 16">Brigada 16</option>
+                                                    <option value="Brigada 17">Brigada 17</option>
+                                                    <option value="Brigada 18">Brigada 18</option>
+                                                    <option value="Brigada 19">Brigada 19</option>
+                                                    <option value="Brigada 20">Brigada 20</option>
+                                                                            
                                                 </select><br><br>
                                                 <label>Zona</label><select data-placeholder="Zona" class="chosen-select form-control col-sm-10"  name="zonaLider" style="width:350px;" tabindex="4">
                                                 
