@@ -10,6 +10,7 @@ if (!isset($_SESSION["correo"])) {
 <!DOCTYPE html>
 <html>
 <head>
+	
    <title>Agendar Rutas</title>
    <?PHP include "../Section/css.php";?>
 

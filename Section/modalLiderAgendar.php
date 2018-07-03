@@ -100,7 +100,7 @@
                             
                             <?php
                             require('../Conect/conecviatik.php');
-                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios where tipouser = 'Brigadista'");
+                            $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios");
                             while($row=mysqli_fetch_array($rs))
                             {
                               echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";

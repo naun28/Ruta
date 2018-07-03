@@ -568,6 +568,7 @@ function myFunction() {
                 {"data":"correo"},
                 {"data":"tipouser"},
                 {"data":"nbrigada"},
+                {"data":"pass","visible": false},
                 {"data":"zonaBrig"}
                 /*{"defaultContent":"<button>Editar</button>"}*/
             ]

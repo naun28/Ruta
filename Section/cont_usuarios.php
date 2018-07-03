@@ -175,6 +175,7 @@
                                             <th>Email</th>
                                             <th>Tipo de Empleado</th>
                                             <th>N. Brigada</th>
+                                            <th style="display: none;">pass</th>
                                             <th>Zona</th>
                                             
                                         </tr>
@@ -191,6 +192,7 @@
                                             <th>Email</th>
                                             <th>Tipo de Empleado</th>
                                             <th>N. Brigada</th>
+                                            <th style="display: none;">pass</th>
                                             <th>Zona</th>
                                             
                                         </tr>
