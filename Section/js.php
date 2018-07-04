@@ -127,16 +127,11 @@ function myFunction() {
     <script src="../Include/js/plugins/sweetalert/sweetalert.min.js"></script>
 
 <script>
-
+   
     $(document).ready(function () {
-
-        $('.demo1').click(function(){
-            swal({
-                title: "YA PUEDE AGENDAR LA ESCUELA",
-                text: "Bien Hecho",
-                type: "success"
-
-            });
+     $('.demo1').click(function(){
+        swal({title:"REVISADA CORRECTAMENTE", text: "LISTO!",imageUrl: '../Include/img/bien.png',showConfirmButton: false,})
+              
         });
 
         $('.demo2').click(function(){
@@ -604,6 +599,7 @@ function myFunction() {
             "ajax":{
                 "method":"POST",
                 "url":"../Controlador/escuelaController.php",
+                
                  error: function (result) {
                         swal({
                             title: "LISTA VACIA",

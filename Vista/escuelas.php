@@ -6,6 +6,7 @@ if (!isset($_SESSION["correo"])) {
     exit();
 
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,7 +19,6 @@ if (!isset($_SESSION["correo"])) {
 
 <body>
   <div id="wrapper">
-  	
   <?PHP include "../Section/listaesc.php";?>
 </div>
 <?PHP include "../Section/js.php";?>

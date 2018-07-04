@@ -4,13 +4,14 @@ session_start();
 if (!isset($_SESSION["correo"])) {
     header("location:../Vista/login.php");
     exit();
-
 }
+
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	
+	<meta charset="utf-8">
    <title>Agendar Rutas</title>
    <?PHP include "../Section/css.php";?>
 

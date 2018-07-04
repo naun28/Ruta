@@ -37,4 +37,3 @@ $ejecutar_q = mysqli_query($conexion, $Actualizar) or die("error al insertar");
 $ejecutar_q = mysqli_query($conexion, $borra) or die("error al insertar");*/
 
 header("location: ../Vista/escuelas.php");
-echo "<br> Registro Insertado Correctamente! <br>";

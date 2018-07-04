@@ -69,7 +69,7 @@
                  
             <div class="modal-footer">
                <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white dim" data-dismiss="modal">Cerrar</button>
-                <button type="submit" class="btn btn-danger dim demo1"><i class="fa fa-check"></i> Revisada</button>
+                <button type="submit" id="revisada" class="btn btn-danger dim demo1"><i class="fa fa-check"></i> Revisada</button>
             </div>
             </form>
         </div>

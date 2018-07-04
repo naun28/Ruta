@@ -80,10 +80,12 @@
                                 <option value="0" disabled selected>Seleccionar lider</option>
                                 <?php
                                 require('../Conect/conexion.php');
-
+                               
                                 $rs = mysqli_query($conexion, "SELECT * FROM usuarios where tipouser = 'Lider'");
+
                                 while($row=mysqli_fetch_array($rs))
                                 {
+                                
                                   echo "<option value='".$row['id_usuario']."'>";
                                   echo $row['nombres']. " " .$row['apellidos'];
                                   echo "</option>";
