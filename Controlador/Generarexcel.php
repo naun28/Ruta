@@ -21,7 +21,7 @@
   header("Content-Type: application/vnd.ms-excel");
 
   $flag = false;
-  $result = mysqli_query($conecviatiks, "SELECT liderbrig,lugares,fechaini,fechafin,semana,dias,brigacompanante,vehiculo,placas,rendimiento,escuelasvisit,recorrido,excedente,presugasolina,presucasetas,viaticoslider,viaticosbrig,totalreal,totalchilo from viatiks where semana='$semana' ") or die('Query failed!');
+  $result = mysqli_query($conecviatiks, "SELECT liderbrig as Lider,lugares as Destino,fechaini as Fecha_de_salida,fechafin as Fecha_de_llegada,semana as Semana,dias as Dias,brigacompanante as Brigadistas,vehiculo as Vehiculo,placas as Placas,rendimiento as Rendimiento,escuelasvisit as Escuelas_Visitadas,recorrido as Recorrido,excedente as Excedente,presugasolina as Gasolina,presucasetas as Casetas,viaticoslider as Viaticos_Lider,viaticosbrig as Viaticos_Brigadista,totalreal as Total_Real,totalchilo as Total from viatiks where semana='$semana' ") or die('Query failed!');
   while(false != ($row = mysqli_fetch_assoc($result))) {
     if(!$flag) {
       // display field/column names as first row
