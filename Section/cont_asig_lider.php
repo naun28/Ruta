@@ -45,7 +45,7 @@
                                     <?php
 
                                     require('../Conect/conecviatik.php');
-                                    $lider = $_SESSION["nombres"];
+                                    $lider = utf8_encode($_SESSION["nombres"];)
                                     $nbrigada = $_SESSION["nbrigada"];
                                     $rs = mysqli_query($conecviatiks, "SELECT * FROM agendadas where Lider like '%$lider%' AND nBrigada = '$nbrigada' AND (statusvisita=0 || statusvisita=1) ORDER BY statusvisita=0");
                                     while($row=mysqli_fetch_array($rs))

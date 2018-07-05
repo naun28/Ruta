@@ -87,7 +87,7 @@
                                 {
                                 
                                   echo "<option value='".$row['id_usuario']."'>";
-                                  echo $row['nombres']. " " .$row['apellidos'];
+                                  echo utf8_encode($row['nombres']). " " .utf8_encode($row['apellidos']);
                                   echo "</option>";
                                }
                               mysqli_close($conexion);
@@ -128,8 +128,8 @@
                             $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios");
                             while($row=mysqli_fetch_array($rs))
                             {
-                              echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
-                              echo $row['nombres']. " " .$row['apellidos'];
+                              echo "<option value='".utf8_encode($row['nombres']). " " .utf8_encode($row['apellidos'])."'>";
+                              echo utf8_encode($row['nombres']). " " .utf8_encode($row['apellidos']);
                               echo "</option>";                     
                             }
                             mysqli_close($conecviatiks);

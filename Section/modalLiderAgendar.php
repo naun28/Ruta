@@ -91,7 +91,7 @@
                                 
                                 $nombres= $_SESSION["nombres"]; 
                                 $apellidos= $_SESSION["apellidos"]; 
-                                $Lider = $nombres." ".$apellidos;
+                                $Lider = utf8_encode($nombres)." ".utf8_encode($apellidos);
                                 echo $Lider; ?>">
                        </div>
                         <div class="form-group col-md-12">
@@ -103,8 +103,8 @@
                             $rs = mysqli_query($conecviatiks, "SELECT id_usuario,nombres,apellidos FROM usuarios");
                             while($row=mysqli_fetch_array($rs))
                             {
-                              echo "<option value='".$row['nombres']. " " .$row['apellidos']."'>";
-                              echo $row['nombres']. " " .$row['apellidos'];
+                              echo "<option value='".utf8_encode($row['nombres']). " " .utf8_encode($row['apellidos'])."'>";
+                              echo utf8_encode($row['nombres']). " " .utf8_encode($row['apellidos']);
                               echo "</option>";                     
                             }
                             mysqli_close($conecviatiks);

@@ -8,7 +8,7 @@
                             <h1><b><span class="text-navy">Bienvenido</span></b></h1>
 
                             <p>
-                                <h2><b> <?php echo $_SESSION["nombres"];echo " "; echo $_SESSION["apellidos"];  ?></b></h2>
+                                <h2><b> <?php echo utf8_encode($_SESSION["nombres"]);echo " "; echo utf8_encode($_SESSION["apellidos"]);  ?></b></h2>
                             </p>
 
 
