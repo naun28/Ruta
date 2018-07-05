@@ -1,5 +1,6 @@
 <?php 
 include '../Conect/conecviatik.php';
+//$semana=$_POST['semana'];
 $q = "SELECT * FROM viatiks";
 $resultado = mysqli_query($conecviatiks, $q);
 if (!$resultado) {

@@ -205,7 +205,9 @@
                       echo $interval->format('%d%');*/
                       ?>
                       <div class="form-group"><label class="col-sm-2 control-label">Dias</label>
-                        <div class="col-sm-10"><input type="text" id="di" onkeypress="return validanum(event)" value="" name="dia" class="form-control" required="llenar campo"></div>
+                        <div class="col-sm-4"><input type="text" id="di" onkeypress="return validanum(event)" value="" name="dia" class="form-control" required="llenar campo"></div>
+                        <label class="col-sm-2 control-label">Semana</label>
+                        <div class="col-sm-4"><input type="text" id="semana" onkeypress="return validanum(event)" value="" name="semana" class="form-control" required="llenar campo"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Claves de escuelas</label>
                         <div class="col-sm-10">

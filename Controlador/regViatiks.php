@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require('../Conect/conecviatik.php');
-
+$varsemana=$_POST['semana'];
 $varlibrigada=$_POST['librigada'];
 $varnuvehiculo=$_POST['nuvehiculo'];
 // arreglo para destinos
@@ -68,11 +68,11 @@ $toreal= $presupuestoparagasolina+$varviaticoacompanantes+$varprecasetas+$viatic
 $q= "INSERT INTO viatiks (
 							id,liderbrig,vehiculo,placas,rendimiento,lugares,fechaini,fechafin,
 							dias,escuelasvisit,recorrido,excedente,prelitrogas,presugasolina,
-							presucasetas,viaticoslider,brigacompanante,viaticosbrig,totalreal,totalchilo) 
+							presucasetas,viaticoslider,brigacompanante,viaticosbrig,totalreal,totalchilo,semana) 
 				  values (  '','$varlibrigada','$varnuvehiculo','$varplavehiculo','$varrendvehiculo',
 				  			'$var','$varfeini','$varfefin','$vardia','$varesc','$varrecor',
 				  			'$varrecorexe','$varprelitro','$presupuestoparagasolina','$varprecasetas',
-				  			'$viaticosdiaporpersona','$varbrig','$varviaticoacompanantes','$toreal','$toreal')";
+				  			'$viaticosdiaporpersona','$varbrig','$varviaticoacompanantes','$toreal','$toreal','$varsemana')";
 $ejecuta_q= mysqli_query($conecviatiks,$q) or die("error al insertar");
 
 mysqli_close($con);

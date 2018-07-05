@@ -4,7 +4,7 @@
     <!-- para calcular dias -->
     <script src="http://momentjs.com/downloads/moment.min.js"></script>
     
-    <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+    <!--<script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>-->
     <script src="../Include/js/jquery-3.1.1.min.js"></script>
     <script src="../Include/js/bootstrap.min.js"></script>
     <script src="../Include/js/plugins/metisMenu/jquery.metisMenu.js"></script>
@@ -661,4 +661,79 @@
 </script>
 <!--Estructura del ModalEscuelas-->
 <?php include "modalHistorial.php"; ?>
+<script>
 
+       $(document).ready(function () {
+
+                var hoy=$("#semana").val();
+               
+
+               
+
+                listar(hoy);
+
+
+                
+
+            });
+
+       function fechas(e){
+
+            listar(e);
+
+
+       }
+
+       var listar = function(e){
+
+           // var sem=$("#semana").val();
+
+            var table = $("#rutas").DataTable({
+                destroy:true,
+                pageLength: 10,
+                responsive: true,
+                expandFirst: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                   
+                    {extend: 'excel', title: 'Historial de viaticos'},
+                    
+                 
+                ],
+
+                "ajax":{
+                "method":"POST",
+                "url":"../Controlador/conHistorial.php"
+                },
+                "columns":[
+                {"data":"liderbrig"},
+                {"data":"lugares"},
+                {"data":"fechaini"},
+                {"data":"fechafin"},
+                {"data":"brigacompanante"},  
+                {"data":"vehiculo"},
+                {"data":"placas"},
+                {"data":"rendimiento"},
+                {"data":"dias"},
+                {"data":"escuelasvisit"},
+                {"data":"recorrido"},
+                {"data":"excedente"},
+                {"data":"prelitrogas"},
+                {"data":"presugasolina"},
+                {"data":"presucasetas"},
+                {"data":"viaticoslider"},                
+                {"data":"viaticosbrig"},
+                {"data":"totalreal"},
+                {"data":"totalreal"},
+                {"data":"semana"}
+
+                ]
+            });
+
+
+            
+
+        }
+
+
+    </script>
