@@ -66,22 +66,7 @@
                             <option value="Brigada 20">Brigada 20</option>
                             
                         </select><br>
-                        <label>Zona</label><select id="zonaBrig" class="form-control" name="zonaBri" > 
-                        	     
-                            <?php
-                           
-                            require('../Conect/conecviatik.php');
-                            $rs = mysqli_query($conecviatiks, "SELECT * FROM zona WHERE 1 ORDER BY zonaL ASC");
-                            while($row=mysqli_fetch_array($rs))
-                            {
-
-                              echo "<option value='".$row['zonaL']."'>";
-                              echo $row['zonaL'];
-                              echo "</option>";                     
-                            }
-                            mysqli_close($conecviatiks);
-                            ?>
-                          </select>
+                        
                     </div>
                     <div id="Lider" style="display:none;" class="form-group">
 
@@ -109,7 +94,13 @@
                             <option value="Brigada 20">Brigada 20</option>
                             
                         </select><br>
-                        <label>Zona</label><select id="zonaBrig" class="form-control" name="zonaLider" >               
+                       
+                    </div>
+                   
+                    
+                </div>
+                 <div class="form-group">
+                        <label>Zona</label><select id="zonaBrig" class="form-control" name="zona" >               
                             <?php
                             
                             require('../Conect/conecviatik.php');
@@ -124,8 +115,6 @@
                             ?>
                           </select>
                     </div>
-                    
-                </div>
                 <div class="modal-footer">
                    <button type="button" id="btnLimpiar" value="Cerrar" class="btn btn-white dim" data-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-danger dim">Aceptar</button>

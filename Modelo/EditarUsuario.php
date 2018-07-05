@@ -8,8 +8,8 @@ $pass      = $_POST['pass'];
 $tipouser      = $_POST['tipouser'];
 $nbrigad      = $_POST['nbrigada'];
 $nbrig      = $_POST['nbrig'];
-$zonaBri=$_POST['zonaBri'];
-$zonaLider=$_POST['zonaLider'];
+
+$zona=$_POST['zona'];
 if (!empty($nbrigad)) {
 	$nbrigada = $nbrigad;
 }else{
@@ -20,10 +20,8 @@ if ($tipouser=="Mesa" || $tipouser=="Director" || $tipouser=="Administrador") {
 }
 
 
-if (!empty($zonaBri)) {
-	$zonaBrig = $zonaBri;
-}else{
-	$zonaBrig = $zonaLider;
+if (!empty($zona)) {
+	$zonaBrig = $zona;
 }
 if ($tipouser=="Mesa" || $tipouser=="Director" || $tipouser=="Administrador") {
 	
