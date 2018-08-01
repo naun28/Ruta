@@ -32,7 +32,7 @@
                <table  id="rutas" class="table table-striped table-bordered table-hover" style="width: 100%;">
                 <thead>
                     <tr>
-                      <th style="display: none;">id</th>
+                       <th style="display: none;">id</th>
                        <th>Clave</th>
                        <th>Escuela</th>
                        <th>Localidad</th>
@@ -59,5 +59,81 @@
    </div>
  </div>
 </div>
+<!-- mostrar escuelas agendadas por fecha -->
+ <script>
+
+       $(document).ready(function () {
+
+                var hoy = new Date();
+                var dd = hoy.getDate();
+                var mm = hoy.getMonth()+1; //hoy es 0!
+                var yyyy = hoy.getFullYear();
+
+               if(dd<10) {
+                    dd='0'+dd
+                }
+
+               if(mm<10) {
+                     mm='0'+mm
+                }
+
+                hoy = mm+'/'+dd+'/'+yyyy;
+
+                listar(hoy);
+
+
+                $('#data_1 .input-group.date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: false,
+                autoclose: true
+            });
+
+            });
+
+       function fechas(e){
+
+            listar(e);
+
+
+       }
+
+       var listar = function(e){
+
+            var datestring = moment(e.value).format('YYYY/MM/DD');
+
+            var table = $("#rutas").DataTable({
+                "destroy":true,
+                "ajax":{
+                "method" : "POST",
+                "url": "../Controlador/fechasController.php?fecha="+datestring+""
+                                   
+                },
+                "columns":[
+                    {"data":"id_agendada","visible": false},
+                    {"data":"Clave"},
+                    {"data":"Escuela"},
+                    {"data":"Localidad22"},
+                    {"data":"Municipio"},
+                    {"data":"Lider"},
+                    {"data":"nBrigada"},
+                    {"data":"Brigadistas"},
+                    {"data":"FechaIni"},
+                    {"data":"FechaFin"},
+                    {"data":"Semana"},
+                    {"data":"Comentarios","visible": false},
+                    {"data":"Actividad"}
+
+                ]
+            });
+
+
+            
+
+        }
+
+
+    </script>
 
 

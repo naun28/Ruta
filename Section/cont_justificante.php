@@ -40,9 +40,9 @@
                         <div class="form-group" id="data_5"><label class="col-sm-2 control-label">Fecha</label>
                         <div class="col-sm-10">
                           <center><div class="input-daterange input-group" id="datepicker">
-                            <input type="text" class="input-sm form-control" id="fi" name="fi" placeholder="inicio" required="llenar campo" />
+                            <input type="text" class="input-sm form-control" autocomplete="off" id="fi" name="fi" placeholder="inicio" required="llenar campo" />
                             <span class="input-group-addon">Al</span>
-                            <input type="text" class="input-sm form-control" id="ff" name="ff"  placeholder="final" required="llenar campo" />
+                            <input type="text" class="input-sm form-control" autocomplete="off" id="ff" name="ff"  placeholder="final" required="llenar campo" />
                           </div></center>
                         </div>
                       </div> 

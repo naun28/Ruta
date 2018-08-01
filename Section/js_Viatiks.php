@@ -113,13 +113,9 @@
 
     $(document).ready(function () {
 
-        $('.demo1').click(function(){
-            swal({
-                title: "YA PUEDE AGENDAR LA ESCUELA",
-                text: "Bien Hecho",
-                type: "success"
-
-            });
+       $('.demo11').click(function(){
+        swal({title:"Se guardo correctamente", text: "Listo!",imageUrl: '../Include/img/bien.png',showConfirmButton: false,})
+              
         });
 
         $('.demo2').click(function(){

@@ -191,9 +191,9 @@
                       <div class="form-group" id="data_5"><label class="col-sm-2 control-label">Fecha</label>
                         <div class="col-sm-10">
                           <center><div class="input-daterange input-group" id="datepicker">
-                            <input type="text" class="input-sm form-control" id="feini" name="feini" values="05/16/2018" placeholder="inicio" required="llenar campo" />
+                            <input type="text" class="input-sm form-control" autocomplete="off" id="feini" name="feini" values="05/16/2018" placeholder="inicio" required="llenar campo" />
                             <span class="input-group-addon">Al</span>
-                            <input type="text" class="input-sm form-control" id="fefin" name="fefin" values="05/30/2018" placeholder="final" required="llenar campo" />
+                            <input type="text" class="input-sm form-control" autocomplete="off" id="fefin" name="fefin" values="05/30/2018" placeholder="final" required="llenar campo" />
                           </div></center>
                         </div>
                       </div>                     
@@ -205,9 +205,9 @@
                       echo $interval->format('%d%');*/
                       ?>
                       <div class="form-group"><label class="col-sm-2 control-label">Dias</label>
-                        <div class="col-sm-4"><input type="text" id="di" onkeypress="return validanum(event)" value="" name="dia" class="form-control" required="llenar campo"></div>
+                        <div class="col-sm-4"><input type="text" autocomplete="off" id="di" onkeypress="return validanum(event)" value="" name="dia" class="form-control" required="llenar campo"></div>
                         <label class="col-sm-2 control-label">Semana</label>
-                        <div class="col-sm-4"><input type="text" id="semana" onkeypress="return validanum(event)" value="" name="semana" class="form-control" required="llenar campo"></div>
+                        <div class="col-sm-4"><input type="text" autocomplete="off" id="semana" onkeypress="return validanum(event)" value="" name="semana" class="form-control" required="llenar campo"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Claves de escuelas</label>
                         <div class="col-sm-10">
@@ -230,10 +230,10 @@
                         </div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Recorrido (Km)</label>
-                        <div class="col-sm-10"><input type="text" name="recor" onkeypress="return validanum(event)" value="" placeholder="" class="form-control" required="llenar campo"></div>
+                        <div class="col-sm-10"><input type="text" autocomplete="off" name="recor" onkeypress="return validanum(event)" value="" placeholder="" class="form-control" required="llenar campo"></div>
                       </div>
                       <div class="form-group"><label class="col-sm-2 control-label">Excedente</label>
-                        <div class="col-sm-10"><input type="text" name="recorexe" onkeypress="return validanum(event)" value="" class="form-control" required="llenar campo"></div>
+                        <div class="col-sm-10"><input type="text" autocomplete="off" name="recorexe" onkeypress="return validanum(event)" value="" class="form-control" required="llenar campo"></div>
                       </div>
                     </fieldset>
                   </div> 
@@ -243,11 +243,11 @@
                       <legend>Presupuestos</legend>
                       
                       <div class="form-group"><label class="col-sm-2 control-label">Precio Gasolina/L</label>
-                        <div class="col-sm-10"><input placeholder="Introduzca el precio actual" value="" name="prelitro" onkeypress="return validanum(event)" type="text" class="form-control" required="llenar campo"></div>
+                        <div class="col-sm-10"><input placeholder="Introduzca el precio actual" value="" name="prelitro" autocomplete="off" onkeypress="return validanum(event)" type="text" class="form-control" required="llenar campo"></div>
                       </div>
                       
                       <div class="form-group"><label class="col-sm-2 control-label">Presupuesto casetas</label>
-                        <div class="col-sm-10"><input type="text" name="precasetas"  value="" class="form-control" onkeypress="return validanum(event)" required="llenar campo"></div>
+                        <div class="col-sm-10"><input type="text" name="precasetas" autocomplete="off"  value="" class="form-control" onkeypress="return validanum(event)" required="llenar campo"></div>
                       </div>
                       
                     </fieldset>
@@ -275,8 +275,8 @@
                     </fieldset>
                   </div>
                   <div class="col-sm-10"><br><br>
-                         <!--  <button type="submit" class="btn btn-danger demo2 pull-right">Terminar2</button> -->
-                          <input type="submit" onclick="alert('guardado');" class="btn btn-danger  pull-right" value="Terminar">
+                         <!--  <button type="submit" class="btn btn-danger demo2 pull-right">Terminar2</button> onclick="alert('guardado');"-->
+                          <input type="submit"  class="btn btn-danger  pull-right demo11" value="Terminar">
                         </div>
                 </div>
                 <!-- NIVEL 3 -->
@@ -296,16 +296,16 @@
                 <legend>Agregar vehiculo</legend>
                 <form action="../Controlador/regVehiculo.php" method="POST" class="form-horizontal" >
                   <div class="form-group"><label class="col-sm-2 control-label">Numero del vehiculo</label>
-                    <div class="col-sm-10"><input type="text" name="numve" class="form-control" pattern="[0-9]{1,3}" minlength="1" maxlength="3" required title="Solo permite numeros"></div>
+                    <div class="col-sm-10"><input type="text" name="numve" class="form-control" pattern="[0-9]{1,3}" autocomplete="off" minlength="1" maxlength="3" required title="Solo permite numeros"></div>
                   </div>
                   <div class="form-group"><label class="col-sm-2 control-label">Nombre del carro</label>
-                    <div class="col-sm-10"><input type="text" name="nomve" class="form-control" title="Llenar campo" required=""></div>
+                    <div class="col-sm-10"><input type="text" name="nomve" class="form-control" title="Llenar campo" autocomplete="off" required=""></div>
                   </div>
                   <div class="form-group"><label class="col-sm-2 control-label">Placas</label>
-                    <div class="col-sm-10"><input type="text" name="plave" class="form-control" pattern="[A-Za-z0-9]{7}" maxlength="7" required title="Placa incompleta"></div>
+                    <div class="col-sm-10"><input type="text" name="plave" class="form-control" pattern="[A-Za-z0-9]{7}" autocomplete="off" maxlength="7" required title="Placa incompleta"></div>
                   </div>
                   <div class="form-group"><label class="col-sm-2 control-label">Rendimiento</label>
-                    <div class="col-sm-10"><input type="text" name="renve" class="form-control" pattern="[0-9]{1,3}" minlength="1" maxlength="3"  required title="Solo permite numeros"></div>
+                    <div class="col-sm-10"><input type="text" name="renve" class="form-control" pattern="[0-9]{1,3}" minlength="1" autocomplete="off" maxlength="3"  required title="Solo permite numeros"></div>
                   </div>
                   <input type="submit" class="btn btn-danger pull-right" value="Guardar" >
                 </form>
